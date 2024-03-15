@@ -1,1 +1,6 @@
-void InitializeGUI();
+namespace GUI
+{
+
+void DrawMainWindow();
+
+} // namespace GUI

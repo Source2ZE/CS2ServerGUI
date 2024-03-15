@@ -26,10 +26,12 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
-#include "imgui/gui.h"
+#include "imgui/main.h"
 #include <thread>
 #include <schemasystem/schemasystem.h>
 #include <entity2/entitysystem.h>
+#include "interfaces.h"
+#include "networkstringtabledefs.h"
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -40,12 +42,6 @@
 #endif
 
 CS2ServerGUI g_CS2ServerGUI;
-IServerGameDLL *server = NULL;
-IServerGameClients *gameclients = NULL;
-IVEngineServer *engine = NULL;
-IGameEventManager2 *gameevents = NULL;
-ICvar *icvar = NULL;
-CSchemaSystem *g_pSchemaSystem2 = NULL;
 
 std::thread g_thread;
 
@@ -59,26 +55,48 @@ CGameEntitySystem* GameEntitySystem()
 	return *reinterpret_cast<CGameEntitySystem**>((uintptr_t)(g_pGameResourceServiceServer)+offset);
 }
 
+// Should only be called within the active game loop (i e map should be loaded and active)
+// otherwise that'll be nullptr!
+CGlobalVars* GetGameGlobals()
+{
+	INetworkGameServer* server = g_pNetworkServerService->GetIGameServer();
+
+	if (!server)
+		return nullptr;
+
+	return g_pNetworkServerService->GetIGameServer()->GetGlobals();
+}
+
+CON_COMMAND_F(gui, "Opens server GUI", FCVAR_LINKED_CONCOMMAND | FCVAR_SPONLY)
+{
+	if (!GUI::g_GUICtx.m_bIsGUIOpen)
+	{
+		g_thread = std::thread(GUI::InitializeGUI);
+		g_thread.detach();
+	}
+}
+
+
 PLUGIN_EXPOSE(CS2ServerGUI, g_CS2ServerGUI);
 bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, bool late)
 {
 	PLUGIN_SAVEVARS();
 
-	GET_V_IFACE_CURRENT(GetEngineFactory, engine, IVEngineServer, INTERFACEVERSION_VENGINESERVER);
-	GET_V_IFACE_CURRENT(GetEngineFactory, icvar, ICvar, CVAR_INTERFACE_VERSION);
-	GET_V_IFACE_ANY(GetServerFactory, server, IServerGameDLL, INTERFACEVERSION_SERVERGAMEDLL);
-	GET_V_IFACE_ANY(GetServerFactory, gameclients, IServerGameClients, INTERFACEVERSION_SERVERGAMECLIENTS);
+	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::engine, IVEngineServer, INTERFACEVERSION_VENGINESERVER);
+	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::icvar, ICvar, CVAR_INTERFACE_VERSION);
+	GET_V_IFACE_ANY(GetServerFactory, Interfaces::server, IServerGameDLL, INTERFACEVERSION_SERVERGAMEDLL);
+	GET_V_IFACE_ANY(GetServerFactory, Interfaces::gameclients, IServerGameClients, INTERFACEVERSION_SERVERGAMECLIENTS);
 	GET_V_IFACE_ANY(GetEngineFactory, g_pNetworkServerService, INetworkServerService, NETWORKSERVERSERVICE_INTERFACE_VERSION);
-	GET_V_IFACE_ANY(GetEngineFactory, g_pSchemaSystem2, CSchemaSystem, SCHEMASYSTEM_INTERFACE_VERSION);
+	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::g_pSchemaSystem2, CSchemaSystem, SCHEMASYSTEM_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceServiceServer, GAMERESOURCESERVICESERVER_INTERFACE_VERSION);
-
+	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::networkStringTableContainerServer, INetworkStringTableContainer, SOURCE2ENGINETOSERVERSTRINGTABLE_INTERFACE_VERSION);
 	g_SMAPI->AddListener( this, this );
 
-	g_pCVar = icvar;
+	g_pCVar = Interfaces::icvar;
 	ConVar_Register( FCVAR_RELEASE | FCVAR_CLIENT_CAN_EXECUTE | FCVAR_GAMEDLL );
 
 	// InitializeGUI on another thread
-	g_thread = std::thread(InitializeGUI);
+	g_thread = std::thread(GUI::InitializeGUI);
 	g_thread.detach();
 	return true;
 }
@@ -144,7 +162,7 @@ const char *CS2ServerGUI::GetAuthor()
 
 const char *CS2ServerGUI::GetDescription()
 {
-	return "Server GUI using Dear ImGUI";
+	return "Server GUI using Dear ImGui";
 }
 
 const char *CS2ServerGUI::GetName()
