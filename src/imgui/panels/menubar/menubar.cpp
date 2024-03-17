@@ -22,5 +22,6 @@ void GUI::MenuBar::Draw()
 			Actions::Draw();
 			ImGui::EndMenu();
 		}
+		ImGui::EndMainMenuBar();
 	}
 }

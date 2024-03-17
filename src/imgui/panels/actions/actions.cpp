@@ -64,8 +64,6 @@ void Draw()
 			iUnhiddenConVars++;
 		} while (pCvar);
 	}
-
-	ImGui::End();
 }
 
 } // namespace GUI::PlayerList

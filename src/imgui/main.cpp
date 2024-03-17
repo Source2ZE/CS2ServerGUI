@@ -5,6 +5,7 @@
 #include <imgui_impl_dx9.h>
 #include <imgui_impl_win32.h>
 #include <imgui-notify/ImGuiNotify.hpp>
+#include <ImGuiFileDialog.h>
 
 #include <d3d9.h>
 #include <filesystem>
@@ -81,6 +82,9 @@ void InitializeGUI()
     bool show_entity_browser = true;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
+    IGFD::FileDialog* fileDialogInstance = new IGFD::FileDialog();
+    ImGuiFileDialog::Instance(fileDialogInstance, true);
+
     // Main loop
     bool done = false;
     while (!done)
@@ -135,6 +139,8 @@ void InitializeGUI()
         if (result == D3DERR_DEVICELOST && g_pd3dDevice->TestCooperativeLevel() == D3DERR_DEVICENOTRESET)
             ResetDevice();
     }
+
+    delete fileDialogInstance;
 
     ImGui_ImplDX9_Shutdown();
     ImGui_ImplWin32_Shutdown();
