@@ -99,4 +99,4 @@ void Draw()
 	}
 }
 
-} // namespace GUI::Dumper
+} // namespace GUI::Dumper::EntityList

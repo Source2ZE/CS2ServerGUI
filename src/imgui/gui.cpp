@@ -6,6 +6,7 @@
 #include "panels/stringtables/stringtables.h"
 #include "panels/dumper/dumper.h"
 #include "panels/dumper/convarlist/convarlist.h"
+#include "panels/dumper/commandlist/commandlist.h"
 #include <ImGuiFileDialog.h>
 
 namespace GUI
@@ -44,6 +45,18 @@ void DrawFileDialogs()
 		{
 			std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
 			GUI::Dumper::ConVarList::DumpToJSON(filePathName);
+		}
+
+		ImGuiFileDialog::Instance()->Close();
+	}
+
+	ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
+	if (ImGuiFileDialog::Instance()->Display("SaveCommandsFileDlg", ImGuiWindowFlags_NoCollapse, ImVec2(0, 0)))
+	{
+		if (ImGuiFileDialog::Instance()->IsOk())
+		{
+			std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
+			GUI::Dumper::CommandList::DumpToJSON(filePathName);
 		}
 
 		ImGuiFileDialog::Instance()->Close();

@@ -3,6 +3,7 @@
 #include "interfaces.h"
 #include "entitylist/entitylist.h"
 #include "convarlist/convarlist.h"
+#include "commandlist/commandlist.h"
 #include <string>
 #include <imgui.h>
 #include <vector>
@@ -34,7 +35,7 @@ void Draw(bool* isOpen)
 
 		if (ImGui::BeginTabItem("Command List"))
 		{
-			EntityList::Draw();
+			CommandList::Draw();
 			ImGui::EndTabItem();
 		}
 
