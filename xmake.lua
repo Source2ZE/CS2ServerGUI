@@ -1,6 +1,9 @@
 add_rules("mode.debug", "mode.release")
+add_repositories("custom-repo repo")
 add_requires("imgui", {configs = {dx9 = true, win32 = true}})
 add_requires("nlohmann_json")
+add_requires("imgui-file-dialog")
+
 
 includes("@builtin/xpack")
 
@@ -12,7 +15,7 @@ target("CS2ServerGUI")
     set_kind("shared")
     add_files("src/**.cpp")
     add_headerfiles("src/**.h")
-    add_packages("imgui", "nlohmann_json")
+    add_packages("imgui", "nlohmann_json", "imgui-file-dialog")
     --set_symbols("hidden")
 
     add_files({

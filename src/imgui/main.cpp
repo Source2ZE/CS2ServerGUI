@@ -64,6 +64,7 @@ void InitializeGUI()
     ImFontConfig icons_config;
     icons_config.MergeMode = true;
     icons_config.PixelSnapH = true;
+    icons_config.FontDataOwnedByAtlas = false;
 
     io.Fonts->AddFontFromMemoryTTF((void*)fa_solid_900, sizeof(fa_solid_900), 14.0f, &icons_config, icons_ranges);
 
