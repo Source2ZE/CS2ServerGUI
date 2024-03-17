@@ -12,7 +12,7 @@
 namespace GUI::Dumper::EntityList
 {
 
-static std::vector<CEntityClass*> entClasses;
+static std::vector<std::pair<CEntityClass*, std::string>> entClasses;
 
 enum ItemColumnID
 {
@@ -26,9 +26,9 @@ void DumpToClipBoard()
 	ImGui::LogToClipboard();
 	ImGui::LogText("| Classname | Designer name |\n");
 	ImGui::LogText("| --- | --- |\n");
-	for (CEntityClass* entClass : entClasses)
+	for (auto entClass : entClasses)
 	{
-		ImGui::LogText("| %s | %s |\n", entClass->m_pClassInfo->m_pszCPPClassname, entClass->m_designerName.String());
+		ImGui::LogText("| %s | %s |\n", entClass.first->m_pClassInfo->m_pszCPPClassname, entClass.second.c_str());
 	}
 	ImGui::LogFinish();
 }
@@ -41,7 +41,7 @@ void Draw()
 	{
 		FOR_EACH_MAP_FAST(GameEntitySystem()->m_entClassesByClassname, i)
 		{
-			entClasses.push_back(GameEntitySystem()->m_entClassesByClassname[i]);
+			entClasses.push_back({ GameEntitySystem()->m_entClassesByClassname[i], GameEntitySystem()->m_entClassesByClassname.Key(i)});
 		}
 	}
 
@@ -60,39 +60,39 @@ void Draw()
 		{
 			if (sort_specs->SpecsDirty)
 			{
-				std::sort(entClasses.begin(), entClasses.end(), [sort_specs](CEntityClass* a, CEntityClass* b) -> bool
+				std::sort(entClasses.begin(), entClasses.end(), [sort_specs](auto a, auto b) -> bool
+				{
+					int delta = 0;
+					if (sort_specs->Specs->ColumnUserID == ItemColumnID_Classname)
 					{
-						int delta = 0;
-						if (sort_specs->Specs->ColumnUserID == ItemColumnID_Classname)
-						{
-							delta = strcmp(a->m_pClassInfo->m_pszCPPClassname, b->m_pClassInfo->m_pszCPPClassname);
-						}
-						else if (sort_specs->Specs->ColumnUserID == ItemColumnID_DesignerName)
-						{
-							delta = strcmp(a->m_designerName.String(), b->m_designerName.String());
-						}
+						delta = strcmp(a.first->m_pClassInfo->m_pszCPPClassname, b.first->m_pClassInfo->m_pszCPPClassname);
+					}
+					else if (sort_specs->Specs->ColumnUserID == ItemColumnID_DesignerName)
+					{
+						delta = strcmp(a.first->m_designerName.String(), b.first->m_designerName.String());
+					}
 
-						if (sort_specs->Specs->SortDirection == ImGuiSortDirection_Ascending)
-							return delta < 0;
-						else
-							return delta > 0;
+					if (sort_specs->Specs->SortDirection == ImGuiSortDirection_Ascending)
+						return delta < 0;
+					else
+						return delta > 0;
 
-						return false;
-					});
+					return false;
+				});
 			}
 		}
 
 
-		for (CEntityClass* entClass : entClasses)
+		for (auto entClass : entClasses)
 		{
-			if (!m_nameFilter.PassFilter(entClass->m_pClassInfo->m_pszCPPClassname) && !m_nameFilter.PassFilter(entClass->m_designerName.String()))
+			if (!m_nameFilter.PassFilter(entClass.first->m_pClassInfo->m_pszCPPClassname) && !m_nameFilter.PassFilter(entClass.second.c_str()))
 				continue;
 
 			ImGui::TableNextRow();
 			ImGui::TableNextColumn();
-			ImGui::Text("%s", entClass->m_pClassInfo->m_pszCPPClassname);
+			ImGui::Text("%s", entClass.first->m_pClassInfo->m_pszCPPClassname);
 			ImGui::TableNextColumn();
-			ImGui::Text("%s", entClass->m_designerName.String());
+			ImGui::Text("%s", entClass.second.c_str());
 		}
 
 		ImGui::EndTable();
