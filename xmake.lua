@@ -1,5 +1,6 @@
 add_rules("mode.debug", "mode.release")
 add_requires("imgui", {configs = {dx9 = true, win32 = true}})
+add_requires("nlohmann_json")
 
 includes("@builtin/xpack")
 
@@ -11,7 +12,7 @@ target("CS2ServerGUI")
     set_kind("shared")
     add_files("src/**.cpp")
     add_headerfiles("src/**.h")
-    add_packages("imgui")
+    add_packages("imgui", "nlohmann_json")
     --set_symbols("hidden")
 
     add_files({
@@ -47,6 +48,7 @@ target("CS2ServerGUI")
     add_includedirs({
         "src",
         "vendor/funchook/include",
+        "vendor",
         -- sdk
         SDK_PATH,
         SDK_PATH.."/thirdparty/protobuf-3.21.8/src",

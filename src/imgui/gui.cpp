@@ -4,7 +4,7 @@
 #include "panels/menubar/menubar.h"
 #include "panels/playerlist/playerlist.h"
 #include "panels/stringtables/stringtables.h"
-#include "panels/actions/actions.h"
+#include "panels/dumper/dumper.h"
 
 namespace GUI
 {
@@ -22,6 +22,9 @@ void DrawMainWindow()
 
 	if (g_GUICtx.m_WindowStates.m_bStringTables)
 		StringTables::Draw(&g_GUICtx.m_WindowStates.m_bStringTables);
+
+	if (g_GUICtx.m_WindowStates.m_bDumper)
+		Dumper::Draw(&g_GUICtx.m_WindowStates.m_bDumper);
 
 	MenuBar::Draw();
 }

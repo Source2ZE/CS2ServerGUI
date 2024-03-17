@@ -8,6 +8,7 @@ struct WindowStates
 	bool m_bEntityBrowser = true;
 	bool m_bPlayerList = false;
 	bool m_bStringTables = false;
+	bool m_bDumper = false;
 	bool m_bDemoWindow = false;
 };
 

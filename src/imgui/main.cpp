@@ -1,10 +1,13 @@
 #include "main.h"
+#include "gui.h"
+
 #include <imgui.h>
 #include <imgui_impl_dx9.h>
 #include <imgui_impl_win32.h>
+#include <imgui-notify/ImGuiNotify.hpp>
+
 #include <d3d9.h>
 #include <filesystem>
-#include "gui.h"
 #include <platform.h>
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -51,11 +54,18 @@ void InitializeGUI()
     std::string iniPath = (std::filesystem::path(Plat_GetGameDirectory()) / "csgo/addons/CS2ServerGUI/imgui.ini").string();
     io.IniFilename = iniPath.c_str();
 
-    /*
     std::filesystem::path fontPath = std::getenv("WINDIR");
     fontPath /= "Fonts";
-    fontPath /= "Lucon.ttf";
-    io.Fonts->AddFontFromFileTTF(fontPath.string().c_str(), 13.0f);*/
+    fontPath /= "Consola.ttf";
+    io.Fonts->AddFontFromFileTTF(fontPath.string().c_str(), 13.0f);
+
+    static const ImWchar icons_ranges[] = { ICON_MIN_FA, ICON_MAX_FA, 0 };
+
+    ImFontConfig icons_config;
+    icons_config.MergeMode = true;
+    icons_config.PixelSnapH = true;
+
+    io.Fonts->AddFontFromMemoryTTF((void*)fa_solid_900, sizeof(fa_solid_900), 14.0f, &icons_config, icons_ranges);
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
@@ -102,6 +112,8 @@ void InitializeGUI()
         ImGui::NewFrame();
 
         DrawMainWindow();
+
+        ImGui::RenderNotifications();
 
         // Rendering
         ImGui::EndFrame();

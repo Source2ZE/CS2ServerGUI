@@ -12,6 +12,7 @@ void GUI::MenuBar::Draw()
 			ImGui::MenuItem("Entity Browser", nullptr, &g_GUICtx.m_WindowStates.m_bEntityBrowser);
 			ImGui::MenuItem("Player List", nullptr, &g_GUICtx.m_WindowStates.m_bPlayerList);
 			ImGui::MenuItem("String Tables", nullptr, &g_GUICtx.m_WindowStates.m_bStringTables);
+			ImGui::MenuItem("Dumper", nullptr, &g_GUICtx.m_WindowStates.m_bDumper);
 			ImGui::MenuItem("Demo Window", nullptr, &g_GUICtx.m_WindowStates.m_bDemoWindow);
 			ImGui::EndMenu();
 		}
