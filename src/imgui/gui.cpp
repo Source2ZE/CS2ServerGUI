@@ -5,9 +5,13 @@
 #include "panels/playerlist/playerlist.h"
 #include "panels/stringtables/stringtables.h"
 #include "panels/dumper/dumper.h"
+#include "panels/dumper/convarlist/convarlist.h"
+#include <ImGuiFileDialog.h>
 
 namespace GUI
 {
+
+void DrawFileDialogs();
 
 void DrawMainWindow()
 {
@@ -27,6 +31,23 @@ void DrawMainWindow()
 		Dumper::Draw(&g_GUICtx.m_WindowStates.m_bDumper);
 
 	MenuBar::Draw();
+
+	DrawFileDialogs();
+}
+
+void DrawFileDialogs()
+{
+	ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
+	if (ImGuiFileDialog::Instance()->Display("SaveConvarFileDlg", ImGuiWindowFlags_NoCollapse, ImVec2(0, 0)))
+	{
+		if (ImGuiFileDialog::Instance()->IsOk())
+		{
+			std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
+			GUI::Dumper::ConVarList::DumpToJSON(filePathName);
+		}
+
+		ImGuiFileDialog::Instance()->Close();
+	}
 }
 
 } // namespace GUI

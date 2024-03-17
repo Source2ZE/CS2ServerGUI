@@ -255,34 +255,25 @@ void DumpToJSON(std::string& path)
 
 void Draw()
 {
+	static ImGuiTextFilter m_nameFilter;
+
+	m_nameFilter.Draw("Search");
+
 	if (ImGui::Button("Dump to file"))
 	{
 		const char* filters = "JSON File (*.json){.json}";
 		IGFD::FileDialogConfig config;
 		config.path = ".";
-		config.userDatas = IGFDUserDatas("SaveFile");
 		config.countSelectionMax = 1;
-		ImGuiFileDialog::Instance()->OpenDialog("ChooseFileDlgKey", "Choose a File", filters, config);
+		config.flags = ImGuiFileDialogFlags_Default;
+		ImGuiFileDialog::Instance()->OpenDialog("SaveConvarFileDlg", "Choose a File", filters, config);
 	}
 
-	// display
-	if (ImGuiFileDialog::Instance()->Display("ChooseFileDlgKey", ImGuiWindowFlags_NoCollapse))
-	{
-		// action if OK
-		if (ImGuiFileDialog::Instance()->IsOk())
-		{
-			std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
-			DumpToJSON(filePathName);
-		}
-
-		// close
-		ImGuiFileDialog::Instance()->Close();
-	}
-
-	if (ImGui::BeginTable("Convar List", 3, ImGuiTableFlags_Borders | ImGuiTableFlags_Resizable | ImGuiTableFlags_SizingFixedFit | ImGuiTableFlags_RowBg))
+	if (ImGui::BeginTable("Convar List", 4, ImGuiTableFlags_Borders | ImGuiTableFlags_Resizable | ImGuiTableFlags_SizingFixedFit | ImGuiTableFlags_RowBg))
 	{
 		ImGui::TableSetupColumn("Name");
 		ImGui::TableSetupColumn("Default Value");
+		ImGui::TableSetupColumn("Flags");
 		ImGui::TableSetupColumn("Description");
 		ImGui::TableHeadersRow();
 
@@ -299,12 +290,18 @@ void Draw()
 			if (!pCvar)
 				continue;
 
+			if (!m_nameFilter.PassFilter(pCvar->m_pszName))
+				continue;
+
 			ImGui::TableNextRow();
 			ImGui::TableNextColumn();
 			ImGui::Text("%s", pCvar->m_pszName);
 
 			ImGui::TableNextColumn();
-			ImGui::Text("%s", StringifyValue(pCvar));
+			ImGui::Text("%s", StringifyValue(pCvar).c_str());
+
+			ImGui::TableNextColumn();
+			ImGui::Text("%s", PrettifyFlags(static_cast<uint64_t>(pCvar->flags)).c_str());
 
 			ImGui::TableNextColumn();
 			ImGui::Text("%s", pCvar->m_pszHelpString);
