@@ -1,5 +1,6 @@
 add_rules("mode.debug", "mode.release")
 add_repositories("custom-repo repo")
+-- if we want docking branch, we need to edit imgui-file-dialog xmake config in custom repo to also use docking
 add_requires("imgui", {debug = is_mode("debug"), configs = {dx9 = true, win32 = true}})
 add_requires("nlohmann_json")
 add_requires("imgui-file-dialog", {debug = is_mode("debug")})
