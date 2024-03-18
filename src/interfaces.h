@@ -3,6 +3,7 @@
 class CSchemaSystem;
 class IGameEventManager2;
 class INetworkStringTableContainer;
+class IGameEventSystem;
 
 namespace Interfaces
 {
@@ -14,5 +15,6 @@ inline IGameEventManager2* gameevents = NULL;
 inline ICvar* icvar = NULL;
 inline CSchemaSystem* g_pSchemaSystem2 = NULL;
 inline INetworkStringTableContainer* networkStringTableContainerServer = NULL;
+inline IGameEventSystem* gameEventSystem = NULL;
 
 } // namespace Interfaces

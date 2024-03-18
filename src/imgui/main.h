@@ -10,6 +10,7 @@ struct WindowStates
 	bool m_bStringTables = false;
 	bool m_bDumper = false;
 	bool m_bDemoWindow = false;
+	bool m_bEventLogger = false;
 };
 
 class GUICtx

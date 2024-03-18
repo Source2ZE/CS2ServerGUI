@@ -1,6 +1,6 @@
 /**
  * =============================================================================
- * CleanerCS2
+ * CS2ServerGUI
  * Copyright (C) 2024 Poggu
  * =============================================================================
  *
@@ -23,6 +23,7 @@
 #include <ISmmPlugin.h>
 #include <igameevents.h>
 #include <sh_vector.h>
+#include "networksystem/inetworkserializer.h"
 
 class CS2ServerGUI : public ISmmPlugin, public IMetamodListener
 {
@@ -33,6 +34,8 @@ public:
 	bool Unpause(char *error, size_t maxlen);
 	void AllPluginsLoaded();
 public: //hooks
+	void Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int nClientCount, const uint64* clients,
+		INetworkSerializable* pEvent, const void* pData, unsigned long nSize, NetChannelBufType_t bufType);
 	void OnLevelInit( char const *pMapName,
 				 char const *pMapEntities,
 				 char const *pOldLevel,

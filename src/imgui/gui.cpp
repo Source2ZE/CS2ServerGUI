@@ -7,6 +7,7 @@
 #include "panels/dumper/dumper.h"
 #include "panels/dumper/convarlist/convarlist.h"
 #include "panels/dumper/commandlist/commandlist.h"
+#include "panels/eventlogger/eventlogger.h"
 #include <ImGuiFileDialog.h>
 
 namespace GUI
@@ -30,6 +31,9 @@ void DrawMainWindow()
 
 	if (g_GUICtx.m_WindowStates.m_bDumper)
 		Dumper::Draw(&g_GUICtx.m_WindowStates.m_bDumper);
+
+	if (g_GUICtx.m_WindowStates.m_bEventLogger)
+		EventLogger::Draw(&g_GUICtx.m_WindowStates.m_bEventLogger);
 
 	MenuBar::Draw();
 

@@ -32,6 +32,8 @@
 #include <entity2/entitysystem.h>
 #include "interfaces.h"
 #include "networkstringtabledefs.h"
+#include "igameeventsystem.h"
+#include "imgui/panels/eventlogger/eventlogger.h"
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -42,8 +44,10 @@
 #endif
 
 CS2ServerGUI g_CS2ServerGUI;
-
 std::thread g_thread;
+
+SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitScreenSlot, bool, int, const uint64*,
+	INetworkSerializable*, const void*, unsigned long, NetChannelBufType_t);
 
 CGameEntitySystem* GameEntitySystem()
 {
@@ -90,7 +94,10 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::g_pSchemaSystem2, CSchemaSystem, SCHEMASYSTEM_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceServiceServer, GAMERESOURCESERVICESERVER_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::networkStringTableContainerServer, INetworkStringTableContainer, SOURCE2ENGINETOSERVERSTRINGTABLE_INTERFACE_VERSION);
+	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::gameEventSystem, IGameEventSystem, GAMEEVENTSYSTEM_INTERFACE_VERSION);
 	g_SMAPI->AddListener( this, this );
+
+	SH_ADD_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
 
 	g_pCVar = Interfaces::icvar;
 	ConVar_Register( FCVAR_RELEASE | FCVAR_CLIENT_CAN_EXECUTE | FCVAR_GAMEDLL );
@@ -101,8 +108,26 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	return true;
 }
 
+void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int nClientCount, const uint64* clients,
+	INetworkSerializable* pEvent, const void* pData, unsigned long nSize, NetChannelBufType_t bufType)
+{
+	if (!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
+		return;
+
+	NetMessageInfo_t* info = pEvent->GetNetMessageInfo();
+	if (info)
+	{
+		CUtlString str;
+		info->m_pBinding->ToString(pData, str);
+
+		GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()));
+	}
+
+}
+
 bool CS2ServerGUI::Unload(char *error, size_t maxlen)
 {
+	SH_REMOVE_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
 	return true;
 }
 
