@@ -27,9 +27,20 @@ target("CS2ServerGUI")
         SDK_PATH.."/entity2/entityidentity.cpp",
         SDK_PATH.."/entity2/entitykeyvalues.cpp",
         SDK_PATH.."/tier1/keyvalues3.cpp",
+        "protobufs/generated/usermessages.pb.cc",
+        "protobufs/generated/network_connection.pb.cc",
+        "protobufs/generated/networkbasetypes.pb.cc",
+        "protobufs/generated/engine_gcmessages.pb.cc",
+        "protobufs/generated/steammessages.pb.cc",
+        "protobufs/generated/gcsdk_gcmessages.pb.cc",
+        "protobufs/generated/cstrike15_gcmessages.pb.cc",
+        "protobufs/generated/cstrike15_usermessages.pb.cc",
+        "protobufs/generated/usercmd.pb.cc",
+        "protobufs/generated/cs_usercmd.pb.cc"
     })
 
     add_links({
+        SDK_PATH.."/lib/public/win64/2015/libprotobuf.lib",
         SDK_PATH.."/lib/public/win64/tier0.lib",
         SDK_PATH.."/lib/public/win64/tier1.lib",
         SDK_PATH.."/lib/public/win64/interfaces.lib",

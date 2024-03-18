@@ -15,13 +15,17 @@ struct EventLog
 	std::string data;
 };
 
-std::map<size_t, EventLog> vecEventLogs;
-std::mutex eventLogLock;
-size_t globalId = 0;
-size_t selectedId = -1;
+static std::map<size_t, EventLog> vecEventLogs;
+static std::mutex eventLogLock;
+static size_t globalId = 0;
+static size_t selectedId = -1;
+static bool paused = false;
 
 void AddEventLog(std::string&& name, std::string&& data)
 {
+	if(paused)
+		return;
+
 	std::lock_guard<std::mutex> lock(eventLogLock);
 	vecEventLogs[globalId++] = { std::move(name), std::move(data) };
 
@@ -48,6 +52,9 @@ void Draw(bool* isOpen)
 		ClearEvents();
 
 	// TODO: add pause checkbox
+
+	ImGui::SameLine();
+	ImGui::Checkbox("Pause", &paused);
 
 	if (ImGui::BeginTable("Event Table", 1))
 	{

@@ -34,6 +34,10 @@
 #include "networkstringtabledefs.h"
 #include "igameeventsystem.h"
 #include "imgui/panels/eventlogger/eventlogger.h"
+#include "../protobufs/generated/netmessages.pb.h"
+#include "../protobufs/generated/usercmd.pb.h"
+#include "../protobufs/generated/cs_usercmd.pb.h"
+#include "networksystem/inetworkmessages.h"
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -45,6 +49,10 @@
 
 CS2ServerGUI g_CS2ServerGUI;
 std::thread g_thread;
+
+typedef bool (*FilterMessage_t)(void* player, INetworkSerializable* pEvent, void* pData, void* pNetChan);
+FilterMessage_t g_pFilterMessage = nullptr;
+funchook_t* g_pHook = nullptr;
 
 SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitScreenSlot, bool, int, const uint64*,
 	INetworkSerializable*, const void*, unsigned long, NetChannelBufType_t);
@@ -80,6 +88,99 @@ CON_COMMAND_F(gui, "Opens server GUI", FCVAR_LINKED_CONCOMMAND | FCVAR_SPONLY)
 	}
 }
 
+int aa = 0;
+
+template <typename T>
+bool ReadPBFromBuffer(bf_read& buffer, T& pb)
+{
+	auto size = buffer.ReadVarInt32();
+
+	if (size < 0 || size > 262140)
+	{
+		return false;
+	}
+
+	if (size > buffer.GetNumBytesLeft())
+	{
+		return false;
+	}
+
+	if ((buffer.GetNumBitsRead() % 8) == 0)
+	{
+		bool parseResult = pb.ParseFromArray(buffer.GetBasePointer() + buffer.GetNumBytesRead(), size);
+		buffer.SeekRelative(size * 8);
+
+		return true;
+	}
+
+	void* parseBuffer = stackalloc(size);
+	if (!buffer.ReadBytes(parseBuffer, size))
+	{
+		return false;
+	}
+
+	if (!pb.ParseFromArray(parseBuffer, size))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool Detour_FilterMessage(void* player, INetworkSerializable* pEvent, void* pData, void* pNetChan)
+{
+	NetMessageInfo_t* info = pEvent->GetNetMessageInfo();
+	if (info)
+	{
+		if (info->m_MessageId == 21)
+		{
+			CCLCMsg_Move* msg = (CCLCMsg_Move*)pData;
+
+			if (msg->has_data() && msg->has_num_commands() && msg->num_commands() >= 1)
+			{
+				bf_read buffer(msg->data().data(), msg->data().size());
+
+				for (int i = 0; i < msg->num_commands(); i++)
+				{
+					CSGOUserCmdPB userCmd;
+					if (ReadPBFromBuffer(buffer, userCmd))
+						GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()));
+				}
+			}
+		}
+		else
+		{
+			CUtlString str;
+			info->m_pBinding->ToString(pData, str);
+
+			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()));
+		}
+	}
+
+	return g_pFilterMessage(player, pEvent, pData, pNetChan);
+}
+
+void SetupHook()
+{
+	auto engineModule = new CModule(ROOTBIN, "engine2");
+
+	int err;
+	const byte sig[] = "\x40\x53\x48\x83\xEC\x30\x48\x3B\x15\x1B\xAB\x51\x00";
+
+	g_pFilterMessage = (FilterMessage_t)engineModule->FindSignature((byte*)sig, sizeof(sig) - 1, err);
+
+	if (err)
+	{
+		META_CONPRINTF("[CS2ServerGUI] Failed to find signature: %i\n", err);
+		return;
+	}
+
+	auto g_pHook = funchook_create();
+	funchook_prepare(g_pHook, (void**)&g_pFilterMessage, (void*)Detour_FilterMessage);
+	funchook_install(g_pHook, 0);
+
+	return;
+}
 
 PLUGIN_EXPOSE(CS2ServerGUI, g_CS2ServerGUI);
 bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, bool late)
@@ -95,9 +196,12 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceServiceServer, GAMERESOURCESERVICESERVER_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::networkStringTableContainerServer, INetworkStringTableContainer, SOURCE2ENGINETOSERVERSTRINGTABLE_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::gameEventSystem, IGameEventSystem, GAMEEVENTSYSTEM_INTERFACE_VERSION);
+	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::networkMessages, INetworkMessages, NETWORKMESSAGES_INTERFACE_VERSION);
 	g_SMAPI->AddListener( this, this );
 
 	SH_ADD_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
+
+	SetupHook();
 
 	g_pCVar = Interfaces::icvar;
 	ConVar_Register( FCVAR_RELEASE | FCVAR_CLIENT_CAN_EXECUTE | FCVAR_GAMEDLL );
