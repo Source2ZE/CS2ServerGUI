@@ -60,11 +60,9 @@ void Draw(bool* isOpen)
 		}
 
 		ImGui::EndTable();
-
 	}
 
 	ImGui::EndChild();
-
 
 	if (g_pSelectedEntity.IsValid())
 	{
@@ -79,19 +77,21 @@ void Draw(bool* isOpen)
 			ImGui::Text("Schema: %s", pEntity->Schema_DynamicBinding().Get()->m_pszName);
 			g_menuContext.m_propertyFilter.Draw("Search");
 
-			ImGui::BeginTable("Schema", 3, ImGuiTableFlags_Borders);
+			if (ImGui::BeginTable("Schema", 3, ImGuiTableFlags_Borders))
+			{
 
-			ImGui::TableSetupColumn("Name");
-			ImGui::TableSetupColumn("Type");
-			ImGui::TableSetupColumn("Value");
-			ImGui::TableHeadersRow();
+				ImGui::TableSetupColumn("Name");
+				ImGui::TableSetupColumn("Type");
+				ImGui::TableSetupColumn("Value");
+				ImGui::TableHeadersRow();
 
-			auto pSchema = pEntity->Schema_DynamicBinding().Get();
-			std::unordered_map<std::string, std::string> overrideMap;
+				auto pSchema = pEntity->Schema_DynamicBinding().Get();
+				std::unordered_map<std::string, std::string> overrideMap;
 
-			DumpEntitySchema(pEntity, pSchema, overrideMap, true);
+				DumpEntitySchema(pEntity, pSchema, overrideMap, true);
 
-			ImGui::EndTable();
+				ImGui::EndTable();
+			}
 
 		}
 		ImGui::EndChild();

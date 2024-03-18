@@ -132,7 +132,7 @@ bool Detour_FilterMessage(void* player, INetworkSerializable* pEvent, void* pDat
 	NetMessageInfo_t* info = pEvent->GetNetMessageInfo();
 	if (info)
 	{
-		if (info->m_MessageId == 21)
+		if (info->m_MessageId == CLC_Messages::clc_Move)
 		{
 			CCLCMsg_Move* msg = (CCLCMsg_Move*)pData;
 
