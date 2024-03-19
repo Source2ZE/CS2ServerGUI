@@ -13,6 +13,7 @@ struct EventLog
 {
 	std::string name;
 	std::string data;
+	bool ingress;
 };
 
 static std::map<size_t, EventLog> vecEventLogs;
@@ -21,13 +22,13 @@ static size_t globalId = 0;
 static size_t selectedId = -1;
 static bool paused = false;
 
-void AddEventLog(std::string&& name, std::string&& data)
+void AddEventLog(std::string&& name, std::string&& data, bool ingress)
 {
 	if(paused)
 		return;
 
 	std::lock_guard<std::mutex> lock(eventLogLock);
-	vecEventLogs[globalId++] = { std::move(name), std::move(data) };
+	vecEventLogs[globalId++] = { std::move(name), std::move(data), ingress };
 
 	if(vecEventLogs.size() > 500)
 		vecEventLogs.erase(vecEventLogs.begin());
@@ -37,6 +38,39 @@ void ClearEvents()
 {
 	std::lock_guard<std::mutex> lock(eventLogLock);
 	vecEventLogs.clear();
+}
+
+void DrawTable(bool ingress)
+{
+	if (ImGui::BeginTable("Event Table", 1))
+	{
+		ImGui::TableSetupColumn("Name");
+		ImGui::TableHeadersRow();
+
+		size_t i = vecEventLogs.size() - 1;
+		{
+			std::lock_guard<std::mutex> lock(eventLogLock);
+
+			std::map<size_t, EventLog>::reverse_iterator rit;
+			for (rit = vecEventLogs.rbegin(); rit != vecEventLogs.rend(); rit++) {
+				const auto& event = rit->second;
+				if (event.ingress != ingress)
+					continue;
+
+				ImGui::TableNextRow();
+				ImGui::TableNextColumn();
+
+				ImGui::PushID(rit->first);
+				if (ImGui::Selectable(event.name.c_str(), rit->first == selectedId, ImGuiSelectableFlags_SpanAllColumns))
+				{
+					selectedId = rit->first;
+				}
+				ImGui::PopID();
+			}
+		}
+
+		ImGui::EndTable();
+	}
 }
 
 void Draw(bool* isOpen)
@@ -51,38 +85,25 @@ void Draw(bool* isOpen)
 	if (ImGui::Button("Clear"))
 		ClearEvents();
 
-	// TODO: add pause checkbox
-
 	ImGui::SameLine();
 	ImGui::Checkbox("Pause", &paused);
 
-	if (ImGui::BeginTable("Event Table", 1))
+	if (ImGui::BeginTabBar("Event Logger Tab"))
 	{
-		ImGui::TableSetupColumn("Name");
-		ImGui::TableHeadersRow();
-
-		size_t i = vecEventLogs.size()-1;
+		if (ImGui::BeginTabItem("Ingress"))
 		{
-			std::lock_guard<std::mutex> lock(eventLogLock);
-
-			std::map<size_t, EventLog>::reverse_iterator rit;
-			for (rit = vecEventLogs.rbegin(); rit != vecEventLogs.rend(); rit++) {
-				const auto& event = rit->second;
-				ImGui::TableNextRow();
-				ImGui::TableNextColumn();
-
-				ImGui::PushID(rit->first);
-				if (ImGui::Selectable(event.name.c_str(), rit->first == selectedId, ImGuiSelectableFlags_SpanAllColumns))
-				{
-					selectedId = rit->first;
-				}
-				ImGui::PopID();
-			}
+			DrawTable(true);
+			ImGui::EndTabItem();
 		}
 
-		ImGui::EndTable();
-
+		if (ImGui::BeginTabItem("Egress"))
+		{
+			DrawTable(false);
+			ImGui::EndTabItem();
+		}
+		ImGui::EndTabBar();
 	}
+
 
 	ImGui::EndChild();
 

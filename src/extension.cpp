@@ -144,7 +144,7 @@ bool Detour_FilterMessage(void* player, INetworkSerializable* pEvent, void* pDat
 				{
 					CSGOUserCmdPB userCmd;
 					if (ReadPBFromBuffer(buffer, userCmd))
-						GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()));
+						GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true);
 				}
 			}
 		}
@@ -153,7 +153,7 @@ bool Detour_FilterMessage(void* player, INetworkSerializable* pEvent, void* pDat
 			CUtlString str;
 			info->m_pBinding->ToString(pData, str);
 
-			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()));
+			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), true);
 		}
 	}
 
@@ -224,7 +224,7 @@ void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int n
 		CUtlString str;
 		info->m_pBinding->ToString(pData, str);
 
-		GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()));
+		GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), false);
 	}
 
 }
