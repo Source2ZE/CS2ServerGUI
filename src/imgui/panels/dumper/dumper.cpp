@@ -14,8 +14,6 @@ namespace GUI::Dumper
 
 void Draw(bool* isOpen)
 {
-	static ImGuiTextFilter m_nameFilter;
-
 	ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
 	ImGui::Begin("Dumper", isOpen);
 

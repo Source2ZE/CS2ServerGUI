@@ -42,6 +42,10 @@ void ClearEvents()
 
 void DrawTable(bool ingress)
 {
+	static ImGuiTextFilter logFilter;
+
+	logFilter.Draw("Search");
+
 	if (ImGui::BeginTable("Event Table", 1))
 	{
 		ImGui::TableSetupColumn("Name");
@@ -52,9 +56,13 @@ void DrawTable(bool ingress)
 			std::lock_guard<std::mutex> lock(eventLogLock);
 
 			std::map<size_t, EventLog>::reverse_iterator rit;
-			for (rit = vecEventLogs.rbegin(); rit != vecEventLogs.rend(); rit++) {
+			for (rit = vecEventLogs.rbegin(); rit != vecEventLogs.rend(); rit++)
+			{
 				const auto& event = rit->second;
 				if (event.ingress != ingress)
+					continue;
+
+				if (!logFilter.PassFilter(event.name.c_str()) && !logFilter.PassFilter(event.data.c_str()))
 					continue;
 
 				ImGui::TableNextRow();
