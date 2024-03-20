@@ -38,6 +38,7 @@
 #include "../protobufs/generated/usercmd.pb.h"
 #include "../protobufs/generated/cs_usercmd.pb.h"
 #include "networksystem/inetworkmessages.h"
+#include "cs2_sdk/serversideclient.h"
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -50,7 +51,7 @@
 CS2ServerGUI g_CS2ServerGUI;
 std::thread g_thread;
 
-typedef bool (*FilterMessage_t)(void* player, INetworkSerializable* pEvent, void* pData, void* pNetChan);
+typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilter* player, INetworkSerializable* pEvent, void* pData, void* pNetChan);
 FilterMessage_t g_pFilterMessage = nullptr;
 funchook_t* g_pHook = nullptr;
 
@@ -127,8 +128,11 @@ bool ReadPBFromBuffer(bf_read& buffer, T& pb)
 	return true;
 }
 
-bool Detour_FilterMessage(void* player, INetworkSerializable* pEvent, void* pData, void* pNetChan)
+bool Detour_FilterMessage(INetworkMessageProcessingPreFilter* player, INetworkSerializable* pEvent, void* pData, void* pNetChan)
 {
+	if(!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
+		return g_pFilterMessage(player, pEvent, pData, pNetChan);
+
 	NetMessageInfo_t* info = pEvent->GetNetMessageInfo();
 	if (info)
 	{
@@ -144,7 +148,7 @@ bool Detour_FilterMessage(void* player, INetworkSerializable* pEvent, void* pDat
 				{
 					CSGOUserCmdPB userCmd;
 					if (ReadPBFromBuffer(buffer, userCmd))
-						GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true);
+						GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true, std::string(player->GetClientName()));
 				}
 			}
 		}
@@ -153,7 +157,7 @@ bool Detour_FilterMessage(void* player, INetworkSerializable* pEvent, void* pDat
 			CUtlString str;
 			info->m_pBinding->ToString(pData, str);
 
-			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), true);
+			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), true, std::string(player->GetClientName()));
 		}
 	}
 

@@ -13,6 +13,7 @@ struct EventLog
 {
 	std::string name;
 	std::string data;
+	std::string senderName;
 	bool ingress;
 };
 
@@ -22,13 +23,13 @@ static size_t globalId = 0;
 static size_t selectedId = -1;
 static bool paused = false;
 
-void AddEventLog(std::string&& name, std::string&& data, bool ingress)
+void AddEventLog(std::string&& name, std::string&& data, bool ingress, std::string&& senderName)
 {
 	if(paused)
 		return;
 
 	std::lock_guard<std::mutex> lock(eventLogLock);
-	vecEventLogs[globalId++] = { std::move(name), std::move(data), ingress };
+	vecEventLogs[globalId++] = { std::move(name), std::move(data),senderName, ingress };
 
 	if(vecEventLogs.size() > 500)
 		vecEventLogs.erase(vecEventLogs.begin());
@@ -46,9 +47,11 @@ void DrawTable(bool ingress)
 
 	logFilter.Draw("Search");
 
-	if (ImGui::BeginTable("Event Table", 1))
+	if (ImGui::BeginTable("Event Table", ingress ? 2 : 1))
 	{
 		ImGui::TableSetupColumn("Name");
+		if (ingress)
+			ImGui::TableSetupColumn("Sender");
 		ImGui::TableHeadersRow();
 
 		size_t i = vecEventLogs.size() - 1;
@@ -74,6 +77,12 @@ void DrawTable(bool ingress)
 					selectedId = rit->first;
 				}
 				ImGui::PopID();
+
+				if (ingress)
+				{
+					ImGui::TableNextColumn();
+					ImGui::Text(event.senderName.c_str());
+				}
 			}
 		}
 
