@@ -24,6 +24,7 @@
 #include <igameevents.h>
 #include <sh_vector.h>
 #include "networksystem/inetworkserializer.h"
+#include "config/config.h"
 
 class CS2ServerGUI : public ISmmPlugin, public IMetamodListener
 {
@@ -52,6 +53,8 @@ public:
 	const char *GetVersion();
 	const char *GetDate();
 	const char *GetLogTag();
+public:
+	PluginConfig m_config;
 };
 
 extern CS2ServerGUI g_CS2ServerGUI;

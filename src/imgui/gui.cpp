@@ -1,4 +1,4 @@
-#include <imgui.h>
+﻿#include <imgui.h>
 #include "main.h"
 #include "panels/entitybrowser/entitybrowser.h"
 #include "panels/menubar/menubar.h"
@@ -9,11 +9,13 @@
 #include "panels/dumper/commandlist/commandlist.h"
 #include "panels/eventlogger/eventlogger.h"
 #include <ImGuiFileDialog.h>
+#include "extension.h"
 
 namespace GUI
 {
 
 void DrawFileDialogs();
+void DrawWelcomeModal();
 
 void DrawMainWindow()
 {
@@ -38,6 +40,7 @@ void DrawMainWindow()
 	MenuBar::Draw();
 
 	DrawFileDialogs();
+	DrawWelcomeModal();
 }
 
 void DrawFileDialogs()
@@ -64,6 +67,31 @@ void DrawFileDialogs()
 		}
 
 		ImGuiFileDialog::Instance()->Close();
+	}
+}
+
+void DrawWelcomeModal()
+{
+	if (!g_CS2ServerGUI.m_config.m_bWelcomeSeen)
+	{
+		g_CS2ServerGUI.m_config.m_bWelcomeSeen = true;
+		g_CS2ServerGUI.m_config.SaveConfig();
+
+		ImGui::OpenPopup("Welcome");
+	}
+
+	ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+	ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+
+	if (ImGui::BeginPopupModal("Welcome", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+	{
+		ImGui::Text("CS2ServerGUI is a debugging tool designed for development purposes.");
+		ImGui::Text("It is not intended for use in production environments.");
+		ImGui::Separator();
+		ImGui::Spacing();
+
+		if (ImGui::Button("I understand")) { ImGui::CloseCurrentPopup(); }
+		ImGui::EndPopup();
 	}
 }
 

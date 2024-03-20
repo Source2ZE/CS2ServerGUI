@@ -190,6 +190,8 @@ PLUGIN_EXPOSE(CS2ServerGUI, g_CS2ServerGUI);
 bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, bool late)
 {
 	PLUGIN_SAVEVARS();
+	m_config.SetPath((std::filesystem::path(Plat_GetGameDirectory()) / "csgo/addons/CS2ServerGUI/config.json"));
+	m_config.LoadConfig();
 
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::engine, IVEngineServer, INTERFACEVERSION_VENGINESERVER);
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::icvar, ICvar, CVAR_INTERFACE_VERSION);
