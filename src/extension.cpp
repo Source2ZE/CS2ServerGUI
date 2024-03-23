@@ -169,7 +169,7 @@ void SetupHook()
 	auto engineModule = new CModule(ROOTBIN, "engine2");
 
 	int err;
-	const byte sig[] = "\x40\x53\x48\x83\xEC\x30\x48\x3B\x15\x1B\xAB\x51\x00";
+	const byte sig[] = "\x40\x53\x48\x83\xEC\x30\x48\x3B\x15\x2A\x2A\x2A\x2A\x48\x8B\xD9";
 
 	g_pFilterMessage = (FilterMessage_t)engineModule->FindSignature((byte*)sig, sizeof(sig) - 1, err);
 
