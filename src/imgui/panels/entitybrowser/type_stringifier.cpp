@@ -143,6 +143,12 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "CNetworkedQuantizedFloat"))
+	{
+		ImGui::Text("%f", *static_cast<float*>(value));
+		return;
+	}
+
 	ImGui::Text("? (Atomic)");
 }
 
