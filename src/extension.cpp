@@ -169,6 +169,7 @@ void SetupHook()
 	auto engineModule = new CModule(ROOTBIN, "engine2");
 
 	int err;
+	// Client %d(%s) tried to send a RebroadcastSourceId msg.\n
 	const byte sig[] = "\x40\x53\x48\x83\xEC\x30\x48\x3B\x15\x2A\x2A\x2A\x2A\x48\x8B\xD9";
 
 	g_pFilterMessage = (FilterMessage_t)engineModule->FindSignature((byte*)sig, sizeof(sig) - 1, err);
@@ -277,7 +278,7 @@ const char *CS2ServerGUI::GetLicense()
 
 const char *CS2ServerGUI::GetVersion()
 {
-	return "1.0.0";
+	return "1.0.1";
 }
 
 const char *CS2ServerGUI::GetDate()
