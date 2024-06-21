@@ -73,7 +73,7 @@ void Draw(bool* isOpen)
 
 		for (int i = 1; i <= gpGlobals->maxClients; i++)
 		{
-			auto controller = static_cast<CBasePlayerController*>(GameEntitySystem()->GetBaseEntity(CEntityIndex(i)));
+			auto controller = static_cast<CBasePlayerController*>(GameEntitySystem()->GetEntityInstance(CEntityIndex(i)));
 
 			if (!controller)
 				continue;

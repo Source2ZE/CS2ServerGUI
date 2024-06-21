@@ -23,10 +23,9 @@
 #include "ehandle.h"
 
 
-class Z_CBaseEntity : public CBaseEntity
+class Z_CBaseEntity : public CEntityInstance
 {
 public:
-	// This is a unique case as CBaseEntity is already defined in the sdk
 	typedef Z_CBaseEntity ThisClass;
 	static constexpr const char *ThisClassName = "CBaseEntity";
 	static constexpr bool IsStruct = false;

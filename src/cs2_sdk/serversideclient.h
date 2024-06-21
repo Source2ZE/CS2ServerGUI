@@ -5,7 +5,7 @@
 #include "utlstring.h"
 #include "inetchannel.h"
 
-class INetworkMessageProcessingPreFilter
+class INetworkMessageProcessingPreFilterCustom
 {
 public:
 	virtual void FilterMessage() = 0;

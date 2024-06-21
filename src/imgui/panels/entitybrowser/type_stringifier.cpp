@@ -35,29 +35,29 @@ std::string DumpBuiltinValue(void* value, CSchemaType_Builtin* pType)
 {
 	switch (pType->m_eBuiltinType)
 	{
-	case SCHEMA_BUILTIN_BOOL:
+	case SCHEMA_BUILTIN_TYPE_BOOL:
 		return *(bool*)value ? "true" : "false";
-	case SCHEMA_BUILTIN_CHAR:
+	case SCHEMA_BUILTIN_TYPE_CHAR:
 		return std::to_string(*(char*)value);
-	case SCHEMA_BUILTIN_INT8:
+	case SCHEMA_BUILTIN_TYPE_INT8:
 		return std::to_string(*(int8*)value);
-	case SCHEMA_BUILTIN_UINT8:
+	case SCHEMA_BUILTIN_TYPE_UINT8:
 		return std::to_string(*(uint8*)value);
-	case SCHEMA_BUILTIN_INT16:
+	case SCHEMA_BUILTIN_TYPE_INT16:
 		return std::to_string(*(int16*)value);
-	case SCHEMA_BUILTIN_UINT16:
+	case SCHEMA_BUILTIN_TYPE_UINT16:
 		return std::to_string(*(uint16*)value);
-	case SCHEMA_BUILTIN_INT32:
+	case SCHEMA_BUILTIN_TYPE_INT32:
 		return std::to_string(*(int32*)value);
-	case SCHEMA_BUILTIN_UINT32:
+	case SCHEMA_BUILTIN_TYPE_UINT32:
 		return std::to_string(*(uint32*)value);
-	case SCHEMA_BUILTIN_INT64:
+	case SCHEMA_BUILTIN_TYPE_INT64:
 		return std::to_string(*(int64*)value);
-	case SCHEMA_BUILTIN_UINT64:
+	case SCHEMA_BUILTIN_TYPE_UINT64:
 		return std::to_string(*(uint64*)value);
-	case SCHEMA_BUILTIN_FLOAT32:
+	case SCHEMA_BUILTIN_TYPE_FLOAT32:
 		return std::to_string(*(float*)value);
-	case SCHEMA_BUILTIN_FLOAT64:
+	case SCHEMA_BUILTIN_TYPE_FLOAT64:
 		return std::to_string(*(double*)value);
 	default:
 		return "? (Builtin)";
@@ -69,28 +69,28 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 	if (!pType->m_pAtomicInfo)
 		return ImGui::Text("? (Atomic null info)");
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "Vector"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "Vector"))
 	{
 		auto& vector = *static_cast<Vector*>(value);
 		ImGui::Text("%f %f %f", vector.x, vector.y, vector.z);
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "Vector2D"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "Vector2D"))
 	{
 		auto& vector = *static_cast<Vector2D*>(value);
 		ImGui::Text("%f %f", vector.x, vector.y);
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "QAngle"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "QAngle"))
 	{
 		auto& qangle = *static_cast<QAngle*>(value);
 		ImGui::Text("%f %f %f", qangle.x, qangle.y, qangle.z);
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "Color"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "Color"))
 	{
 		auto& color = *static_cast<Color*>(value);
 		auto imColor = ImVec4(color.r() / 255.0f, color.g() / 255.0f, color.b() / 255.0f, color.a() / 255.0f);
@@ -98,7 +98,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "CUtlSymbolLarge"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CUtlSymbolLarge"))
 	{
 		auto& symbolLarge = *static_cast<CUtlSymbolLarge*>(value);
 		ImGui::Text("\"%s\"", symbolLarge.String());
@@ -106,7 +106,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "CUtlString"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CUtlString"))
 	{
 		auto& string = *static_cast<CUtlString*>(value);
 		ImGui::Text("\"%s\"", string.Get());
@@ -114,7 +114,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "CEntityIndex"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CEntityIndex"))
 	{
 		auto& index = *static_cast<CEntityIndex*>(value);
 		auto entity = GameEntitySystem()->GetEntityInstance(index);
@@ -129,7 +129,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "CEntityHandle"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CEntityHandle"))
 	{
 		auto& handle = *static_cast<CEntityHandle*>(value);
 		if (auto entity = handle.Get())
@@ -143,7 +143,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "CNetworkedQuantizedFloat"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CNetworkedQuantizedFloat"))
 	{
 		ImGui::Text("%f", *static_cast<float*>(value));
 		return;
@@ -157,7 +157,7 @@ void DumpAtomicTValue(void* value, CSchemaType_Atomic_T* pType, const char* fiel
 	if (!pType->m_pAtomicInfo)
 		return ImGui::Text("? (AtomicT null info)");
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName1, "CHandle"))
+	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CHandle"))
 	{
 		auto& handle = *static_cast<CEntityHandle*>(value);
 		if (auto entity = handle.Get())
@@ -183,14 +183,14 @@ void DumpStringValue(void* ptr, CSchemaType* pType, bool* isNested, const char* 
 	{
 		auto fixedArrayType = static_cast<CSchemaType_FixedArray*>(pType);
 		if (fixedArrayType->m_pElementType->m_eTypeCategory == SCHEMA_TYPE_BUILTIN)
-			if (static_cast<CSchemaType_Builtin*>(fixedArrayType->m_pElementType)->m_eBuiltinType == SCHEMA_BUILTIN_CHAR)
+			if (static_cast<CSchemaType_Builtin*>(fixedArrayType->m_pElementType)->m_eBuiltinType == SCHEMA_BUILTIN_TYPE_CHAR)
 				return ImGui::Text("\"%s\"", (char*)ptr);
 
 		*isNested = true;
 	}
 	else if (pType->m_eTypeCategory == SCHEMA_TYPE_ATOMIC)
 	{
-		if (pType->m_eAtomicCategory == SCHEMA_ATOMIC_BASIC)
+		if (pType->m_eAtomicCategory == SCHEMA_ATOMIC_PLAIN)
 			return DumpAtomicBasicValue(ptr, static_cast<CSchemaType_Atomic*>(pType), fieldName);
 		else if (pType->m_eAtomicCategory == SCHEMA_ATOMIC_T)
 		{

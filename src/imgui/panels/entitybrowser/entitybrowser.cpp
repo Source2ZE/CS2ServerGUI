@@ -157,7 +157,7 @@ void DumpEntitySchema(void* pSchemaField, CSchemaClassInfo* pSchema, std::unorde
 
 void DumpFieldValue(const char* name, void* pSchemaField, CSchemaType* pType, bool wasPtr, std::unordered_map<std::string, std::string>& overrideMap)
 {
-	if (pType->m_eTypeCategory == SCHEMA_TYPE_PTR)
+	if (pType->m_eTypeCategory == SCHEMA_TYPE_POINTER)
 	{
 		auto ptrType = static_cast<CSchemaType_Ptr*>(pType);
 		DumpFieldValue(name, *static_cast<void**>(pSchemaField), ptrType->m_pObjectType, true, overrideMap);
@@ -205,12 +205,12 @@ void DumpFieldValue(const char* name, void* pSchemaField, CSchemaType* pType, bo
 		else if (pType->m_eTypeCategory == SCHEMA_TYPE_ATOMIC && pType->m_eAtomicCategory == SCHEMA_ATOMIC_COLLECTION_OF_T)
 		{
 			auto atomicType = static_cast<CSchemaType_Atomic_CollectionOfT*>(pType);
-			size_t count = (int)atomicType->m_pfnManipulator(SCHEMA_ATOMIC_MANIPULATOR_ACTION_GET_COUNT, pSchemaField, 0, 0);
+			size_t count = (int)atomicType->m_pfnManipulator(SCHEMA_COLLECTION_MANIPULATOR_ACTION_GET_COUNT, pSchemaField, 0, 0);
 
 			for (int i = 0; i < count; i++)
 			{
 				auto fieldName = std::format("[{}]", i);
-				DumpFieldValue(fieldName.c_str(), (void*)atomicType->m_pfnManipulator(SCHEMA_ATOMIC_MANIPULATOR_ACTION_GET_ELEMENT_CONST, pSchemaField, (void*)i, 0), atomicType->m_pTemplateType, false, overrideMap);
+				DumpFieldValue(fieldName.c_str(), (void*)atomicType->m_pfnManipulator(SCHEMA_COLLECTION_MANIPULATOR_ACTION_GET_ELEMENT_CONST, pSchemaField, (void*)i, 0), atomicType->m_pTemplateType, false, overrideMap);
 			}
 			ImGui::TreePop();
 		}

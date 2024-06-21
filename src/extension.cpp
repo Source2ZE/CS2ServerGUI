@@ -51,12 +51,12 @@
 CS2ServerGUI g_CS2ServerGUI;
 std::thread g_thread;
 
-typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilter* player, INetworkSerializable* pEvent, void* pData, void* pNetChan);
+typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, void* pData, void* pNetChan);
 FilterMessage_t g_pFilterMessage = nullptr;
 funchook_t* g_pHook = nullptr;
 
 SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitScreenSlot, bool, int, const uint64*,
-	INetworkSerializable*, const void*, unsigned long, NetChannelBufType_t);
+	INetworkMessageInternal*, const CNetMessage*, unsigned long, NetChannelBufType_t);
 
 CGameEntitySystem* GameEntitySystem()
 {
@@ -128,7 +128,7 @@ bool ReadPBFromBuffer(bf_read& buffer, T& pb)
 	return true;
 }
 
-bool Detour_FilterMessage(INetworkMessageProcessingPreFilter* player, INetworkSerializable* pEvent, void* pData, void* pNetChan)
+bool Detour_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, void* pData, void* pNetChan)
 {
 	if(!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
 		return g_pFilterMessage(player, pEvent, pData, pNetChan);
@@ -200,7 +200,7 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	GET_V_IFACE_ANY(GetServerFactory, Interfaces::gameclients, IServerGameClients, INTERFACEVERSION_SERVERGAMECLIENTS);
 	GET_V_IFACE_ANY(GetEngineFactory, g_pNetworkServerService, INetworkServerService, NETWORKSERVERSERVICE_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::g_pSchemaSystem2, CSchemaSystem, SCHEMASYSTEM_INTERFACE_VERSION);
-	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceServiceServer, GAMERESOURCESERVICESERVER_INTERFACE_VERSION);
+	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceService, GAMERESOURCESERVICESERVER_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::networkStringTableContainerServer, INetworkStringTableContainer, SOURCE2ENGINETOSERVERSTRINGTABLE_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::gameEventSystem, IGameEventSystem, GAMEEVENTSYSTEM_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::networkMessages, INetworkMessages, NETWORKMESSAGES_INTERFACE_VERSION);
@@ -220,7 +220,7 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 }
 
 void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int nClientCount, const uint64* clients,
-	INetworkSerializable* pEvent, const void* pData, unsigned long nSize, NetChannelBufType_t bufType)
+	INetworkMessageInternal* pEvent, const CNetMessage* pData, unsigned long nSize, NetChannelBufType_t bufType)
 {
 	if (!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
 		return;

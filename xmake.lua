@@ -8,8 +8,8 @@ add_requires("imgui-file-dialog", {debug = is_mode("debug")})
 
 includes("@builtin/xpack")
 
---local SDK_PATH = os.getenv("HL2SDKCS2")
-local SDK_PATH = "G:/hl2sdk-experimental/hl2sdk"
+local SDK_PATH = os.getenv("HL2SDKCS2")
+--local SDK_PATH = "G:/hl2sdk-experimental/hl2sdk"
 local MM_PATH = os.getenv("MMSOURCE112")
 
 target("CS2ServerGUI")

@@ -50,7 +50,7 @@ void AddEventLog(std::string&& name, std::string&& data, bool ingress, std::stri
 	std::lock_guard<std::mutex> lock(eventLogLock);
 	vecEventLogs[globalId++] = { std::move(name), std::move(data),senderName, ingress };
 
-	if(vecEventLogs.size() > 500)
+	if(vecEventLogs.size() > 5000)
 		vecEventLogs.erase(vecEventLogs.begin());
 }
 
