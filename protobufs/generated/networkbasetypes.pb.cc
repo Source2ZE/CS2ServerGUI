@@ -204,20 +204,20 @@ struct CNETMsg_SplitScreenUserDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CNETMsg_SplitScreenUserDefaultTypeInternal _CNETMsg_SplitScreenUser_default_instance_;
-PROTOBUF_CONSTEXPR CNETMsg_Disconnect::CNETMsg_Disconnect(
+PROTOBUF_CONSTEXPR CNETMsg_Disconnect_Legacy::CNETMsg_Disconnect_Legacy(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.reason_)*/0} {}
-struct CNETMsg_DisconnectDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CNETMsg_DisconnectDefaultTypeInternal()
+struct CNETMsg_Disconnect_LegacyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CNETMsg_Disconnect_LegacyDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CNETMsg_DisconnectDefaultTypeInternal() {}
+  ~CNETMsg_Disconnect_LegacyDefaultTypeInternal() {}
   union {
-    CNETMsg_Disconnect _instance;
+    CNETMsg_Disconnect_Legacy _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CNETMsg_DisconnectDefaultTypeInternal _CNETMsg_Disconnect_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CNETMsg_Disconnect_LegacyDefaultTypeInternal _CNETMsg_Disconnect_Legacy_default_instance_;
 PROTOBUF_CONSTEXPR CNETMsg_Tick::CNETMsg_Tick(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -641,13 +641,13 @@ const uint32_t TableStruct_networkbasetypes_2eproto::offsets[] PROTOBUF_SECTION_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::CNETMsg_SplitScreenUser, _impl_.slot_),
   0,
-  PROTOBUF_FIELD_OFFSET(::CNETMsg_Disconnect, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CNETMsg_Disconnect, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::CNETMsg_Disconnect_Legacy, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CNETMsg_Disconnect_Legacy, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CNETMsg_Disconnect, _impl_.reason_),
+  PROTOBUF_FIELD_OFFSET(::CNETMsg_Disconnect_Legacy, _impl_.reason_),
   0,
   PROTOBUF_FIELD_OFFSET(::CNETMsg_Tick, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CNETMsg_Tick, _internal_metadata_),
@@ -934,7 +934,7 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 112, -1, -1, sizeof(::CMsg_CVars)},
   { 119, -1, -1, sizeof(::CNETMsg_NOP)},
   { 125, 132, -1, sizeof(::CNETMsg_SplitScreenUser)},
-  { 133, 140, -1, sizeof(::CNETMsg_Disconnect)},
+  { 133, 140, -1, sizeof(::CNETMsg_Disconnect_Legacy)},
   { 141, 158, -1, sizeof(::CNETMsg_Tick)},
   { 169, 177, -1, sizeof(::CNETMsg_StringCmd)},
   { 179, 186, -1, sizeof(::CNETMsg_SetConVar)},
@@ -965,7 +965,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CMsg_CVars_default_instance_._instance,
   &::_CNETMsg_NOP_default_instance_._instance,
   &::_CNETMsg_SplitScreenUser_default_instance_._instance,
-  &::_CNETMsg_Disconnect_default_instance_._instance,
+  &::_CNETMsg_Disconnect_Legacy_default_instance_._instance,
   &::_CNETMsg_Tick_default_instance_._instance,
   &::_CNETMsg_StringCmd_default_instance_._instance,
   &::_CNETMsg_SetConVar_default_instance_._instance,
@@ -1001,104 +1001,105 @@ const char descriptor_table_protodef_networkbasetypes_2eproto[] PROTOBUF_SECTION
   " \001(\r:\01016777215\"R\n\nCMsg_CVars\022\037\n\005cvars\030\001 "
   "\003(\0132\020.CMsg_CVars.CVar\032#\n\004CVar\022\014\n\004name\030\001 "
   "\001(\t\022\r\n\005value\030\002 \001(\t\"\r\n\013CNETMsg_NOP\"\'\n\027CNE"
-  "TMsg_SplitScreenUser\022\014\n\004slot\030\001 \001(\005\"^\n\022CN"
-  "ETMsg_Disconnect\022H\n\006reason\030\002 \001(\0162\034.ENetw"
-  "orkDisconnectionReason:\032NETWORK_DISCONNE"
-  "CT_INVALID\"\337\002\n\014CNETMsg_Tick\022\014\n\004tick\030\001 \001("
-  "\r\022\026\n\016host_frametime\030\002 \001(\r\022$\n\034host_framet"
-  "ime_std_deviation\030\003 \001(\r\022\034\n\024host_computat"
-  "iontime\030\004 \001(\r\022*\n\"host_computationtime_st"
-  "d_deviation\030\005 \001(\r\022)\n!host_framestarttime"
-  "_std_deviation\030\006 \001(\r\022\021\n\thost_loss\030\007 \001(\r\022"
-  "!\n\031host_unfiltered_frametime\030\010 \001(\r\022\031\n\021hl"
-  "tv_replay_flags\030\t \001(\r\022\032\n\022expected_long_t"
-  "ick\030\n \001(\r\022!\n\031expected_long_tick_reason\030\013"
-  " \001(\t\"=\n\021CNETMsg_StringCmd\022\017\n\007command\030\001 \001"
-  "(\t\022\027\n\017prediction_sync\030\002 \001(\r\"1\n\021CNETMsg_S"
-  "etConVar\022\034\n\007convars\030\001 \001(\0132\013.CMsg_CVars\"\274"
-  "\001\n\023CNETMsg_SignonState\0226\n\014signon_state\030\001"
-  " \001(\0162\016.SignonState_t:\020SIGNONSTATE_NONE\022\023"
-  "\n\013spawn_count\030\002 \001(\r\022\032\n\022num_server_player"
-  "s\030\003 \001(\r\022\032\n\022players_networkids\030\004 \003(\t\022\020\n\010m"
-  "ap_name\030\005 \001(\t\022\016\n\006addons\030\006 \001(\t\"\374\001\n\021CSVCMs"
-  "g_GameEvent\022\022\n\nevent_name\030\001 \001(\t\022\017\n\007event"
-  "id\030\002 \001(\005\022&\n\004keys\030\003 \003(\0132\030.CSVCMsg_GameEve"
-  "nt.key_t\032\231\001\n\005key_t\022\014\n\004type\030\001 \001(\005\022\022\n\nval_"
-  "string\030\002 \001(\t\022\021\n\tval_float\030\003 \001(\002\022\020\n\010val_l"
-  "ong\030\004 \001(\005\022\021\n\tval_short\030\005 \001(\005\022\020\n\010val_byte"
-  "\030\006 \001(\005\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nval_uint64\030\010"
-  " \001(\004\"\205\001\n\026CSVCMsgList_GameEvents\022/\n\006event"
-  "s\030\001 \003(\0132\037.CSVCMsgList_GameEvents.event_t"
-  "\032:\n\007event_t\022\014\n\004tick\030\001 \001(\005\022!\n\005event\030\002 \001(\013"
-  "2\022.CSVCMsg_GameEvent\"\253\004\n\027CNETMsg_SpawnGr"
-  "oup_Load\022\021\n\tworldname\030\001 \001(\t\022\026\n\016entitylum"
-  "pname\030\002 \001(\t\022\030\n\020entityfiltername\030\003 \001(\t\022\030\n"
-  "\020spawngrouphandle\030\004 \001(\r\022\035\n\025spawngroupown"
-  "erhandle\030\005 \001(\r\022%\n\020world_offset_pos\030\006 \001(\013"
-  "2\013.CMsgVector\022\'\n\022world_offset_angle\030\007 \001("
-  "\0132\013.CMsgQAngle\022\032\n\022spawngroupmanifest\030\010 \001"
-  "(\014\022\r\n\005flags\030\t \001(\r\022\021\n\ttickcount\030\n \001(\005\022\032\n\022"
-  "manifestincomplete\030\013 \001(\010\022\026\n\016localnamefix"
-  "up\030\014 \001(\t\022\027\n\017parentnamefixup\030\r \001(\t\022\034\n\024man"
-  "ifestloadpriority\030\016 \001(\005\022\024\n\014worldgroupid\030"
-  "\017 \001(\r\022\030\n\020creationsequence\030\020 \001(\r\022\030\n\020saveg"
-  "amefilename\030\021 \001(\t\022\036\n\026spawngroupparenthan"
-  "dle\030\022 \001(\r\022\027\n\017leveltransition\030\023 \001(\010\022\026\n\016wo"
-  "rldgroupname\030\024 \001(\t\"u\n!CNETMsg_SpawnGroup"
-  "_ManifestUpdate\022\030\n\020spawngrouphandle\030\001 \001("
-  "\r\022\032\n\022spawngroupmanifest\030\002 \001(\014\022\032\n\022manifes"
-  "tincomplete\030\003 \001(\010\"k\n\"CNETMsg_SpawnGroup_"
-  "SetCreationTick\022\030\n\020spawngrouphandle\030\001 \001("
-  "\r\022\021\n\ttickcount\030\002 \001(\005\022\030\n\020creationsequence"
-  "\030\003 \001(\r\"W\n\031CNETMsg_SpawnGroup_Unload\022\030\n\020s"
-  "pawngrouphandle\030\001 \001(\r\022\r\n\005flags\030\002 \001(\r\022\021\n\t"
-  "tickcount\030\003 \001(\005\"<\n CNETMsg_SpawnGroup_Lo"
-  "adCompleted\022\030\n\020spawngrouphandle\030\001 \001(\r\"\315\003"
-  "\n CSVCMsg_GameSessionConfiguration\022\026\n\016is"
-  "_multiplayer\030\001 \001(\010\022\027\n\017is_loadsavegame\030\002 "
-  "\001(\010\022\031\n\021is_background_map\030\003 \001(\010\022\023\n\013is_hea"
-  "dless\030\004 \001(\010\022\030\n\020min_client_limit\030\005 \001(\r\022\030\n"
-  "\020max_client_limit\030\006 \001(\r\022\023\n\013max_clients\030\007"
-  " \001(\r\022\025\n\rtick_interval\030\010 \001(\007\022\020\n\010hostname\030"
-  "\t \001(\t\022\024\n\014savegamename\030\n \001(\t\022\022\n\ns1_mapnam"
-  "e\030\013 \001(\t\022\020\n\010gamemode\030\014 \001(\t\022\031\n\021server_ip_a"
-  "ddress\030\r \001(\t\022\014\n\004data\030\016 \001(\014\022\024\n\014is_localon"
-  "ly\030\017 \001(\010\022\027\n\017no_steam_server\030\023 \001(\010\022\025\n\ris_"
-  "transition\030\020 \001(\010\022\025\n\rpreviouslevel\030\021 \001(\t\022"
-  "\024\n\014landmarkname\030\022 \001(\t\"\262\001\n\024CNETMsg_DebugO"
-  "verlay\022\r\n\005etype\030\001 \001(\005\022\034\n\007vectors\030\002 \003(\0132\013"
-  ".CMsgVector\022\031\n\006colors\030\003 \003(\0132\t.CMsgRGBA\022\022"
-  "\n\ndimensions\030\004 \003(\002\022\r\n\005times\030\005 \003(\002\022\r\n\005boo"
-  "ls\030\006 \003(\010\022\017\n\007uint64s\030\007 \003(\004\022\017\n\007strings\030\010 \003"
-  "(\t*\324\001\n\rSignonState_t\022\024\n\020SIGNONSTATE_NONE"
-  "\020\000\022\031\n\025SIGNONSTATE_CHALLENGE\020\001\022\031\n\025SIGNONS"
-  "TATE_CONNECTED\020\002\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n"
-  "\024SIGNONSTATE_PRESPAWN\020\004\022\025\n\021SIGNONSTATE_S"
-  "PAWN\020\005\022\024\n\020SIGNONSTATE_FULL\020\006\022\033\n\027SIGNONST"
-  "ATE_CHANGELEVEL\020\007*\304\002\n\014NET_Messages\022\013\n\007ne"
-  "t_NOP\020\000\022\022\n\016net_Disconnect\020\001\022\027\n\023net_Split"
-  "ScreenUser\020\003\022\014\n\010net_Tick\020\004\022\021\n\rnet_String"
-  "Cmd\020\005\022\021\n\rnet_SetConVar\020\006\022\023\n\017net_SignonSt"
-  "ate\020\007\022\027\n\023net_SpawnGroup_Load\020\010\022!\n\035net_Sp"
-  "awnGroup_ManifestUpdate\020\t\022\"\n\036net_SpawnGr"
-  "oup_SetCreationTick\020\013\022\031\n\025net_SpawnGroup_"
-  "Unload\020\014\022 \n\034net_SpawnGroup_LoadCompleted"
-  "\020\r\022\024\n\020net_DebugOverlay\020\017*\314\002\n\021SpawnGroupF"
-  "lags_t\022\'\n#SPAWN_GROUP_LOAD_ENTITIES_FROM"
-  "_SAVE\020\001\022#\n\037SPAWN_GROUP_DONT_SPAWN_ENTITI"
-  "ES\020\002\022!\n\035SPAWN_GROUP_SYNCHRONOUS_SPAWN\020\004\022"
-  "&\n\"SPAWN_GROUP_IS_INITIAL_SPAWN_GROUP\020\010\022"
-  "+\n\'SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTITI"
-  "ES\020\020\022\"\n\036SPAWN_GROUP_BLOCK_UNTIL_LOADED\020@"
-  "\022$\n\037SPAWN_GROUP_LOAD_STREAMING_DATA\020\200\001\022\'"
-  "\n\"SPAWN_GROUP_CREATE_NEW_SCENE_WORLD\020\200\002"
+  "TMsg_SplitScreenUser\022\014\n\004slot\030\001 \001(\005\"e\n\031CN"
+  "ETMsg_Disconnect_Legacy\022H\n\006reason\030\002 \001(\0162"
+  "\034.ENetworkDisconnectionReason:\032NETWORK_D"
+  "ISCONNECT_INVALID\"\337\002\n\014CNETMsg_Tick\022\014\n\004ti"
+  "ck\030\001 \001(\r\022\026\n\016host_frametime\030\002 \001(\r\022$\n\034host"
+  "_frametime_std_deviation\030\003 \001(\r\022\034\n\024host_c"
+  "omputationtime\030\004 \001(\r\022*\n\"host_computation"
+  "time_std_deviation\030\005 \001(\r\022)\n!host_framest"
+  "arttime_std_deviation\030\006 \001(\r\022\021\n\thost_loss"
+  "\030\007 \001(\r\022!\n\031host_unfiltered_frametime\030\010 \001("
+  "\r\022\031\n\021hltv_replay_flags\030\t \001(\r\022\032\n\022expected"
+  "_long_tick\030\n \001(\r\022!\n\031expected_long_tick_r"
+  "eason\030\013 \001(\t\"=\n\021CNETMsg_StringCmd\022\017\n\007comm"
+  "and\030\001 \001(\t\022\027\n\017prediction_sync\030\002 \001(\r\"1\n\021CN"
+  "ETMsg_SetConVar\022\034\n\007convars\030\001 \001(\0132\013.CMsg_"
+  "CVars\"\274\001\n\023CNETMsg_SignonState\0226\n\014signon_"
+  "state\030\001 \001(\0162\016.SignonState_t:\020SIGNONSTATE"
+  "_NONE\022\023\n\013spawn_count\030\002 \001(\r\022\032\n\022num_server"
+  "_players\030\003 \001(\r\022\032\n\022players_networkids\030\004 \003"
+  "(\t\022\020\n\010map_name\030\005 \001(\t\022\016\n\006addons\030\006 \001(\t\"\374\001\n"
+  "\021CSVCMsg_GameEvent\022\022\n\nevent_name\030\001 \001(\t\022\017"
+  "\n\007eventid\030\002 \001(\005\022&\n\004keys\030\003 \003(\0132\030.CSVCMsg_"
+  "GameEvent.key_t\032\231\001\n\005key_t\022\014\n\004type\030\001 \001(\005\022"
+  "\022\n\nval_string\030\002 \001(\t\022\021\n\tval_float\030\003 \001(\002\022\020"
+  "\n\010val_long\030\004 \001(\005\022\021\n\tval_short\030\005 \001(\005\022\020\n\010v"
+  "al_byte\030\006 \001(\005\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nval_u"
+  "int64\030\010 \001(\004\"\205\001\n\026CSVCMsgList_GameEvents\022/"
+  "\n\006events\030\001 \003(\0132\037.CSVCMsgList_GameEvents."
+  "event_t\032:\n\007event_t\022\014\n\004tick\030\001 \001(\005\022!\n\005even"
+  "t\030\002 \001(\0132\022.CSVCMsg_GameEvent\"\253\004\n\027CNETMsg_"
+  "SpawnGroup_Load\022\021\n\tworldname\030\001 \001(\t\022\026\n\016en"
+  "titylumpname\030\002 \001(\t\022\030\n\020entityfiltername\030\003"
+  " \001(\t\022\030\n\020spawngrouphandle\030\004 \001(\r\022\035\n\025spawng"
+  "roupownerhandle\030\005 \001(\r\022%\n\020world_offset_po"
+  "s\030\006 \001(\0132\013.CMsgVector\022\'\n\022world_offset_ang"
+  "le\030\007 \001(\0132\013.CMsgQAngle\022\032\n\022spawngroupmanif"
+  "est\030\010 \001(\014\022\r\n\005flags\030\t \001(\r\022\021\n\ttickcount\030\n "
+  "\001(\005\022\032\n\022manifestincomplete\030\013 \001(\010\022\026\n\016local"
+  "namefixup\030\014 \001(\t\022\027\n\017parentnamefixup\030\r \001(\t"
+  "\022\034\n\024manifestloadpriority\030\016 \001(\005\022\024\n\014worldg"
+  "roupid\030\017 \001(\r\022\030\n\020creationsequence\030\020 \001(\r\022\030"
+  "\n\020savegamefilename\030\021 \001(\t\022\036\n\026spawngrouppa"
+  "renthandle\030\022 \001(\r\022\027\n\017leveltransition\030\023 \001("
+  "\010\022\026\n\016worldgroupname\030\024 \001(\t\"u\n!CNETMsg_Spa"
+  "wnGroup_ManifestUpdate\022\030\n\020spawngrouphand"
+  "le\030\001 \001(\r\022\032\n\022spawngroupmanifest\030\002 \001(\014\022\032\n\022"
+  "manifestincomplete\030\003 \001(\010\"k\n\"CNETMsg_Spaw"
+  "nGroup_SetCreationTick\022\030\n\020spawngrouphand"
+  "le\030\001 \001(\r\022\021\n\ttickcount\030\002 \001(\005\022\030\n\020creations"
+  "equence\030\003 \001(\r\"W\n\031CNETMsg_SpawnGroup_Unlo"
+  "ad\022\030\n\020spawngrouphandle\030\001 \001(\r\022\r\n\005flags\030\002 "
+  "\001(\r\022\021\n\ttickcount\030\003 \001(\005\"<\n CNETMsg_SpawnG"
+  "roup_LoadCompleted\022\030\n\020spawngrouphandle\030\001"
+  " \001(\r\"\315\003\n CSVCMsg_GameSessionConfiguratio"
+  "n\022\026\n\016is_multiplayer\030\001 \001(\010\022\027\n\017is_loadsave"
+  "game\030\002 \001(\010\022\031\n\021is_background_map\030\003 \001(\010\022\023\n"
+  "\013is_headless\030\004 \001(\010\022\030\n\020min_client_limit\030\005"
+  " \001(\r\022\030\n\020max_client_limit\030\006 \001(\r\022\023\n\013max_cl"
+  "ients\030\007 \001(\r\022\025\n\rtick_interval\030\010 \001(\007\022\020\n\010ho"
+  "stname\030\t \001(\t\022\024\n\014savegamename\030\n \001(\t\022\022\n\ns1"
+  "_mapname\030\013 \001(\t\022\020\n\010gamemode\030\014 \001(\t\022\031\n\021serv"
+  "er_ip_address\030\r \001(\t\022\014\n\004data\030\016 \001(\014\022\024\n\014is_"
+  "localonly\030\017 \001(\010\022\027\n\017no_steam_server\030\023 \001(\010"
+  "\022\025\n\ris_transition\030\020 \001(\010\022\025\n\rpreviouslevel"
+  "\030\021 \001(\t\022\024\n\014landmarkname\030\022 \001(\t\"\262\001\n\024CNETMsg"
+  "_DebugOverlay\022\r\n\005etype\030\001 \001(\005\022\034\n\007vectors\030"
+  "\002 \003(\0132\013.CMsgVector\022\031\n\006colors\030\003 \003(\0132\t.CMs"
+  "gRGBA\022\022\n\ndimensions\030\004 \003(\002\022\r\n\005times\030\005 \003(\002"
+  "\022\r\n\005bools\030\006 \003(\010\022\017\n\007uint64s\030\007 \003(\004\022\017\n\007stri"
+  "ngs\030\010 \003(\t*\324\001\n\rSignonState_t\022\024\n\020SIGNONSTA"
+  "TE_NONE\020\000\022\031\n\025SIGNONSTATE_CHALLENGE\020\001\022\031\n\025"
+  "SIGNONSTATE_CONNECTED\020\002\022\023\n\017SIGNONSTATE_N"
+  "EW\020\003\022\030\n\024SIGNONSTATE_PRESPAWN\020\004\022\025\n\021SIGNON"
+  "STATE_SPAWN\020\005\022\024\n\020SIGNONSTATE_FULL\020\006\022\033\n\027S"
+  "IGNONSTATE_CHANGELEVEL\020\007*\313\002\n\014NET_Message"
+  "s\022\013\n\007net_NOP\020\000\022\031\n\025net_Disconnect_Legacy\020"
+  "\001\022\027\n\023net_SplitScreenUser\020\003\022\014\n\010net_Tick\020\004"
+  "\022\021\n\rnet_StringCmd\020\005\022\021\n\rnet_SetConVar\020\006\022\023"
+  "\n\017net_SignonState\020\007\022\027\n\023net_SpawnGroup_Lo"
+  "ad\020\010\022!\n\035net_SpawnGroup_ManifestUpdate\020\t\022"
+  "\"\n\036net_SpawnGroup_SetCreationTick\020\013\022\031\n\025n"
+  "et_SpawnGroup_Unload\020\014\022 \n\034net_SpawnGroup"
+  "_LoadCompleted\020\r\022\024\n\020net_DebugOverlay\020\017*\314"
+  "\002\n\021SpawnGroupFlags_t\022\'\n#SPAWN_GROUP_LOAD"
+  "_ENTITIES_FROM_SAVE\020\001\022#\n\037SPAWN_GROUP_DON"
+  "T_SPAWN_ENTITIES\020\002\022!\n\035SPAWN_GROUP_SYNCHR"
+  "ONOUS_SPAWN\020\004\022&\n\"SPAWN_GROUP_IS_INITIAL_"
+  "SPAWN_GROUP\020\010\022+\n\'SPAWN_GROUP_CREATE_CLIE"
+  "NT_ONLY_ENTITIES\020\020\022\"\n\036SPAWN_GROUP_BLOCK_"
+  "UNTIL_LOADED\020@\022$\n\037SPAWN_GROUP_LOAD_STREA"
+  "MING_DATA\020\200\001\022\'\n\"SPAWN_GROUP_CREATE_NEW_S"
+  "CENE_WORLD\020\200\002"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_networkbasetypes_2eproto_deps[1] = {
   &::descriptor_table_network_5fconnection_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_networkbasetypes_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_networkbasetypes_2eproto = {
-    false, false, 4319, descriptor_table_protodef_networkbasetypes_2eproto,
+    false, false, 4333, descriptor_table_protodef_networkbasetypes_2eproto,
     "networkbasetypes.proto",
     &descriptor_table_networkbasetypes_2eproto_once, descriptor_table_networkbasetypes_2eproto_deps, 1, 28,
     schemas, file_default_instances, TableStruct_networkbasetypes_2eproto::offsets,
@@ -4124,23 +4125,23 @@ void CNETMsg_SplitScreenUser::InternalSwap(CNETMsg_SplitScreenUser* other) {
 
 // ===================================================================
 
-class CNETMsg_Disconnect::_Internal {
+class CNETMsg_Disconnect_Legacy::_Internal {
  public:
-  using HasBits = decltype(std::declval<CNETMsg_Disconnect>()._impl_._has_bits_);
+  using HasBits = decltype(std::declval<CNETMsg_Disconnect_Legacy>()._impl_._has_bits_);
   static void set_has_reason(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
-CNETMsg_Disconnect::CNETMsg_Disconnect(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+CNETMsg_Disconnect_Legacy::CNETMsg_Disconnect_Legacy(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CNETMsg_Disconnect)
+  // @@protoc_insertion_point(arena_constructor:CNETMsg_Disconnect_Legacy)
 }
-CNETMsg_Disconnect::CNETMsg_Disconnect(const CNETMsg_Disconnect& from)
+CNETMsg_Disconnect_Legacy::CNETMsg_Disconnect_Legacy(const CNETMsg_Disconnect_Legacy& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CNETMsg_Disconnect* const _this = this; (void)_this;
+  CNETMsg_Disconnect_Legacy* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
@@ -4148,10 +4149,10 @@ CNETMsg_Disconnect::CNETMsg_Disconnect(const CNETMsg_Disconnect& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.reason_ = from._impl_.reason_;
-  // @@protoc_insertion_point(copy_constructor:CNETMsg_Disconnect)
+  // @@protoc_insertion_point(copy_constructor:CNETMsg_Disconnect_Legacy)
 }
 
-inline void CNETMsg_Disconnect::SharedCtor(
+inline void CNETMsg_Disconnect_Legacy::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -4162,8 +4163,8 @@ inline void CNETMsg_Disconnect::SharedCtor(
   };
 }
 
-CNETMsg_Disconnect::~CNETMsg_Disconnect() {
-  // @@protoc_insertion_point(destructor:CNETMsg_Disconnect)
+CNETMsg_Disconnect_Legacy::~CNETMsg_Disconnect_Legacy() {
+  // @@protoc_insertion_point(destructor:CNETMsg_Disconnect_Legacy)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4171,16 +4172,16 @@ CNETMsg_Disconnect::~CNETMsg_Disconnect() {
   SharedDtor();
 }
 
-inline void CNETMsg_Disconnect::SharedDtor() {
+inline void CNETMsg_Disconnect_Legacy::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void CNETMsg_Disconnect::SetCachedSize(int size) const {
+void CNETMsg_Disconnect_Legacy::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void CNETMsg_Disconnect::Clear() {
-// @@protoc_insertion_point(message_clear_start:CNETMsg_Disconnect)
+void CNETMsg_Disconnect_Legacy::Clear() {
+// @@protoc_insertion_point(message_clear_start:CNETMsg_Disconnect_Legacy)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4190,7 +4191,7 @@ void CNETMsg_Disconnect::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CNETMsg_Disconnect::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* CNETMsg_Disconnect_Legacy::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -4234,9 +4235,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* CNETMsg_Disconnect::_InternalSerialize(
+uint8_t* CNETMsg_Disconnect_Legacy::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CNETMsg_Disconnect)
+  // @@protoc_insertion_point(serialize_to_array_start:CNETMsg_Disconnect_Legacy)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4252,12 +4253,12 @@ uint8_t* CNETMsg_Disconnect::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CNETMsg_Disconnect)
+  // @@protoc_insertion_point(serialize_to_array_end:CNETMsg_Disconnect_Legacy)
   return target;
 }
 
-size_t CNETMsg_Disconnect::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CNETMsg_Disconnect)
+size_t CNETMsg_Disconnect_Legacy::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CNETMsg_Disconnect_Legacy)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4274,17 +4275,17 @@ size_t CNETMsg_Disconnect::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CNETMsg_Disconnect::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CNETMsg_Disconnect_Legacy::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CNETMsg_Disconnect::MergeImpl
+    CNETMsg_Disconnect_Legacy::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CNETMsg_Disconnect::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CNETMsg_Disconnect_Legacy::GetClassData() const { return &_class_data_; }
 
 
-void CNETMsg_Disconnect::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CNETMsg_Disconnect*>(&to_msg);
-  auto& from = static_cast<const CNETMsg_Disconnect&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CNETMsg_Disconnect)
+void CNETMsg_Disconnect_Legacy::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CNETMsg_Disconnect_Legacy*>(&to_msg);
+  auto& from = static_cast<const CNETMsg_Disconnect_Legacy&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CNETMsg_Disconnect_Legacy)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4295,25 +4296,25 @@ void CNETMsg_Disconnect::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void CNETMsg_Disconnect::CopyFrom(const CNETMsg_Disconnect& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CNETMsg_Disconnect)
+void CNETMsg_Disconnect_Legacy::CopyFrom(const CNETMsg_Disconnect_Legacy& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CNETMsg_Disconnect_Legacy)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool CNETMsg_Disconnect::IsInitialized() const {
+bool CNETMsg_Disconnect_Legacy::IsInitialized() const {
   return true;
 }
 
-void CNETMsg_Disconnect::InternalSwap(CNETMsg_Disconnect* other) {
+void CNETMsg_Disconnect_Legacy::InternalSwap(CNETMsg_Disconnect_Legacy* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.reason_, other->_impl_.reason_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata CNETMsg_Disconnect::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CNETMsg_Disconnect_Legacy::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_networkbasetypes_2eproto_getter, &descriptor_table_networkbasetypes_2eproto_once,
       file_level_metadata_networkbasetypes_2eproto[12]);
@@ -10387,9 +10388,9 @@ template<> PROTOBUF_NOINLINE ::CNETMsg_SplitScreenUser*
 Arena::CreateMaybeMessage< ::CNETMsg_SplitScreenUser >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CNETMsg_SplitScreenUser >(arena);
 }
-template<> PROTOBUF_NOINLINE ::CNETMsg_Disconnect*
-Arena::CreateMaybeMessage< ::CNETMsg_Disconnect >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CNETMsg_Disconnect >(arena);
+template<> PROTOBUF_NOINLINE ::CNETMsg_Disconnect_Legacy*
+Arena::CreateMaybeMessage< ::CNETMsg_Disconnect_Legacy >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CNETMsg_Disconnect_Legacy >(arena);
 }
 template<> PROTOBUF_NOINLINE ::CNETMsg_Tick*
 Arena::CreateMaybeMessage< ::CNETMsg_Tick >(Arena* arena) {

@@ -51,7 +51,7 @@
 CS2ServerGUI g_CS2ServerGUI;
 std::thread g_thread;
 
-typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, void* pData, void* pNetChan);
+typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, CNetMessage* pData, void* pNetChan);
 FilterMessage_t g_pFilterMessage = nullptr;
 funchook_t* g_pHook = nullptr;
 
@@ -128,7 +128,7 @@ bool ReadPBFromBuffer(bf_read& buffer, T& pb)
 	return true;
 }
 
-bool Detour_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, void* pData, void* pNetChan)
+bool Detour_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, CNetMessage* pData, void* pNetChan)
 {
 	if(!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
 		return g_pFilterMessage(player, pEvent, pData, pNetChan);
@@ -138,18 +138,14 @@ bool Detour_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, INet
 	{
 		if (info->m_MessageId == CLC_Messages::clc_Move)
 		{
-			CCLCMsg_Move* msg = (CCLCMsg_Move*)pData;
+			auto msg = pData->ToPB<CCLCMsg_Move>();
 
-			if (msg->has_data() && msg->has_num_commands() && msg->num_commands() >= 1)
+			if (msg->has_data())
 			{
 				bf_read buffer(msg->data().data(), msg->data().size());
-
-				for (int i = 0; i < msg->num_commands(); i++)
-				{
-					CSGOUserCmdPB userCmd;
-					if (ReadPBFromBuffer(buffer, userCmd))
-						GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true, std::string(player->GetClientName()));
-				}
+				CSGOUserCmdPB userCmd;
+				if (ReadPBFromBuffer(buffer, userCmd))
+					GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true, std::string(player->GetClientName()));
 			}
 		}
 		else
@@ -166,13 +162,13 @@ bool Detour_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, INet
 
 void SetupHook()
 {
-	auto engineModule = new CModule(ROOTBIN, "engine2");
+	CModule engineModule(ROOTBIN, "engine2");
 
 	int err;
 	// Client %d(%s) tried to send a RebroadcastSourceId msg.\n
 	const byte sig[] = "\x40\x53\x48\x83\xEC\x30\x48\x3B\x15\x2A\x2A\x2A\x2A\x48\x8B\xD9";
 
-	g_pFilterMessage = (FilterMessage_t)engineModule->FindSignature((byte*)sig, sizeof(sig) - 1, err);
+	g_pFilterMessage = (FilterMessage_t)engineModule.FindSignature((byte*)sig, sizeof(sig) - 1, err);
 
 	if (err)
 	{

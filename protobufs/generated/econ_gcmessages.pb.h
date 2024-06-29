@@ -49,6 +49,9 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 class CMsgCasketItem;
 struct CMsgCasketItemDefaultTypeInternal;
 extern CMsgCasketItemDefaultTypeInternal _CMsgCasketItem_default_instance_;
+class CMsgGCDev_SchemaReservationRequest;
+struct CMsgGCDev_SchemaReservationRequestDefaultTypeInternal;
+extern CMsgGCDev_SchemaReservationRequestDefaultTypeInternal _CMsgGCDev_SchemaReservationRequest_default_instance_;
 class CMsgGCGiftedItems;
 struct CMsgGCGiftedItemsDefaultTypeInternal;
 extern CMsgGCGiftedItemsDefaultTypeInternal _CMsgGCGiftedItems_default_instance_;
@@ -60,6 +63,7 @@ struct CMsgGCUserTrackTimePlayedConsecutivelyDefaultTypeInternal;
 extern CMsgGCUserTrackTimePlayedConsecutivelyDefaultTypeInternal _CMsgGCUserTrackTimePlayedConsecutively_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::CMsgCasketItem* Arena::CreateMaybeMessage<::CMsgCasketItem>(Arena*);
+template<> ::CMsgGCDev_SchemaReservationRequest* Arena::CreateMaybeMessage<::CMsgGCDev_SchemaReservationRequest>(Arena*);
 template<> ::CMsgGCGiftedItems* Arena::CreateMaybeMessage<::CMsgGCGiftedItems>(Arena*);
 template<> ::CMsgGCItemCustomizationNotification* Arena::CreateMaybeMessage<::CMsgGCItemCustomizationNotification>(Arena*);
 template<> ::CMsgGCUserTrackTimePlayedConsecutively* Arena::CreateMaybeMessage<::CMsgGCUserTrackTimePlayedConsecutively>(Arena*);
@@ -179,6 +183,7 @@ enum EGCItemMsg : int {
   k_EMsgGCDev_NewItemRequest = 2001,
   k_EMsgGCDev_NewItemRequestResponse = 2002,
   k_EMsgGCDev_PaintKitDropItem = 2003,
+  k_EMsgGCDev_SchemaReservationRequest = 2004,
   k_EMsgGCStoreGetUserData = 2500,
   k_EMsgGCStoreGetUserDataResponse = 2501,
   k_EMsgGCStorePurchaseInit_DEPRECATED = 2502,
@@ -210,11 +215,14 @@ enum EGCItemMsg : int {
   k_EMsgGCAdjustItemEquippedStateMulti = 2529,
   k_EMsgGCRecurringSubscriptionStatus = 2530,
   k_EMsgGCAdjustEquipSlotsManual = 2531,
-  k_EMsgGCAdjustEquipSlotsShuffle = 2532
+  k_EMsgGCAdjustEquipSlotsShuffle = 2532,
+  k_EMsgGCNameItemAndEquip = 2533,
+  k_EMsgGCOpenCrate = 2534,
+  k_EMsgGCAcknowledgeRentalExpiration = 2535
 };
 bool EGCItemMsg_IsValid(int value);
 constexpr EGCItemMsg EGCItemMsg_MIN = k_EMsgGCBase;
-constexpr EGCItemMsg EGCItemMsg_MAX = k_EMsgGCAdjustEquipSlotsShuffle;
+constexpr EGCItemMsg EGCItemMsg_MAX = k_EMsgGCAcknowledgeRentalExpiration;
 constexpr int EGCItemMsg_ARRAYSIZE = EGCItemMsg_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* EGCItemMsg_descriptor();
@@ -335,7 +343,7 @@ inline bool EGCItemCustomizationNotification_Parse(
 }
 // ===================================================================
 
-class CMsgGCGiftedItems final :
+class CMsgGCGiftedItems :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCGiftedItems) */ {
  public:
   inline CMsgGCGiftedItems() : CMsgGCGiftedItems(nullptr) {}
@@ -564,7 +572,207 @@ class CMsgGCGiftedItems final :
 };
 // -------------------------------------------------------------------
 
-class CMsgCasketItem final :
+class CMsgGCDev_SchemaReservationRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCDev_SchemaReservationRequest) */ {
+ public:
+  inline CMsgGCDev_SchemaReservationRequest() : CMsgGCDev_SchemaReservationRequest(nullptr) {}
+  ~CMsgGCDev_SchemaReservationRequest() override;
+  explicit PROTOBUF_CONSTEXPR CMsgGCDev_SchemaReservationRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CMsgGCDev_SchemaReservationRequest(const CMsgGCDev_SchemaReservationRequest& from);
+  CMsgGCDev_SchemaReservationRequest(CMsgGCDev_SchemaReservationRequest&& from) noexcept
+    : CMsgGCDev_SchemaReservationRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CMsgGCDev_SchemaReservationRequest& operator=(const CMsgGCDev_SchemaReservationRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CMsgGCDev_SchemaReservationRequest& operator=(CMsgGCDev_SchemaReservationRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CMsgGCDev_SchemaReservationRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CMsgGCDev_SchemaReservationRequest* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCDev_SchemaReservationRequest*>(
+               &_CMsgGCDev_SchemaReservationRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(CMsgGCDev_SchemaReservationRequest& a, CMsgGCDev_SchemaReservationRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CMsgGCDev_SchemaReservationRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CMsgGCDev_SchemaReservationRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CMsgGCDev_SchemaReservationRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CMsgGCDev_SchemaReservationRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CMsgGCDev_SchemaReservationRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CMsgGCDev_SchemaReservationRequest& from) {
+    CMsgGCDev_SchemaReservationRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CMsgGCDev_SchemaReservationRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CMsgGCDev_SchemaReservationRequest";
+  }
+  protected:
+  explicit CMsgGCDev_SchemaReservationRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSchemaTypenameFieldNumber = 1,
+    kInstanceNameFieldNumber = 2,
+    kIdFieldNumber = 3,
+  };
+  // optional string schema_typename = 1;
+  bool has_schema_typename() const;
+  private:
+  bool _internal_has_schema_typename() const;
+  public:
+  void clear_schema_typename();
+  const std::string& schema_typename() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_schema_typename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_schema_typename();
+  PROTOBUF_NODISCARD std::string* release_schema_typename();
+  void set_allocated_schema_typename(std::string* schema_typename);
+  private:
+  const std::string& _internal_schema_typename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_schema_typename(const std::string& value);
+  std::string* _internal_mutable_schema_typename();
+  public:
+
+  // optional string instance_name = 2;
+  bool has_instance_name() const;
+  private:
+  bool _internal_has_instance_name() const;
+  public:
+  void clear_instance_name();
+  const std::string& instance_name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_instance_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_instance_name();
+  PROTOBUF_NODISCARD std::string* release_instance_name();
+  void set_allocated_instance_name(std::string* instance_name);
+  private:
+  const std::string& _internal_instance_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_instance_name(const std::string& value);
+  std::string* _internal_mutable_instance_name();
+  public:
+
+  // optional uint64 id = 3;
+  bool has_id() const;
+  private:
+  bool _internal_has_id() const;
+  public:
+  void clear_id();
+  uint64_t id() const;
+  void set_id(uint64_t value);
+  private:
+  uint64_t _internal_id() const;
+  void _internal_set_id(uint64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CMsgGCDev_SchemaReservationRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr schema_typename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr instance_name_;
+    uint64_t id_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_econ_5fgcmessages_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CMsgCasketItem :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgCasketItem) */ {
  public:
   inline CMsgCasketItem() : CMsgCasketItem(nullptr) {}
@@ -619,7 +827,7 @@ class CMsgCasketItem final :
                &_CMsgCasketItem_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(CMsgCasketItem& a, CMsgCasketItem& b) {
     a.Swap(&b);
@@ -739,7 +947,7 @@ class CMsgCasketItem final :
 };
 // -------------------------------------------------------------------
 
-class CMsgGCUserTrackTimePlayedConsecutively final :
+class CMsgGCUserTrackTimePlayedConsecutively :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCUserTrackTimePlayedConsecutively) */ {
  public:
   inline CMsgGCUserTrackTimePlayedConsecutively() : CMsgGCUserTrackTimePlayedConsecutively(nullptr) {}
@@ -794,7 +1002,7 @@ class CMsgGCUserTrackTimePlayedConsecutively final :
                &_CMsgGCUserTrackTimePlayedConsecutively_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(CMsgGCUserTrackTimePlayedConsecutively& a, CMsgGCUserTrackTimePlayedConsecutively& b) {
     a.Swap(&b);
@@ -899,7 +1107,7 @@ class CMsgGCUserTrackTimePlayedConsecutively final :
 };
 // -------------------------------------------------------------------
 
-class CMsgGCItemCustomizationNotification final :
+class CMsgGCItemCustomizationNotification :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCItemCustomizationNotification) */ {
  public:
   inline CMsgGCItemCustomizationNotification() : CMsgGCItemCustomizationNotification(nullptr) {}
@@ -954,7 +1162,7 @@ class CMsgGCItemCustomizationNotification final :
                &_CMsgGCItemCustomizationNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(CMsgGCItemCustomizationNotification& a, CMsgGCItemCustomizationNotification& b) {
     a.Swap(&b);
@@ -1253,6 +1461,174 @@ CMsgGCGiftedItems::mutable_recipients_accountids() {
 
 // -------------------------------------------------------------------
 
+// CMsgGCDev_SchemaReservationRequest
+
+// optional string schema_typename = 1;
+inline bool CMsgGCDev_SchemaReservationRequest::_internal_has_schema_typename() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CMsgGCDev_SchemaReservationRequest::has_schema_typename() const {
+  return _internal_has_schema_typename();
+}
+inline void CMsgGCDev_SchemaReservationRequest::clear_schema_typename() {
+  _impl_.schema_typename_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CMsgGCDev_SchemaReservationRequest::schema_typename() const {
+  // @@protoc_insertion_point(field_get:CMsgGCDev_SchemaReservationRequest.schema_typename)
+  return _internal_schema_typename();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CMsgGCDev_SchemaReservationRequest::set_schema_typename(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.schema_typename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:CMsgGCDev_SchemaReservationRequest.schema_typename)
+}
+inline std::string* CMsgGCDev_SchemaReservationRequest::mutable_schema_typename() {
+  std::string* _s = _internal_mutable_schema_typename();
+  // @@protoc_insertion_point(field_mutable:CMsgGCDev_SchemaReservationRequest.schema_typename)
+  return _s;
+}
+inline const std::string& CMsgGCDev_SchemaReservationRequest::_internal_schema_typename() const {
+  return _impl_.schema_typename_.Get();
+}
+inline void CMsgGCDev_SchemaReservationRequest::_internal_set_schema_typename(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.schema_typename_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CMsgGCDev_SchemaReservationRequest::_internal_mutable_schema_typename() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.schema_typename_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CMsgGCDev_SchemaReservationRequest::release_schema_typename() {
+  // @@protoc_insertion_point(field_release:CMsgGCDev_SchemaReservationRequest.schema_typename)
+  if (!_internal_has_schema_typename()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.schema_typename_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.schema_typename_.IsDefault()) {
+    _impl_.schema_typename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CMsgGCDev_SchemaReservationRequest::set_allocated_schema_typename(std::string* schema_typename) {
+  if (schema_typename != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.schema_typename_.SetAllocated(schema_typename, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.schema_typename_.IsDefault()) {
+    _impl_.schema_typename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:CMsgGCDev_SchemaReservationRequest.schema_typename)
+}
+
+// optional string instance_name = 2;
+inline bool CMsgGCDev_SchemaReservationRequest::_internal_has_instance_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CMsgGCDev_SchemaReservationRequest::has_instance_name() const {
+  return _internal_has_instance_name();
+}
+inline void CMsgGCDev_SchemaReservationRequest::clear_instance_name() {
+  _impl_.instance_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& CMsgGCDev_SchemaReservationRequest::instance_name() const {
+  // @@protoc_insertion_point(field_get:CMsgGCDev_SchemaReservationRequest.instance_name)
+  return _internal_instance_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CMsgGCDev_SchemaReservationRequest::set_instance_name(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_.instance_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:CMsgGCDev_SchemaReservationRequest.instance_name)
+}
+inline std::string* CMsgGCDev_SchemaReservationRequest::mutable_instance_name() {
+  std::string* _s = _internal_mutable_instance_name();
+  // @@protoc_insertion_point(field_mutable:CMsgGCDev_SchemaReservationRequest.instance_name)
+  return _s;
+}
+inline const std::string& CMsgGCDev_SchemaReservationRequest::_internal_instance_name() const {
+  return _impl_.instance_name_.Get();
+}
+inline void CMsgGCDev_SchemaReservationRequest::_internal_set_instance_name(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.instance_name_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CMsgGCDev_SchemaReservationRequest::_internal_mutable_instance_name() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.instance_name_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CMsgGCDev_SchemaReservationRequest::release_instance_name() {
+  // @@protoc_insertion_point(field_release:CMsgGCDev_SchemaReservationRequest.instance_name)
+  if (!_internal_has_instance_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.instance_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.instance_name_.IsDefault()) {
+    _impl_.instance_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CMsgGCDev_SchemaReservationRequest::set_allocated_instance_name(std::string* instance_name) {
+  if (instance_name != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.instance_name_.SetAllocated(instance_name, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.instance_name_.IsDefault()) {
+    _impl_.instance_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:CMsgGCDev_SchemaReservationRequest.instance_name)
+}
+
+// optional uint64 id = 3;
+inline bool CMsgGCDev_SchemaReservationRequest::_internal_has_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool CMsgGCDev_SchemaReservationRequest::has_id() const {
+  return _internal_has_id();
+}
+inline void CMsgGCDev_SchemaReservationRequest::clear_id() {
+  _impl_.id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline uint64_t CMsgGCDev_SchemaReservationRequest::_internal_id() const {
+  return _impl_.id_;
+}
+inline uint64_t CMsgGCDev_SchemaReservationRequest::id() const {
+  // @@protoc_insertion_point(field_get:CMsgGCDev_SchemaReservationRequest.id)
+  return _internal_id();
+}
+inline void CMsgGCDev_SchemaReservationRequest::_internal_set_id(uint64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.id_ = value;
+}
+inline void CMsgGCDev_SchemaReservationRequest::set_id(uint64_t value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:CMsgGCDev_SchemaReservationRequest.id)
+}
+
+// -------------------------------------------------------------------
+
 // CMsgCasketItem
 
 // optional uint64 casket_item_id = 1;
@@ -1425,6 +1801,8 @@ inline void CMsgGCItemCustomizationNotification::set_request(uint32_t value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

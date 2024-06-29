@@ -66,7 +66,7 @@ PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
 
-class CInButtonStatePB final :
+class CInButtonStatePB :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CInButtonStatePB) */ {
  public:
   inline CInButtonStatePB() : CInButtonStatePB(nullptr) {}
@@ -256,7 +256,7 @@ class CInButtonStatePB final :
 };
 // -------------------------------------------------------------------
 
-class CSubtickMoveStep final :
+class CSubtickMoveStep :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSubtickMoveStep) */ {
  public:
   inline CSubtickMoveStep() : CSubtickMoveStep(nullptr) {}
@@ -476,7 +476,7 @@ class CSubtickMoveStep final :
 };
 // -------------------------------------------------------------------
 
-class CBaseUserCmdPB final :
+class CBaseUserCmdPB :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CBaseUserCmdPB) */ {
  public:
   inline CBaseUserCmdPB() : CBaseUserCmdPB(nullptr) {}
@@ -609,7 +609,7 @@ class CBaseUserCmdPB final :
     kButtonsPbFieldNumber = 3,
     kViewanglesFieldNumber = 4,
     kCommandNumberFieldNumber = 1,
-    kTickCountFieldNumber = 2,
+    kClientTickFieldNumber = 2,
     kForwardmoveFieldNumber = 5,
     kLeftmoveFieldNumber = 6,
     kUpmoveFieldNumber = 7,
@@ -707,17 +707,17 @@ class CBaseUserCmdPB final :
   void _internal_set_command_number(int32_t value);
   public:
 
-  // optional int32 tick_count = 2;
-  bool has_tick_count() const;
+  // optional int32 client_tick = 2;
+  bool has_client_tick() const;
   private:
-  bool _internal_has_tick_count() const;
+  bool _internal_has_client_tick() const;
   public:
-  void clear_tick_count();
-  int32_t tick_count() const;
-  void set_tick_count(int32_t value);
+  void clear_client_tick();
+  int32_t client_tick() const;
+  void set_client_tick(int32_t value);
   private:
-  int32_t _internal_tick_count() const;
-  void _internal_set_tick_count(int32_t value);
+  int32_t _internal_client_tick() const;
+  void _internal_set_client_tick(int32_t value);
   public:
 
   // optional float forwardmove = 5;
@@ -878,7 +878,7 @@ class CBaseUserCmdPB final :
     ::CInButtonStatePB* buttons_pb_;
     ::CMsgQAngle* viewangles_;
     int32_t command_number_;
-    int32_t tick_count_;
+    int32_t client_tick_;
     float forwardmove_;
     float leftmove_;
     float upmove_;
@@ -896,7 +896,7 @@ class CBaseUserCmdPB final :
 };
 // -------------------------------------------------------------------
 
-class CUserCmdBasePB final :
+class CUserCmdBasePB :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CUserCmdBasePB) */ {
  public:
   inline CUserCmdBasePB() : CUserCmdBasePB(nullptr) {}
@@ -1330,32 +1330,32 @@ inline void CBaseUserCmdPB::set_command_number(int32_t value) {
   // @@protoc_insertion_point(field_set:CBaseUserCmdPB.command_number)
 }
 
-// optional int32 tick_count = 2;
-inline bool CBaseUserCmdPB::_internal_has_tick_count() const {
+// optional int32 client_tick = 2;
+inline bool CBaseUserCmdPB::_internal_has_client_tick() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool CBaseUserCmdPB::has_tick_count() const {
-  return _internal_has_tick_count();
+inline bool CBaseUserCmdPB::has_client_tick() const {
+  return _internal_has_client_tick();
 }
-inline void CBaseUserCmdPB::clear_tick_count() {
-  _impl_.tick_count_ = 0;
+inline void CBaseUserCmdPB::clear_client_tick() {
+  _impl_.client_tick_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int32_t CBaseUserCmdPB::_internal_tick_count() const {
-  return _impl_.tick_count_;
+inline int32_t CBaseUserCmdPB::_internal_client_tick() const {
+  return _impl_.client_tick_;
 }
-inline int32_t CBaseUserCmdPB::tick_count() const {
-  // @@protoc_insertion_point(field_get:CBaseUserCmdPB.tick_count)
-  return _internal_tick_count();
+inline int32_t CBaseUserCmdPB::client_tick() const {
+  // @@protoc_insertion_point(field_get:CBaseUserCmdPB.client_tick)
+  return _internal_client_tick();
 }
-inline void CBaseUserCmdPB::_internal_set_tick_count(int32_t value) {
+inline void CBaseUserCmdPB::_internal_set_client_tick(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.tick_count_ = value;
+  _impl_.client_tick_ = value;
 }
-inline void CBaseUserCmdPB::set_tick_count(int32_t value) {
-  _internal_set_tick_count(value);
-  // @@protoc_insertion_point(field_set:CBaseUserCmdPB.tick_count)
+inline void CBaseUserCmdPB::set_client_tick(int32_t value) {
+  _internal_set_client_tick(value);
+  // @@protoc_insertion_point(field_set:CBaseUserCmdPB.client_tick)
 }
 
 // optional .CInButtonStatePB buttons_pb = 3;

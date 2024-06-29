@@ -631,6 +631,7 @@ message CMsgGCCStrike15_v2_MatchmakingGC2ClientHello {
 	optional int32 player_cur_xp = 18;
 	optional int32 player_xp_bonus_flags = 19;
 	repeated .PlayerRankingInfo rankings = 20;
+	optional uint64 owcaseid = 21;
 }
 
 message CMsgGCCStrike15_v2_AccountPrivacySettings {
@@ -897,6 +898,7 @@ message CEconItemPreviewDataBlock {
 	optional uint32 dropreason = 16;
 	optional uint32 musicindex = 17;
 	optional int32 entindex = 18;
+	optional uint32 petindex = 19;
 }
 
 message CMsgGCCStrike15_v2_MatchEndRewardDropsNotification {

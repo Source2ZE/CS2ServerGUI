@@ -63,6 +63,11 @@ public:
 		ConMsg("Initialized module %s base: 0x%p | size: %lu\n", m_pszModule, m_base, m_size);
 	}
 
+	~CModule()
+	{
+		FreeLibrary(m_hModule);
+	}
+
 	void *FindSignature(const byte *pData, size_t iSigLength, int &error)
 	{
 		unsigned char *pMemory;

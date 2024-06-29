@@ -80,9 +80,9 @@ extern CMsg_CVars_CVarDefaultTypeInternal _CMsg_CVars_CVar_default_instance_;
 class CNETMsg_DebugOverlay;
 struct CNETMsg_DebugOverlayDefaultTypeInternal;
 extern CNETMsg_DebugOverlayDefaultTypeInternal _CNETMsg_DebugOverlay_default_instance_;
-class CNETMsg_Disconnect;
-struct CNETMsg_DisconnectDefaultTypeInternal;
-extern CNETMsg_DisconnectDefaultTypeInternal _CNETMsg_Disconnect_default_instance_;
+class CNETMsg_Disconnect_Legacy;
+struct CNETMsg_Disconnect_LegacyDefaultTypeInternal;
+extern CNETMsg_Disconnect_LegacyDefaultTypeInternal _CNETMsg_Disconnect_Legacy_default_instance_;
 class CNETMsg_NOP;
 struct CNETMsg_NOPDefaultTypeInternal;
 extern CNETMsg_NOPDefaultTypeInternal _CNETMsg_NOP_default_instance_;
@@ -143,7 +143,7 @@ template<> ::CMsgVector2D* Arena::CreateMaybeMessage<::CMsgVector2D>(Arena*);
 template<> ::CMsg_CVars* Arena::CreateMaybeMessage<::CMsg_CVars>(Arena*);
 template<> ::CMsg_CVars_CVar* Arena::CreateMaybeMessage<::CMsg_CVars_CVar>(Arena*);
 template<> ::CNETMsg_DebugOverlay* Arena::CreateMaybeMessage<::CNETMsg_DebugOverlay>(Arena*);
-template<> ::CNETMsg_Disconnect* Arena::CreateMaybeMessage<::CNETMsg_Disconnect>(Arena*);
+template<> ::CNETMsg_Disconnect_Legacy* Arena::CreateMaybeMessage<::CNETMsg_Disconnect_Legacy>(Arena*);
 template<> ::CNETMsg_NOP* Arena::CreateMaybeMessage<::CNETMsg_NOP>(Arena*);
 template<> ::CNETMsg_SetConVar* Arena::CreateMaybeMessage<::CNETMsg_SetConVar>(Arena*);
 template<> ::CNETMsg_SignonState* Arena::CreateMaybeMessage<::CNETMsg_SignonState>(Arena*);
@@ -193,7 +193,7 @@ inline bool SignonState_t_Parse(
 }
 enum NET_Messages : int {
   net_NOP = 0,
-  net_Disconnect = 1,
+  net_Disconnect_Legacy = 1,
   net_SplitScreenUser = 3,
   net_Tick = 4,
   net_StringCmd = 5,
@@ -256,7 +256,7 @@ inline bool SpawnGroupFlags_t_Parse(
 }
 // ===================================================================
 
-class CMsgVector final :
+class CMsgVector :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgVector) */ {
  public:
   inline CMsgVector() : CMsgVector(nullptr) {}
@@ -461,7 +461,7 @@ class CMsgVector final :
 };
 // -------------------------------------------------------------------
 
-class CMsgVector2D final :
+class CMsgVector2D :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgVector2D) */ {
  public:
   inline CMsgVector2D() : CMsgVector2D(nullptr) {}
@@ -636,7 +636,7 @@ class CMsgVector2D final :
 };
 // -------------------------------------------------------------------
 
-class CMsgQAngle final :
+class CMsgQAngle :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgQAngle) */ {
  public:
   inline CMsgQAngle() : CMsgQAngle(nullptr) {}
@@ -826,7 +826,7 @@ class CMsgQAngle final :
 };
 // -------------------------------------------------------------------
 
-class CMsgQuaternion final :
+class CMsgQuaternion :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgQuaternion) */ {
  public:
   inline CMsgQuaternion() : CMsgQuaternion(nullptr) {}
@@ -1031,7 +1031,7 @@ class CMsgQuaternion final :
 };
 // -------------------------------------------------------------------
 
-class CMsgTransform final :
+class CMsgTransform :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgTransform) */ {
  public:
   inline CMsgTransform() : CMsgTransform(nullptr) {}
@@ -1231,7 +1231,7 @@ class CMsgTransform final :
 };
 // -------------------------------------------------------------------
 
-class CMsgRGBA final :
+class CMsgRGBA :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgRGBA) */ {
  public:
   inline CMsgRGBA() : CMsgRGBA(nullptr) {}
@@ -1436,7 +1436,7 @@ class CMsgRGBA final :
 };
 // -------------------------------------------------------------------
 
-class CMsgPlayerInfo final :
+class CMsgPlayerInfo :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgPlayerInfo) */ {
  public:
   inline CMsgPlayerInfo() : CMsgPlayerInfo(nullptr) {}
@@ -1676,7 +1676,7 @@ class CMsgPlayerInfo final :
 };
 // -------------------------------------------------------------------
 
-class CEntityMsg final :
+class CEntityMsg :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CEntityMsg) */ {
  public:
   inline CEntityMsg() : CEntityMsg(nullptr) {}
@@ -1836,7 +1836,7 @@ class CEntityMsg final :
 };
 // -------------------------------------------------------------------
 
-class CMsg_CVars_CVar final :
+class CMsg_CVars_CVar :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsg_CVars.CVar) */ {
  public:
   inline CMsg_CVars_CVar() : CMsg_CVars_CVar(nullptr) {}
@@ -2021,7 +2021,7 @@ class CMsg_CVars_CVar final :
 };
 // -------------------------------------------------------------------
 
-class CMsg_CVars final :
+class CMsg_CVars :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsg_CVars) */ {
  public:
   inline CMsg_CVars() : CMsg_CVars(nullptr) {}
@@ -2187,7 +2187,7 @@ class CMsg_CVars final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_NOP final :
+class CNETMsg_NOP :
     public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:CNETMsg_NOP) */ {
  public:
   inline CNETMsg_NOP() : CNETMsg_NOP(nullptr) {}
@@ -2312,7 +2312,7 @@ class CNETMsg_NOP final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SplitScreenUser final :
+class CNETMsg_SplitScreenUser :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SplitScreenUser) */ {
  public:
   inline CNETMsg_SplitScreenUser() : CNETMsg_SplitScreenUser(nullptr) {}
@@ -2472,24 +2472,24 @@ class CNETMsg_SplitScreenUser final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_Disconnect final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_Disconnect) */ {
+class CNETMsg_Disconnect_Legacy :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_Disconnect_Legacy) */ {
  public:
-  inline CNETMsg_Disconnect() : CNETMsg_Disconnect(nullptr) {}
-  ~CNETMsg_Disconnect() override;
-  explicit PROTOBUF_CONSTEXPR CNETMsg_Disconnect(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CNETMsg_Disconnect_Legacy() : CNETMsg_Disconnect_Legacy(nullptr) {}
+  ~CNETMsg_Disconnect_Legacy() override;
+  explicit PROTOBUF_CONSTEXPR CNETMsg_Disconnect_Legacy(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  CNETMsg_Disconnect(const CNETMsg_Disconnect& from);
-  CNETMsg_Disconnect(CNETMsg_Disconnect&& from) noexcept
-    : CNETMsg_Disconnect() {
+  CNETMsg_Disconnect_Legacy(const CNETMsg_Disconnect_Legacy& from);
+  CNETMsg_Disconnect_Legacy(CNETMsg_Disconnect_Legacy&& from) noexcept
+    : CNETMsg_Disconnect_Legacy() {
     *this = ::std::move(from);
   }
 
-  inline CNETMsg_Disconnect& operator=(const CNETMsg_Disconnect& from) {
+  inline CNETMsg_Disconnect_Legacy& operator=(const CNETMsg_Disconnect_Legacy& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CNETMsg_Disconnect& operator=(CNETMsg_Disconnect&& from) noexcept {
+  inline CNETMsg_Disconnect_Legacy& operator=(CNETMsg_Disconnect_Legacy&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2519,20 +2519,20 @@ class CNETMsg_Disconnect final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const CNETMsg_Disconnect& default_instance() {
+  static const CNETMsg_Disconnect_Legacy& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CNETMsg_Disconnect* internal_default_instance() {
-    return reinterpret_cast<const CNETMsg_Disconnect*>(
-               &_CNETMsg_Disconnect_default_instance_);
+  static inline const CNETMsg_Disconnect_Legacy* internal_default_instance() {
+    return reinterpret_cast<const CNETMsg_Disconnect_Legacy*>(
+               &_CNETMsg_Disconnect_Legacy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     12;
 
-  friend void swap(CNETMsg_Disconnect& a, CNETMsg_Disconnect& b) {
+  friend void swap(CNETMsg_Disconnect_Legacy& a, CNETMsg_Disconnect_Legacy& b) {
     a.Swap(&b);
   }
-  inline void Swap(CNETMsg_Disconnect* other) {
+  inline void Swap(CNETMsg_Disconnect_Legacy* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2545,7 +2545,7 @@ class CNETMsg_Disconnect final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CNETMsg_Disconnect* other) {
+  void UnsafeArenaSwap(CNETMsg_Disconnect_Legacy* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2553,14 +2553,14 @@ class CNETMsg_Disconnect final :
 
   // implements Message ----------------------------------------------
 
-  CNETMsg_Disconnect* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CNETMsg_Disconnect>(arena);
+  CNETMsg_Disconnect_Legacy* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CNETMsg_Disconnect_Legacy>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const CNETMsg_Disconnect& from);
+  void CopyFrom(const CNETMsg_Disconnect_Legacy& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CNETMsg_Disconnect& from) {
-    CNETMsg_Disconnect::MergeImpl(*this, from);
+  void MergeFrom( const CNETMsg_Disconnect_Legacy& from) {
+    CNETMsg_Disconnect_Legacy::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2578,15 +2578,15 @@ class CNETMsg_Disconnect final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(CNETMsg_Disconnect* other);
+  void InternalSwap(CNETMsg_Disconnect_Legacy* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "CNETMsg_Disconnect";
+    return "CNETMsg_Disconnect_Legacy";
   }
   protected:
-  explicit CNETMsg_Disconnect(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CNETMsg_Disconnect_Legacy(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2615,7 +2615,7 @@ class CNETMsg_Disconnect final :
   void _internal_set_reason(::ENetworkDisconnectionReason value);
   public:
 
-  // @@protoc_insertion_point(class_scope:CNETMsg_Disconnect)
+  // @@protoc_insertion_point(class_scope:CNETMsg_Disconnect_Legacy)
  private:
   class _Internal;
 
@@ -2632,7 +2632,7 @@ class CNETMsg_Disconnect final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_Tick final :
+class CNETMsg_Tick :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_Tick) */ {
  public:
   inline CNETMsg_Tick() : CNETMsg_Tick(nullptr) {}
@@ -2947,7 +2947,7 @@ class CNETMsg_Tick final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_StringCmd final :
+class CNETMsg_StringCmd :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_StringCmd) */ {
  public:
   inline CNETMsg_StringCmd() : CNETMsg_StringCmd(nullptr) {}
@@ -3127,7 +3127,7 @@ class CNETMsg_StringCmd final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SetConVar final :
+class CNETMsg_SetConVar :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SetConVar) */ {
  public:
   inline CNETMsg_SetConVar() : CNETMsg_SetConVar(nullptr) {}
@@ -3292,7 +3292,7 @@ class CNETMsg_SetConVar final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SignonState final :
+class CNETMsg_SignonState :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SignonState) */ {
  public:
   inline CNETMsg_SignonState() : CNETMsg_SignonState(nullptr) {}
@@ -3548,7 +3548,7 @@ class CNETMsg_SignonState final :
 };
 // -------------------------------------------------------------------
 
-class CSVCMsg_GameEvent_key_t final :
+class CSVCMsg_GameEvent_key_t :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSVCMsg_GameEvent.key_t) */ {
  public:
   inline CSVCMsg_GameEvent_key_t() : CSVCMsg_GameEvent_key_t(nullptr) {}
@@ -3818,7 +3818,7 @@ class CSVCMsg_GameEvent_key_t final :
 };
 // -------------------------------------------------------------------
 
-class CSVCMsg_GameEvent final :
+class CSVCMsg_GameEvent :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSVCMsg_GameEvent) */ {
  public:
   inline CSVCMsg_GameEvent() : CSVCMsg_GameEvent(nullptr) {}
@@ -4020,7 +4020,7 @@ class CSVCMsg_GameEvent final :
 };
 // -------------------------------------------------------------------
 
-class CSVCMsgList_GameEvents_event_t final :
+class CSVCMsgList_GameEvents_event_t :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSVCMsgList_GameEvents.event_t) */ {
  public:
   inline CSVCMsgList_GameEvents_event_t() : CSVCMsgList_GameEvents_event_t(nullptr) {}
@@ -4200,7 +4200,7 @@ class CSVCMsgList_GameEvents_event_t final :
 };
 // -------------------------------------------------------------------
 
-class CSVCMsgList_GameEvents final :
+class CSVCMsgList_GameEvents :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSVCMsgList_GameEvents) */ {
  public:
   inline CSVCMsgList_GameEvents() : CSVCMsgList_GameEvents(nullptr) {}
@@ -4366,7 +4366,7 @@ class CSVCMsgList_GameEvents final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SpawnGroup_Load final :
+class CNETMsg_SpawnGroup_Load :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SpawnGroup_Load) */ {
  public:
   inline CNETMsg_SpawnGroup_Load() : CNETMsg_SpawnGroup_Load(nullptr) {}
@@ -4861,7 +4861,7 @@ class CNETMsg_SpawnGroup_Load final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SpawnGroup_ManifestUpdate final :
+class CNETMsg_SpawnGroup_ManifestUpdate :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SpawnGroup_ManifestUpdate) */ {
  public:
   inline CNETMsg_SpawnGroup_ManifestUpdate() : CNETMsg_SpawnGroup_ManifestUpdate(nullptr) {}
@@ -5056,7 +5056,7 @@ class CNETMsg_SpawnGroup_ManifestUpdate final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SpawnGroup_SetCreationTick final :
+class CNETMsg_SpawnGroup_SetCreationTick :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SpawnGroup_SetCreationTick) */ {
  public:
   inline CNETMsg_SpawnGroup_SetCreationTick() : CNETMsg_SpawnGroup_SetCreationTick(nullptr) {}
@@ -5246,7 +5246,7 @@ class CNETMsg_SpawnGroup_SetCreationTick final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SpawnGroup_Unload final :
+class CNETMsg_SpawnGroup_Unload :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SpawnGroup_Unload) */ {
  public:
   inline CNETMsg_SpawnGroup_Unload() : CNETMsg_SpawnGroup_Unload(nullptr) {}
@@ -5436,7 +5436,7 @@ class CNETMsg_SpawnGroup_Unload final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_SpawnGroup_LoadCompleted final :
+class CNETMsg_SpawnGroup_LoadCompleted :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_SpawnGroup_LoadCompleted) */ {
  public:
   inline CNETMsg_SpawnGroup_LoadCompleted() : CNETMsg_SpawnGroup_LoadCompleted(nullptr) {}
@@ -5596,7 +5596,7 @@ class CNETMsg_SpawnGroup_LoadCompleted final :
 };
 // -------------------------------------------------------------------
 
-class CSVCMsg_GameSessionConfiguration final :
+class CSVCMsg_GameSessionConfiguration :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSVCMsg_GameSessionConfiguration) */ {
  public:
   inline CSVCMsg_GameSessionConfiguration() : CSVCMsg_GameSessionConfiguration(nullptr) {}
@@ -6066,7 +6066,7 @@ class CSVCMsg_GameSessionConfiguration final :
 };
 // -------------------------------------------------------------------
 
-class CNETMsg_DebugOverlay final :
+class CNETMsg_DebugOverlay :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CNETMsg_DebugOverlay) */ {
  public:
   inline CNETMsg_DebugOverlay() : CNETMsg_DebugOverlay(nullptr) {}
@@ -7567,35 +7567,35 @@ inline void CNETMsg_SplitScreenUser::set_slot(int32_t value) {
 
 // -------------------------------------------------------------------
 
-// CNETMsg_Disconnect
+// CNETMsg_Disconnect_Legacy
 
 // optional .ENetworkDisconnectionReason reason = 2 [default = NETWORK_DISCONNECT_INVALID];
-inline bool CNETMsg_Disconnect::_internal_has_reason() const {
+inline bool CNETMsg_Disconnect_Legacy::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CNETMsg_Disconnect::has_reason() const {
+inline bool CNETMsg_Disconnect_Legacy::has_reason() const {
   return _internal_has_reason();
 }
-inline void CNETMsg_Disconnect::clear_reason() {
+inline void CNETMsg_Disconnect_Legacy::clear_reason() {
   _impl_.reason_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline ::ENetworkDisconnectionReason CNETMsg_Disconnect::_internal_reason() const {
+inline ::ENetworkDisconnectionReason CNETMsg_Disconnect_Legacy::_internal_reason() const {
   return static_cast< ::ENetworkDisconnectionReason >(_impl_.reason_);
 }
-inline ::ENetworkDisconnectionReason CNETMsg_Disconnect::reason() const {
-  // @@protoc_insertion_point(field_get:CNETMsg_Disconnect.reason)
+inline ::ENetworkDisconnectionReason CNETMsg_Disconnect_Legacy::reason() const {
+  // @@protoc_insertion_point(field_get:CNETMsg_Disconnect_Legacy.reason)
   return _internal_reason();
 }
-inline void CNETMsg_Disconnect::_internal_set_reason(::ENetworkDisconnectionReason value) {
+inline void CNETMsg_Disconnect_Legacy::_internal_set_reason(::ENetworkDisconnectionReason value) {
   assert(::ENetworkDisconnectionReason_IsValid(value));
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.reason_ = value;
 }
-inline void CNETMsg_Disconnect::set_reason(::ENetworkDisconnectionReason value) {
+inline void CNETMsg_Disconnect_Legacy::set_reason(::ENetworkDisconnectionReason value) {
   _internal_set_reason(value);
-  // @@protoc_insertion_point(field_set:CNETMsg_Disconnect.reason)
+  // @@protoc_insertion_point(field_set:CNETMsg_Disconnect_Legacy.reason)
 }
 
 // -------------------------------------------------------------------

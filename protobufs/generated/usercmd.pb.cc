@@ -63,7 +63,7 @@ PROTOBUF_CONSTEXPR CBaseUserCmdPB::CBaseUserCmdPB(
   , /*decltype(_impl_.buttons_pb_)*/nullptr
   , /*decltype(_impl_.viewangles_)*/nullptr
   , /*decltype(_impl_.command_number_)*/0
-  , /*decltype(_impl_.tick_count_)*/0
+  , /*decltype(_impl_.client_tick_)*/0
   , /*decltype(_impl_.forwardmove_)*/0
   , /*decltype(_impl_.leftmove_)*/0
   , /*decltype(_impl_.upmove_)*/0
@@ -138,7 +138,7 @@ const uint32_t TableStruct_usercmd_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::CBaseUserCmdPB, _impl_.command_number_),
-  PROTOBUF_FIELD_OFFSET(::CBaseUserCmdPB, _impl_.tick_count_),
+  PROTOBUF_FIELD_OFFSET(::CBaseUserCmdPB, _impl_.client_tick_),
   PROTOBUF_FIELD_OFFSET(::CBaseUserCmdPB, _impl_.buttons_pb_),
   PROTOBUF_FIELD_OFFSET(::CBaseUserCmdPB, _impl_.viewangles_),
   PROTOBUF_FIELD_OFFSET(::CBaseUserCmdPB, _impl_.forwardmove_),
@@ -201,26 +201,26 @@ const char descriptor_table_protodef_usercmd_2eproto[] PROTOBUF_SECTION_VARIABLE
   "\003 \001(\004\"z\n\020CSubtickMoveStep\022\016\n\006button\030\001 \001("
   "\004\022\017\n\007pressed\030\002 \001(\010\022\014\n\004when\030\003 \001(\002\022\034\n\024anal"
   "og_forward_delta\030\004 \001(\002\022\031\n\021analog_left_de"
-  "lta\030\005 \001(\002\"\265\003\n\016CBaseUserCmdPB\022\026\n\016command_"
-  "number\030\001 \001(\005\022\022\n\ntick_count\030\002 \001(\005\022%\n\nbutt"
-  "ons_pb\030\003 \001(\0132\021.CInButtonStatePB\022\037\n\nviewa"
-  "ngles\030\004 \001(\0132\013.CMsgQAngle\022\023\n\013forwardmove\030"
-  "\005 \001(\002\022\020\n\010leftmove\030\006 \001(\002\022\016\n\006upmove\030\007 \001(\002\022"
-  "\017\n\007impulse\030\010 \001(\005\022\024\n\014weaponselect\030\t \001(\005\022\023"
-  "\n\013random_seed\030\n \001(\005\022\017\n\007mousedx\030\013 \001(\005\022\017\n\007"
-  "mousedy\030\014 \001(\005\022$\n\022pawn_entity_handle\030\016 \001("
-  "\r:\01016777215\022(\n\rsubtick_moves\030\022 \003(\0132\021.CSu"
-  "btickMoveStep\022\020\n\010move_crc\030\023 \001(\014\022%\n\035consu"
-  "med_server_angle_changes\030\024 \001(\r\022\021\n\tcmd_fl"
-  "ags\030\025 \001(\005\"/\n\016CUserCmdBasePB\022\035\n\004base\030\001 \001("
-  "\0132\017.CBaseUserCmdPB"
+  "lta\030\005 \001(\002\"\266\003\n\016CBaseUserCmdPB\022\026\n\016command_"
+  "number\030\001 \001(\005\022\023\n\013client_tick\030\002 \001(\005\022%\n\nbut"
+  "tons_pb\030\003 \001(\0132\021.CInButtonStatePB\022\037\n\nview"
+  "angles\030\004 \001(\0132\013.CMsgQAngle\022\023\n\013forwardmove"
+  "\030\005 \001(\002\022\020\n\010leftmove\030\006 \001(\002\022\016\n\006upmove\030\007 \001(\002"
+  "\022\017\n\007impulse\030\010 \001(\005\022\024\n\014weaponselect\030\t \001(\005\022"
+  "\023\n\013random_seed\030\n \001(\005\022\017\n\007mousedx\030\013 \001(\005\022\017\n"
+  "\007mousedy\030\014 \001(\005\022$\n\022pawn_entity_handle\030\016 \001"
+  "(\r:\01016777215\022(\n\rsubtick_moves\030\022 \003(\0132\021.CS"
+  "ubtickMoveStep\022\020\n\010move_crc\030\023 \001(\014\022%\n\035cons"
+  "umed_server_angle_changes\030\024 \001(\r\022\021\n\tcmd_f"
+  "lags\030\025 \001(\005\"/\n\016CUserCmdBasePB\022\035\n\004base\030\001 \001"
+  "(\0132\017.CBaseUserCmdPB"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_usercmd_2eproto_deps[1] = {
   &::descriptor_table_networkbasetypes_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_usercmd_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_usercmd_2eproto = {
-    false, false, 738, descriptor_table_protodef_usercmd_2eproto,
+    false, false, 739, descriptor_table_protodef_usercmd_2eproto,
     "usercmd.proto",
     &descriptor_table_usercmd_2eproto_once, descriptor_table_usercmd_2eproto_deps, 1, 4,
     schemas, file_default_instances, TableStruct_usercmd_2eproto::offsets,
@@ -828,7 +828,7 @@ class CBaseUserCmdPB::_Internal {
   static void set_has_command_number(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_tick_count(HasBits* has_bits) {
+  static void set_has_client_tick(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static const ::CInButtonStatePB& buttons_pb(const CBaseUserCmdPB* msg);
@@ -906,7 +906,7 @@ CBaseUserCmdPB::CBaseUserCmdPB(const CBaseUserCmdPB& from)
     , decltype(_impl_.buttons_pb_){nullptr}
     , decltype(_impl_.viewangles_){nullptr}
     , decltype(_impl_.command_number_){}
-    , decltype(_impl_.tick_count_){}
+    , decltype(_impl_.client_tick_){}
     , decltype(_impl_.forwardmove_){}
     , decltype(_impl_.leftmove_){}
     , decltype(_impl_.upmove_){}
@@ -952,7 +952,7 @@ inline void CBaseUserCmdPB::SharedCtor(
     , decltype(_impl_.buttons_pb_){nullptr}
     , decltype(_impl_.viewangles_){nullptr}
     , decltype(_impl_.command_number_){0}
-    , decltype(_impl_.tick_count_){0}
+    , decltype(_impl_.client_tick_){0}
     , decltype(_impl_.forwardmove_){0}
     , decltype(_impl_.leftmove_){0}
     , decltype(_impl_.upmove_){0}
@@ -1044,11 +1044,11 @@ const char* CBaseUserCmdPB::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // optional int32 tick_count = 2;
+      // optional int32 client_tick = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_tick_count(&has_bits);
-          _impl_.tick_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_client_tick(&has_bits);
+          _impl_.client_tick_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1227,10 +1227,10 @@ uint8_t* CBaseUserCmdPB::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_command_number(), target);
   }
 
-  // optional int32 tick_count = 2;
+  // optional int32 client_tick = 2;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_tick_count(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_client_tick(), target);
   }
 
   // optional .CInButtonStatePB buttons_pb = 3;
@@ -1378,9 +1378,9 @@ size_t CBaseUserCmdPB::ByteSizeLong() const {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_command_number());
     }
 
-    // optional int32 tick_count = 2;
+    // optional int32 client_tick = 2;
     if (cached_has_bits & 0x00000010u) {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_tick_count());
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_client_tick());
     }
 
     // optional float forwardmove = 5;
@@ -1481,7 +1481,7 @@ void CBaseUserCmdPB::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
       _this->_impl_.command_number_ = from._impl_.command_number_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.tick_count_ = from._impl_.tick_count_;
+      _this->_impl_.client_tick_ = from._impl_.client_tick_;
     }
     if (cached_has_bits & 0x00000020u) {
       _this->_impl_.forwardmove_ = from._impl_.forwardmove_;

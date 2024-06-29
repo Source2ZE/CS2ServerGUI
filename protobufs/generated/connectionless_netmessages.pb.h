@@ -58,7 +58,7 @@ PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
 
-class C2S_CONNECT_Message final :
+class C2S_CONNECT_Message :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:C2S_CONNECT_Message) */ {
  public:
   inline C2S_CONNECT_Message() : C2S_CONNECT_Message(nullptr) {}
@@ -358,7 +358,7 @@ class C2S_CONNECT_Message final :
 };
 // -------------------------------------------------------------------
 
-class C2S_CONNECTION_Message final :
+class C2S_CONNECTION_Message :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:C2S_CONNECTION_Message) */ {
  public:
   inline C2S_CONNECTION_Message() : C2S_CONNECTION_Message(nullptr) {}
