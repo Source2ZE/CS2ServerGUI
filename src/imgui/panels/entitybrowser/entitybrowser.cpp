@@ -168,6 +168,12 @@ void DumpFieldValue(const char* name, void* pSchemaField, CSchemaType* pType, bo
 	ImGui::TableSetColumnIndex(2);
 	bool isRenderNested = false;
 	TypeStringifier::DumpStringValue(pSchemaField, pType, &isRenderNested, name);
+
+	if (ImGui::BeginItemTooltip())
+	{
+		ImGui::Text("%p", pSchemaField);
+		ImGui::EndTooltip();
+	}
 		
 	ImGui::TableSetColumnIndex(0);
 	bool hasNested = isRenderNested || pType->m_eTypeCategory == SCHEMA_TYPE_DECLARED_CLASS || (pType->m_eTypeCategory == SCHEMA_TYPE_ATOMIC && pType->m_eAtomicCategory == SCHEMA_ATOMIC_COLLECTION_OF_T);
