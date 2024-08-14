@@ -1336,6 +1336,7 @@ PROTOBUF_CONSTEXPR CMsgServerUserCmd::CMsgServerUserCmd(
   , /*decltype(_impl_.data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.cmd_number_)*/0
   , /*decltype(_impl_.server_tick_executed_)*/0
+  , /*decltype(_impl_.client_tick_)*/0
   , /*decltype(_impl_.player_slot_)*/-1} {}
 struct CMsgServerUserCmdDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CMsgServerUserCmdDefaultTypeInternal()
@@ -2470,10 +2471,12 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.cmd_number_),
   PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.player_slot_),
   PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.server_tick_executed_),
+  PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.client_tick_),
   0,
   1,
-  3,
+  4,
   2,
+  3,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_UserCommands, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2559,8 +2562,8 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 1056, 1063, -1, sizeof(::CSVCMsg_Broadcast_Command)},
   { 1064, 1078, -1, sizeof(::CCLCMsg_HltvFixupOperatorTick)},
   { 1086, 1094, -1, sizeof(::CSVCMsg_HltvFixupOperatorStatus)},
-  { 1096, 1106, -1, sizeof(::CMsgServerUserCmd)},
-  { 1110, -1, -1, sizeof(::CSVCMsg_UserCommands)},
+  { 1096, 1107, -1, sizeof(::CMsgServerUserCmd)},
+  { 1112, -1, -1, sizeof(::CSVCMsg_UserCommands)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -2888,70 +2891,71 @@ const char descriptor_table_protodef_netmessages_2eproto[] PROTOBUF_SECTION_VARI
   "erver_target\030\007 \001(\005\022 \n\013view_offset\030\010 \001(\0132"
   "\013.CMsgVector\"O\n\037CSVCMsg_HltvFixupOperato"
   "rStatus\022\014\n\004mode\030\001 \001(\r\022\036\n\026override_operat"
-  "or_name\030\002 \001(\t\"l\n\021CMsgServerUserCmd\022\014\n\004da"
-  "ta\030\001 \001(\014\022\022\n\ncmd_number\030\002 \001(\005\022\027\n\013player_s"
-  "lot\030\003 \001(\005:\002-1\022\034\n\024server_tick_executed\030\004 "
-  "\001(\005\"<\n\024CSVCMsg_UserCommands\022$\n\010commands\030"
-  "\001 \003(\0132\022.CMsgServerUserCmd*\242\003\n\014CLC_Messag"
-  "es\022\022\n\016clc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\r"
-  "clc_VoiceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\024\n\020"
-  "clc_ListenEvents\020\030\022\030\n\024clc_RespondCvarVal"
-  "ue\020\031\022\024\n\020clc_FileCRCCheck\020\032\022\027\n\023clc_Loadin"
-  "gProgress\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022"
-  "\025\n\021clc_ClientMessage\020\035\022\035\n\031clc_SplitPlaye"
-  "rDisconnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\022\n\016c"
-  "lc_ServerPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n"
-  "\020clc_CmdKeyValues\020\"\022\031\n\025clc_RconServerDet"
-  "ails\020#\022\022\n\016clc_HltvReplay\020$\022\022\n\016clc_Diagno"
-  "stic\020%*\253\005\n\014SVC_Messages\022\022\n\016svc_ServerInf"
-  "o\020(\022\033\n\027svc_FlattenedSerializer\020)\022\021\n\rsvc_"
-  "ClassInfo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025svc_Cre"
-  "ateStringTable\020,\022\031\n\025svc_UpdateStringTabl"
-  "e\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_VoiceData\020"
-  "/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sounds\0201\022\017\n\013svc_"
-  "SetView\0202\022\034\n\030svc_ClearAllStringTables\0203\022"
-  "\024\n\020svc_CmdKeyValues\0204\022\020\n\014svc_BSPDecal\0205\022"
-  "\023\n\017svc_SplitScreen\0206\022\026\n\022svc_PacketEntiti"
-  "es\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_Menu\0209\022\024\n\020"
-  "svc_GetCvarValue\020:\022\021\n\rsvc_StopSound\020;\022\020\n"
-  "\014svc_PeerList\020<\022\026\n\022svc_PacketReliable\020=\022"
-  "\022\n\016svc_HLTVStatus\020>\022\025\n\021svc_ServerSteamID"
-  "\020\?\022\026\n\022svc_FullFrameSplit\020F\022\031\n\025svc_RconSe"
-  "rverDetails\020G\022\023\n\017svc_UserMessage\020H\022\022\n\016sv"
-  "c_HltvReplay\020I\022\031\n\025svc_Broadcast_Command\020"
-  "J\022\037\n\033svc_HltvFixupOperatorStatus\020K\022\020\n\014sv"
-  "c_UserCmds\020L*g\n\021VoiceDataFormat_t\022\032\n\026VOI"
-  "CEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FORMA"
-  "T_ENGINE\020\001\022\031\n\025VOICEDATA_FORMAT_OPUS\020\002*B\n"
-  "\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UNPA"
-  "USE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002*\035\n\014PrefetchTyp"
-  "e\022\r\n\tPFT_SOUND\020\000*V\n\027ESplitScreenMessageT"
-  "ype\022\033\n\027MSG_SPLITSCREEN_ADDUSER\020\000\022\036\n\032MSG_"
-  "SPLITSCREEN_REMOVEUSER\020\001*\263\001\n\025EQueryCvarV"
-  "alueStatus\022%\n!eQueryCvarValueStatus_Valu"
-  "eIntact\020\000\022&\n\"eQueryCvarValueStatus_CvarN"
-  "otFound\020\001\022\"\n\036eQueryCvarValueStatus_NotAC"
-  "var\020\002\022\'\n#eQueryCvarValueStatus_CvarProte"
-  "cted\020\003*h\n\013DIALOG_TYPE\022\016\n\nDIALOG_MSG\020\000\022\017\n"
-  "\013DIALOG_MENU\020\001\022\017\n\013DIALOG_TEXT\020\002\022\020\n\014DIALO"
-  "G_ENTRY\020\003\022\025\n\021DIALOG_ASKCONNECT\020\004*+\n\031SVC_"
-  "Messages_LowFrequency\022\016\n\tsvc_dummy\020\330\004*a\n"
-  "\026Bidirectional_Messages\022\033\n\027bi_Rebroadcas"
-  "tGameEvent\020\020\022\030\n\024bi_RebroadcastSource\020\021\022\020"
-  "\n\014bi_GameEvent\020\022*M\n#Bidirectional_Messag"
-  "es_LowFrequency\022\021\n\014bi_RelayInfo\020\274\005\022\023\n\016bi"
-  "_RelayPacket\020\275\005*\241\001\n\021ReplayEventType_t\022\027\n"
-  "\023REPLAY_EVENT_CANCEL\020\000\022\026\n\022REPLAY_EVENT_D"
-  "EATH\020\001\022\030\n\024REPLAY_EVENT_GENERIC\020\002\022\'\n#REPL"
-  "AY_EVENT_STUCK_NEED_FULL_UPDATE\020\003\022\030\n\024REP"
-  "LAY_EVENT_VICTORY\020\004"
+  "or_name\030\002 \001(\t\"\201\001\n\021CMsgServerUserCmd\022\014\n\004d"
+  "ata\030\001 \001(\014\022\022\n\ncmd_number\030\002 \001(\005\022\027\n\013player_"
+  "slot\030\003 \001(\005:\002-1\022\034\n\024server_tick_executed\030\004"
+  " \001(\005\022\023\n\013client_tick\030\005 \001(\005\"<\n\024CSVCMsg_Use"
+  "rCommands\022$\n\010commands\030\001 \003(\0132\022.CMsgServer"
+  "UserCmd*\242\003\n\014CLC_Messages\022\022\n\016clc_ClientIn"
+  "fo\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc_VoiceData\020\026\022\023\n"
+  "\017clc_BaselineAck\020\027\022\024\n\020clc_ListenEvents\020\030"
+  "\022\030\n\024clc_RespondCvarValue\020\031\022\024\n\020clc_FileCR"
+  "CCheck\020\032\022\027\n\023clc_LoadingProgress\020\033\022\032\n\026clc"
+  "_SplitPlayerConnect\020\034\022\025\n\021clc_ClientMessa"
+  "ge\020\035\022\035\n\031clc_SplitPlayerDisconnect\020\036\022\024\n\020c"
+  "lc_ServerStatus\020\037\022\022\n\016clc_ServerPing\020 \022\024\n"
+  "\020clc_RequestPause\020!\022\024\n\020clc_CmdKeyValues\020"
+  "\"\022\031\n\025clc_RconServerDetails\020#\022\022\n\016clc_Hltv"
+  "Replay\020$\022\022\n\016clc_Diagnostic\020%*\253\005\n\014SVC_Mes"
+  "sages\022\022\n\016svc_ServerInfo\020(\022\033\n\027svc_Flatten"
+  "edSerializer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc"
+  "_SetPause\020+\022\031\n\025svc_CreateStringTable\020,\022\031"
+  "\n\025svc_UpdateStringTable\020-\022\021\n\rsvc_VoiceIn"
+  "it\020.\022\021\n\rsvc_VoiceData\020/\022\r\n\tsvc_Print\0200\022\016"
+  "\n\nsvc_Sounds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_C"
+  "learAllStringTables\0203\022\024\n\020svc_CmdKeyValue"
+  "s\0204\022\020\n\014svc_BSPDecal\0205\022\023\n\017svc_SplitScreen"
+  "\0206\022\026\n\022svc_PacketEntities\0207\022\020\n\014svc_Prefet"
+  "ch\0208\022\014\n\010svc_Menu\0209\022\024\n\020svc_GetCvarValue\020:"
+  "\022\021\n\rsvc_StopSound\020;\022\020\n\014svc_PeerList\020<\022\026\n"
+  "\022svc_PacketReliable\020=\022\022\n\016svc_HLTVStatus\020"
+  ">\022\025\n\021svc_ServerSteamID\020\?\022\026\n\022svc_FullFram"
+  "eSplit\020F\022\031\n\025svc_RconServerDetails\020G\022\023\n\017s"
+  "vc_UserMessage\020H\022\022\n\016svc_HltvReplay\020I\022\031\n\025"
+  "svc_Broadcast_Command\020J\022\037\n\033svc_HltvFixup"
+  "OperatorStatus\020K\022\020\n\014svc_UserCmds\020L*g\n\021Vo"
+  "iceDataFormat_t\022\032\n\026VOICEDATA_FORMAT_STEA"
+  "M\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001\022\031\n\025VOIC"
+  "EDATA_FORMAT_OPUS\020\002*B\n\016RequestPause_t\022\014\n"
+  "\010RP_PAUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLE"
+  "PAUSE\020\002*\035\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000*V"
+  "\n\027ESplitScreenMessageType\022\033\n\027MSG_SPLITSC"
+  "REEN_ADDUSER\020\000\022\036\n\032MSG_SPLITSCREEN_REMOVE"
+  "USER\020\001*\263\001\n\025EQueryCvarValueStatus\022%\n!eQue"
+  "ryCvarValueStatus_ValueIntact\020\000\022&\n\"eQuer"
+  "yCvarValueStatus_CvarNotFound\020\001\022\"\n\036eQuer"
+  "yCvarValueStatus_NotACvar\020\002\022\'\n#eQueryCva"
+  "rValueStatus_CvarProtected\020\003*h\n\013DIALOG_T"
+  "YPE\022\016\n\nDIALOG_MSG\020\000\022\017\n\013DIALOG_MENU\020\001\022\017\n\013"
+  "DIALOG_TEXT\020\002\022\020\n\014DIALOG_ENTRY\020\003\022\025\n\021DIALO"
+  "G_ASKCONNECT\020\004*+\n\031SVC_Messages_LowFreque"
+  "ncy\022\016\n\tsvc_dummy\020\330\004*a\n\026Bidirectional_Mes"
+  "sages\022\033\n\027bi_RebroadcastGameEvent\020\020\022\030\n\024bi"
+  "_RebroadcastSource\020\021\022\020\n\014bi_GameEvent\020\022*M"
+  "\n#Bidirectional_Messages_LowFrequency\022\021\n"
+  "\014bi_RelayInfo\020\274\005\022\023\n\016bi_RelayPacket\020\275\005*\241\001"
+  "\n\021ReplayEventType_t\022\027\n\023REPLAY_EVENT_CANC"
+  "EL\020\000\022\026\n\022REPLAY_EVENT_DEATH\020\001\022\030\n\024REPLAY_E"
+  "VENT_GENERIC\020\002\022\'\n#REPLAY_EVENT_STUCK_NEE"
+  "D_FULL_UPDATE\020\003\022\030\n\024REPLAY_EVENT_VICTORY\020"
+  "\004"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_netmessages_2eproto_deps[1] = {
   &::descriptor_table_networkbasetypes_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_netmessages_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_netmessages_2eproto = {
-    false, false, 11979, descriptor_table_protodef_netmessages_2eproto,
+    false, false, 12001, descriptor_table_protodef_netmessages_2eproto,
     "netmessages.proto",
     &descriptor_table_netmessages_2eproto_once, descriptor_table_netmessages_2eproto_deps, 1, 78,
     schemas, file_default_instances, TableStruct_netmessages_2eproto::offsets,
@@ -27564,10 +27568,13 @@ class CMsgServerUserCmd::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static void set_has_player_slot(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
+    (*has_bits)[0] |= 16u;
   }
   static void set_has_server_tick_executed(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
+  }
+  static void set_has_client_tick(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
   }
 };
 
@@ -27586,6 +27593,7 @@ CMsgServerUserCmd::CMsgServerUserCmd(const CMsgServerUserCmd& from)
     , decltype(_impl_.data_){}
     , decltype(_impl_.cmd_number_){}
     , decltype(_impl_.server_tick_executed_){}
+    , decltype(_impl_.client_tick_){}
     , decltype(_impl_.player_slot_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -27613,6 +27621,7 @@ inline void CMsgServerUserCmd::SharedCtor(
     , decltype(_impl_.data_){}
     , decltype(_impl_.cmd_number_){0}
     , decltype(_impl_.server_tick_executed_){0}
+    , decltype(_impl_.client_tick_){0}
     , decltype(_impl_.player_slot_){-1}
   };
   _impl_.data_.InitDefault();
@@ -27649,10 +27658,10 @@ void CMsgServerUserCmd::Clear() {
   if (cached_has_bits & 0x00000001u) {
     _impl_.data_.ClearNonDefaultToEmpty();
   }
-  if (cached_has_bits & 0x0000000eu) {
+  if (cached_has_bits & 0x0000001eu) {
     ::memset(&_impl_.cmd_number_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.server_tick_executed_) -
-        reinterpret_cast<char*>(&_impl_.cmd_number_)) + sizeof(_impl_.server_tick_executed_));
+        reinterpret_cast<char*>(&_impl_.client_tick_) -
+        reinterpret_cast<char*>(&_impl_.cmd_number_)) + sizeof(_impl_.client_tick_));
     _impl_.player_slot_ = -1;
   }
   _impl_._has_bits_.Clear();
@@ -27702,6 +27711,15 @@ const char* CMsgServerUserCmd::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
+      // optional int32 client_tick = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_client_tick(&has_bits);
+          _impl_.client_tick_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -27746,7 +27764,7 @@ uint8_t* CMsgServerUserCmd::_InternalSerialize(
   }
 
   // optional int32 player_slot = 3 [default = -1];
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_player_slot(), target);
   }
@@ -27755,6 +27773,12 @@ uint8_t* CMsgServerUserCmd::_InternalSerialize(
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_server_tick_executed(), target);
+  }
+
+  // optional int32 client_tick = 5;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_client_tick(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -27774,7 +27798,7 @@ size_t CMsgServerUserCmd::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     // optional bytes data = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -27792,8 +27816,13 @@ size_t CMsgServerUserCmd::ByteSizeLong() const {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_server_tick_executed());
     }
 
-    // optional int32 player_slot = 3 [default = -1];
+    // optional int32 client_tick = 5;
     if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_client_tick());
+    }
+
+    // optional int32 player_slot = 3 [default = -1];
+    if (cached_has_bits & 0x00000010u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_player_slot());
     }
 
@@ -27817,7 +27846,7 @@ void CMsgServerUserCmd::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_data(from._internal_data());
     }
@@ -27828,6 +27857,9 @@ void CMsgServerUserCmd::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
       _this->_impl_.server_tick_executed_ = from._impl_.server_tick_executed_;
     }
     if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.client_tick_ = from._impl_.client_tick_;
+    }
+    if (cached_has_bits & 0x00000010u) {
       _this->_impl_.player_slot_ = from._impl_.player_slot_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -27857,8 +27889,8 @@ void CMsgServerUserCmd::InternalSwap(CMsgServerUserCmd* other) {
       &other->_impl_.data_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CMsgServerUserCmd, _impl_.server_tick_executed_)
-      + sizeof(CMsgServerUserCmd::_impl_.server_tick_executed_)
+      PROTOBUF_FIELD_OFFSET(CMsgServerUserCmd, _impl_.client_tick_)
+      + sizeof(CMsgServerUserCmd::_impl_.client_tick_)
       - PROTOBUF_FIELD_OFFSET(CMsgServerUserCmd, _impl_.cmd_number_)>(
           reinterpret_cast<char*>(&_impl_.cmd_number_),
           reinterpret_cast<char*>(&other->_impl_.cmd_number_));

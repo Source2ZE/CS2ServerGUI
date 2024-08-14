@@ -1,7 +1,7 @@
 /**
  * =============================================================================
  * CS2Fixes
- * Copyright (C) 2023 Source2ZE
+ * Copyright (C) 2023-2024 Source2ZE
  * =============================================================================
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -18,8 +18,26 @@
  */
 
 #pragma once
+#include <vector>
+#include <string>
 #include <cstdint>
 #include "metamod_oslink.h"
+
+struct Section
+{
+	std::string m_szName;
+	void* m_pBase;
+	size_t m_iSize;
+};
+
+#if defined(_WIN32)
+#define FASTCALL __fastcall
+#define THISCALL __thiscall
+#else
+#define FASTCALL
+#define THISCALL
+#define strtok_s strtok_r
+#endif
 
 struct Module
 {
@@ -31,7 +49,7 @@ struct Module
 };
 
 #ifndef _WIN32
-int GetModuleInformation(HINSTANCE module, void** base, size_t* length);
+int GetModuleInformation(HINSTANCE module, void** base, size_t* length, std::vector<Section>& m_sections);
 #endif
 
 #ifdef _WIN32
@@ -42,4 +60,4 @@ int GetModuleInformation(HINSTANCE module, void** base, size_t* length);
 #define MODULE_EXT ".so"
 #endif
 
-void Plat_WriteMemory(void* pPatchAddress, uint8_t *pPatch, int iPatchSize);
+void Plat_WriteMemory(void* pPatchAddress, uint8_t* pPatch, int iPatchSize);

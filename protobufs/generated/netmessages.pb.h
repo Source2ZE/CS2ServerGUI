@@ -17178,6 +17178,7 @@ class CMsgServerUserCmd :
     kDataFieldNumber = 1,
     kCmdNumberFieldNumber = 2,
     kServerTickExecutedFieldNumber = 4,
+    kClientTickFieldNumber = 5,
     kPlayerSlotFieldNumber = 3,
   };
   // optional bytes data = 1;
@@ -17224,6 +17225,19 @@ class CMsgServerUserCmd :
   void _internal_set_server_tick_executed(int32_t value);
   public:
 
+  // optional int32 client_tick = 5;
+  bool has_client_tick() const;
+  private:
+  bool _internal_has_client_tick() const;
+  public:
+  void clear_client_tick();
+  int32_t client_tick() const;
+  void set_client_tick(int32_t value);
+  private:
+  int32_t _internal_client_tick() const;
+  void _internal_set_client_tick(int32_t value);
+  public:
+
   // optional int32 player_slot = 3 [default = -1];
   bool has_player_slot() const;
   private:
@@ -17250,6 +17264,7 @@ class CMsgServerUserCmd :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
     int32_t cmd_number_;
     int32_t server_tick_executed_;
+    int32_t client_tick_;
     int32_t player_slot_;
   };
   union { Impl_ _impl_; };
@@ -30364,7 +30379,7 @@ inline void CMsgServerUserCmd::set_cmd_number(int32_t value) {
 
 // optional int32 player_slot = 3 [default = -1];
 inline bool CMsgServerUserCmd::_internal_has_player_slot() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool CMsgServerUserCmd::has_player_slot() const {
@@ -30372,7 +30387,7 @@ inline bool CMsgServerUserCmd::has_player_slot() const {
 }
 inline void CMsgServerUserCmd::clear_player_slot() {
   _impl_.player_slot_ = -1;
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t CMsgServerUserCmd::_internal_player_slot() const {
   return _impl_.player_slot_;
@@ -30382,7 +30397,7 @@ inline int32_t CMsgServerUserCmd::player_slot() const {
   return _internal_player_slot();
 }
 inline void CMsgServerUserCmd::_internal_set_player_slot(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.player_slot_ = value;
 }
 inline void CMsgServerUserCmd::set_player_slot(int32_t value) {
@@ -30416,6 +30431,34 @@ inline void CMsgServerUserCmd::_internal_set_server_tick_executed(int32_t value)
 inline void CMsgServerUserCmd::set_server_tick_executed(int32_t value) {
   _internal_set_server_tick_executed(value);
   // @@protoc_insertion_point(field_set:CMsgServerUserCmd.server_tick_executed)
+}
+
+// optional int32 client_tick = 5;
+inline bool CMsgServerUserCmd::_internal_has_client_tick() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool CMsgServerUserCmd::has_client_tick() const {
+  return _internal_has_client_tick();
+}
+inline void CMsgServerUserCmd::clear_client_tick() {
+  _impl_.client_tick_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int32_t CMsgServerUserCmd::_internal_client_tick() const {
+  return _impl_.client_tick_;
+}
+inline int32_t CMsgServerUserCmd::client_tick() const {
+  // @@protoc_insertion_point(field_get:CMsgServerUserCmd.client_tick)
+  return _internal_client_tick();
+}
+inline void CMsgServerUserCmd::_internal_set_client_tick(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.client_tick_ = value;
+}
+inline void CMsgServerUserCmd::set_client_tick(int32_t value) {
+  _internal_set_client_tick(value);
+  // @@protoc_insertion_point(field_set:CMsgServerUserCmd.client_tick)
 }
 
 // -------------------------------------------------------------------

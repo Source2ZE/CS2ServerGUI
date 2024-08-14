@@ -51,12 +51,13 @@
 CS2ServerGUI g_CS2ServerGUI;
 std::thread g_thread;
 
-typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, CNetMessage* pData, void* pNetChan);
-FilterMessage_t g_pFilterMessage = nullptr;
-funchook_t* g_pHook = nullptr;
+typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilterCustom* player, CNetMessage* pData, void* pNetChan);
+int g_iFilterMessage;
 
 SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitScreenSlot, bool, int, const uint64*,
 	INetworkMessageInternal*, const CNetMessage*, unsigned long, NetChannelBufType_t);
+
+SH_DECL_MANUALHOOK2(FilterMessage, 0, 0, 0, bool, CNetMessage*, void*);
 
 CGameEntitySystem* GameEntitySystem()
 {
@@ -128,12 +129,16 @@ bool ReadPBFromBuffer(bf_read& buffer, T& pb)
 	return true;
 }
 
-bool Detour_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, INetworkMessageInternal* pEvent, CNetMessage* pData, void* pNetChan)
+bool CS2ServerGUI::Hook_FilterMessage(CNetMessage* pData, void* pNetChan)
 {
-	if(!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
-		return g_pFilterMessage(player, pEvent, pData, pNetChan);
+	if (!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
+	{
+		RETURN_META_VALUE(MRES_IGNORED, true);
+	}
 
-	NetMessageInfo_t* info = pEvent->GetNetMessageInfo();
+	auto player = META_IFACEPTR(INetworkMessageProcessingPreFilterCustom);
+	
+	NetMessageInfo_t* info = pData->GetNetMessage()->GetNetMessageInfo();
 	if (info)
 	{
 		if (info->m_MessageId == CLC_Messages::clc_Move)
@@ -157,28 +162,22 @@ bool Detour_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, INet
 		}
 	}
 
-	return g_pFilterMessage(player, pEvent, pData, pNetChan);
+	RETURN_META_VALUE(MRES_IGNORED, true);
 }
 
 void SetupHook()
 {
 	CModule engineModule(ROOTBIN, "engine2");
 
-	int err;
-	// Client %d(%s) tried to send a RebroadcastSourceId msg.\n
-	const byte sig[] = "\x40\x53\x48\x83\xEC\x30\x48\x3B\x15\x2A\x2A\x2A\x2A\x48\x8B\xD9";
+	auto serverSideClientVTable = engineModule.FindVirtualTable("CServerSideClient", 8);
 
-	g_pFilterMessage = (FilterMessage_t)engineModule.FindSignature((byte*)sig, sizeof(sig) - 1, err);
-
-	if (err)
+	if (!serverSideClientVTable)
 	{
-		META_CONPRINTF("[CS2ServerGUI] Failed to find signature: %i\n", err);
+		META_CONPRINTF("[CS2ServerGUI] Failed to find serverSideClientVTable\n");
 		return;
 	}
 
-	auto g_pHook = funchook_create();
-	funchook_prepare(g_pHook, (void**)&g_pFilterMessage, (void*)Detour_FilterMessage);
-	funchook_install(g_pHook, 0);
+	g_iFilterMessage = SH_ADD_MANUALDVPHOOK(FilterMessage, serverSideClientVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage), false);
 
 	return;
 }
