@@ -151,7 +151,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 
 	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CUtlStringToken"))
 	{
-		ImGui::Text("%u", static_cast<CUtlStringToken*>(value)->m_nHashCode);
+		ImGui::Text("%u", static_cast<CUtlStringToken*>(value)->GetHashCode());
 		return;
 	}
 
