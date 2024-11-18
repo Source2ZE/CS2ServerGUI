@@ -246,7 +246,7 @@ void* CModule::FindVirtualTable(const std::string& name, int32_t offset)
 
 		while (void* vtable = sigIt3.FindNext(false))
 		{
-			if (*(int64_t*)((uintptr_t)vtable - 0x8) == offset)
+			if (*(int64_t*)((uintptr_t)vtable - 0x8) == (int64_t)offset)
 				return (void*)((uintptr_t)vtable + 0x8);
 		}
 	}
