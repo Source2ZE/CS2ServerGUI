@@ -168,8 +168,12 @@ bool CS2ServerGUI::Hook_FilterMessage(CNetMessage* pData, void* pNetChan)
 void SetupHook()
 {
 	CModule engineModule(ROOTBIN, "engine2");
-
+	
+#ifdef _WIN32
 	auto serverSideClientVTable = engineModule.FindVirtualTable("CServerSideClient", 8);
+#else
+	auto serverSideClientVTable = engineModule.FindVirtualTable("CServerSideClient", -64);
+#endif
 
 	if (!serverSideClientVTable)
 	{
