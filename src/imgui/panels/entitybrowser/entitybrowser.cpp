@@ -216,7 +216,7 @@ void DumpFieldValue(const char* name, void* pSchemaField, CSchemaType* pType, bo
 			for (int i = 0; i < count; i++)
 			{
 				auto fieldName = std::format("[{}]", i);
-				DumpFieldValue(fieldName.c_str(), (void*)atomicType->m_pfnManipulator(SCHEMA_COLLECTION_MANIPULATOR_ACTION_GET_ELEMENT_CONST, pSchemaField, (void*)i, 0), atomicType->m_pTemplateType, false, overrideMap);
+				DumpFieldValue(fieldName.c_str(), (void*)atomicType->m_pfnManipulator(SCHEMA_COLLECTION_MANIPULATOR_ACTION_GET_ELEMENT_CONST, pSchemaField, i, 0), atomicType->m_pTemplateType, false, overrideMap);
 			}
 			ImGui::TreePop();
 		}

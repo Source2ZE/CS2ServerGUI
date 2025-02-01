@@ -91,6 +91,8 @@ std::string PrettifyFlags(uint64_t flags)
 		result += " missing4";
 	if (flags & FCVAR_SERVER_CAN_EXECUTE)
 		result += " server_can_execute";
+	if (flags & FCVAR_CLIENT_CAN_EXECUTE)
+		result += " client_can_execute";
 	if (flags & FCVAR_SERVER_CANNOT_QUERY)
 		result += " server_cannot_query";
 	if (flags & FCVAR_VCONSOLE_SET_FOCUS)
@@ -103,7 +105,7 @@ std::string PrettifyFlags(uint64_t flags)
 		result += " missing5";
 	if (flags & FCVAR_MISSING6)
 		result += " missing6";
-	if (flags & ((uint64_t)1 << (uint64_t)32))
+	if (flags & FCVAR_DEFENSIVE)
 		result += " defensive";
 	result.erase(0, result.find_first_not_of(" \t\n\r\f\v"));
 	return result;
