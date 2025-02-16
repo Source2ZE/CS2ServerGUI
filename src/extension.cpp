@@ -210,7 +210,7 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	SetupHook();
 
 	g_pCVar = Interfaces::icvar;
-	ConVar_Register( FCVAR_RELEASE | FCVAR_CLIENT_CAN_EXECUTE | FCVAR_GAMEDLL );
+	META_CONVAR_REGISTER(FCVAR_RELEASE | FCVAR_CLIENT_CAN_EXECUTE | FCVAR_GAMEDLL);
 
 	// InitializeGUI on another thread
 	g_thread = std::thread(GUI::InitializeGUI);

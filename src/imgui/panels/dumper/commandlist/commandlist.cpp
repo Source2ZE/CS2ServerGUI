@@ -27,86 +27,59 @@
 #include <ImGuiFileDialog.h>
 #include <nlohmann/json.hpp>
 
-#define FCVAR_MISSING5	((uint64_t)1<<(uint64_t)30)
-#define FCVAR_MISSING6	((uint64_t)1<<(uint64_t)31)
-#define FCVAR_DEFENSIVE	((uint64_t)1<<(uint64_t)32)
-
+#define FCVAR_MISSING1	(1ull<<30)
+#define FCVAR_MISSING2	(1ull<<31)
 using json = nlohmann::json;
 
 namespace GUI::Dumper::CommandList
 {
 
+std::vector<std::pair<uint64_t, const char*>> g_flagMap{
+	{FCVAR_LINKED_CONCOMMAND, "linked_concommand"},
+	{FCVAR_DEVELOPMENTONLY, "developmentonly"},
+	{FCVAR_GAMEDLL, "gamedll"},
+	{FCVAR_CLIENTDLL, "clientdll"},
+	{FCVAR_HIDDEN, "hidden"},
+	{FCVAR_PROTECTED, "protected"},
+	{FCVAR_SPONLY, "sponly"},
+	{FCVAR_ARCHIVE, "archive"},
+	{FCVAR_NOTIFY, "notify"},
+	{FCVAR_USERINFO, "userinfo"},
+	{FCVAR_REFERENCE, "reference"},
+	{FCVAR_UNLOGGED, "unlogged"},
+	{FCVAR_INITIAL_SETVALUE, "initial_setvalue"},
+	{FCVAR_REPLICATED, "replicated"},
+	{FCVAR_CHEAT, "cheat"},
+	{FCVAR_PER_USER, "per_user"},
+	{FCVAR_DEMO, "demo"},
+	{FCVAR_DONTRECORD, "dontrecord"},
+	{FCVAR_PERFORMING_CALLBACKS, "performing_callbacks"},
+	{FCVAR_RELEASE, "release"},
+	{FCVAR_MENUBAR_ITEM, "menubar_item"},
+	{FCVAR_COMMANDLINE_ENFORCED, "commandline_enforced"},
+	{FCVAR_NOT_CONNECTED, "notconnected"},
+	{FCVAR_VCONSOLE_FUZZY_MATCHING, "vconsole_fuzzy_matching"},
+	{FCVAR_SERVER_CAN_EXECUTE, "server_can_execute"},
+	{FCVAR_CLIENT_CAN_EXECUTE, "client_can_execute"},
+	{FCVAR_SERVER_CANNOT_QUERY, "server_cannot_query"},
+	{FCVAR_VCONSOLE_SET_FOCUS, "vconsole_set_focus"},
+	{FCVAR_CLIENTCMD_CAN_EXECUTE, "clientcmd_can_execute"},
+	{FCVAR_EXECUTE_PER_TICK, "execute_per_tick"},
+	{FCVAR_MISSING1, "missing1"},
+	{FCVAR_MISSING2, "missing2"},
+	{FCVAR_DEFENSIVE, "defensive"}
+};
+
 std::string PrettifyFlags(uint64_t flags)
 {
 	std::string result("");
-	if (flags & FCVAR_NOT_CONNECTED)
-		result += " notconnected";
-	if (flags & FCVAR_DEVELOPMENTONLY)
-		result += " developmentonly";
-	if (flags & FCVAR_GAMEDLL)
-		result += " gamedll";
-	if (flags & FCVAR_HIDDEN)
-		result += " hidden";
-	if (flags & FCVAR_CLIENTDLL)
-		result += " clientdll";
-	if (flags & FCVAR_PROTECTED)
-		result += " protected";
-	if (flags & FCVAR_SPONLY)
-		result += " sponly";
-	if (flags & FCVAR_ARCHIVE)
-		result += " archive";
-	if (flags & FCVAR_NOTIFY)
-		result += " notify";
-	if (flags & FCVAR_MISSING0)
-		result += " hide";
-	if (flags & FCVAR_USERINFO)
-		result += " userinfo";
-	if (flags & FCVAR_MISSING1)
-		result += " missing1";
-	if (flags & FCVAR_UNLOGGED)
-		result += " unlogged";
-	if (flags & FCVAR_REPLICATED)
-		result += " replicated";
-	if (flags & FCVAR_CHEAT)
-		result += " cheat";
-	if (flags & FCVAR_PER_USER)
-		result += " per_user";
-	if (flags & FCVAR_DEMO)
-		result += " demo";
-	if (flags & FCVAR_MISSING2)
-		result += " missing2";
-	if (flags & FCVAR_DONTRECORD)
-		result += " dontrecord";
-	if (flags & FCVAR_RELEASE)
-		result += " release";
-	if (flags & FCVAR_MENUBAR_ITEM)
-		result += " menubar_item";
-	if (flags & FCVAR_LINKED_CONCOMMAND)
-		result += " linked_concommand";
-	if (flags & FCVAR_VCONSOLE_FUZZY_MATCHING)
-		result += " vconsole_fuzzy_matching";
-	if (flags & FCVAR_MISSING3)
-		result += " missing3";
-	if (flags & FCVAR_NOT_CONNECTED)
-		result += " missing4";
-	if (flags & FCVAR_SERVER_CAN_EXECUTE)
-		result += " server_can_execute";
-	if (flags & FCVAR_CLIENT_CAN_EXECUTE)
-		result += " client_can_execute";
-	if (flags & FCVAR_SERVER_CANNOT_QUERY)
-		result += " server_cannot_query";
-	if (flags & FCVAR_VCONSOLE_SET_FOCUS)
-		result += " vconsole_set_focus";
-	if (flags & FCVAR_CLIENTCMD_CAN_EXECUTE)
-		result += " clientcmd_can_execute";
-	if (flags & FCVAR_EXECUTE_PER_TICK)
-		result += " execute_per_tick";
-	if (flags & FCVAR_MISSING5)
-		result += " missing5";
-	if (flags & FCVAR_MISSING6)
-		result += " missing6";
-	if (flags & FCVAR_DEFENSIVE)
-		result += " defensive";
+	for (const auto& [value, name] : g_flagMap)
+	{
+		if (flags & value)
+		{
+			result += std::string(" ") + name;
+		}
+	}
 	result.erase(0, result.find_first_not_of(" \t\n\r\f\v"));
 	return result;
 }
@@ -114,26 +87,17 @@ std::string PrettifyFlags(uint64_t flags)
 void DumpToJSON(std::string& path)
 {
 	json jsonArray;
-	ConCommand* pConCommand = nullptr;
-	ConCommand* pInvalidCommand = g_pCVar->GetCommand(ConCommandHandle());
-	ConCommandHandle hConCommandHandle;
-	hConCommandHandle.Set(0);
 
-	do
+	ConCommandData* data = g_pCVar->GetConCommandData(ConCommandRef());
+	for (ConCommandRef ref = ConCommandRef((uint16)0); ref.GetRawData() != data; ref = ConCommandRef(ref.GetAccessIndex() + 1))
 	{
-		pConCommand = g_pCVar->GetCommand(hConCommandHandle);
-
-		hConCommandHandle.Set(hConCommandHandle.Get() + 1);
-
-
 		json cvar;
-		cvar["name"] = pConCommand->GetName();
-		cvar["description"] = pConCommand->GetHelpText();
-		cvar["flags"] = PrettifyFlags(static_cast<uint64_t>(pConCommand->GetFlags()));
-		cvar["flagsRaw"] = static_cast<uint64_t>(pConCommand->GetFlags());
+		cvar["name"] = ref.GetName();
+		cvar["description"] = ref.GetHelpText();
+		cvar["flags"] = PrettifyFlags(static_cast<uint64_t>(ref.GetFlags()));
+		cvar["flagsRaw"] = static_cast<uint64_t>(ref.GetFlags());
 		jsonArray.push_back(cvar);
-
-	} while (pConCommand && pConCommand != pInvalidCommand);
+	}
 
 
 	std::ofstream file(path);
@@ -165,31 +129,22 @@ void Draw()
 		ImGui::TableSetupColumn("Description");
 		ImGui::TableHeadersRow();
 
-		ConCommand* pConCommand = nullptr;
-		ConCommand* pInvalidCommand = g_pCVar->GetCommand(ConCommandHandle());
-		ConCommandHandle hConCommandHandle;
-		hConCommandHandle.Set(0);
-
-		do
+		ConCommandData* data = g_pCVar->GetConCommandData(ConCommandRef());
+		for (ConCommandRef ref = ConCommandRef((uint16)0); ref.GetRawData() != data; ref = ConCommandRef(ref.GetAccessIndex() + 1))
 		{
-			pConCommand = g_pCVar->GetCommand(hConCommandHandle);
-
-			hConCommandHandle.Set(hConCommandHandle.Get() + 1);
-
-			if (!m_nameFilter.PassFilter(pConCommand->GetName()))
+			if (!m_nameFilter.PassFilter(ref.GetName()))
 				continue;
 
 			ImGui::TableNextRow();
 			ImGui::TableNextColumn();
-			ImGui::Text("%s", pConCommand->GetName());
+			ImGui::Text("%s", ref.GetName());
 
 			ImGui::TableNextColumn();
-			ImGui::Text("%s", PrettifyFlags(static_cast<uint64_t>(pConCommand->GetFlags())).c_str());
+			ImGui::Text("%s", PrettifyFlags(static_cast<uint64_t>(ref.GetFlags())).c_str());
 
 			ImGui::TableNextColumn();
-			ImGui::Text("%s", pConCommand->GetHelpText());
-
-		} while (pConCommand && pConCommand != pInvalidCommand);
+			ImGui::Text("%s", ref.GetHelpText());
+		}
 
 		ImGui::EndTable();
 	}	
