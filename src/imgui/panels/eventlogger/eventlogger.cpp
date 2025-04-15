@@ -126,13 +126,13 @@ void Draw(bool* isOpen)
 
 	if (ImGui::BeginTabBar("Event Logger Tab"))
 	{
-		if (ImGui::BeginTabItem("Ingress"))
+		if (ImGui::BeginTabItem("Incoming (C -> S)"))
 		{
 			DrawTable(true);
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Egress"))
+		if (ImGui::BeginTabItem("Outgoing (S -> C)"))
 		{
 			DrawTable(false);
 			ImGui::EndTabItem();

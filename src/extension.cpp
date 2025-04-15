@@ -21,7 +21,6 @@
 #include "extension.h"
 #include <iserver.h>
 #include <funchook.h>
-#include "utils/module.h"
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -39,6 +38,7 @@
 #include "../protobufs/generated/cs_usercmd.pb.h"
 #include "networksystem/inetworkmessages.h"
 #include "cs2_sdk/serversideclient.h"
+#include "utils/module.h"
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -53,11 +53,14 @@ std::thread g_thread;
 
 typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilterCustom* player, CNetMessage* pData, void* pNetChan);
 int g_iFilterMessage;
+int g_iSendNetMessage;
 
+/*
 SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitScreenSlot, bool, int, const uint64*,
 	INetworkMessageInternal*, const CNetMessage*, unsigned long, NetChannelBufType_t);
-
+*/
 SH_DECL_MANUALHOOK2(FilterMessage, 0, 0, 0, bool, CNetMessage*, void*);
+SH_DECL_MANUALHOOK2(SendNetMessage, 15, 0, 0, bool, CNetMessage*, NetChannelBufType_t);
 
 CGameEntitySystem* GameEntitySystem()
 {
@@ -165,23 +168,69 @@ bool CS2ServerGUI::Hook_FilterMessage(CNetMessage* pData, void* pNetChan)
 	RETURN_META_VALUE(MRES_IGNORED, true);
 }
 
+bool CS2ServerGUI::Hook_SendNetMessage(CNetMessage* pData, NetChannelBufType_t bufType)
+{
+	if (GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
+	{
+		INetworkMessageProcessingPreFilterCustom* client = META_IFACEPTR(INetworkMessageProcessingPreFilterCustom);
+
+		NetMessageInfo_t* info = pData->GetNetMessage()->GetNetMessageInfo();
+		if (info)
+		{
+			CUtlString str;
+			info->m_pBinding->ToString(pData, str);
+
+			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), false);
+		}
+	}
+
+	RETURN_META_VALUE(MRES_IGNORED, true);
+}
+
+// legacy hook for outgoing messages
+/*
+void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int nClientCount, const uint64* clients,
+	INetworkMessageInternal* pEvent, const CNetMessage* pData, unsigned long nSize, NetChannelBufType_t bufType)
+{
+	if (!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
+		return;
+	
+	NetMessageInfo_t* info = pEvent->GetNetMessageInfo();
+	if (info)
+	{
+		CUtlString str;
+		info->m_pBinding->ToString(pData, str);
+
+		GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), false);
+	}
+}
+*/
+
 void SetupHook()
 {
 	CModule engineModule(ROOTBIN, "engine2");
 	
 #ifdef _WIN32
-	auto serverSideClientVTable = engineModule.FindVirtualTable("CServerSideClient", 8);
+	auto networkMessageProcessingPreFilterCustomVTable = engineModule.FindVirtualTable("CServerSideClient", 8);
+	auto serverSideClientVTable = engineModule.FindVirtualTable("CServerSideClient", 0);
 #else
 	auto serverSideClientVTable = engineModule.FindVirtualTable("CServerSideClient", -64);
+	auto serverSideClientVTable = nullptr;
 #endif
 
+	if (!networkMessageProcessingPreFilterCustomVTable)
+	{
+		META_CONPRINTF("[CS2ServerGUI] Failed to find networkMessageProcessingPreFilterCustomVTable\n");
+		return;
+	}
 	if (!serverSideClientVTable)
 	{
-		META_CONPRINTF("[CS2ServerGUI] Failed to find serverSideClientVTable\n");
+		META_CONPRINTF("[CS2ServerGUI] Failed to find networkMessageProcessingPreFilterCustomVTable\n");
 		return;
 	}
 
-	g_iFilterMessage = SH_ADD_MANUALDVPHOOK(FilterMessage, serverSideClientVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage), false);
+	g_iFilterMessage = SH_ADD_MANUALDVPHOOK(FilterMessage, networkMessageProcessingPreFilterCustomVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage), false);
+	g_iSendNetMessage = SH_ADD_MANUALDVPHOOK(SendNetMessage, serverSideClientVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_SendNetMessage), false);
 
 	return;
 }
@@ -205,7 +254,7 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::networkMessages, INetworkMessages, NETWORKMESSAGES_INTERFACE_VERSION);
 	g_SMAPI->AddListener( this, this );
 
-	SH_ADD_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
+	//SH_ADD_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
 
 	SetupHook();
 
@@ -218,26 +267,11 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	return true;
 }
 
-void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int nClientCount, const uint64* clients,
-	INetworkMessageInternal* pEvent, const CNetMessage* pData, unsigned long nSize, NetChannelBufType_t bufType)
-{
-	if (!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
-		return;
-
-	NetMessageInfo_t* info = pEvent->GetNetMessageInfo();
-	if (info)
-	{
-		CUtlString str;
-		info->m_pBinding->ToString(pData, str);
-
-		GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), false);
-	}
-
-}
-
 bool CS2ServerGUI::Unload(char *error, size_t maxlen)
 {
-	SH_REMOVE_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
+	//SH_REMOVE_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
+	SH_REMOVE_HOOK_ID(g_iFilterMessage);
+	SH_REMOVE_HOOK_ID(g_iSendNetMessage);
 	return true;
 }
 

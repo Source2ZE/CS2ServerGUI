@@ -22,9 +22,9 @@
 #include "schemasystem/schemasystem.h"
 #include "tier1/utlmap.h"
 #include "tier0/memdbgon.h"
-#include "../utils/plat.h"
 #include "entity/cbaseentity.h"
 #include "interfaces.h"
+#include "../utils/plat.h"
 
 extern CGlobalVars *gpGlobals;
 
