@@ -41,6 +41,7 @@ public: //hooks
 	//	INetworkMessageInternal* pEvent, const CNetMessage* pData, unsigned long nSize, NetChannelBufType_t bufType);
 	bool Hook_FilterMessage(CNetMessage* pData, void* pNetChan);
 	bool Hook_SendNetMessage(CNetMessage* pData, NetChannelBufType_t bufType);
+	void Hook_MaterialText(void*, const char*, void*, int, int, void*, int);
 	void OnLevelInit( char const *pMapName,
 				 char const *pMapEntities,
 				 char const *pOldLevel,

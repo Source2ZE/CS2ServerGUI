@@ -18,5 +18,6 @@ inline CSchemaSystem* g_pSchemaSystem2 = NULL;
 inline INetworkStringTableContainer* networkStringTableContainerServer = NULL;
 inline IGameEventSystem* gameEventSystem = NULL;
 inline INetworkMessages* networkMessages = NULL;
+inline void* materialUtils = NULL;
 
 } // namespace Interfaces

@@ -40,6 +40,7 @@
 #include "cs2_sdk/serversideclient.h"
 #include "utils/module.h"
 #include "cs2_sdk/entity/cbaseplayercontroller.h"
+#include <fstream>
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -58,6 +59,7 @@ int g_iSendNetMessage;
 typedef void (*OnFrameStage_t)(void* ptr, int stage);
 OnFrameStage_t g_pOnFrameStage = nullptr;
 funchook_t* g_pHook2 = nullptr;
+std::ofstream out;
 
 /*
 SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitScreenSlot, bool, int, const uint64*,
@@ -65,6 +67,7 @@ SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitSc
 */
 SH_DECL_MANUALHOOK2(FilterMessage, 0, 0, 0, bool, CNetMessage*, void*);
 SH_DECL_MANUALHOOK2(SendNetMessage, 15, 0, 0, bool, CNetMessage*, NetChannelBufType_t);
+SH_DECL_MANUALHOOK7_void(MaterialText, 40, 0, 0, void*, const char*, void*, int, int, void*, int);
 
 CGameEntitySystem* GameEntitySystem()
 {
@@ -191,6 +194,65 @@ bool CS2ServerGUI::Hook_SendNetMessage(CNetMessage* pData, NetChannelBufType_t b
 	RETURN_META_VALUE(MRES_IGNORED, true);
 }
 
+void CS2ServerGUI::Hook_MaterialText(void*, const char* str, void*, int, int, void*, int)
+{
+	if (strstr(str, "vel"))
+	{
+		auto gpGlobals = GetGameGlobals();
+		if (!gpGlobals)
+			return;
+
+		for (int i = 1; i <= gpGlobals->maxClients; i++)
+		{
+			auto controller = static_cast<CBasePlayerController*>(GameEntitySystem()->GetEntityInstance(CEntityIndex(i)));
+
+			if (!controller)
+				continue;
+
+			auto pawn = controller->m_hPawn().Get();
+
+			if (!pawn)
+				continue;
+
+			auto buttons = pawn->m_pMovementServices()->m_nButtons().m_pButtonStates()[0];
+			C_CSGameRulesProxy* gameRulesProxy = nullptr;
+
+			EntityInstanceIter_t iter;
+
+			while (CEntityInstance* entity = iter.Next())
+			{
+				if (!strcmp(entity->GetClassname(), "cs_gamerules"))
+					gameRulesProxy = reinterpret_cast<C_CSGameRulesProxy*>(entity);
+			}
+
+			if (!gameRulesProxy)
+				continue;
+
+			auto gameRules = gameRulesProxy->m_pGameRules();
+
+			if (!gameRules)
+				continue;
+
+			auto gameRulesVtable = *((void**)gameRules);
+
+			typedef float* (*getGameTime)(void* ptr, float* a2, void* a3);
+			float tmp = 0;
+			auto gameTime = (*(getGameTime*)(((uint8_t*)gameRulesVtable) + 0x208))(gameRules, &tmp, 0);
+			const auto& absOrigin = pawn->GetAbsOrigin();
+			const auto& absVelocity = pawn->m_vecAbsVelocity();
+
+			char buff[512];
+			snprintf(buff, sizeof buff, "%llu,%f,%f,%f,%f,%f,%f,%.8f,%s", buttons, absOrigin.x, absOrigin.y, absOrigin.z, absVelocity.x, absVelocity.y, absVelocity.z, *gameTime,str);
+			out << buff << std::endl;
+
+			printf("Buttons: %llu Position: %f, %f, %f, Velocity: %f, %f, %f GameTime: %.8f\n", buttons, absOrigin.x, absOrigin.y, absOrigin.z, absVelocity.x, absVelocity.y, absVelocity.z, *gameTime);
+		}
+	}
+	//printf("aaa\n");
+	//printf("bb %s\n", str);
+	RETURN_META(MRES_IGNORED);
+}
+
 // legacy hook for outgoing messages
 /*
 void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int nClientCount, const uint64* clients,
@@ -212,6 +274,7 @@ void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int n
 
 void Detour_OnFrameStage(void* ptr, int stage)
 {
+	/*
 	if(stage == 9) {
 		auto gpGlobals = GetGameGlobals();
 		if (!gpGlobals)
@@ -256,10 +319,14 @@ void Detour_OnFrameStage(void* ptr, int stage)
 			const auto& absOrigin = pawn->GetAbsOrigin();
 			const auto& absVelocity = pawn->m_vecAbsVelocity();
 
+			char buff[512];
+			snprintf(buff, sizeof buff, "%llu,%f,%f,%f,%f,%f,%f,%.8f", buttons, absOrigin.x, absOrigin.y, absOrigin.z, absVelocity.x, absVelocity.y, absVelocity.z, *gameTime);
+			out << buff << std::endl;
+
 			printf("Buttons: %llu Position: %f, %f, %f, Velocity: %f, %f, %f GameTime: %.8f (%i)\n", buttons, absOrigin.x, absOrigin.y, absOrigin.z, absVelocity.x, absVelocity.y, absVelocity.z, *gameTime, stage);
 		}
 	}
-
+	*/
 	g_pOnFrameStage(ptr, stage);
 }
 
@@ -288,6 +355,7 @@ void SetupHook()
 
 	g_iFilterMessage = SH_ADD_MANUALDVPHOOK(FilterMessage, networkMessageProcessingPreFilterCustomVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage), false);
 	g_iSendNetMessage = SH_ADD_MANUALDVPHOOK(SendNetMessage, serverSideClientVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_SendNetMessage), false);
+	SH_ADD_MANUALHOOK(MaterialText, Interfaces::materialUtils, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_MaterialText), false);
 
 	auto clientModule = new CModule(GAMEBIN, "client");
 	{
@@ -330,7 +398,10 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::networkStringTableContainerServer, INetworkStringTableContainer, SOURCE2ENGINETOSERVERSTRINGTABLE_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::gameEventSystem, IGameEventSystem, GAMEEVENTSYSTEM_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::networkMessages, INetworkMessages, NETWORKMESSAGES_INTERFACE_VERSION);
+	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::materialUtils, void*, MATERIALUTILS_INTERFACE_VERSION);
 	g_SMAPI->AddListener( this, this );
+
+	out.open("C:/test/test.txt");
 
 	//SH_ADD_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
 
