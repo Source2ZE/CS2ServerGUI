@@ -20,32 +20,34 @@
 #pragma once
 
 #include "cbaseentity.h"
-#include "cbasemodelentity.h"
-#include "services.h"
 
-class CBasePlayerPawn : public CBaseModelEntity
+class CInButtonState
 {
 public:
-	DECLARE_SCHEMA_CLASS(CBasePlayerPawn);
+	DECLARE_SCHEMA_CLASS_INLINE(CInButtonState)
+
+	// m_pButtonStates[3]
+
+	// m_pButtonStates[0] is the mask of currently pressed buttons
+	// m_pButtonStates[1] is the mask of buttons that changed in the current frame
+	SCHEMA_FIELD_POINTER(uint64, m_pButtonStates)
+};
+
+class CPlayer_MovementServices
+{
+public:
+	DECLARE_SCHEMA_CLASS(CPlayer_MovementServices);
+
+
+	SCHEMA_FIELD(void*, m_pMovementServices)
+	SCHEMA_FIELD(CInButtonState, m_nButtons)
+};
+
+class C_BasePlayerPawn : public Z_CBaseEntity
+{
+public:
+	DECLARE_SCHEMA_CLASS(C_BasePlayerPawn);
 
 	SCHEMA_FIELD(CPlayer_MovementServices*, m_pMovementServices)
-	SCHEMA_FIELD(CPlayer_WeaponServices*, m_pWeaponServices)
-	SCHEMA_FIELD(CCSPlayer_ItemServices*, m_pItemServices)
-	SCHEMA_FIELD(CHandle<CBasePlayerController>, m_hController)
 
-	void TakeDamage(int iDamage)
-	{
-		if (m_iHealth() - iDamage <= 0)
-			CommitSuicide(false, true);
-		else
-			Z_CBaseEntity::TakeDamage(iDamage);
-	}
-
-	void CommitSuicide(bool bExplode, bool bForce)
-	{
-		static int offset = g_GameConfig->GetOffset("CBasePlayerPawn_CommitSuicide");
-		CALL_VIRTUAL(void, offset, this, bExplode, bForce);
-	}
-
-	CBasePlayerController *GetController() { return m_hController.Get(); }
 };

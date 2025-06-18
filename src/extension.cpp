@@ -39,6 +39,7 @@
 #include "networksystem/inetworkmessages.h"
 #include "cs2_sdk/serversideclient.h"
 #include "utils/module.h"
+#include "cs2_sdk/entity/cbaseplayercontroller.h"
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -54,6 +55,9 @@ std::thread g_thread;
 typedef bool (*FilterMessage_t)(INetworkMessageProcessingPreFilterCustom* player, CNetMessage* pData, void* pNetChan);
 int g_iFilterMessage;
 int g_iSendNetMessage;
+typedef void (*OnFrameStage_t)(void* ptr, int stage);
+OnFrameStage_t g_pOnFrameStage = nullptr;
+funchook_t* g_pHook2 = nullptr;
 
 /*
 SH_DECL_HOOK8_void(IGameEventSystem, PostEventAbstract, SH_NOATTRIB, 0, CSplitScreenSlot, bool, int, const uint64*,
@@ -206,6 +210,59 @@ void CS2ServerGUI::Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int n
 }
 */
 
+void Detour_OnFrameStage(void* ptr, int stage)
+{
+	if(stage == 9) {
+		auto gpGlobals = GetGameGlobals();
+		if (!gpGlobals)
+			return;
+
+		for (int i = 1; i <= gpGlobals->maxClients; i++)
+		{
+			auto controller = static_cast<CBasePlayerController*>(GameEntitySystem()->GetEntityInstance(CEntityIndex(i)));
+
+			if (!controller)
+				continue;
+
+			auto pawn = controller->m_hPawn().Get();
+
+			if (!pawn)
+				continue;
+
+			auto buttons = pawn->m_pMovementServices()->m_nButtons().m_pButtonStates()[0];
+			C_CSGameRulesProxy* gameRulesProxy = nullptr;
+
+			EntityInstanceIter_t iter;
+
+			while (CEntityInstance* entity = iter.Next())
+			{
+				if (!strcmp(entity->GetClassname(), "cs_gamerules"))
+					gameRulesProxy = reinterpret_cast<C_CSGameRulesProxy*>(entity);
+			}
+
+			if (!gameRulesProxy)
+				continue;
+
+			auto gameRules = gameRulesProxy->m_pGameRules();
+
+			if (!gameRules)
+				continue;
+
+			auto gameRulesVtable = *((void**)gameRules);
+
+			typedef float* (*getGameTime)(void* ptr, float* a2, void* a3);
+			float tmp = 0;
+			auto gameTime = (*(getGameTime*)(((uint8_t*)gameRulesVtable) + 0x208))(gameRules, &tmp, 0);
+			const auto& absOrigin = pawn->GetAbsOrigin();
+			const auto& absVelocity = pawn->m_vecAbsVelocity();
+
+			printf("Buttons: %llu Position: %f, %f, %f, Velocity: %f, %f, %f GameTime: %.8f (%i)\n", buttons, absOrigin.x, absOrigin.y, absOrigin.z, absVelocity.x, absVelocity.y, absVelocity.z, *gameTime, stage);
+		}
+	}
+
+	g_pOnFrameStage(ptr, stage);
+}
+
 void SetupHook()
 {
 	CModule engineModule(ROOTBIN, "engine2");
@@ -232,6 +289,27 @@ void SetupHook()
 	g_iFilterMessage = SH_ADD_MANUALDVPHOOK(FilterMessage, networkMessageProcessingPreFilterCustomVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage), false);
 	g_iSendNetMessage = SH_ADD_MANUALDVPHOOK(SendNetMessage, serverSideClientVTable, SH_MEMBER(&g_CS2ServerGUI, &CS2ServerGUI::Hook_SendNetMessage), false);
 
+	auto clientModule = new CModule(GAMEBIN, "client");
+	{
+
+		int err;
+
+		const byte sig[] = "\x48\x89\x5C\x24\x2A\x56\x48\x83\xEC\x30\x8B\x05\x2A\x2A\x2A\x2A\x8D\x5A\xFF\x3B\xC2\x48";
+
+		g_pOnFrameStage = (OnFrameStage_t)clientModule->FindSignature((byte*)sig, sizeof(sig) - 1, err);
+
+		if (err)
+		{
+			META_CONPRINTF("[CS2ServerGUI] Failed to find frame signature: %i\n", err);
+			return;
+		}
+
+		g_pHook2 = funchook_create();
+		funchook_prepare(g_pHook2, (void**)&g_pOnFrameStage, (void*)Detour_OnFrameStage);
+		funchook_install(g_pHook2, 0);
+	}
+
+
 	return;
 }
 
@@ -248,13 +326,17 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	GET_V_IFACE_ANY(GetServerFactory, Interfaces::gameclients, IServerGameClients, INTERFACEVERSION_SERVERGAMECLIENTS);
 	GET_V_IFACE_ANY(GetEngineFactory, g_pNetworkServerService, INetworkServerService, NETWORKSERVERSERVICE_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::g_pSchemaSystem2, CSchemaSystem, SCHEMASYSTEM_INTERFACE_VERSION);
-	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceService, GAMERESOURCESERVICESERVER_INTERFACE_VERSION);
+	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceService, GAMERESOURCESERVICECLIENT_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::networkStringTableContainerServer, INetworkStringTableContainer, SOURCE2ENGINETOSERVERSTRINGTABLE_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::gameEventSystem, IGameEventSystem, GAMEEVENTSYSTEM_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::networkMessages, INetworkMessages, NETWORKMESSAGES_INTERFACE_VERSION);
 	g_SMAPI->AddListener( this, this );
 
 	//SH_ADD_HOOK_MEMFUNC(IGameEventSystem, PostEventAbstract, Interfaces::gameEventSystem, this, &CS2ServerGUI::Hook_PostEvent, false);
+
+	AllocConsole();
+	freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
+	freopen_s((FILE**)stdin, "CONIN$", "r", stdin);
 
 	SetupHook();
 

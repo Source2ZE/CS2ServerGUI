@@ -46,7 +46,7 @@ static bool IsFieldNetworked(SchemaClassFieldData_t& field)
 
 static bool InitSchemaFieldsForClass(SchemaTableMap_t *tableMap, const char* className, uint32_t classKey)
 {
-    CSchemaSystemTypeScope* pType = Interfaces::g_pSchemaSystem2->FindTypeScopeForModule(MODULE_PREFIX "server" MODULE_EXT);
+    CSchemaSystemTypeScope* pType = Interfaces::g_pSchemaSystem2->FindTypeScopeForModule(MODULE_PREFIX "client" MODULE_EXT);
 
     if (!pType)
         return false;
@@ -85,7 +85,7 @@ static bool InitSchemaFieldsForClass(SchemaTableMap_t *tableMap, const char* cla
 
 int16_t schema::FindChainOffset(const char* className)
 {
-    CSchemaSystemTypeScope* pType = Interfaces::g_pSchemaSystem2->FindTypeScopeForModule(MODULE_PREFIX "server" MODULE_EXT);
+    CSchemaSystemTypeScope* pType = Interfaces::g_pSchemaSystem2->FindTypeScopeForModule(MODULE_PREFIX "client" MODULE_EXT);
 
     if (!pType)
         return false;
