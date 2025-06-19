@@ -1,10 +1,10 @@
+set_runtimes("MT")
 add_rules("mode.debug", "mode.release")
 add_repositories("custom-repo repo")
 -- if we want docking branch, we need to edit imgui-file-dialog xmake config in custom repo to also use docking
 add_requires("imgui", {debug = is_mode("debug"), configs = {dx9 = true, win32 = true}})
 add_requires("nlohmann_json")
 add_requires("imgui-file-dialog", {debug = is_mode("debug")})
-set_policy("package.requires_lock", true)
 
 includes("@builtin/xpack")
 
@@ -96,6 +96,4 @@ target("CS2ServerGUI")
         "META_IS_SOURCE2",
         "_ITERATOR_DEBUG_LEVEL=0"
     })
-
-    set_runtimes("MT")
     set_languages("cxx20")
