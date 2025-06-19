@@ -1,3 +1,4 @@
+set_runtimes("MT")
 add_rules("mode.debug", "mode.release")
 add_repositories("custom-repo repo")
 -- if we want docking branch, we need to edit imgui-file-dialog xmake config in custom repo to also use docking
@@ -96,4 +97,3 @@ target("CS2ServerGUI")
     })
 
     set_languages("cxx20")
-    set_runtimes("MT")
