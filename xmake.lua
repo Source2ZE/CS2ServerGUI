@@ -5,7 +5,6 @@ add_requires("imgui", {debug = is_mode("debug"), configs = {dx9 = true, win32 = 
 add_requires("nlohmann_json")
 add_requires("imgui-file-dialog", {debug = is_mode("debug")})
 
-
 includes("@builtin/xpack")
 
 local SDK_PATH = os.getenv("HL2SDKCS2")
@@ -97,3 +96,4 @@ target("CS2ServerGUI")
     })
 
     set_languages("cxx20")
+    set_runtimes("MT")
