@@ -159,8 +159,20 @@ bool CS2ServerGUI::Hook_FilterMessage(CNetMessage* pData, void* pNetChan)
 			{
 				bf_read buffer(msg->data().data(), msg->data().size());
 				CSGOUserCmdPB userCmd;
-				if (ReadPBFromBuffer(buffer, userCmd))
+				if (ReadPBFromBuffer(buffer, userCmd)) {
+					if (userCmd.base().subtick_moves().size())
+					{
+						const auto& move = userCmd.base().subtick_moves().at(0);
+						if (move.has_button() && move.has_when()) {
+							char buff[512];
+							snprintf(buff, sizeof buff, "%i, %f", move.button(), move.when());
+							out << buff << std::endl;
+
+							printf("SUBTICK MOVE: %i, %f\n", move.button(), move.when());
+						}
+					}
 					GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true, std::string(player->GetClientName()));
+				}
 			}
 		}
 		else
