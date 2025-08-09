@@ -10,4 +10,5 @@ done
 cd temp
 ../protoc/protoc --cpp_out=../generated *.proto
 
+cd ..
 rm -rf temp
