@@ -165,11 +165,14 @@ enum ENetworkDisconnectionReason : int {
   NETWORK_DISCONNECT_KICKED_IDLE = 158,
   NETWORK_DISCONNECT_KICKED_SUICIDE = 159,
   NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN = 160,
-  NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET = 161
+  NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET = 161,
+  NETWORK_DISCONNECT_KICKED_INPUTAUTOMATION = 162,
+  NETWORK_DISCONNECT_KICKED_VACNETABNORMALBEHAVIOR = 163,
+  NETWORK_DISCONNECT_KICKED_INSECURECLIENT = 164
 };
 bool ENetworkDisconnectionReason_IsValid(int value);
 constexpr ENetworkDisconnectionReason ENetworkDisconnectionReason_MIN = NETWORK_DISCONNECT_INVALID;
-constexpr ENetworkDisconnectionReason ENetworkDisconnectionReason_MAX = NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET;
+constexpr ENetworkDisconnectionReason ENetworkDisconnectionReason_MAX = NETWORK_DISCONNECT_KICKED_INSECURECLIENT;
 constexpr int ENetworkDisconnectionReason_ARRAYSIZE = ENetworkDisconnectionReason_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENetworkDisconnectionReason_descriptor();
@@ -195,6 +198,14 @@ static const int kNetworkConnectionTokenFieldNumber = 50500;
 extern ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::EnumValueOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::StringTypeTraits, 9, false >
   network_connection_token;
+static const int kNetworkConnectionDetailTokenFieldNumber = 50501;
+extern ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::EnumValueOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::StringTypeTraits, 9, false >
+  network_connection_detail_token;
+static const int kAllowedFromClientFieldNumber = 50502;
+extern ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::EnumValueOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
+  allowed_from_client;
 
 // ===================================================================
 

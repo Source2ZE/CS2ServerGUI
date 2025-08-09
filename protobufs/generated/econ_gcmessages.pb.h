@@ -124,7 +124,6 @@ enum EGCItemMsg : int {
   k_EMsgGCRemoveUniqueCraftIndexResponse = 1056,
   k_EMsgGCSaxxyBroadcast = 1057,
   k_EMsgGCBackpackSortFinished = 1058,
-  k_EMsgGCAdjustItemEquippedState = 1059,
   k_EMsgGCCollectItem = 1061,
   k_EMsgGCItemAcknowledged__DEPRECATED = 1062,
   k_EMsgGC_ReportAbuse = 1065,
@@ -212,11 +211,9 @@ enum EGCItemMsg : int {
   k_EMsgGCRequestAnnouncementsResponse = 2526,
   k_EMsgGCRequestPassportItemGrant = 2527,
   k_EMsgGCClientVersionUpdated = 2528,
-  k_EMsgGCAdjustItemEquippedStateMulti = 2529,
   k_EMsgGCRecurringSubscriptionStatus = 2530,
   k_EMsgGCAdjustEquipSlotsManual = 2531,
   k_EMsgGCAdjustEquipSlotsShuffle = 2532,
-  k_EMsgGCNameItemAndEquip = 2533,
   k_EMsgGCOpenCrate = 2534,
   k_EMsgGCAcknowledgeRentalExpiration = 2535
 };
@@ -315,16 +312,20 @@ enum EGCItemCustomizationNotification : int {
   k_EGCItemCustomizationNotification_StatTrakSwap = 1088,
   k_EGCItemCustomizationNotification_RemovePatch = 1089,
   k_EGCItemCustomizationNotification_ApplyPatch = 1090,
+  k_EGCItemCustomizationNotification_ApplyKeychain = 1091,
+  k_EGCItemCustomizationNotification_RemoveKeychain = 1092,
   k_EGCItemCustomizationNotification_ActivateFanToken = 9178,
   k_EGCItemCustomizationNotification_ActivateOperationCoin = 9179,
   k_EGCItemCustomizationNotification_GraffitiUnseal = 9185,
   k_EGCItemCustomizationNotification_GenerateSouvenir = 9204,
   k_EGCItemCustomizationNotification_ClientRedeemMissionReward = 9209,
-  k_EGCItemCustomizationNotification_ClientRedeemFreeReward = 9219
+  k_EGCItemCustomizationNotification_ClientRedeemFreeReward = 9219,
+  k_EGCItemCustomizationNotification_XpShopUseTicket = 9221,
+  k_EGCItemCustomizationNotification_XpShopAckTracks = 9222
 };
 bool EGCItemCustomizationNotification_IsValid(int value);
 constexpr EGCItemCustomizationNotification EGCItemCustomizationNotification_MIN = k_EGCItemCustomizationNotification_NameItem;
-constexpr EGCItemCustomizationNotification EGCItemCustomizationNotification_MAX = k_EGCItemCustomizationNotification_ClientRedeemFreeReward;
+constexpr EGCItemCustomizationNotification EGCItemCustomizationNotification_MAX = k_EGCItemCustomizationNotification_XpShopAckTracks;
 constexpr int EGCItemCustomizationNotification_ARRAYSIZE = EGCItemCustomizationNotification_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* EGCItemCustomizationNotification_descriptor();
@@ -702,7 +703,8 @@ class CMsgGCDev_SchemaReservationRequest :
   enum : int {
     kSchemaTypenameFieldNumber = 1,
     kInstanceNameFieldNumber = 2,
-    kIdFieldNumber = 3,
+    kContextFieldNumber = 3,
+    kIdFieldNumber = 4,
   };
   // optional string schema_typename = 1;
   bool has_schema_typename() const;
@@ -740,7 +742,20 @@ class CMsgGCDev_SchemaReservationRequest :
   std::string* _internal_mutable_instance_name();
   public:
 
-  // optional uint64 id = 3;
+  // optional uint64 context = 3;
+  bool has_context() const;
+  private:
+  bool _internal_has_context() const;
+  public:
+  void clear_context();
+  uint64_t context() const;
+  void set_context(uint64_t value);
+  private:
+  uint64_t _internal_context() const;
+  void _internal_set_context(uint64_t value);
+  public:
+
+  // optional uint64 id = 4;
   bool has_id() const;
   private:
   bool _internal_has_id() const;
@@ -765,6 +780,7 @@ class CMsgGCDev_SchemaReservationRequest :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr schema_typename_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr instance_name_;
+    uint64_t context_;
     uint64_t id_;
   };
   union { Impl_ _impl_; };
@@ -1236,6 +1252,7 @@ class CMsgGCItemCustomizationNotification :
 
   enum : int {
     kItemIdFieldNumber = 1,
+    kExtraDataFieldNumber = 3,
     kRequestFieldNumber = 2,
   };
   // repeated uint64 item_id = 1;
@@ -1259,6 +1276,28 @@ class CMsgGCItemCustomizationNotification :
       item_id() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
       mutable_item_id();
+
+  // repeated uint64 extra_data = 3;
+  int extra_data_size() const;
+  private:
+  int _internal_extra_data_size() const;
+  public:
+  void clear_extra_data();
+  private:
+  uint64_t _internal_extra_data(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      _internal_extra_data() const;
+  void _internal_add_extra_data(uint64_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      _internal_mutable_extra_data();
+  public:
+  uint64_t extra_data(int index) const;
+  void set_extra_data(int index, uint64_t value);
+  void add_extra_data(uint64_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      extra_data() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      mutable_extra_data();
 
   // optional uint32 request = 2;
   bool has_request() const;
@@ -1284,6 +1323,7 @@ class CMsgGCItemCustomizationNotification :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > item_id_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > extra_data_;
     uint32_t request_;
   };
   union { Impl_ _impl_; };
@@ -1599,9 +1639,37 @@ inline void CMsgGCDev_SchemaReservationRequest::set_allocated_instance_name(std:
   // @@protoc_insertion_point(field_set_allocated:CMsgGCDev_SchemaReservationRequest.instance_name)
 }
 
-// optional uint64 id = 3;
-inline bool CMsgGCDev_SchemaReservationRequest::_internal_has_id() const {
+// optional uint64 context = 3;
+inline bool CMsgGCDev_SchemaReservationRequest::_internal_has_context() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool CMsgGCDev_SchemaReservationRequest::has_context() const {
+  return _internal_has_context();
+}
+inline void CMsgGCDev_SchemaReservationRequest::clear_context() {
+  _impl_.context_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline uint64_t CMsgGCDev_SchemaReservationRequest::_internal_context() const {
+  return _impl_.context_;
+}
+inline uint64_t CMsgGCDev_SchemaReservationRequest::context() const {
+  // @@protoc_insertion_point(field_get:CMsgGCDev_SchemaReservationRequest.context)
+  return _internal_context();
+}
+inline void CMsgGCDev_SchemaReservationRequest::_internal_set_context(uint64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.context_ = value;
+}
+inline void CMsgGCDev_SchemaReservationRequest::set_context(uint64_t value) {
+  _internal_set_context(value);
+  // @@protoc_insertion_point(field_set:CMsgGCDev_SchemaReservationRequest.context)
+}
+
+// optional uint64 id = 4;
+inline bool CMsgGCDev_SchemaReservationRequest::_internal_has_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool CMsgGCDev_SchemaReservationRequest::has_id() const {
@@ -1609,7 +1677,7 @@ inline bool CMsgGCDev_SchemaReservationRequest::has_id() const {
 }
 inline void CMsgGCDev_SchemaReservationRequest::clear_id() {
   _impl_.id_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t CMsgGCDev_SchemaReservationRequest::_internal_id() const {
   return _impl_.id_;
@@ -1619,7 +1687,7 @@ inline uint64_t CMsgGCDev_SchemaReservationRequest::id() const {
   return _internal_id();
 }
 inline void CMsgGCDev_SchemaReservationRequest::_internal_set_id(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.id_ = value;
 }
 inline void CMsgGCDev_SchemaReservationRequest::set_id(uint64_t value) {
@@ -1796,6 +1864,53 @@ inline void CMsgGCItemCustomizationNotification::_internal_set_request(uint32_t 
 inline void CMsgGCItemCustomizationNotification::set_request(uint32_t value) {
   _internal_set_request(value);
   // @@protoc_insertion_point(field_set:CMsgGCItemCustomizationNotification.request)
+}
+
+// repeated uint64 extra_data = 3;
+inline int CMsgGCItemCustomizationNotification::_internal_extra_data_size() const {
+  return _impl_.extra_data_.size();
+}
+inline int CMsgGCItemCustomizationNotification::extra_data_size() const {
+  return _internal_extra_data_size();
+}
+inline void CMsgGCItemCustomizationNotification::clear_extra_data() {
+  _impl_.extra_data_.Clear();
+}
+inline uint64_t CMsgGCItemCustomizationNotification::_internal_extra_data(int index) const {
+  return _impl_.extra_data_.Get(index);
+}
+inline uint64_t CMsgGCItemCustomizationNotification::extra_data(int index) const {
+  // @@protoc_insertion_point(field_get:CMsgGCItemCustomizationNotification.extra_data)
+  return _internal_extra_data(index);
+}
+inline void CMsgGCItemCustomizationNotification::set_extra_data(int index, uint64_t value) {
+  _impl_.extra_data_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CMsgGCItemCustomizationNotification.extra_data)
+}
+inline void CMsgGCItemCustomizationNotification::_internal_add_extra_data(uint64_t value) {
+  _impl_.extra_data_.Add(value);
+}
+inline void CMsgGCItemCustomizationNotification::add_extra_data(uint64_t value) {
+  _internal_add_extra_data(value);
+  // @@protoc_insertion_point(field_add:CMsgGCItemCustomizationNotification.extra_data)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+CMsgGCItemCustomizationNotification::_internal_extra_data() const {
+  return _impl_.extra_data_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+CMsgGCItemCustomizationNotification::extra_data() const {
+  // @@protoc_insertion_point(field_list:CMsgGCItemCustomizationNotification.extra_data)
+  return _internal_extra_data();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+CMsgGCItemCustomizationNotification::_internal_mutable_extra_data() {
+  return &_impl_.extra_data_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+CMsgGCItemCustomizationNotification::mutable_extra_data() {
+  // @@protoc_insertion_point(field_mutable_list:CMsgGCItemCustomizationNotification.extra_data)
+  return _internal_mutable_extra_data();
 }
 
 #ifdef __GNUC__

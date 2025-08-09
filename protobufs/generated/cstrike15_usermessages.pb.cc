@@ -1386,7 +1386,58 @@ struct CCSUsrMsgPreMatchSayTextDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsgPreMatchSayTextDefaultTypeInternal _CCSUsrMsgPreMatchSayText_default_instance_;
-static ::_pb::Metadata file_level_metadata_cstrike15_5fusermessages_2eproto[86];
+PROTOBUF_CONSTEXPR CCSUsrMsg_CounterStrafe::CCSUsrMsg_CounterStrafe(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.press_to_release_ns_)*/0
+  , /*decltype(_impl_.total_keys_down_)*/0} {}
+struct CCSUsrMsg_CounterStrafeDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CCSUsrMsg_CounterStrafeDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CCSUsrMsg_CounterStrafeDefaultTypeInternal() {}
+  union {
+    CCSUsrMsg_CounterStrafe _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_CounterStrafeDefaultTypeInternal _CCSUsrMsg_CounterStrafe_default_instance_;
+PROTOBUF_CONSTEXPR CCSUsrMsg_DamagePrediction::CCSUsrMsg_DamagePrediction(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.shoot_pos_)*/nullptr
+  , /*decltype(_impl_.shoot_dir_)*/nullptr
+  , /*decltype(_impl_.aim_punch_)*/nullptr
+  , /*decltype(_impl_.command_num_)*/0
+  , /*decltype(_impl_.pellet_idx_)*/0
+  , /*decltype(_impl_.victim_slot_)*/0
+  , /*decltype(_impl_.victim_starting_health_)*/0
+  , /*decltype(_impl_.victim_damage_)*/0} {}
+struct CCSUsrMsg_DamagePredictionDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CCSUsrMsg_DamagePredictionDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CCSUsrMsg_DamagePredictionDefaultTypeInternal() {}
+  union {
+    CCSUsrMsg_DamagePrediction _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_DamagePredictionDefaultTypeInternal _CCSUsrMsg_DamagePrediction_default_instance_;
+PROTOBUF_CONSTEXPR CCSUsrMsg_RecurringMissionSchema::CCSUsrMsg_RecurringMissionSchema(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.mission_schema_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.period_)*/0u} {}
+struct CCSUsrMsg_RecurringMissionSchemaDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CCSUsrMsg_RecurringMissionSchemaDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CCSUsrMsg_RecurringMissionSchemaDefaultTypeInternal() {}
+  union {
+    CCSUsrMsg_RecurringMissionSchema _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_RecurringMissionSchemaDefaultTypeInternal _CCSUsrMsg_RecurringMissionSchema_default_instance_;
+static ::_pb::Metadata file_level_metadata_cstrike15_5fusermessages_2eproto[89];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_cstrike15_5fusermessages_2eproto[2];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_cstrike15_5fusermessages_2eproto = nullptr;
 
@@ -2407,6 +2458,48 @@ const uint32_t TableStruct_cstrike15_5fusermessages_2eproto::offsets[] PROTOBUF_
   1,
   0,
   2,
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CounterStrafe, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CounterStrafe, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CounterStrafe, _impl_.press_to_release_ns_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CounterStrafe, _impl_.total_keys_down_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.command_num_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.pellet_idx_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.victim_slot_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.victim_starting_health_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.victim_damage_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.shoot_pos_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.shoot_dir_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DamagePrediction, _impl_.aim_punch_),
+  3,
+  4,
+  5,
+  6,
+  7,
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_RecurringMissionSchema, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_RecurringMissionSchema, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_RecurringMissionSchema, _impl_.period_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_RecurringMissionSchema, _impl_.mission_schema_),
+  1,
+  0,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 8, -1, sizeof(::CCSUsrMsg_VGUIMenu_Keys)},
@@ -2495,6 +2588,9 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 986, 993, -1, sizeof(::CCSUsrMsg_ClientInfo)},
   { 994, 1002, -1, sizeof(::CCSUsrMsg_ServerRankRevealAll)},
   { 1004, 1013, -1, sizeof(::CCSUsrMsgPreMatchSayText)},
+  { 1016, 1024, -1, sizeof(::CCSUsrMsg_CounterStrafe)},
+  { 1026, 1040, -1, sizeof(::CCSUsrMsg_DamagePrediction)},
+  { 1048, 1056, -1, sizeof(::CCSUsrMsg_RecurringMissionSchema)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -2584,6 +2680,9 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CCSUsrMsg_ClientInfo_default_instance_._instance,
   &::_CCSUsrMsg_ServerRankRevealAll_default_instance_._instance,
   &::_CCSUsrMsgPreMatchSayText_default_instance_._instance,
+  &::_CCSUsrMsg_CounterStrafe_default_instance_._instance,
+  &::_CCSUsrMsg_DamagePrediction_default_instance_._instance,
+  &::_CCSUsrMsg_RecurringMissionSchema_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_cstrike15_5fusermessages_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -2787,59 +2886,71 @@ const char descriptor_table_protodef_cstrike15_5fusermessages_2eproto[] PROTOBUF
   "ervation\030\002 \001(\0132/.CMsgGCCStrike15_v2_Matc"
   "hmakingGC2ServerReserve\"N\n\030CCSUsrMsgPreM"
   "atchSayText\022\022\n\naccount_id\030\001 \001(\r\022\014\n\004text\030"
-  "\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010*\222\017\n\026ECstrike15Us"
-  "erMessages\022\023\n\016CS_UM_VGUIMenu\020\255\002\022\021\n\014CS_UM"
-  "_Geiger\020\256\002\022\020\n\013CS_UM_Train\020\257\002\022\022\n\rCS_UM_Hu"
-  "dText\020\260\002\022\022\n\rCS_UM_SayText\020\261\002\022\023\n\016CS_UM_Sa"
-  "yText2\020\262\002\022\022\n\rCS_UM_TextMsg\020\263\002\022\021\n\014CS_UM_H"
-  "udMsg\020\264\002\022\023\n\016CS_UM_ResetHud\020\265\002\022\024\n\017CS_UM_G"
-  "ameTitle\020\266\002\022\020\n\013CS_UM_Shake\020\270\002\022\017\n\nCS_UM_F"
-  "ade\020\271\002\022\021\n\014CS_UM_Rumble\020\272\002\022\027\n\022CS_UM_Close"
-  "Caption\020\273\002\022\035\n\030CS_UM_CloseCaptionDirect\020\274"
-  "\002\022\024\n\017CS_UM_SendAudio\020\275\002\022\023\n\016CS_UM_RawAudi"
-  "o\020\276\002\022\024\n\017CS_UM_VoiceMask\020\277\002\022\027\n\022CS_UM_Requ"
-  "estState\020\300\002\022\021\n\014CS_UM_Damage\020\301\002\022\024\n\017CS_UM_"
-  "RadioText\020\302\002\022\023\n\016CS_UM_HintText\020\303\002\022\026\n\021CS_"
-  "UM_KeyHintText\020\304\002\022%\n CS_UM_ProcessSpotte"
-  "dEntityUpdate\020\305\002\022\027\n\022CS_UM_ReloadEffect\020\306"
-  "\002\022\026\n\021CS_UM_AdjustMoney\020\307\002\022\032\n\025CS_UM_Updat"
-  "eTeamMoney\020\310\002\022\034\n\027CS_UM_StopSpectatorMode"
-  "\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033\n\026CS_UM_Desired"
-  "Timescale\020\313\002\022\033\n\026CS_UM_CurrentTimescale\020\314"
-  "\002\022\033\n\026CS_UM_AchievementEvent\020\315\002\022\035\n\030CS_UM_"
-  "MatchEndConditions\020\316\002\022\034\n\027CS_UM_Disconnec"
-  "tToLobby\020\317\002\022\034\n\027CS_UM_PlayerStatsUpdate\020\320"
-  "\002\022\031\n\024CS_UM_WarmupHasEnded\020\322\002\022\025\n\020CS_UM_Cl"
-  "ientInfo\020\323\002\022\023\n\016CS_UM_XRankGet\020\324\002\022\023\n\016CS_U"
-  "M_XRankUpd\020\325\002\022\031\n\024CS_UM_CallVoteFailed\020\331\002"
-  "\022\024\n\017CS_UM_VoteStart\020\332\002\022\023\n\016CS_UM_VotePass"
-  "\020\333\002\022\025\n\020CS_UM_VoteFailed\020\334\002\022\024\n\017CS_UM_Vote"
-  "Setup\020\335\002\022\036\n\031CS_UM_ServerRankRevealAll\020\336\002"
-  "\022\'\n\"CS_UM_SendLastKillerDamageToClient\020\337"
-  "\002\022\033\n\026CS_UM_ServerRankUpdate\020\340\002\022\025\n\020CS_UM_"
-  "ItemPickup\020\341\002\022\023\n\016CS_UM_ShowMenu\020\342\002\022\022\n\rCS"
-  "_UM_BarTime\020\343\002\022\025\n\020CS_UM_AmmoDenied\020\344\002\022\032\n"
-  "\025CS_UM_MarkAchievement\020\345\002\022\033\n\026CS_UM_Match"
-  "StatsUpdate\020\346\002\022\023\n\016CS_UM_ItemDrop\020\347\002\022\032\n\025C"
-  "S_UM_GlowPropTurnOff\020\350\002\022\036\n\031CS_UM_SendPla"
-  "yerItemDrops\020\351\002\022\037\n\032CS_UM_RoundBackupFile"
-  "names\020\352\002\022\036\n\031CS_UM_SendPlayerItemFound\020\353\002"
-  "\022\024\n\017CS_UM_ReportHit\020\354\002\022\023\n\016CS_UM_XpUpdate"
-  "\020\355\002\022\030\n\023CS_UM_QuestProgress\020\356\002\022\037\n\032CS_UM_S"
-  "coreLeaderboardData\020\357\002\022&\n!CS_UM_PlayerDe"
-  "calDigitalSignature\020\360\002\022\026\n\021CS_UM_WeaponSo"
-  "und\020\361\002\022 \n\033CS_UM_UpdateScreenHealthBar\020\362\002"
-  "\022!\n\034CS_UM_EntityOutlineHighlight\020\363\002\022\017\n\nC"
-  "S_UM_SSUI\020\364\002\022\030\n\023CS_UM_SurvivalStats\020\365\002\022\035"
-  "\n\030CS_UM_DisconnectToLobby2\020\366\002\022#\n\036CS_UM_E"
-  "ndOfMatchAllPlayersData\020\367\002\022 \n\033CS_UM_Post"
-  "RoundDamageReport\020\370\002\022\035\n\030CS_UM_RoundEndRe"
-  "portData\020\373\002\022\033\n\026CS_UM_CurrentRoundOdds\020\374\002"
-  "\022\024\n\017CS_UM_DeepStats\020\375\002\022\024\n\017CS_UM_ShootInf"
-  "o\020\377\002*\210\001\n\"ECSUsrMsg_DisconnectToLobby_Act"
-  "ion\0220\n,k_ECSUsrMsg_DisconnectToLobby_Act"
-  "ion_Default\020\000\0220\n,k_ECSUsrMsg_DisconnectT"
-  "oLobby_Action_GoQueue\020\001"
+  "\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010\"O\n\027CCSUsrMsg_Cou"
+  "nterStrafe\022\033\n\023press_to_release_ns\030\001 \001(\005\022"
+  "\027\n\017total_keys_down\030\002 \001(\005\"\361\001\n\032CCSUsrMsg_D"
+  "amagePrediction\022\023\n\013command_num\030\001 \001(\005\022\022\n\n"
+  "pellet_idx\030\002 \001(\005\022\023\n\013victim_slot\030\003 \001(\005\022\036\n"
+  "\026victim_starting_health\030\004 \001(\005\022\025\n\rvictim_"
+  "damage\030\005 \001(\005\022\036\n\tshoot_pos\030\006 \001(\0132\013.CMsgVe"
+  "ctor\022\036\n\tshoot_dir\030\007 \001(\0132\013.CMsgQAngle\022\036\n\t"
+  "aim_punch\030\010 \001(\0132\013.CMsgQAngle\"J\n CCSUsrMs"
+  "g_RecurringMissionSchema\022\016\n\006period\030\001 \001(\r"
+  "\022\026\n\016mission_schema\030\002 \001(\014*\354\017\n\026ECstrike15U"
+  "serMessages\022\023\n\016CS_UM_VGUIMenu\020\255\002\022\021\n\014CS_U"
+  "M_Geiger\020\256\002\022\020\n\013CS_UM_Train\020\257\002\022\022\n\rCS_UM_H"
+  "udText\020\260\002\022\022\n\rCS_UM_SayText\020\261\002\022\023\n\016CS_UM_S"
+  "ayText2\020\262\002\022\022\n\rCS_UM_TextMsg\020\263\002\022\021\n\014CS_UM_"
+  "HudMsg\020\264\002\022\023\n\016CS_UM_ResetHud\020\265\002\022\024\n\017CS_UM_"
+  "GameTitle\020\266\002\022\020\n\013CS_UM_Shake\020\270\002\022\017\n\nCS_UM_"
+  "Fade\020\271\002\022\021\n\014CS_UM_Rumble\020\272\002\022\027\n\022CS_UM_Clos"
+  "eCaption\020\273\002\022\035\n\030CS_UM_CloseCaptionDirect\020"
+  "\274\002\022\024\n\017CS_UM_SendAudio\020\275\002\022\023\n\016CS_UM_RawAud"
+  "io\020\276\002\022\024\n\017CS_UM_VoiceMask\020\277\002\022\027\n\022CS_UM_Req"
+  "uestState\020\300\002\022\021\n\014CS_UM_Damage\020\301\002\022\024\n\017CS_UM"
+  "_RadioText\020\302\002\022\023\n\016CS_UM_HintText\020\303\002\022\026\n\021CS"
+  "_UM_KeyHintText\020\304\002\022%\n CS_UM_ProcessSpott"
+  "edEntityUpdate\020\305\002\022\027\n\022CS_UM_ReloadEffect\020"
+  "\306\002\022\026\n\021CS_UM_AdjustMoney\020\307\002\022\032\n\025CS_UM_Upda"
+  "teTeamMoney\020\310\002\022\034\n\027CS_UM_StopSpectatorMod"
+  "e\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033\n\026CS_UM_Desire"
+  "dTimescale\020\313\002\022\033\n\026CS_UM_CurrentTimescale\020"
+  "\314\002\022\033\n\026CS_UM_AchievementEvent\020\315\002\022\035\n\030CS_UM"
+  "_MatchEndConditions\020\316\002\022\034\n\027CS_UM_Disconne"
+  "ctToLobby\020\317\002\022\034\n\027CS_UM_PlayerStatsUpdate\020"
+  "\320\002\022\031\n\024CS_UM_WarmupHasEnded\020\322\002\022\025\n\020CS_UM_C"
+  "lientInfo\020\323\002\022\023\n\016CS_UM_XRankGet\020\324\002\022\023\n\016CS_"
+  "UM_XRankUpd\020\325\002\022\031\n\024CS_UM_CallVoteFailed\020\331"
+  "\002\022\024\n\017CS_UM_VoteStart\020\332\002\022\023\n\016CS_UM_VotePas"
+  "s\020\333\002\022\025\n\020CS_UM_VoteFailed\020\334\002\022\024\n\017CS_UM_Vot"
+  "eSetup\020\335\002\022\036\n\031CS_UM_ServerRankRevealAll\020\336"
+  "\002\022\'\n\"CS_UM_SendLastKillerDamageToClient\020"
+  "\337\002\022\033\n\026CS_UM_ServerRankUpdate\020\340\002\022\025\n\020CS_UM"
+  "_ItemPickup\020\341\002\022\023\n\016CS_UM_ShowMenu\020\342\002\022\022\n\rC"
+  "S_UM_BarTime\020\343\002\022\025\n\020CS_UM_AmmoDenied\020\344\002\022\032"
+  "\n\025CS_UM_MarkAchievement\020\345\002\022\033\n\026CS_UM_Matc"
+  "hStatsUpdate\020\346\002\022\023\n\016CS_UM_ItemDrop\020\347\002\022\032\n\025"
+  "CS_UM_GlowPropTurnOff\020\350\002\022\036\n\031CS_UM_SendPl"
+  "ayerItemDrops\020\351\002\022\037\n\032CS_UM_RoundBackupFil"
+  "enames\020\352\002\022\036\n\031CS_UM_SendPlayerItemFound\020\353"
+  "\002\022\024\n\017CS_UM_ReportHit\020\354\002\022\023\n\016CS_UM_XpUpdat"
+  "e\020\355\002\022\030\n\023CS_UM_QuestProgress\020\356\002\022\037\n\032CS_UM_"
+  "ScoreLeaderboardData\020\357\002\022&\n!CS_UM_PlayerD"
+  "ecalDigitalSignature\020\360\002\022\026\n\021CS_UM_WeaponS"
+  "ound\020\361\002\022 \n\033CS_UM_UpdateScreenHealthBar\020\362"
+  "\002\022!\n\034CS_UM_EntityOutlineHighlight\020\363\002\022\017\n\n"
+  "CS_UM_SSUI\020\364\002\022\030\n\023CS_UM_SurvivalStats\020\365\002\022"
+  "\035\n\030CS_UM_DisconnectToLobby2\020\366\002\022#\n\036CS_UM_"
+  "EndOfMatchAllPlayersData\020\367\002\022 \n\033CS_UM_Pos"
+  "tRoundDamageReport\020\370\002\022\035\n\030CS_UM_RoundEndR"
+  "eportData\020\373\002\022\033\n\026CS_UM_CurrentRoundOdds\020\374"
+  "\002\022\024\n\017CS_UM_DeepStats\020\375\002\022\024\n\017CS_UM_ShootIn"
+  "fo\020\377\002\022\030\n\023CS_UM_CounterStrafe\020\201\003\022\033\n\026CS_UM"
+  "_DamagePrediction\020\202\003\022!\n\034CS_UM_RecurringM"
+  "issionSchema\020\203\003*\210\001\n\"ECSUsrMsg_Disconnect"
+  "ToLobby_Action\0220\n,k_ECSUsrMsg_Disconnect"
+  "ToLobby_Action_Default\020\000\0220\n,k_ECSUsrMsg_"
+  "DisconnectToLobby_Action_GoQueue\020\001"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_cstrike15_5fusermessages_2eproto_deps[2] = {
   &::descriptor_table_cstrike15_5fgcmessages_2eproto,
@@ -2847,9 +2958,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_cstrike15_5fusermes
 };
 static ::_pbi::once_flag descriptor_table_cstrike15_5fusermessages_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_cstrike15_5fusermessages_2eproto = {
-    false, false, 10103, descriptor_table_protodef_cstrike15_5fusermessages_2eproto,
+    false, false, 10594, descriptor_table_protodef_cstrike15_5fusermessages_2eproto,
     "cstrike15_usermessages.proto",
-    &descriptor_table_cstrike15_5fusermessages_2eproto_once, descriptor_table_cstrike15_5fusermessages_2eproto_deps, 2, 86,
+    &descriptor_table_cstrike15_5fusermessages_2eproto_once, descriptor_table_cstrike15_5fusermessages_2eproto_deps, 2, 89,
     schemas, file_default_instances, TableStruct_cstrike15_5fusermessages_2eproto::offsets,
     file_level_metadata_cstrike15_5fusermessages_2eproto, file_level_enum_descriptors_cstrike15_5fusermessages_2eproto,
     file_level_service_descriptors_cstrike15_5fusermessages_2eproto,
@@ -2941,6 +3052,9 @@ bool ECstrike15UserMessages_IsValid(int value) {
     case 380:
     case 381:
     case 383:
+    case 385:
+    case 386:
+    case 387:
       return true;
     default:
       return false;
@@ -26113,6 +26227,960 @@ void CCSUsrMsgPreMatchSayText::InternalSwap(CCSUsrMsgPreMatchSayText* other) {
       file_level_metadata_cstrike15_5fusermessages_2eproto[85]);
 }
 
+// ===================================================================
+
+class CCSUsrMsg_CounterStrafe::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CCSUsrMsg_CounterStrafe>()._impl_._has_bits_);
+  static void set_has_press_to_release_ns(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_total_keys_down(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+CCSUsrMsg_CounterStrafe::CCSUsrMsg_CounterStrafe(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_CounterStrafe)
+}
+CCSUsrMsg_CounterStrafe::CCSUsrMsg_CounterStrafe(const CCSUsrMsg_CounterStrafe& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CCSUsrMsg_CounterStrafe* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.press_to_release_ns_){}
+    , decltype(_impl_.total_keys_down_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.press_to_release_ns_, &from._impl_.press_to_release_ns_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.total_keys_down_) -
+    reinterpret_cast<char*>(&_impl_.press_to_release_ns_)) + sizeof(_impl_.total_keys_down_));
+  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_CounterStrafe)
+}
+
+inline void CCSUsrMsg_CounterStrafe::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.press_to_release_ns_){0}
+    , decltype(_impl_.total_keys_down_){0}
+  };
+}
+
+CCSUsrMsg_CounterStrafe::~CCSUsrMsg_CounterStrafe() {
+  // @@protoc_insertion_point(destructor:CCSUsrMsg_CounterStrafe)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CCSUsrMsg_CounterStrafe::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void CCSUsrMsg_CounterStrafe::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CCSUsrMsg_CounterStrafe::Clear() {
+// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_CounterStrafe)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.press_to_release_ns_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.total_keys_down_) -
+        reinterpret_cast<char*>(&_impl_.press_to_release_ns_)) + sizeof(_impl_.total_keys_down_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CCSUsrMsg_CounterStrafe::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int32 press_to_release_ns = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_press_to_release_ns(&has_bits);
+          _impl_.press_to_release_ns_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 total_keys_down = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_total_keys_down(&has_bits);
+          _impl_.total_keys_down_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CCSUsrMsg_CounterStrafe::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_CounterStrafe)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int32 press_to_release_ns = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_press_to_release_ns(), target);
+  }
+
+  // optional int32 total_keys_down = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_total_keys_down(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_CounterStrafe)
+  return target;
+}
+
+size_t CCSUsrMsg_CounterStrafe::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_CounterStrafe)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional int32 press_to_release_ns = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_press_to_release_ns());
+    }
+
+    // optional int32 total_keys_down = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_total_keys_down());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_CounterStrafe::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CCSUsrMsg_CounterStrafe::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_CounterStrafe::GetClassData() const { return &_class_data_; }
+
+
+void CCSUsrMsg_CounterStrafe::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CCSUsrMsg_CounterStrafe*>(&to_msg);
+  auto& from = static_cast<const CCSUsrMsg_CounterStrafe&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_CounterStrafe)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.press_to_release_ns_ = from._impl_.press_to_release_ns_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.total_keys_down_ = from._impl_.total_keys_down_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CCSUsrMsg_CounterStrafe::CopyFrom(const CCSUsrMsg_CounterStrafe& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_CounterStrafe)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CCSUsrMsg_CounterStrafe::IsInitialized() const {
+  return true;
+}
+
+void CCSUsrMsg_CounterStrafe::InternalSwap(CCSUsrMsg_CounterStrafe* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CCSUsrMsg_CounterStrafe, _impl_.total_keys_down_)
+      + sizeof(CCSUsrMsg_CounterStrafe::_impl_.total_keys_down_)
+      - PROTOBUF_FIELD_OFFSET(CCSUsrMsg_CounterStrafe, _impl_.press_to_release_ns_)>(
+          reinterpret_cast<char*>(&_impl_.press_to_release_ns_),
+          reinterpret_cast<char*>(&other->_impl_.press_to_release_ns_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_CounterStrafe::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[86]);
+}
+
+// ===================================================================
+
+class CCSUsrMsg_DamagePrediction::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CCSUsrMsg_DamagePrediction>()._impl_._has_bits_);
+  static void set_has_command_num(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_pellet_idx(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_victim_slot(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_victim_starting_health(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_victim_damage(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static const ::CMsgVector& shoot_pos(const CCSUsrMsg_DamagePrediction* msg);
+  static void set_has_shoot_pos(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::CMsgQAngle& shoot_dir(const CCSUsrMsg_DamagePrediction* msg);
+  static void set_has_shoot_dir(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static const ::CMsgQAngle& aim_punch(const CCSUsrMsg_DamagePrediction* msg);
+  static void set_has_aim_punch(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+const ::CMsgVector&
+CCSUsrMsg_DamagePrediction::_Internal::shoot_pos(const CCSUsrMsg_DamagePrediction* msg) {
+  return *msg->_impl_.shoot_pos_;
+}
+const ::CMsgQAngle&
+CCSUsrMsg_DamagePrediction::_Internal::shoot_dir(const CCSUsrMsg_DamagePrediction* msg) {
+  return *msg->_impl_.shoot_dir_;
+}
+const ::CMsgQAngle&
+CCSUsrMsg_DamagePrediction::_Internal::aim_punch(const CCSUsrMsg_DamagePrediction* msg) {
+  return *msg->_impl_.aim_punch_;
+}
+void CCSUsrMsg_DamagePrediction::clear_shoot_pos() {
+  if (_impl_.shoot_pos_ != nullptr) _impl_.shoot_pos_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+void CCSUsrMsg_DamagePrediction::clear_shoot_dir() {
+  if (_impl_.shoot_dir_ != nullptr) _impl_.shoot_dir_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+void CCSUsrMsg_DamagePrediction::clear_aim_punch() {
+  if (_impl_.aim_punch_ != nullptr) _impl_.aim_punch_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+CCSUsrMsg_DamagePrediction::CCSUsrMsg_DamagePrediction(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_DamagePrediction)
+}
+CCSUsrMsg_DamagePrediction::CCSUsrMsg_DamagePrediction(const CCSUsrMsg_DamagePrediction& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CCSUsrMsg_DamagePrediction* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.shoot_pos_){nullptr}
+    , decltype(_impl_.shoot_dir_){nullptr}
+    , decltype(_impl_.aim_punch_){nullptr}
+    , decltype(_impl_.command_num_){}
+    , decltype(_impl_.pellet_idx_){}
+    , decltype(_impl_.victim_slot_){}
+    , decltype(_impl_.victim_starting_health_){}
+    , decltype(_impl_.victim_damage_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_shoot_pos()) {
+    _this->_impl_.shoot_pos_ = new ::CMsgVector(*from._impl_.shoot_pos_);
+  }
+  if (from._internal_has_shoot_dir()) {
+    _this->_impl_.shoot_dir_ = new ::CMsgQAngle(*from._impl_.shoot_dir_);
+  }
+  if (from._internal_has_aim_punch()) {
+    _this->_impl_.aim_punch_ = new ::CMsgQAngle(*from._impl_.aim_punch_);
+  }
+  ::memcpy(&_impl_.command_num_, &from._impl_.command_num_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.victim_damage_) -
+    reinterpret_cast<char*>(&_impl_.command_num_)) + sizeof(_impl_.victim_damage_));
+  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_DamagePrediction)
+}
+
+inline void CCSUsrMsg_DamagePrediction::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.shoot_pos_){nullptr}
+    , decltype(_impl_.shoot_dir_){nullptr}
+    , decltype(_impl_.aim_punch_){nullptr}
+    , decltype(_impl_.command_num_){0}
+    , decltype(_impl_.pellet_idx_){0}
+    , decltype(_impl_.victim_slot_){0}
+    , decltype(_impl_.victim_starting_health_){0}
+    , decltype(_impl_.victim_damage_){0}
+  };
+}
+
+CCSUsrMsg_DamagePrediction::~CCSUsrMsg_DamagePrediction() {
+  // @@protoc_insertion_point(destructor:CCSUsrMsg_DamagePrediction)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CCSUsrMsg_DamagePrediction::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.shoot_pos_;
+  if (this != internal_default_instance()) delete _impl_.shoot_dir_;
+  if (this != internal_default_instance()) delete _impl_.aim_punch_;
+}
+
+void CCSUsrMsg_DamagePrediction::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CCSUsrMsg_DamagePrediction::Clear() {
+// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_DamagePrediction)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.shoot_pos_ != nullptr);
+      _impl_.shoot_pos_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.shoot_dir_ != nullptr);
+      _impl_.shoot_dir_->Clear();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.aim_punch_ != nullptr);
+      _impl_.aim_punch_->Clear();
+    }
+  }
+  if (cached_has_bits & 0x000000f8u) {
+    ::memset(&_impl_.command_num_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.victim_damage_) -
+        reinterpret_cast<char*>(&_impl_.command_num_)) + sizeof(_impl_.victim_damage_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CCSUsrMsg_DamagePrediction::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int32 command_num = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_command_num(&has_bits);
+          _impl_.command_num_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 pellet_idx = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_pellet_idx(&has_bits);
+          _impl_.pellet_idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 victim_slot = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_victim_slot(&has_bits);
+          _impl_.victim_slot_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 victim_starting_health = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_victim_starting_health(&has_bits);
+          _impl_.victim_starting_health_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 victim_damage = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_victim_damage(&has_bits);
+          _impl_.victim_damage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .CMsgVector shoot_pos = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_shoot_pos(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .CMsgQAngle shoot_dir = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_shoot_dir(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .CMsgQAngle aim_punch = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_aim_punch(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CCSUsrMsg_DamagePrediction::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_DamagePrediction)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int32 command_num = 1;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_command_num(), target);
+  }
+
+  // optional int32 pellet_idx = 2;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_pellet_idx(), target);
+  }
+
+  // optional int32 victim_slot = 3;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_victim_slot(), target);
+  }
+
+  // optional int32 victim_starting_health = 4;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_victim_starting_health(), target);
+  }
+
+  // optional int32 victim_damage = 5;
+  if (cached_has_bits & 0x00000080u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_victim_damage(), target);
+  }
+
+  // optional .CMsgVector shoot_pos = 6;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::shoot_pos(this),
+        _Internal::shoot_pos(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .CMsgQAngle shoot_dir = 7;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(7, _Internal::shoot_dir(this),
+        _Internal::shoot_dir(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .CMsgQAngle aim_punch = 8;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, _Internal::aim_punch(this),
+        _Internal::aim_punch(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_DamagePrediction)
+  return target;
+}
+
+size_t CCSUsrMsg_DamagePrediction::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_DamagePrediction)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    // optional .CMsgVector shoot_pos = 6;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.shoot_pos_);
+    }
+
+    // optional .CMsgQAngle shoot_dir = 7;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.shoot_dir_);
+    }
+
+    // optional .CMsgQAngle aim_punch = 8;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.aim_punch_);
+    }
+
+    // optional int32 command_num = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_command_num());
+    }
+
+    // optional int32 pellet_idx = 2;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_pellet_idx());
+    }
+
+    // optional int32 victim_slot = 3;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_victim_slot());
+    }
+
+    // optional int32 victim_starting_health = 4;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_victim_starting_health());
+    }
+
+    // optional int32 victim_damage = 5;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_victim_damage());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_DamagePrediction::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CCSUsrMsg_DamagePrediction::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_DamagePrediction::GetClassData() const { return &_class_data_; }
+
+
+void CCSUsrMsg_DamagePrediction::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CCSUsrMsg_DamagePrediction*>(&to_msg);
+  auto& from = static_cast<const CCSUsrMsg_DamagePrediction&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_DamagePrediction)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_shoot_pos()->::CMsgVector::MergeFrom(
+          from._internal_shoot_pos());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_shoot_dir()->::CMsgQAngle::MergeFrom(
+          from._internal_shoot_dir());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_aim_punch()->::CMsgQAngle::MergeFrom(
+          from._internal_aim_punch());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.command_num_ = from._impl_.command_num_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.pellet_idx_ = from._impl_.pellet_idx_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.victim_slot_ = from._impl_.victim_slot_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.victim_starting_health_ = from._impl_.victim_starting_health_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.victim_damage_ = from._impl_.victim_damage_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CCSUsrMsg_DamagePrediction::CopyFrom(const CCSUsrMsg_DamagePrediction& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_DamagePrediction)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CCSUsrMsg_DamagePrediction::IsInitialized() const {
+  return true;
+}
+
+void CCSUsrMsg_DamagePrediction::InternalSwap(CCSUsrMsg_DamagePrediction* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CCSUsrMsg_DamagePrediction, _impl_.victim_damage_)
+      + sizeof(CCSUsrMsg_DamagePrediction::_impl_.victim_damage_)
+      - PROTOBUF_FIELD_OFFSET(CCSUsrMsg_DamagePrediction, _impl_.shoot_pos_)>(
+          reinterpret_cast<char*>(&_impl_.shoot_pos_),
+          reinterpret_cast<char*>(&other->_impl_.shoot_pos_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_DamagePrediction::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[87]);
+}
+
+// ===================================================================
+
+class CCSUsrMsg_RecurringMissionSchema::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CCSUsrMsg_RecurringMissionSchema>()._impl_._has_bits_);
+  static void set_has_period(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_mission_schema(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+CCSUsrMsg_RecurringMissionSchema::CCSUsrMsg_RecurringMissionSchema(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_RecurringMissionSchema)
+}
+CCSUsrMsg_RecurringMissionSchema::CCSUsrMsg_RecurringMissionSchema(const CCSUsrMsg_RecurringMissionSchema& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CCSUsrMsg_RecurringMissionSchema* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.mission_schema_){}
+    , decltype(_impl_.period_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.mission_schema_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.mission_schema_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_mission_schema()) {
+    _this->_impl_.mission_schema_.Set(from._internal_mission_schema(), 
+      _this->GetArenaForAllocation());
+  }
+  _this->_impl_.period_ = from._impl_.period_;
+  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_RecurringMissionSchema)
+}
+
+inline void CCSUsrMsg_RecurringMissionSchema::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.mission_schema_){}
+    , decltype(_impl_.period_){0u}
+  };
+  _impl_.mission_schema_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.mission_schema_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+CCSUsrMsg_RecurringMissionSchema::~CCSUsrMsg_RecurringMissionSchema() {
+  // @@protoc_insertion_point(destructor:CCSUsrMsg_RecurringMissionSchema)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CCSUsrMsg_RecurringMissionSchema::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.mission_schema_.Destroy();
+}
+
+void CCSUsrMsg_RecurringMissionSchema::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CCSUsrMsg_RecurringMissionSchema::Clear() {
+// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_RecurringMissionSchema)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.mission_schema_.ClearNonDefaultToEmpty();
+  }
+  _impl_.period_ = 0u;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CCSUsrMsg_RecurringMissionSchema::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional uint32 period = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_period(&has_bits);
+          _impl_.period_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bytes mission_schema = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_mission_schema();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CCSUsrMsg_RecurringMissionSchema::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_RecurringMissionSchema)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional uint32 period = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_period(), target);
+  }
+
+  // optional bytes mission_schema = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->WriteBytesMaybeAliased(
+        2, this->_internal_mission_schema(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_RecurringMissionSchema)
+  return target;
+}
+
+size_t CCSUsrMsg_RecurringMissionSchema::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_RecurringMissionSchema)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional bytes mission_schema = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_mission_schema());
+    }
+
+    // optional uint32 period = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_period());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_RecurringMissionSchema::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CCSUsrMsg_RecurringMissionSchema::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_RecurringMissionSchema::GetClassData() const { return &_class_data_; }
+
+
+void CCSUsrMsg_RecurringMissionSchema::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CCSUsrMsg_RecurringMissionSchema*>(&to_msg);
+  auto& from = static_cast<const CCSUsrMsg_RecurringMissionSchema&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_RecurringMissionSchema)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_mission_schema(from._internal_mission_schema());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.period_ = from._impl_.period_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CCSUsrMsg_RecurringMissionSchema::CopyFrom(const CCSUsrMsg_RecurringMissionSchema& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_RecurringMissionSchema)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CCSUsrMsg_RecurringMissionSchema::IsInitialized() const {
+  return true;
+}
+
+void CCSUsrMsg_RecurringMissionSchema::InternalSwap(CCSUsrMsg_RecurringMissionSchema* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.mission_schema_, lhs_arena,
+      &other->_impl_.mission_schema_, rhs_arena
+  );
+  swap(_impl_.period_, other->_impl_.period_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_RecurringMissionSchema::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[88]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::CCSUsrMsg_VGUIMenu_Keys*
@@ -26458,6 +27526,18 @@ Arena::CreateMaybeMessage< ::CCSUsrMsg_ServerRankRevealAll >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::CCSUsrMsgPreMatchSayText*
 Arena::CreateMaybeMessage< ::CCSUsrMsgPreMatchSayText >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCSUsrMsgPreMatchSayText >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CCSUsrMsg_CounterStrafe*
+Arena::CreateMaybeMessage< ::CCSUsrMsg_CounterStrafe >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CCSUsrMsg_CounterStrafe >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CCSUsrMsg_DamagePrediction*
+Arena::CreateMaybeMessage< ::CCSUsrMsg_DamagePrediction >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CCSUsrMsg_DamagePrediction >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CCSUsrMsg_RecurringMissionSchema*
+Arena::CreateMaybeMessage< ::CCSUsrMsg_RecurringMissionSchema >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CCSUsrMsg_RecurringMissionSchema >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

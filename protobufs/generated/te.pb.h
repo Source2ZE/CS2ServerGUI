@@ -4763,34 +4763,34 @@ class CMsgTEExplosion :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEffectNameFieldNumber = 10,
+    kSoundNameFieldNumber = 10,
     kOriginFieldNumber = 1,
     kNormalFieldNumber = 4,
-    kFramerateFieldNumber = 2,
+    kDebrisOriginFieldNumber = 13,
     kFlagsFieldNumber = 3,
-    kMaterialtypeFieldNumber = 5,
     kRadiusFieldNumber = 6,
     kMagnitudeFieldNumber = 7,
-    kScaleFieldNumber = 8,
     kAffectRagdollsFieldNumber = 9,
+    kCreateDebrisFieldNumber = 12,
     kExplosionTypeFieldNumber = 11,
+    kDebrisSurfacepropFieldNumber = 14,
   };
-  // optional string effect_name = 10;
-  bool has_effect_name() const;
+  // optional string sound_name = 10;
+  bool has_sound_name() const;
   private:
-  bool _internal_has_effect_name() const;
+  bool _internal_has_sound_name() const;
   public:
-  void clear_effect_name();
-  const std::string& effect_name() const;
+  void clear_sound_name();
+  const std::string& sound_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_effect_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_effect_name();
-  PROTOBUF_NODISCARD std::string* release_effect_name();
-  void set_allocated_effect_name(std::string* effect_name);
+  void set_sound_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_sound_name();
+  PROTOBUF_NODISCARD std::string* release_sound_name();
+  void set_allocated_sound_name(std::string* sound_name);
   private:
-  const std::string& _internal_effect_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_effect_name(const std::string& value);
-  std::string* _internal_mutable_effect_name();
+  const std::string& _internal_sound_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sound_name(const std::string& value);
+  std::string* _internal_mutable_sound_name();
   public:
 
   // optional .CMsgVector origin = 1;
@@ -4829,18 +4829,23 @@ class CMsgTEExplosion :
       ::CMsgVector* normal);
   ::CMsgVector* unsafe_arena_release_normal();
 
-  // optional uint32 framerate = 2;
-  bool has_framerate() const;
+  // optional .CMsgVector debris_origin = 13;
+  bool has_debris_origin() const;
   private:
-  bool _internal_has_framerate() const;
+  bool _internal_has_debris_origin() const;
   public:
-  void clear_framerate();
-  uint32_t framerate() const;
-  void set_framerate(uint32_t value);
+  void clear_debris_origin();
+  const ::CMsgVector& debris_origin() const;
+  PROTOBUF_NODISCARD ::CMsgVector* release_debris_origin();
+  ::CMsgVector* mutable_debris_origin();
+  void set_allocated_debris_origin(::CMsgVector* debris_origin);
   private:
-  uint32_t _internal_framerate() const;
-  void _internal_set_framerate(uint32_t value);
+  const ::CMsgVector& _internal_debris_origin() const;
+  ::CMsgVector* _internal_mutable_debris_origin();
   public:
+  void unsafe_arena_set_allocated_debris_origin(
+      ::CMsgVector* debris_origin);
+  ::CMsgVector* unsafe_arena_release_debris_origin();
 
   // optional uint32 flags = 3;
   bool has_flags() const;
@@ -4853,19 +4858,6 @@ class CMsgTEExplosion :
   private:
   uint32_t _internal_flags() const;
   void _internal_set_flags(uint32_t value);
-  public:
-
-  // optional uint32 materialtype = 5;
-  bool has_materialtype() const;
-  private:
-  bool _internal_has_materialtype() const;
-  public:
-  void clear_materialtype();
-  uint32_t materialtype() const;
-  void set_materialtype(uint32_t value);
-  private:
-  uint32_t _internal_materialtype() const;
-  void _internal_set_materialtype(uint32_t value);
   public:
 
   // optional uint32 radius = 6;
@@ -4894,19 +4886,6 @@ class CMsgTEExplosion :
   void _internal_set_magnitude(uint32_t value);
   public:
 
-  // optional float scale = 8;
-  bool has_scale() const;
-  private:
-  bool _internal_has_scale() const;
-  public:
-  void clear_scale();
-  float scale() const;
-  void set_scale(float value);
-  private:
-  float _internal_scale() const;
-  void _internal_set_scale(float value);
-  public:
-
   // optional bool affect_ragdolls = 9;
   bool has_affect_ragdolls() const;
   private:
@@ -4918,6 +4897,19 @@ class CMsgTEExplosion :
   private:
   bool _internal_affect_ragdolls() const;
   void _internal_set_affect_ragdolls(bool value);
+  public:
+
+  // optional bool create_debris = 12;
+  bool has_create_debris() const;
+  private:
+  bool _internal_has_create_debris() const;
+  public:
+  void clear_create_debris();
+  bool create_debris() const;
+  void set_create_debris(bool value);
+  private:
+  bool _internal_create_debris() const;
+  void _internal_set_create_debris(bool value);
   public:
 
   // optional uint32 explosion_type = 11;
@@ -4933,6 +4925,19 @@ class CMsgTEExplosion :
   void _internal_set_explosion_type(uint32_t value);
   public:
 
+  // optional fixed32 debris_surfaceprop = 14;
+  bool has_debris_surfaceprop() const;
+  private:
+  bool _internal_has_debris_surfaceprop() const;
+  public:
+  void clear_debris_surfaceprop();
+  uint32_t debris_surfaceprop() const;
+  void set_debris_surfaceprop(uint32_t value);
+  private:
+  uint32_t _internal_debris_surfaceprop() const;
+  void _internal_set_debris_surfaceprop(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:CMsgTEExplosion)
  private:
   class _Internal;
@@ -4943,17 +4948,17 @@ class CMsgTEExplosion :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr effect_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sound_name_;
     ::CMsgVector* origin_;
     ::CMsgVector* normal_;
-    uint32_t framerate_;
+    ::CMsgVector* debris_origin_;
     uint32_t flags_;
-    uint32_t materialtype_;
     uint32_t radius_;
     uint32_t magnitude_;
-    float scale_;
     bool affect_ragdolls_;
+    bool create_debris_;
     uint32_t explosion_type_;
+    uint32_t debris_surfaceprop_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_te_2eproto;
@@ -11867,34 +11872,6 @@ inline void CMsgTEExplosion::set_allocated_origin(::CMsgVector* origin) {
   // @@protoc_insertion_point(field_set_allocated:CMsgTEExplosion.origin)
 }
 
-// optional uint32 framerate = 2;
-inline bool CMsgTEExplosion::_internal_has_framerate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CMsgTEExplosion::has_framerate() const {
-  return _internal_has_framerate();
-}
-inline void CMsgTEExplosion::clear_framerate() {
-  _impl_.framerate_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
-}
-inline uint32_t CMsgTEExplosion::_internal_framerate() const {
-  return _impl_.framerate_;
-}
-inline uint32_t CMsgTEExplosion::framerate() const {
-  // @@protoc_insertion_point(field_get:CMsgTEExplosion.framerate)
-  return _internal_framerate();
-}
-inline void CMsgTEExplosion::_internal_set_framerate(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.framerate_ = value;
-}
-inline void CMsgTEExplosion::set_framerate(uint32_t value) {
-  _internal_set_framerate(value);
-  // @@protoc_insertion_point(field_set:CMsgTEExplosion.framerate)
-}
-
 // optional uint32 flags = 3;
 inline bool CMsgTEExplosion::_internal_has_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
@@ -12010,37 +11987,9 @@ inline void CMsgTEExplosion::set_allocated_normal(::CMsgVector* normal) {
   // @@protoc_insertion_point(field_set_allocated:CMsgTEExplosion.normal)
 }
 
-// optional uint32 materialtype = 5;
-inline bool CMsgTEExplosion::_internal_has_materialtype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CMsgTEExplosion::has_materialtype() const {
-  return _internal_has_materialtype();
-}
-inline void CMsgTEExplosion::clear_materialtype() {
-  _impl_.materialtype_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000020u;
-}
-inline uint32_t CMsgTEExplosion::_internal_materialtype() const {
-  return _impl_.materialtype_;
-}
-inline uint32_t CMsgTEExplosion::materialtype() const {
-  // @@protoc_insertion_point(field_get:CMsgTEExplosion.materialtype)
-  return _internal_materialtype();
-}
-inline void CMsgTEExplosion::_internal_set_materialtype(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.materialtype_ = value;
-}
-inline void CMsgTEExplosion::set_materialtype(uint32_t value) {
-  _internal_set_materialtype(value);
-  // @@protoc_insertion_point(field_set:CMsgTEExplosion.materialtype)
-}
-
 // optional uint32 radius = 6;
 inline bool CMsgTEExplosion::_internal_has_radius() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool CMsgTEExplosion::has_radius() const {
@@ -12048,7 +11997,7 @@ inline bool CMsgTEExplosion::has_radius() const {
 }
 inline void CMsgTEExplosion::clear_radius() {
   _impl_.radius_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t CMsgTEExplosion::_internal_radius() const {
   return _impl_.radius_;
@@ -12058,7 +12007,7 @@ inline uint32_t CMsgTEExplosion::radius() const {
   return _internal_radius();
 }
 inline void CMsgTEExplosion::_internal_set_radius(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.radius_ = value;
 }
 inline void CMsgTEExplosion::set_radius(uint32_t value) {
@@ -12068,7 +12017,7 @@ inline void CMsgTEExplosion::set_radius(uint32_t value) {
 
 // optional uint32 magnitude = 7;
 inline bool CMsgTEExplosion::_internal_has_magnitude() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool CMsgTEExplosion::has_magnitude() const {
@@ -12076,7 +12025,7 @@ inline bool CMsgTEExplosion::has_magnitude() const {
 }
 inline void CMsgTEExplosion::clear_magnitude() {
   _impl_.magnitude_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000080u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t CMsgTEExplosion::_internal_magnitude() const {
   return _impl_.magnitude_;
@@ -12086,7 +12035,7 @@ inline uint32_t CMsgTEExplosion::magnitude() const {
   return _internal_magnitude();
 }
 inline void CMsgTEExplosion::_internal_set_magnitude(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.magnitude_ = value;
 }
 inline void CMsgTEExplosion::set_magnitude(uint32_t value) {
@@ -12094,37 +12043,9 @@ inline void CMsgTEExplosion::set_magnitude(uint32_t value) {
   // @@protoc_insertion_point(field_set:CMsgTEExplosion.magnitude)
 }
 
-// optional float scale = 8;
-inline bool CMsgTEExplosion::_internal_has_scale() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool CMsgTEExplosion::has_scale() const {
-  return _internal_has_scale();
-}
-inline void CMsgTEExplosion::clear_scale() {
-  _impl_.scale_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000100u;
-}
-inline float CMsgTEExplosion::_internal_scale() const {
-  return _impl_.scale_;
-}
-inline float CMsgTEExplosion::scale() const {
-  // @@protoc_insertion_point(field_get:CMsgTEExplosion.scale)
-  return _internal_scale();
-}
-inline void CMsgTEExplosion::_internal_set_scale(float value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.scale_ = value;
-}
-inline void CMsgTEExplosion::set_scale(float value) {
-  _internal_set_scale(value);
-  // @@protoc_insertion_point(field_set:CMsgTEExplosion.scale)
-}
-
 // optional bool affect_ragdolls = 9;
 inline bool CMsgTEExplosion::_internal_has_affect_ragdolls() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool CMsgTEExplosion::has_affect_ragdolls() const {
@@ -12132,7 +12053,7 @@ inline bool CMsgTEExplosion::has_affect_ragdolls() const {
 }
 inline void CMsgTEExplosion::clear_affect_ragdolls() {
   _impl_.affect_ragdolls_ = false;
-  _impl_._has_bits_[0] &= ~0x00000200u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline bool CMsgTEExplosion::_internal_affect_ragdolls() const {
   return _impl_.affect_ragdolls_;
@@ -12142,7 +12063,7 @@ inline bool CMsgTEExplosion::affect_ragdolls() const {
   return _internal_affect_ragdolls();
 }
 inline void CMsgTEExplosion::_internal_set_affect_ragdolls(bool value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.affect_ragdolls_ = value;
 }
 inline void CMsgTEExplosion::set_affect_ragdolls(bool value) {
@@ -12150,77 +12071,77 @@ inline void CMsgTEExplosion::set_affect_ragdolls(bool value) {
   // @@protoc_insertion_point(field_set:CMsgTEExplosion.affect_ragdolls)
 }
 
-// optional string effect_name = 10;
-inline bool CMsgTEExplosion::_internal_has_effect_name() const {
+// optional string sound_name = 10;
+inline bool CMsgTEExplosion::_internal_has_sound_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CMsgTEExplosion::has_effect_name() const {
-  return _internal_has_effect_name();
+inline bool CMsgTEExplosion::has_sound_name() const {
+  return _internal_has_sound_name();
 }
-inline void CMsgTEExplosion::clear_effect_name() {
-  _impl_.effect_name_.ClearToEmpty();
+inline void CMsgTEExplosion::clear_sound_name() {
+  _impl_.sound_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CMsgTEExplosion::effect_name() const {
-  // @@protoc_insertion_point(field_get:CMsgTEExplosion.effect_name)
-  return _internal_effect_name();
+inline const std::string& CMsgTEExplosion::sound_name() const {
+  // @@protoc_insertion_point(field_get:CMsgTEExplosion.sound_name)
+  return _internal_sound_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CMsgTEExplosion::set_effect_name(ArgT0&& arg0, ArgT... args) {
+void CMsgTEExplosion::set_sound_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.effect_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgTEExplosion.effect_name)
+ _impl_.sound_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:CMsgTEExplosion.sound_name)
 }
-inline std::string* CMsgTEExplosion::mutable_effect_name() {
-  std::string* _s = _internal_mutable_effect_name();
-  // @@protoc_insertion_point(field_mutable:CMsgTEExplosion.effect_name)
+inline std::string* CMsgTEExplosion::mutable_sound_name() {
+  std::string* _s = _internal_mutable_sound_name();
+  // @@protoc_insertion_point(field_mutable:CMsgTEExplosion.sound_name)
   return _s;
 }
-inline const std::string& CMsgTEExplosion::_internal_effect_name() const {
-  return _impl_.effect_name_.Get();
+inline const std::string& CMsgTEExplosion::_internal_sound_name() const {
+  return _impl_.sound_name_.Get();
 }
-inline void CMsgTEExplosion::_internal_set_effect_name(const std::string& value) {
+inline void CMsgTEExplosion::_internal_set_sound_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.effect_name_.Set(value, GetArenaForAllocation());
+  _impl_.sound_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CMsgTEExplosion::_internal_mutable_effect_name() {
+inline std::string* CMsgTEExplosion::_internal_mutable_sound_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.effect_name_.Mutable(GetArenaForAllocation());
+  return _impl_.sound_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CMsgTEExplosion::release_effect_name() {
-  // @@protoc_insertion_point(field_release:CMsgTEExplosion.effect_name)
-  if (!_internal_has_effect_name()) {
+inline std::string* CMsgTEExplosion::release_sound_name() {
+  // @@protoc_insertion_point(field_release:CMsgTEExplosion.sound_name)
+  if (!_internal_has_sound_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.effect_name_.Release();
+  auto* p = _impl_.sound_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.effect_name_.IsDefault()) {
-    _impl_.effect_name_.Set("", GetArenaForAllocation());
+  if (_impl_.sound_name_.IsDefault()) {
+    _impl_.sound_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CMsgTEExplosion::set_allocated_effect_name(std::string* effect_name) {
-  if (effect_name != nullptr) {
+inline void CMsgTEExplosion::set_allocated_sound_name(std::string* sound_name) {
+  if (sound_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.effect_name_.SetAllocated(effect_name, GetArenaForAllocation());
+  _impl_.sound_name_.SetAllocated(sound_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.effect_name_.IsDefault()) {
-    _impl_.effect_name_.Set("", GetArenaForAllocation());
+  if (_impl_.sound_name_.IsDefault()) {
+    _impl_.sound_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgTEExplosion.effect_name)
+  // @@protoc_insertion_point(field_set_allocated:CMsgTEExplosion.sound_name)
 }
 
 // optional uint32 explosion_type = 11;
 inline bool CMsgTEExplosion::_internal_has_explosion_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool CMsgTEExplosion::has_explosion_type() const {
@@ -12228,7 +12149,7 @@ inline bool CMsgTEExplosion::has_explosion_type() const {
 }
 inline void CMsgTEExplosion::clear_explosion_type() {
   _impl_.explosion_type_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000400u;
+  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline uint32_t CMsgTEExplosion::_internal_explosion_type() const {
   return _impl_.explosion_type_;
@@ -12238,12 +12159,155 @@ inline uint32_t CMsgTEExplosion::explosion_type() const {
   return _internal_explosion_type();
 }
 inline void CMsgTEExplosion::_internal_set_explosion_type(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_._has_bits_[0] |= 0x00000200u;
   _impl_.explosion_type_ = value;
 }
 inline void CMsgTEExplosion::set_explosion_type(uint32_t value) {
   _internal_set_explosion_type(value);
   // @@protoc_insertion_point(field_set:CMsgTEExplosion.explosion_type)
+}
+
+// optional bool create_debris = 12;
+inline bool CMsgTEExplosion::_internal_has_create_debris() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool CMsgTEExplosion::has_create_debris() const {
+  return _internal_has_create_debris();
+}
+inline void CMsgTEExplosion::clear_create_debris() {
+  _impl_.create_debris_ = false;
+  _impl_._has_bits_[0] &= ~0x00000100u;
+}
+inline bool CMsgTEExplosion::_internal_create_debris() const {
+  return _impl_.create_debris_;
+}
+inline bool CMsgTEExplosion::create_debris() const {
+  // @@protoc_insertion_point(field_get:CMsgTEExplosion.create_debris)
+  return _internal_create_debris();
+}
+inline void CMsgTEExplosion::_internal_set_create_debris(bool value) {
+  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_.create_debris_ = value;
+}
+inline void CMsgTEExplosion::set_create_debris(bool value) {
+  _internal_set_create_debris(value);
+  // @@protoc_insertion_point(field_set:CMsgTEExplosion.create_debris)
+}
+
+// optional .CMsgVector debris_origin = 13;
+inline bool CMsgTEExplosion::_internal_has_debris_origin() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.debris_origin_ != nullptr);
+  return value;
+}
+inline bool CMsgTEExplosion::has_debris_origin() const {
+  return _internal_has_debris_origin();
+}
+inline const ::CMsgVector& CMsgTEExplosion::_internal_debris_origin() const {
+  const ::CMsgVector* p = _impl_.debris_origin_;
+  return p != nullptr ? *p : reinterpret_cast<const ::CMsgVector&>(
+      ::_CMsgVector_default_instance_);
+}
+inline const ::CMsgVector& CMsgTEExplosion::debris_origin() const {
+  // @@protoc_insertion_point(field_get:CMsgTEExplosion.debris_origin)
+  return _internal_debris_origin();
+}
+inline void CMsgTEExplosion::unsafe_arena_set_allocated_debris_origin(
+    ::CMsgVector* debris_origin) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.debris_origin_);
+  }
+  _impl_.debris_origin_ = debris_origin;
+  if (debris_origin) {
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:CMsgTEExplosion.debris_origin)
+}
+inline ::CMsgVector* CMsgTEExplosion::release_debris_origin() {
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  ::CMsgVector* temp = _impl_.debris_origin_;
+  _impl_.debris_origin_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::CMsgVector* CMsgTEExplosion::unsafe_arena_release_debris_origin() {
+  // @@protoc_insertion_point(field_release:CMsgTEExplosion.debris_origin)
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  ::CMsgVector* temp = _impl_.debris_origin_;
+  _impl_.debris_origin_ = nullptr;
+  return temp;
+}
+inline ::CMsgVector* CMsgTEExplosion::_internal_mutable_debris_origin() {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  if (_impl_.debris_origin_ == nullptr) {
+    auto* p = CreateMaybeMessage<::CMsgVector>(GetArenaForAllocation());
+    _impl_.debris_origin_ = p;
+  }
+  return _impl_.debris_origin_;
+}
+inline ::CMsgVector* CMsgTEExplosion::mutable_debris_origin() {
+  ::CMsgVector* _msg = _internal_mutable_debris_origin();
+  // @@protoc_insertion_point(field_mutable:CMsgTEExplosion.debris_origin)
+  return _msg;
+}
+inline void CMsgTEExplosion::set_allocated_debris_origin(::CMsgVector* debris_origin) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.debris_origin_);
+  }
+  if (debris_origin) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(debris_origin));
+    if (message_arena != submessage_arena) {
+      debris_origin = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, debris_origin, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  _impl_.debris_origin_ = debris_origin;
+  // @@protoc_insertion_point(field_set_allocated:CMsgTEExplosion.debris_origin)
+}
+
+// optional fixed32 debris_surfaceprop = 14;
+inline bool CMsgTEExplosion::_internal_has_debris_surfaceprop() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool CMsgTEExplosion::has_debris_surfaceprop() const {
+  return _internal_has_debris_surfaceprop();
+}
+inline void CMsgTEExplosion::clear_debris_surfaceprop() {
+  _impl_.debris_surfaceprop_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000400u;
+}
+inline uint32_t CMsgTEExplosion::_internal_debris_surfaceprop() const {
+  return _impl_.debris_surfaceprop_;
+}
+inline uint32_t CMsgTEExplosion::debris_surfaceprop() const {
+  // @@protoc_insertion_point(field_get:CMsgTEExplosion.debris_surfaceprop)
+  return _internal_debris_surfaceprop();
+}
+inline void CMsgTEExplosion::_internal_set_debris_surfaceprop(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_.debris_surfaceprop_ = value;
+}
+inline void CMsgTEExplosion::set_debris_surfaceprop(uint32_t value) {
+  _internal_set_debris_surfaceprop(value);
+  // @@protoc_insertion_point(field_set:CMsgTEExplosion.debris_surfaceprop)
 }
 
 // -------------------------------------------------------------------
