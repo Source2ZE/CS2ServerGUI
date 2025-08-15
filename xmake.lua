@@ -17,7 +17,7 @@ target("CS2ServerGUI")
     add_files("src/**.cpp")
     add_headerfiles("src/**.h")
     add_packages("imgui", "nlohmann_json", "imgui-file-dialog")
-    --set_symbols("hidden")
+    set_symbols("debug")
 
     add_files({
         SDK_PATH.."/tier1/convar.cpp",
