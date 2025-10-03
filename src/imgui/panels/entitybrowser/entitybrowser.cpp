@@ -55,33 +55,29 @@ void Draw(bool* isOpen)
 
 	if (ImGui::BeginTable("Entity Table", 2))
 	{
-		if (GameEntitySystem() == nullptr) {
-			ImGui::EndTable();
-			ImGui::EndChild();
-			ImGui::End();
-			return;
-		}
 		ImGui::TableSetupColumn("Name");
 		ImGui::TableSetupColumn("Entity Index");
 		ImGui::TableHeadersRow();
 
 		EntityInstanceIter_t iter;
-
-		while (CEntityInstance* entity = iter.Next())
+		if(GameEntitySystem())
 		{
-			if (!g_menuContext.m_entityFilter.PassFilter(entity->GetClassname()))
-				continue;
-
-			ImGui::TableNextRow();
-			ImGui::TableSetColumnIndex(0);
-			ImGui::PushID(entity->GetEntityIndex().Get());
-			if (ImGui::Selectable(entity->GetClassname(), false, ImGuiSelectableFlags_SpanAllColumns))
+			while (CEntityInstance* entity = iter.Next())
 			{
-				g_pSelectedEntity = entity->GetRefEHandle();
+				if (!g_menuContext.m_entityFilter.PassFilter(entity->GetClassname()))
+					continue;
+
+				ImGui::TableNextRow();
+				ImGui::TableSetColumnIndex(0);
+				ImGui::PushID(entity->GetEntityIndex().Get());
+				if (ImGui::Selectable(entity->GetClassname(), false, ImGuiSelectableFlags_SpanAllColumns))
+				{
+					g_pSelectedEntity = entity->GetRefEHandle();
+				}
+				ImGui::PopID();
+				ImGui::TableSetColumnIndex(1);
+				ImGui::Text("%d", entity->GetEntityIndex());
 			}
-			ImGui::PopID();
-			ImGui::TableSetColumnIndex(1);
-			ImGui::Text("%d", entity->GetEntityIndex());
 		}
 
 		ImGui::EndTable();
