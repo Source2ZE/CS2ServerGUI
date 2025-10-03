@@ -55,6 +55,12 @@ void Draw(bool* isOpen)
 
 	if (ImGui::BeginTable("Entity Table", 2))
 	{
+		if (GameEntitySystem() == nullptr) {
+			ImGui::EndTable();
+			ImGui::EndChild();
+			ImGui::End();
+			return;
+		}
 		ImGui::TableSetupColumn("Name");
 		ImGui::TableSetupColumn("Entity Index");
 		ImGui::TableHeadersRow();
