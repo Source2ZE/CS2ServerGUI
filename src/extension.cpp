@@ -311,7 +311,7 @@ const char *CS2ServerGUI::GetLicense()
 
 const char *CS2ServerGUI::GetVersion()
 {
-	return "1.0.7";
+	return "1.0.8";
 }
 
 const char *CS2ServerGUI::GetDate()
