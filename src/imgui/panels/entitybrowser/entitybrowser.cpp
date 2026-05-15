@@ -21,6 +21,7 @@
 #include <imgui.h>
 #include <schemasystem/schemasystem.h>
 #include <entity2/entitysystem.h>
+#include <entity2/entityclass.h>
 #include "cs2_sdk/entity/cbaseentity.h"
 #include "type_stringifier.h"
 #include <format>
@@ -93,23 +94,27 @@ void Draw(bool* isOpen)
 		auto pEntity = g_pSelectedEntity.Get();
 		if (pEntity)
 		{
+			auto pEntityClass = GameEntitySystem() ? GameEntitySystem()->FindClassByDesignName(pEntity->GetClassname()) : nullptr;
+			auto pSchemaBinding = (pEntityClass && pEntityClass->m_pClassInfo) ? pEntityClass->GetSchemaBinding() : nullptr;
+
 			ImGui::Text("Classname: %s", pEntity->GetClassname());
 			ImGui::Text("Index: %d", pEntity->GetEntityIndex());
-			ImGui::Text("Schema: %s", pEntity->Schema_DynamicBinding().Get()->m_pszName);
+			ImGui::Text("Schema: %s", pSchemaBinding && pSchemaBinding->m_pszName ? pSchemaBinding->m_pszName : "N/A");
 			g_menuContext.m_propertyFilter.Draw("Search");
 
 			if (ImGui::BeginTable("Schema", 3, ImGuiTableFlags_Borders))
 			{
-
 				ImGui::TableSetupColumn("Name");
 				ImGui::TableSetupColumn("Type");
 				ImGui::TableSetupColumn("Value");
 				ImGui::TableHeadersRow();
 
-				auto pSchema = pEntity->Schema_DynamicBinding().Get();
-				std::unordered_map<std::string, std::string> overrideMap;
+				if (pSchemaBinding)
+				{
+					std::unordered_map<std::string, std::string> overrideMap;
 
-				DumpEntitySchema(pEntity, pSchema, overrideMap, true);
+					DumpEntitySchema(pEntity, pSchemaBinding, overrideMap, true);
+				}
 
 				ImGui::EndTable();
 			}
@@ -125,7 +130,7 @@ void Draw(bool* isOpen)
 
 void DumpEntitySchema(void* pSchemaField, CSchemaClassInfo* pSchema, std::unordered_map<std::string, std::string>& overrideMap, bool root)
 {
-	if (!pSchemaField)
+	if (!pSchemaField || !pSchema)
 		return;
 
 	ImGui::TableNextRow();
