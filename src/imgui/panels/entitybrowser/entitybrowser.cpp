@@ -21,6 +21,7 @@
 #include <imgui.h>
 #include <schemasystem/schemasystem.h>
 #include <entity2/entitysystem.h>
+#include <entity2/entityclass.h>
 #include "cs2_sdk/entity/cbaseentity.h"
 #include "type_stringifier.h"
 #include <format>
@@ -125,19 +126,24 @@ void Draw(bool* isOpen)
 
 void DumpEntitySchema(void* pSchemaField, CSchemaClassInfo* pSchema, std::unordered_map<std::string, std::string>& overrideMap, bool root)
 {
-	if (!pSchemaField)
+	if (!pSchemaField || !GameEntitySystem())
 		return;
 
 	ImGui::TableNextRow();
 	ImGui::TableNextColumn();
 	ImGui::TextColored(ImVec4(255, 255, 0, 255), "%s", pSchema->m_pszName);
 
-	for (int i = 0; i < pSchema->m_nStaticMetadataCount; i++)
-	{
-		auto& metadata = pSchema->m_pStaticMetadata[i];
-		if (!strcmp(metadata.m_pszName, "MNetworkVarTypeOverride"))
-			overrideMap[((char**)metadata.m_pData)[0]] = ((char**)metadata.m_pData)[1]; // [0] = field name, [1] = type override
-	}
+	// Just use a random class to get access to the full database, as some schema classes don't have entity representations
+	CNetworkSerializerCodeGenDatabase* pDatabase = GameEntitySystem()->FindClassByName("CBaseEntity")->m_NetworkSerializerInfo->m_pDatabase;
+	int index = pDatabase->m_ClassInfos.Find(pSchema->m_pszName);
+
+	if (index == pDatabase->m_ClassInfos.InvalidIndex())
+		return;
+
+	auto& vecOverrides = pDatabase->m_ClassInfos[index]->m_NetworkVarTypeOverrides;
+
+	FOR_EACH_VEC(vecOverrides, i)
+		overrideMap[vecOverrides[i]->m_FieldName.Get()] = vecOverrides[i]->m_OverrideType.Get();
 
 	for (int i = 0; i < pSchema->m_nFieldCount; i++)
 	{
