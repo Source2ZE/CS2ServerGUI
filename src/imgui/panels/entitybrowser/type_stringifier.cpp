@@ -66,31 +66,28 @@ std::string DumpBuiltinValue(void* value, CSchemaType_Builtin* pType)
 
 void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fieldName)
 {
-	if (!pType->m_pAtomicInfo)
-		return ImGui::Text("? (Atomic null info)");
-
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "Vector"))
+	if (!strcmp(pType->m_sTypeName, "Vector"))
 	{
 		auto& vector = *static_cast<Vector*>(value);
 		ImGui::Text("%f %f %f", vector.x, vector.y, vector.z);
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "Vector2D"))
+	if (!strcmp(pType->m_sTypeName, "Vector2D"))
 	{
 		auto& vector = *static_cast<Vector2D*>(value);
 		ImGui::Text("%f %f", vector.x, vector.y);
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "QAngle"))
+	if (!strcmp(pType->m_sTypeName, "QAngle"))
 	{
 		auto& qangle = *static_cast<QAngle*>(value);
 		ImGui::Text("%f %f %f", qangle.x, qangle.y, qangle.z);
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "Color"))
+	if (!strcmp(pType->m_sTypeName, "Color"))
 	{
 		auto& color = *static_cast<Color*>(value);
 		auto imColor = ImVec4(color.r() / 255.0f, color.g() / 255.0f, color.b() / 255.0f, color.a() / 255.0f);
@@ -98,7 +95,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CUtlSymbolLarge"))
+	if (!strcmp(pType->m_sTypeName, "CUtlSymbolLarge"))
 	{
 		auto& symbolLarge = *static_cast<CUtlSymbolLarge*>(value);
 		ImGui::Text("\"%s\"", symbolLarge.String());
@@ -106,7 +103,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CUtlString"))
+	if (!strcmp(pType->m_sTypeName, "CUtlString"))
 	{
 		auto& string = *static_cast<CUtlString*>(value);
 		ImGui::Text("\"%s\"", string.Get());
@@ -114,7 +111,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CEntityIndex"))
+	if (!strcmp(pType->m_sTypeName, "CEntityIndex"))
 	{
 		auto& index = *static_cast<CEntityIndex*>(value);
 		auto entity = GameEntitySystem()->GetEntityInstance(index);
@@ -129,7 +126,7 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CEntityHandle"))
+	if (!strcmp(pType->m_sTypeName, "CEntityHandle"))
 	{
 		auto& handle = *static_cast<CEntityHandle*>(value);
 		if (auto entity = handle.Get())
@@ -143,13 +140,13 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CNetworkedQuantizedFloat"))
+	if (!strcmp(pType->m_sTypeName, "CNetworkedQuantizedFloat"))
 	{
 		ImGui::Text("%f", *static_cast<float*>(value));
 		return;
 	}
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CUtlStringToken"))
+	if (!strcmp(pType->m_sTypeName, "CUtlStringToken"))
 	{
 		ImGui::Text("%u", static_cast<CUtlStringToken*>(value)->GetHashCode());
 		return;
@@ -160,10 +157,15 @@ void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fi
 
 void DumpAtomicTValue(void* value, CSchemaType_Atomic_T* pType, const char* fieldName)
 {
-	if (!pType->m_pAtomicInfo)
+	auto& mapAtomics = g_pSchemaSystem->GlobalTypeScope()->m_AtomicInfos.m_Map;
+	int index = mapAtomics.Find(pType->m_nAtomicID);
+
+	if (index == mapAtomics.InvalidIndex())
 		return ImGui::Text("? (AtomicT null info)");
 
-	if (!strcmp(pType->m_pAtomicInfo->m_pszName, "CHandle"))
+	SchemaAtomicTypeInfo_t* pAtomicInfo = mapAtomics[index].Get();
+
+	if (!strcmp(pAtomicInfo->m_pszName, "CHandle"))
 	{
 		auto& handle = *static_cast<CEntityHandle*>(value);
 		if (auto entity = handle.Get())
