@@ -20,6 +20,7 @@
 #include "type_stringifier.h"
 #include "schemasystem/schemasystem.h"
 #include <entity2/entitysystem.h>
+#include <entity2/entityinstance.h>
 #include <format>
 #include <imgui.h>
 
@@ -66,7 +67,7 @@ std::string DumpBuiltinValue(void* value, CSchemaType_Builtin* pType)
 
 void DumpAtomicBasicValue(void* value, CSchemaType_Atomic* pType, const char* fieldName)
 {
-	if (!strcmp(pType->m_sTypeName, "Vector"))
+	if (!strcmp(pType->m_sTypeName, "Vector") || !strcmp(pType->m_sTypeName, "VectorWS"))
 	{
 		auto& vector = *static_cast<Vector*>(value);
 		ImGui::Text("%f %f %f", vector.x, vector.y, vector.z);

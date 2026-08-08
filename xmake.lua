@@ -27,6 +27,7 @@ target("CS2ServerGUI")
         SDK_PATH.."/entity2/entityidentity.cpp",
         SDK_PATH.."/entity2/entitykeyvalues.cpp",
         SDK_PATH.."/tier1/keyvalues3.cpp",
+        SDK_PATH.."/tier1/bitbuf.cpp",
         "protobufs/generated/usermessages.pb.cc",
         "protobufs/generated/network_connection.pb.cc",
         "protobufs/generated/networkbasetypes.pb.cc",
@@ -42,7 +43,6 @@ target("CS2ServerGUI")
     add_links({
         SDK_PATH.."/lib/public/win64/2015/libprotobuf.lib",
         SDK_PATH.."/lib/public/win64/tier0.lib",
-        SDK_PATH.."/lib/public/win64/tier1.lib",
         SDK_PATH.."/lib/public/win64/interfaces.lib",
         SDK_PATH.."/lib/public/win64/mathlib.lib",
     })
