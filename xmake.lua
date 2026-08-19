@@ -10,7 +10,7 @@ includes("@builtin/xpack")
 
 local SDK_PATH = os.getenv("HL2SDKCS2")
 --local SDK_PATH = "G:/hl2sdk-experimental/hl2sdk"
-local MM_PATH = os.getenv("MMSOURCE112")
+local MM_PATH = os.getenv("MMSOURCE_DEV")
 
 target("CS2ServerGUI")
     set_kind("shared")
@@ -22,7 +22,6 @@ target("CS2ServerGUI")
     add_files({
         SDK_PATH.."/tier1/convar.cpp",
         SDK_PATH.."/public/tier0/memoverride.cpp",
-        SDK_PATH.."/tier1/generichash.cpp",
         SDK_PATH.."/entity2/entitysystem.cpp",
         SDK_PATH.."/entity2/entityidentity.cpp",
         SDK_PATH.."/entity2/entitykeyvalues.cpp",
@@ -76,7 +75,6 @@ target("CS2ServerGUI")
         SDK_PATH.."/public/tier0",
         SDK_PATH.."/public/tier1",
         SDK_PATH.."/public/entity2",
-        SDK_PATH.."/public/game/server",
         -- metamod
         MM_PATH.."/core",
         MM_PATH.."/core/sourcehook",
@@ -97,3 +95,13 @@ target("CS2ServerGUI")
     })
 
     set_languages("cxx20")
+
+xpack("CS2ServerGUI")
+    set_formats("dir")
+    add_targets("CS2ServerGUI")
+    on_package(function (package)
+        local targetfile = package:target("CS2ServerGUI"):targetfile()
+
+        os.vcp(targetfile, path.join(package:outputdir(), "addons", "CS2ServerGUI", "bin", "CS2ServerGUI.dll"))
+        os.vcp("package/CS2ServerGUI.vdf", path.join(package:outputdir(), "addons", "metamod", "CS2ServerGUI.vdf"))
+    end)

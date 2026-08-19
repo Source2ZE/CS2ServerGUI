@@ -1,0 +1,5 @@
+"Metamod Plugin"
+{
+	"alias"	"cs2servergui"
+	"file"	"addons\CS2ServerGUI\bin\CS2ServerGUI"
+}

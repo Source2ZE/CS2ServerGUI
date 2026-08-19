@@ -11,7 +11,7 @@ package("imgui-file-dialog")
         add_configs("shared", {description = "Build shared binaries.", default = false, type = "boolean", readonly = true})
     end
 
-    add_deps("imgui")
+    add_deps("imgui 1.90.3")
     if is_plat("windows") then
         add_deps("dirent")
     end
@@ -19,7 +19,7 @@ package("imgui-file-dialog")
     on_install("windows", "linux", "macosx", "mingw", "android", function (package)
         local configs = {}
         io.writefile("xmake.lua", [[
-            add_requires("imgui")
+            add_requires("imgui 1.90.3")
             if is_plat("windows") then
                 add_requires("dirent")
                 add_packages("dirent")
