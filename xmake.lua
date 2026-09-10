@@ -46,13 +46,7 @@ target("CS2ServerGUI")
         SDK_PATH.."/lib/public/win64/mathlib.lib",
     })
 
-    add_linkdirs({
-        "vendor/funchook/lib/Release",
-    })
-
     add_links({
-        "funchook",
-        "distorm",
         "d3d9"
     })
 
@@ -61,7 +55,6 @@ target("CS2ServerGUI")
 
     add_includedirs({
         "src",
-        "vendor/funchook/include",
         "vendor",
         -- sdk
         SDK_PATH,
@@ -77,7 +70,7 @@ target("CS2ServerGUI")
         SDK_PATH.."/public/entity2",
         -- metamod
         MM_PATH.."/core",
-        MM_PATH.."/core/sourcehook",
+        MM_PATH.."/third_party/khook/include",
     })
 
     add_defines({

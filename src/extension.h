@@ -22,11 +22,12 @@
 
 #include <ISmmPlugin.h>
 #include <igameevents.h>
-#include <sh_vector.h>
+#include "khook.hpp"
 #include "networksystem/inetworkserializer.h"
 #include "config/config.h"
 
 class INetworkMessageProcessingPreFilterCustom;
+class CServerSideClient;
 
 class CS2ServerGUI : public ISmmPlugin, public IMetamodListener
 {
@@ -37,10 +38,8 @@ public:
 	bool Unpause(char *error, size_t maxlen);
 	void AllPluginsLoaded();
 public: //hooks
-	//void Hook_PostEvent(CSplitScreenSlot nSlot, bool bLocalOnly, int nClientCount, const uint64* clients,
-	//	INetworkMessageInternal* pEvent, const CNetMessage* pData, unsigned long nSize, NetChannelBufType_t bufType);
-	bool Hook_FilterMessage(CNetMessage* pData, void* pNetChan);
-	bool Hook_SendNetMessage(CNetMessage* pData, NetChannelBufType_t bufType);
+	KHook::Return<bool> Hook_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, CNetMessage* pData, void* pNetChan);
+	KHook::Return<bool> Hook_SendNetMessage(CServerSideClient* client, CNetMessage* pData, NetChannelBufType_t bufType);
 	void OnLevelInit( char const *pMapName,
 				 char const *pMapEntities,
 				 char const *pOldLevel,
