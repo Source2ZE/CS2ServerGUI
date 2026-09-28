@@ -28,6 +28,7 @@
 
 class INetworkMessageProcessingPreFilterCustom;
 class CServerSideClient;
+class CNetworkGameServerBase;
 
 class CS2ServerGUI : public ISmmPlugin, public IMetamodListener
 {
@@ -40,6 +41,7 @@ public:
 public: //hooks
 	KHook::Return<bool> Hook_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, CNetMessage* pData, void* pNetChan);
 	KHook::Return<bool> Hook_SendNetMessage(CServerSideClient* client, CNetMessage* pData, NetChannelBufType_t bufType);
+	KHook::Return<bool> Hook_WriteDeltaEntities(CNetworkGameServerBase* server, CServerSideClient* client, void* pClientFrame, void* pDeltaFrame, CNetMessage* pMsg, bool unk);
 	void OnLevelInit( char const *pMapName,
 				 char const *pMapEntities,
 				 char const *pOldLevel,

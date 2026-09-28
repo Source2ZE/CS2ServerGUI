@@ -28,6 +28,7 @@ target("CS2ServerGUI")
         SDK_PATH.."/tier1/keyvalues3.cpp",
         SDK_PATH.."/tier1/bitbuf.cpp",
         "protobufs/generated/usermessages.pb.cc",
+        "protobufs/generated/netmessages.pb.cc",
         "protobufs/generated/network_connection.pb.cc",
         "protobufs/generated/networkbasetypes.pb.cc",
         "protobufs/generated/engine_gcmessages.pb.cc",

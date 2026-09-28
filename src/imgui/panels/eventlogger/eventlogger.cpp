@@ -148,10 +148,11 @@ void Draw(bool* isOpen)
 		ImGui::PushID(selectedId);
 		ImGui::BeginChild("Entity Info", ImVec2(0, availableHeight / 2), true);
 
-		if (vecEventLogs.find(selectedId) != vecEventLogs.end())
 		{
-			const auto& event = vecEventLogs[selectedId];
-			ImGui::Text("%s", event.data.c_str());
+			std::lock_guard<std::mutex> lock(eventLogLock);
+			auto it = vecEventLogs.find(selectedId);
+			if (it != vecEventLogs.end())
+				ImGui::Text("%s", it->second.data.c_str());
 		}
 
 		ImGui::EndChild();

@@ -38,6 +38,8 @@
 #include "networksystem/inetworkmessages.h"
 #include "cs2_sdk/serversideclient.h"
 #include "utils/module.h"
+#include "entitydecoder/entitydecoder.h"
+#include <format>
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -52,6 +54,14 @@ std::thread g_thread;
 
 KHook::Virtual<INetworkMessageProcessingPreFilterCustom, bool, CNetMessage*, void*> filterMessageHook(0U, &g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage, nullptr);
 KHook::Virtual<CServerSideClient, bool, CNetMessage*, NetChannelBufType_t> sendNetMessageHook(15U, &g_CS2ServerGUI, &CS2ServerGUI::Hook_SendNetMessage, nullptr);
+// svc_PacketEntities is serialized straight into a bf_write and handed to INetChannel::SendData/Transmit
+// by CServerSideClient::SendSnapshot_Job, so it never passes through SendNetMessage
+KHook::Member<CNetworkGameServerBase, bool, CServerSideClient*, void*, void*, CNetMessage*, bool> writeDeltaEntitiesHook(&g_CS2ServerGUI, nullptr, &CS2ServerGUI::Hook_WriteDeltaEntities);
+
+#ifdef _WIN32
+// CNetworkGameServerBase::WriteDeltaEntities, xref "WriteDeltaEntities"
+#define WRITEDELTAENTITIES_SIG "\x4C\x89\x44\x24\x2A\x48\x89\x54\x24\x2A\x48\x89\x4C\x24\x2A\x55\x53\x56\x57\x41\x54\x41\x55\x41\x56\x41\x57\x48\x8D\xAC\x24\x2A\x2A\x2A\x2A\x48\x81\xEC\xC8\x0A\x00\x00"
+#endif
 
 INetworkMessageProcessingPreFilterCustom* g_pNetworkMessageProcessingPreFilterCustomVTable = nullptr;
 CServerSideClient* g_pServerSideClientVTable = nullptr;
@@ -177,6 +187,35 @@ KHook::Return<bool> CS2ServerGUI::Hook_SendNetMessage(CServerSideClient* client,
 	return {KHook::Action::Ignore};
 }
 
+// Runs on snapshot worker threads when sv_parallel_sendsnapshot is enabled
+KHook::Return<bool> CS2ServerGUI::Hook_WriteDeltaEntities(CNetworkGameServerBase* server, CServerSideClient* client, void* pClientFrame, void* pDeltaFrame, CNetMessage* pMsg, bool unk)
+{
+	if (GUI::g_GUICtx.m_WindowStates.m_bEventLogger && KHook::GetOriginalReturn<bool>())
+	{
+		NetMessageInfo_t* info = pMsg->GetNetMessage()->GetNetMessageInfo();
+		if (info)
+		{
+			const CSVCMsg_PacketEntities* msg = pMsg->ToPB<CSVCMsg_PacketEntities>();
+
+			std::string str = std::format("server_tick: {}\n{}\nupdated_entries: {}\nmax_entries: {}\nbaseline: {}{}\nentity_data: {} bytes\nlast_cmd_number_executed: {}\n\n",
+				msg->server_tick(),
+				msg->has_delta_from() ? std::format("delta_from: {}", msg->delta_from()) : std::string("full update"),
+				msg->updated_entries(),
+				msg->max_entries(),
+				msg->baseline(),
+				msg->update_baseline() ? " (update)" : "",
+				msg->entity_data().size(),
+				msg->last_cmd_number_executed());
+
+			str += EntityDecoder::Decode(client, *msg);
+
+			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::move(str), false);
+		}
+	}
+
+	return {KHook::Action::Ignore};
+}
+
 void SetupHook()
 {
 	CModule engineModule(ROOTBIN, "engine2");
@@ -203,6 +242,15 @@ void SetupHook()
 	filterMessageHook.AddGlobal(reinterpret_cast<INetworkMessageProcessingPreFilterCustom*>(&g_pNetworkMessageProcessingPreFilterCustomVTable));
 	sendNetMessageHook.AddGlobal(reinterpret_cast<CServerSideClient*>(&g_pServerSideClientVTable));
 
+#ifdef _WIN32
+	int sigError;
+	void* pWriteDeltaEntities = engineModule.FindSignature((const byte*)WRITEDELTAENTITIES_SIG, sizeof(WRITEDELTAENTITIES_SIG) - 1, sigError);
+	if (sigError == SIG_OK)
+		writeDeltaEntitiesHook.Configure(pWriteDeltaEntities);
+	else
+		META_CONPRINTF("[CS2ServerGUI] Failed to find CNetworkGameServerBase::WriteDeltaEntities (error %d)\n", sigError);
+#endif
+
 	return;
 }
 
@@ -227,6 +275,9 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 
 	SetupHook();
 
+	if (!EntityDecoder::Init())
+		META_CONPRINTF("[CS2ServerGUI] Failed to initialize entity decoder\n");
+
 	g_pCVar = Interfaces::icvar;
 	META_CONVAR_REGISTER(FCVAR_RELEASE | FCVAR_CLIENT_CAN_EXECUTE | FCVAR_GAMEDLL);
 
@@ -242,6 +293,8 @@ bool CS2ServerGUI::Unload(char *error, size_t maxlen)
 		filterMessageHook.RemoveGlobal(reinterpret_cast<INetworkMessageProcessingPreFilterCustom*>(&g_pNetworkMessageProcessingPreFilterCustomVTable));
 	if (g_pServerSideClientVTable)
 		sendNetMessageHook.RemoveGlobal(reinterpret_cast<CServerSideClient*>(&g_pServerSideClientVTable));
+	writeDeltaEntitiesHook.RemoveContext(&g_CS2ServerGUI);
+	EntityDecoder::Shutdown();
 	return true;
 }
 
