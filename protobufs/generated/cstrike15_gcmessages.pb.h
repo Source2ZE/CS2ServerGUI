@@ -190,9 +190,6 @@ extern CMsgGCCStrike15_v2_ClientReportResponseDefaultTypeInternal _CMsgGCCStrike
 class CMsgGCCStrike15_v2_ClientReportServer;
 struct CMsgGCCStrike15_v2_ClientReportServerDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_ClientReportServerDefaultTypeInternal _CMsgGCCStrike15_v2_ClientReportServer_default_instance_;
-class CMsgGCCStrike15_v2_ClientReportValidation;
-struct CMsgGCCStrike15_v2_ClientReportValidationDefaultTypeInternal;
-extern CMsgGCCStrike15_v2_ClientReportValidationDefaultTypeInternal _CMsgGCCStrike15_v2_ClientReportValidation_default_instance_;
 class CMsgGCCStrike15_v2_ClientRequestJoinFriendData;
 struct CMsgGCCStrike15_v2_ClientRequestJoinFriendDataDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_ClientRequestJoinFriendDataDefaultTypeInternal _CMsgGCCStrike15_v2_ClientRequestJoinFriendData_default_instance_;
@@ -235,21 +232,9 @@ extern CMsgGCCStrike15_v2_Fantasy_FantasySlotDefaultTypeInternal _CMsgGCCStrike1
 class CMsgGCCStrike15_v2_Fantasy_FantasyTeam;
 struct CMsgGCCStrike15_v2_Fantasy_FantasyTeamDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_Fantasy_FantasyTeamDefaultTypeInternal _CMsgGCCStrike15_v2_Fantasy_FantasyTeam_default_instance_;
-class CMsgGCCStrike15_v2_GC2ClientInitSystem;
-struct CMsgGCCStrike15_v2_GC2ClientInitSystemDefaultTypeInternal;
-extern CMsgGCCStrike15_v2_GC2ClientInitSystemDefaultTypeInternal _CMsgGCCStrike15_v2_GC2ClientInitSystem_default_instance_;
-class CMsgGCCStrike15_v2_GC2ClientInitSystem_Response;
-struct CMsgGCCStrike15_v2_GC2ClientInitSystem_ResponseDefaultTypeInternal;
-extern CMsgGCCStrike15_v2_GC2ClientInitSystem_ResponseDefaultTypeInternal _CMsgGCCStrike15_v2_GC2ClientInitSystem_Response_default_instance_;
 class CMsgGCCStrike15_v2_GC2ClientNotifyXPShop;
 struct CMsgGCCStrike15_v2_GC2ClientNotifyXPShopDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_GC2ClientNotifyXPShopDefaultTypeInternal _CMsgGCCStrike15_v2_GC2ClientNotifyXPShop_default_instance_;
-class CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode;
-struct CMsgGCCStrike15_v2_GC2ClientRefuseSecureModeDefaultTypeInternal;
-extern CMsgGCCStrike15_v2_GC2ClientRefuseSecureModeDefaultTypeInternal _CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode_default_instance_;
-class CMsgGCCStrike15_v2_GC2ClientRequestValidation;
-struct CMsgGCCStrike15_v2_GC2ClientRequestValidationDefaultTypeInternal;
-extern CMsgGCCStrike15_v2_GC2ClientRequestValidationDefaultTypeInternal _CMsgGCCStrike15_v2_GC2ClientRequestValidation_default_instance_;
 class CMsgGCCStrike15_v2_GC2ClientTextMsg;
 struct CMsgGCCStrike15_v2_GC2ClientTextMsgDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_GC2ClientTextMsgDefaultTypeInternal _CMsgGCCStrike15_v2_GC2ClientTextMsg_default_instance_;
@@ -403,12 +388,18 @@ extern CMsgGCCStrike15_v2_ServerNotificationForUserPenaltyDefaultTypeInternal _C
 class CMsgGCCStrike15_v2_ServerVarValueNotificationInfo;
 struct CMsgGCCStrike15_v2_ServerVarValueNotificationInfoDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_ServerVarValueNotificationInfoDefaultTypeInternal _CMsgGCCStrike15_v2_ServerVarValueNotificationInfo_default_instance_;
+class CMsgGCCStrike15_v2_SetClanId;
+struct CMsgGCCStrike15_v2_SetClanIdDefaultTypeInternal;
+extern CMsgGCCStrike15_v2_SetClanIdDefaultTypeInternal _CMsgGCCStrike15_v2_SetClanId_default_instance_;
 class CMsgGCCStrike15_v2_SetEventFavorite;
 struct CMsgGCCStrike15_v2_SetEventFavoriteDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_SetEventFavoriteDefaultTypeInternal _CMsgGCCStrike15_v2_SetEventFavorite_default_instance_;
 class CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName;
 struct CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeNameDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeNameDefaultTypeInternal _CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName_default_instance_;
+class CMsgGCCStrike15_v2_VolatileShopSubscribe;
+struct CMsgGCCStrike15_v2_VolatileShopSubscribeDefaultTypeInternal;
+extern CMsgGCCStrike15_v2_VolatileShopSubscribeDefaultTypeInternal _CMsgGCCStrike15_v2_VolatileShopSubscribe_default_instance_;
 class CMsgGCCStrike15_v2_WatchInfoUsers;
 struct CMsgGCCStrike15_v2_WatchInfoUsersDefaultTypeInternal;
 extern CMsgGCCStrike15_v2_WatchInfoUsersDefaultTypeInternal _CMsgGCCStrike15_v2_WatchInfoUsers_default_instance_;
@@ -493,6 +484,12 @@ extern CSOPersonaDataPublicDefaultTypeInternal _CSOPersonaDataPublic_default_ins
 class CSOQuestProgress;
 struct CSOQuestProgressDefaultTypeInternal;
 extern CSOQuestProgressDefaultTypeInternal _CSOQuestProgress_default_instance_;
+class CSOVolatileItemClaimedRewards;
+struct CSOVolatileItemClaimedRewardsDefaultTypeInternal;
+extern CSOVolatileItemClaimedRewardsDefaultTypeInternal _CSOVolatileItemClaimedRewards_default_instance_;
+class CSOVolatileItemOffer;
+struct CSOVolatileItemOfferDefaultTypeInternal;
+extern CSOVolatileItemOfferDefaultTypeInternal _CSOVolatileItemOffer_default_instance_;
 class CVDiagnostic;
 struct CVDiagnosticDefaultTypeInternal;
 extern CVDiagnosticDefaultTypeInternal _CVDiagnostic_default_instance_;
@@ -631,7 +628,6 @@ template<> ::CMsgGCCStrike15_v2_ClientPollState* Arena::CreateMaybeMessage<::CMs
 template<> ::CMsgGCCStrike15_v2_ClientReportPlayer* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ClientReportPlayer>(Arena*);
 template<> ::CMsgGCCStrike15_v2_ClientReportResponse* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ClientReportResponse>(Arena*);
 template<> ::CMsgGCCStrike15_v2_ClientReportServer* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ClientReportServer>(Arena*);
-template<> ::CMsgGCCStrike15_v2_ClientReportValidation* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ClientReportValidation>(Arena*);
 template<> ::CMsgGCCStrike15_v2_ClientRequestJoinFriendData* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ClientRequestJoinFriendData>(Arena*);
 template<> ::CMsgGCCStrike15_v2_ClientRequestJoinServerData* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ClientRequestJoinServerData>(Arena*);
 template<> ::CMsgGCCStrike15_v2_ClientRequestOffers* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ClientRequestOffers>(Arena*);
@@ -646,11 +642,7 @@ template<> ::CMsgGCCStrike15_v2_ClientVarValueNotificationInfo* Arena::CreateMay
 template<> ::CMsgGCCStrike15_v2_Fantasy* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_Fantasy>(Arena*);
 template<> ::CMsgGCCStrike15_v2_Fantasy_FantasySlot* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_Fantasy_FantasySlot>(Arena*);
 template<> ::CMsgGCCStrike15_v2_Fantasy_FantasyTeam* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_Fantasy_FantasyTeam>(Arena*);
-template<> ::CMsgGCCStrike15_v2_GC2ClientInitSystem* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ClientInitSystem>(Arena*);
-template<> ::CMsgGCCStrike15_v2_GC2ClientInitSystem_Response* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ClientInitSystem_Response>(Arena*);
 template<> ::CMsgGCCStrike15_v2_GC2ClientNotifyXPShop* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ClientNotifyXPShop>(Arena*);
-template<> ::CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode>(Arena*);
-template<> ::CMsgGCCStrike15_v2_GC2ClientRequestValidation* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ClientRequestValidation>(Arena*);
 template<> ::CMsgGCCStrike15_v2_GC2ClientTextMsg* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ClientTextMsg>(Arena*);
 template<> ::CMsgGCCStrike15_v2_GC2ClientTournamentInfo* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ClientTournamentInfo>(Arena*);
 template<> ::CMsgGCCStrike15_v2_GC2ServerReservationUpdate* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_GC2ServerReservationUpdate>(Arena*);
@@ -702,8 +694,10 @@ template<> ::CMsgGCCStrike15_v2_PremierSeasonSummary_DataPerWeek* Arena::CreateM
 template<> ::CMsgGCCStrike15_v2_Server2GCClientValidate* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_Server2GCClientValidate>(Arena*);
 template<> ::CMsgGCCStrike15_v2_ServerNotificationForUserPenalty* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ServerNotificationForUserPenalty>(Arena*);
 template<> ::CMsgGCCStrike15_v2_ServerVarValueNotificationInfo* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_ServerVarValueNotificationInfo>(Arena*);
+template<> ::CMsgGCCStrike15_v2_SetClanId* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_SetClanId>(Arena*);
 template<> ::CMsgGCCStrike15_v2_SetEventFavorite* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_SetEventFavorite>(Arena*);
 template<> ::CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName>(Arena*);
+template<> ::CMsgGCCStrike15_v2_VolatileShopSubscribe* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_VolatileShopSubscribe>(Arena*);
 template<> ::CMsgGCCStrike15_v2_WatchInfoUsers* Arena::CreateMaybeMessage<::CMsgGCCStrike15_v2_WatchInfoUsers>(Arena*);
 template<> ::CMsgGCCstrike15_v2_ClientRedeemFreeReward* Arena::CreateMaybeMessage<::CMsgGCCstrike15_v2_ClientRedeemFreeReward>(Arena*);
 template<> ::CMsgGCCstrike15_v2_ClientRedeemMissionReward* Arena::CreateMaybeMessage<::CMsgGCCstrike15_v2_ClientRedeemMissionReward>(Arena*);
@@ -732,6 +726,8 @@ template<> ::CSOEconCoupon* Arena::CreateMaybeMessage<::CSOEconCoupon>(Arena*);
 template<> ::CSOGameAccountSteamChina* Arena::CreateMaybeMessage<::CSOGameAccountSteamChina>(Arena*);
 template<> ::CSOPersonaDataPublic* Arena::CreateMaybeMessage<::CSOPersonaDataPublic>(Arena*);
 template<> ::CSOQuestProgress* Arena::CreateMaybeMessage<::CSOQuestProgress>(Arena*);
+template<> ::CSOVolatileItemClaimedRewards* Arena::CreateMaybeMessage<::CSOVolatileItemClaimedRewards>(Arena*);
+template<> ::CSOVolatileItemOffer* Arena::CreateMaybeMessage<::CSOVolatileItemOffer>(Arena*);
 template<> ::CVDiagnostic* Arena::CreateMaybeMessage<::CVDiagnostic>(Arena*);
 template<> ::DataCenterPing* Arena::CreateMaybeMessage<::DataCenterPing>(Arena*);
 template<> ::DeepPlayerMatchEvent* Arena::CreateMaybeMessage<::DeepPlayerMatchEvent>(Arena*);
@@ -852,14 +848,9 @@ enum ECsgoGCMsg : int {
   k_EMsgGCCStrike15_v2_ClientPerfReport = 9202,
   k_EMsgGCCStrike15_v2_GetEventFavorites_Response = 9203,
   k_EMsgGCCStrike15_v2_ClientRequestSouvenir = 9204,
-  k_EMsgGCCStrike15_v2_ClientReportValidation = 9205,
-  k_EMsgGCCStrike15_v2_GC2ClientRefuseSecureMode = 9206,
-  k_EMsgGCCStrike15_v2_GC2ClientRequestValidation = 9207,
   k_EMsgGCCStrike15_v2_ClientRedeemMissionReward = 9209,
   k_EMsgGCCStrike15_ClientDeepStats = 9210,
   k_EMsgGCCStrike15_StartAgreementSessionInGame = 9211,
-  k_EMsgGCCStrike15_v2_GC2ClientInitSystem = 9212,
-  k_EMsgGCCStrike15_v2_GC2ClientInitSystem_Response = 9213,
   k_EMsgGCCStrike15_v2_PrivateQueues = 9214,
   k_EMsgGCCStrike15_v2_MatchListTournamentOperatorMgmt = 9215,
   k_EMsgGCCStrike15_v2_BetaEnrollment = 9217,
@@ -871,11 +862,14 @@ enum ECsgoGCMsg : int {
   k_EMsgGCCStrike15_v2_MatchmakingGC2ClientSearchStats = 9223,
   k_EMsgGCCStrike15_v2_PremierSeasonSummary = 9224,
   k_EMsgGCCStrike15_v2_RequestRecurringMissionSchedule = 9225,
-  k_EMsgGCCStrike15_v2_RecurringMissionSchema = 9226
+  k_EMsgGCCStrike15_v2_RecurringMissionSchema = 9226,
+  k_EMsgGCCStrike15_v2_VolatileItemClaimReward = 9227,
+  k_EMsgGCCStrike15_v2_VolatileShopSubscribe = 9228,
+  k_EMsgGCCStrike15_v2_SetClanId = 9229
 };
 bool ECsgoGCMsg_IsValid(int value);
 constexpr ECsgoGCMsg ECsgoGCMsg_MIN = k_EMsgGCCStrike15_v2_Base;
-constexpr ECsgoGCMsg ECsgoGCMsg_MAX = k_EMsgGCCStrike15_v2_RecurringMissionSchema;
+constexpr ECsgoGCMsg ECsgoGCMsg_MAX = k_EMsgGCCStrike15_v2_SetClanId;
 constexpr int ECsgoGCMsg_ARRAYSIZE = ECsgoGCMsg_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ECsgoGCMsg_descriptor();
@@ -962,36 +956,6 @@ inline bool EClientReportingVersion_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, EClientReportingVersion* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<EClientReportingVersion>(
     EClientReportingVersion_descriptor(), name, value);
-}
-enum EInitSystemResult : int {
-  k_EInitSystemResult_Invalid = 0,
-  k_EInitSystemResult_Success = 1,
-  k_EInitSystemResult_None = 2,
-  k_EInitSystemResult_NotFound = 3,
-  k_EInitSystemResult_Existing = 4,
-  k_EInitSystemResult_FailedOpen = 5,
-  k_EInitSystemResult_Mismatch = 6,
-  k_EInitSystemResult_FailedInit = 7,
-  k_EInitSystemResult_Max = 8
-};
-bool EInitSystemResult_IsValid(int value);
-constexpr EInitSystemResult EInitSystemResult_MIN = k_EInitSystemResult_Invalid;
-constexpr EInitSystemResult EInitSystemResult_MAX = k_EInitSystemResult_Max;
-constexpr int EInitSystemResult_ARRAYSIZE = EInitSystemResult_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* EInitSystemResult_descriptor();
-template<typename T>
-inline const std::string& EInitSystemResult_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, EInitSystemResult>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function EInitSystemResult_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    EInitSystemResult_descriptor(), enum_t_value);
-}
-inline bool EInitSystemResult_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, EInitSystemResult* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<EInitSystemResult>(
-    EInitSystemResult_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -11523,6 +11487,7 @@ class CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve :
     kTournamentCastersAccountIdsFieldNumber = 13,
     kOpVarValuesFieldNumber = 19,
     kTeammateColorsFieldNumber = 21,
+    kClanTagsFieldNumber = 23,
     kTournamentEventFieldNumber = 11,
     kPreMatchDataFieldNumber = 15,
     kMatchIdFieldNumber = 3,
@@ -11696,6 +11661,30 @@ class CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve :
       teammate_colors() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
       mutable_teammate_colors();
+
+  // repeated string clan_tags = 23;
+  int clan_tags_size() const;
+  private:
+  int _internal_clan_tags_size() const;
+  public:
+  void clear_clan_tags();
+  const std::string& clan_tags(int index) const;
+  std::string* mutable_clan_tags(int index);
+  void set_clan_tags(int index, const std::string& value);
+  void set_clan_tags(int index, std::string&& value);
+  void set_clan_tags(int index, const char* value);
+  void set_clan_tags(int index, const char* value, size_t size);
+  std::string* add_clan_tags();
+  void add_clan_tags(const std::string& value);
+  void add_clan_tags(std::string&& value);
+  void add_clan_tags(const char* value);
+  void add_clan_tags(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& clan_tags() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_clan_tags();
+  private:
+  const std::string& _internal_clan_tags(int index) const;
+  std::string* _internal_add_clan_tags();
+  public:
 
   // optional .TournamentEvent tournament_event = 11;
   bool has_tournament_event() const;
@@ -11894,6 +11883,7 @@ class CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve :
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > tournament_casters_account_ids_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::OperationalVarValue > op_var_values_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > teammate_colors_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> clan_tags_;
     ::TournamentEvent* tournament_event_;
     ::CPreMatchInfoData* pre_match_data_;
     uint64_t match_id_;
@@ -15269,6 +15259,7 @@ class CMsgGCCStrike15_v2_ServerNotificationForUserPenalty :
     kReasonFieldNumber = 2,
     kSecondsFieldNumber = 3,
     kCommunicationCooldownFieldNumber = 4,
+    kCheatingPenaltyLevelFieldNumber = 5,
   };
   // optional uint32 account_id = 1;
   bool has_account_id() const;
@@ -15322,6 +15313,19 @@ class CMsgGCCStrike15_v2_ServerNotificationForUserPenalty :
   void _internal_set_communication_cooldown(bool value);
   public:
 
+  // optional uint32 cheating_penalty_level = 5;
+  bool has_cheating_penalty_level() const;
+  private:
+  bool _internal_has_cheating_penalty_level() const;
+  public:
+  void clear_cheating_penalty_level();
+  uint32_t cheating_penalty_level() const;
+  void set_cheating_penalty_level(uint32_t value);
+  private:
+  uint32_t _internal_cheating_penalty_level() const;
+  void _internal_set_cheating_penalty_level(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_ServerNotificationForUserPenalty)
  private:
   class _Internal;
@@ -15336,6 +15340,7 @@ class CMsgGCCStrike15_v2_ServerNotificationForUserPenalty :
     uint32_t reason_;
     uint32_t seconds_;
     bool communication_cooldown_;
+    uint32_t cheating_penalty_level_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
@@ -17040,6 +17045,7 @@ class CMsgGCCStrike15_v2_ClientRequestJoinFriendData :
     kAccountIdFieldNumber = 2,
     kJoinTokenFieldNumber = 3,
     kJoinIppFieldNumber = 4,
+    kIsLocalServerFieldNumber = 7,
   };
   // optional string errormsg = 6;
   bool has_errormsg() const;
@@ -17129,6 +17135,19 @@ class CMsgGCCStrike15_v2_ClientRequestJoinFriendData :
   void _internal_set_join_ipp(uint32_t value);
   public:
 
+  // optional bool is_local_server = 7;
+  bool has_is_local_server() const;
+  private:
+  bool _internal_has_is_local_server() const;
+  public:
+  void clear_is_local_server();
+  bool is_local_server() const;
+  void set_is_local_server(bool value);
+  private:
+  bool _internal_is_local_server() const;
+  void _internal_set_is_local_server(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_ClientRequestJoinFriendData)
  private:
   class _Internal;
@@ -17145,6 +17164,7 @@ class CMsgGCCStrike15_v2_ClientRequestJoinFriendData :
     uint32_t account_id_;
     uint32_t join_token_;
     uint32_t join_ipp_;
+    bool is_local_server_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
@@ -17539,12 +17559,36 @@ class CMsgGCCstrike15_v2_ClientRedeemMissionReward :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kVolatileShopFieldNumber = 6,
     kCampaignIdFieldNumber = 1,
     kRedeemIdFieldNumber = 2,
     kRedeemableBalanceFieldNumber = 3,
     kExpectedCostFieldNumber = 4,
+    kSouvenirMatchidFieldNumber = 7,
     kBidControlFieldNumber = 5,
   };
+  // repeated uint64 volatile_shop = 6;
+  int volatile_shop_size() const;
+  private:
+  int _internal_volatile_shop_size() const;
+  public:
+  void clear_volatile_shop();
+  private:
+  uint64_t _internal_volatile_shop(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      _internal_volatile_shop() const;
+  void _internal_add_volatile_shop(uint64_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      _internal_mutable_volatile_shop();
+  public:
+  uint64_t volatile_shop(int index) const;
+  void set_volatile_shop(int index, uint64_t value);
+  void add_volatile_shop(uint64_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      volatile_shop() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      mutable_volatile_shop();
+
   // optional uint32 campaign_id = 1;
   bool has_campaign_id() const;
   private:
@@ -17597,6 +17641,19 @@ class CMsgGCCstrike15_v2_ClientRedeemMissionReward :
   void _internal_set_expected_cost(uint32_t value);
   public:
 
+  // optional uint64 souvenir_matchid = 7;
+  bool has_souvenir_matchid() const;
+  private:
+  bool _internal_has_souvenir_matchid() const;
+  public:
+  void clear_souvenir_matchid();
+  uint64_t souvenir_matchid() const;
+  void set_souvenir_matchid(uint64_t value);
+  private:
+  uint64_t _internal_souvenir_matchid() const;
+  void _internal_set_souvenir_matchid(uint64_t value);
+  public:
+
   // optional int32 bid_control = 5;
   bool has_bid_control() const;
   private:
@@ -17620,10 +17677,12 @@ class CMsgGCCstrike15_v2_ClientRedeemMissionReward :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > volatile_shop_;
     uint32_t campaign_id_;
     uint32_t redeem_id_;
     uint32_t redeemable_balance_;
     uint32_t expected_cost_;
+    uint64_t souvenir_matchid_;
     int32_t bid_control_;
   };
   union { Impl_ _impl_; };
@@ -21869,6 +21928,7 @@ class CEconItemPreviewDataBlock_Sticker :
     kOffsetZFieldNumber = 9,
     kPatternFieldNumber = 10,
     kHighlightReelFieldNumber = 11,
+    kWrappedStickerFieldNumber = 12,
   };
   // optional uint32 slot = 1;
   bool has_slot() const;
@@ -22013,6 +22073,19 @@ class CEconItemPreviewDataBlock_Sticker :
   void _internal_set_highlight_reel(uint32_t value);
   public:
 
+  // optional uint32 wrapped_sticker = 12;
+  bool has_wrapped_sticker() const;
+  private:
+  bool _internal_has_wrapped_sticker() const;
+  public:
+  void clear_wrapped_sticker();
+  uint32_t wrapped_sticker() const;
+  void set_wrapped_sticker(uint32_t value);
+  private:
+  uint32_t _internal_wrapped_sticker() const;
+  void _internal_set_wrapped_sticker(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:CEconItemPreviewDataBlock.Sticker)
  private:
   class _Internal;
@@ -22034,6 +22107,7 @@ class CEconItemPreviewDataBlock_Sticker :
     float offset_z_;
     uint32_t pattern_;
     uint32_t highlight_reel_;
+    uint32_t wrapped_sticker_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
@@ -22170,10 +22244,11 @@ class CEconItemPreviewDataBlock :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kCustomnamesFieldNumber = 11,
     kStickersFieldNumber = 12,
     kKeychainsFieldNumber = 20,
     kVariationsFieldNumber = 22,
-    kCustomnameFieldNumber = 11,
+    kBlobdataFieldNumber = 25,
     kItemidFieldNumber = 2,
     kAccountidFieldNumber = 1,
     kDefindexFieldNumber = 3,
@@ -22193,7 +22268,32 @@ class CEconItemPreviewDataBlock :
     kPetindexFieldNumber = 19,
     kStyleFieldNumber = 21,
     kUpgradeLevelFieldNumber = 23,
+    kPetFoodExpirationDateFieldNumber = 24,
   };
+  // repeated string customnames = 11;
+  int customnames_size() const;
+  private:
+  int _internal_customnames_size() const;
+  public:
+  void clear_customnames();
+  const std::string& customnames(int index) const;
+  std::string* mutable_customnames(int index);
+  void set_customnames(int index, const std::string& value);
+  void set_customnames(int index, std::string&& value);
+  void set_customnames(int index, const char* value);
+  void set_customnames(int index, const char* value, size_t size);
+  std::string* add_customnames();
+  void add_customnames(const std::string& value);
+  void add_customnames(std::string&& value);
+  void add_customnames(const char* value);
+  void add_customnames(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& customnames() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_customnames();
+  private:
+  const std::string& _internal_customnames(int index) const;
+  std::string* _internal_add_customnames();
+  public:
+
   // repeated .CEconItemPreviewDataBlock.Sticker stickers = 12;
   int stickers_size() const;
   private:
@@ -22248,22 +22348,22 @@ class CEconItemPreviewDataBlock :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CEconItemPreviewDataBlock_Sticker >&
       variations() const;
 
-  // optional string customname = 11;
-  bool has_customname() const;
+  // optional bytes blobdata = 25;
+  bool has_blobdata() const;
   private:
-  bool _internal_has_customname() const;
+  bool _internal_has_blobdata() const;
   public:
-  void clear_customname();
-  const std::string& customname() const;
+  void clear_blobdata();
+  const std::string& blobdata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_customname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_customname();
-  PROTOBUF_NODISCARD std::string* release_customname();
-  void set_allocated_customname(std::string* customname);
+  void set_blobdata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_blobdata();
+  PROTOBUF_NODISCARD std::string* release_blobdata();
+  void set_allocated_blobdata(std::string* blobdata);
   private:
-  const std::string& _internal_customname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_customname(const std::string& value);
-  std::string* _internal_mutable_customname();
+  const std::string& _internal_blobdata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_blobdata(const std::string& value);
+  std::string* _internal_mutable_blobdata();
   public:
 
   // optional uint64 itemid = 2;
@@ -22513,6 +22613,19 @@ class CEconItemPreviewDataBlock :
   void _internal_set_upgrade_level(uint32_t value);
   public:
 
+  // optional uint32 pet_food_expiration_date = 24;
+  bool has_pet_food_expiration_date() const;
+  private:
+  bool _internal_has_pet_food_expiration_date() const;
+  public:
+  void clear_pet_food_expiration_date();
+  uint32_t pet_food_expiration_date() const;
+  void set_pet_food_expiration_date(uint32_t value);
+  private:
+  uint32_t _internal_pet_food_expiration_date() const;
+  void _internal_set_pet_food_expiration_date(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:CEconItemPreviewDataBlock)
  private:
   class _Internal;
@@ -22523,10 +22636,11 @@ class CEconItemPreviewDataBlock :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> customnames_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CEconItemPreviewDataBlock_Sticker > stickers_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CEconItemPreviewDataBlock_Sticker > keychains_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CEconItemPreviewDataBlock_Sticker > variations_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr blobdata_;
     uint64_t itemid_;
     uint32_t accountid_;
     uint32_t defindex_;
@@ -22546,6 +22660,7 @@ class CEconItemPreviewDataBlock :
     uint32_t petindex_;
     uint32_t style_;
     uint32_t upgrade_level_;
+    uint32_t pet_food_expiration_date_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
@@ -30076,6 +30191,647 @@ class CSOAccountXpShopBids :
 };
 // -------------------------------------------------------------------
 
+class CSOVolatileItemOffer :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSOVolatileItemOffer) */ {
+ public:
+  inline CSOVolatileItemOffer() : CSOVolatileItemOffer(nullptr) {}
+  ~CSOVolatileItemOffer() override;
+  explicit PROTOBUF_CONSTEXPR CSOVolatileItemOffer(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CSOVolatileItemOffer(const CSOVolatileItemOffer& from);
+  CSOVolatileItemOffer(CSOVolatileItemOffer&& from) noexcept
+    : CSOVolatileItemOffer() {
+    *this = ::std::move(from);
+  }
+
+  inline CSOVolatileItemOffer& operator=(const CSOVolatileItemOffer& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CSOVolatileItemOffer& operator=(CSOVolatileItemOffer&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CSOVolatileItemOffer& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CSOVolatileItemOffer* internal_default_instance() {
+    return reinterpret_cast<const CSOVolatileItemOffer*>(
+               &_CSOVolatileItemOffer_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    122;
+
+  friend void swap(CSOVolatileItemOffer& a, CSOVolatileItemOffer& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CSOVolatileItemOffer* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CSOVolatileItemOffer* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CSOVolatileItemOffer* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CSOVolatileItemOffer>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CSOVolatileItemOffer& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CSOVolatileItemOffer& from) {
+    CSOVolatileItemOffer::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CSOVolatileItemOffer* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CSOVolatileItemOffer";
+  }
+  protected:
+  explicit CSOVolatileItemOffer(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kFauxItemidFieldNumber = 2,
+    kGenerationTimeFieldNumber = 3,
+    kDefidxFieldNumber = 1,
+  };
+  // repeated uint64 faux_itemid = 2;
+  int faux_itemid_size() const;
+  private:
+  int _internal_faux_itemid_size() const;
+  public:
+  void clear_faux_itemid();
+  private:
+  uint64_t _internal_faux_itemid(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      _internal_faux_itemid() const;
+  void _internal_add_faux_itemid(uint64_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      _internal_mutable_faux_itemid();
+  public:
+  uint64_t faux_itemid(int index) const;
+  void set_faux_itemid(int index, uint64_t value);
+  void add_faux_itemid(uint64_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      faux_itemid() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      mutable_faux_itemid();
+
+  // repeated uint32 generation_time = 3;
+  int generation_time_size() const;
+  private:
+  int _internal_generation_time_size() const;
+  public:
+  void clear_generation_time();
+  private:
+  uint32_t _internal_generation_time(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      _internal_generation_time() const;
+  void _internal_add_generation_time(uint32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      _internal_mutable_generation_time();
+  public:
+  uint32_t generation_time(int index) const;
+  void set_generation_time(int index, uint32_t value);
+  void add_generation_time(uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      generation_time() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      mutable_generation_time();
+
+  // optional uint32 defidx = 1 [(.key_field) = true];
+  bool has_defidx() const;
+  private:
+  bool _internal_has_defidx() const;
+  public:
+  void clear_defidx();
+  uint32_t defidx() const;
+  void set_defidx(uint32_t value);
+  private:
+  uint32_t _internal_defidx() const;
+  void _internal_set_defidx(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CSOVolatileItemOffer)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > faux_itemid_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > generation_time_;
+    uint32_t defidx_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CSOVolatileItemClaimedRewards :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSOVolatileItemClaimedRewards) */ {
+ public:
+  inline CSOVolatileItemClaimedRewards() : CSOVolatileItemClaimedRewards(nullptr) {}
+  ~CSOVolatileItemClaimedRewards() override;
+  explicit PROTOBUF_CONSTEXPR CSOVolatileItemClaimedRewards(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CSOVolatileItemClaimedRewards(const CSOVolatileItemClaimedRewards& from);
+  CSOVolatileItemClaimedRewards(CSOVolatileItemClaimedRewards&& from) noexcept
+    : CSOVolatileItemClaimedRewards() {
+    *this = ::std::move(from);
+  }
+
+  inline CSOVolatileItemClaimedRewards& operator=(const CSOVolatileItemClaimedRewards& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CSOVolatileItemClaimedRewards& operator=(CSOVolatileItemClaimedRewards&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CSOVolatileItemClaimedRewards& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CSOVolatileItemClaimedRewards* internal_default_instance() {
+    return reinterpret_cast<const CSOVolatileItemClaimedRewards*>(
+               &_CSOVolatileItemClaimedRewards_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    123;
+
+  friend void swap(CSOVolatileItemClaimedRewards& a, CSOVolatileItemClaimedRewards& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CSOVolatileItemClaimedRewards* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CSOVolatileItemClaimedRewards* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CSOVolatileItemClaimedRewards* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CSOVolatileItemClaimedRewards>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CSOVolatileItemClaimedRewards& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CSOVolatileItemClaimedRewards& from) {
+    CSOVolatileItemClaimedRewards::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CSOVolatileItemClaimedRewards* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CSOVolatileItemClaimedRewards";
+  }
+  protected:
+  explicit CSOVolatileItemClaimedRewards(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRewardFieldNumber = 2,
+    kGenerationTimeFieldNumber = 3,
+    kDefidxFieldNumber = 1,
+  };
+  // repeated uint32 reward = 2;
+  int reward_size() const;
+  private:
+  int _internal_reward_size() const;
+  public:
+  void clear_reward();
+  private:
+  uint32_t _internal_reward(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      _internal_reward() const;
+  void _internal_add_reward(uint32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      _internal_mutable_reward();
+  public:
+  uint32_t reward(int index) const;
+  void set_reward(int index, uint32_t value);
+  void add_reward(uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      reward() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      mutable_reward();
+
+  // repeated uint32 generation_time = 3;
+  int generation_time_size() const;
+  private:
+  int _internal_generation_time_size() const;
+  public:
+  void clear_generation_time();
+  private:
+  uint32_t _internal_generation_time(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      _internal_generation_time() const;
+  void _internal_add_generation_time(uint32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      _internal_mutable_generation_time();
+  public:
+  uint32_t generation_time(int index) const;
+  void set_generation_time(int index, uint32_t value);
+  void add_generation_time(uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      generation_time() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      mutable_generation_time();
+
+  // optional uint32 defidx = 1 [(.key_field) = true];
+  bool has_defidx() const;
+  private:
+  bool _internal_has_defidx() const;
+  public:
+  void clear_defidx();
+  uint32_t defidx() const;
+  void set_defidx(uint32_t value);
+  private:
+  uint32_t _internal_defidx() const;
+  void _internal_set_defidx(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CSOVolatileItemClaimedRewards)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > reward_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > generation_time_;
+    uint32_t defidx_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCCStrike15_v2_VolatileShopSubscribe :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_VolatileShopSubscribe) */ {
+ public:
+  inline CMsgGCCStrike15_v2_VolatileShopSubscribe() : CMsgGCCStrike15_v2_VolatileShopSubscribe(nullptr) {}
+  ~CMsgGCCStrike15_v2_VolatileShopSubscribe() override;
+  explicit PROTOBUF_CONSTEXPR CMsgGCCStrike15_v2_VolatileShopSubscribe(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CMsgGCCStrike15_v2_VolatileShopSubscribe(const CMsgGCCStrike15_v2_VolatileShopSubscribe& from);
+  CMsgGCCStrike15_v2_VolatileShopSubscribe(CMsgGCCStrike15_v2_VolatileShopSubscribe&& from) noexcept
+    : CMsgGCCStrike15_v2_VolatileShopSubscribe() {
+    *this = ::std::move(from);
+  }
+
+  inline CMsgGCCStrike15_v2_VolatileShopSubscribe& operator=(const CMsgGCCStrike15_v2_VolatileShopSubscribe& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CMsgGCCStrike15_v2_VolatileShopSubscribe& operator=(CMsgGCCStrike15_v2_VolatileShopSubscribe&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CMsgGCCStrike15_v2_VolatileShopSubscribe& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CMsgGCCStrike15_v2_VolatileShopSubscribe* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCCStrike15_v2_VolatileShopSubscribe*>(
+               &_CMsgGCCStrike15_v2_VolatileShopSubscribe_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    124;
+
+  friend void swap(CMsgGCCStrike15_v2_VolatileShopSubscribe& a, CMsgGCCStrike15_v2_VolatileShopSubscribe& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CMsgGCCStrike15_v2_VolatileShopSubscribe* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CMsgGCCStrike15_v2_VolatileShopSubscribe* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CMsgGCCStrike15_v2_VolatileShopSubscribe* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CMsgGCCStrike15_v2_VolatileShopSubscribe>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CMsgGCCStrike15_v2_VolatileShopSubscribe& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CMsgGCCStrike15_v2_VolatileShopSubscribe& from) {
+    CMsgGCCStrike15_v2_VolatileShopSubscribe::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CMsgGCCStrike15_v2_VolatileShopSubscribe* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CMsgGCCStrike15_v2_VolatileShopSubscribe";
+  }
+  protected:
+  explicit CMsgGCCStrike15_v2_VolatileShopSubscribe(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPayloadFieldNumber = 5,
+    kPsidFieldNumber = 2,
+    kDefidxFieldNumber = 1,
+    kUpnextFieldNumber = 3,
+    kGctimeFieldNumber = 4,
+  };
+  // optional bytes payload = 5;
+  bool has_payload() const;
+  private:
+  bool _internal_has_payload() const;
+  public:
+  void clear_payload();
+  const std::string& payload() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_payload(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_payload();
+  PROTOBUF_NODISCARD std::string* release_payload();
+  void set_allocated_payload(std::string* payload);
+  private:
+  const std::string& _internal_payload() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_payload(const std::string& value);
+  std::string* _internal_mutable_payload();
+  public:
+
+  // optional uint64 psid = 2;
+  bool has_psid() const;
+  private:
+  bool _internal_has_psid() const;
+  public:
+  void clear_psid();
+  uint64_t psid() const;
+  void set_psid(uint64_t value);
+  private:
+  uint64_t _internal_psid() const;
+  void _internal_set_psid(uint64_t value);
+  public:
+
+  // optional uint32 defidx = 1;
+  bool has_defidx() const;
+  private:
+  bool _internal_has_defidx() const;
+  public:
+  void clear_defidx();
+  uint32_t defidx() const;
+  void set_defidx(uint32_t value);
+  private:
+  uint32_t _internal_defidx() const;
+  void _internal_set_defidx(uint32_t value);
+  public:
+
+  // optional uint32 upnext = 3;
+  bool has_upnext() const;
+  private:
+  bool _internal_has_upnext() const;
+  public:
+  void clear_upnext();
+  uint32_t upnext() const;
+  void set_upnext(uint32_t value);
+  private:
+  uint32_t _internal_upnext() const;
+  void _internal_set_upnext(uint32_t value);
+  public:
+
+  // optional uint32 gctime = 4;
+  bool has_gctime() const;
+  private:
+  bool _internal_has_gctime() const;
+  public:
+  void clear_gctime();
+  uint32_t gctime() const;
+  void set_gctime(uint32_t value);
+  private:
+  uint32_t _internal_gctime() const;
+  void _internal_set_gctime(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_VolatileShopSubscribe)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr payload_;
+    uint64_t psid_;
+    uint32_t defidx_;
+    uint32_t upnext_;
+    uint32_t gctime_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
+};
+// -------------------------------------------------------------------
+
 class CSOAccountKeychainRemoveToolCharges :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CSOAccountKeychainRemoveToolCharges) */ {
  public:
@@ -30131,7 +30887,7 @@ class CSOAccountKeychainRemoveToolCharges :
                &_CSOAccountKeychainRemoveToolCharges_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    122;
+    125;
 
   friend void swap(CSOAccountKeychainRemoveToolCharges& a, CSOAccountKeychainRemoveToolCharges& b) {
     a.Swap(&b);
@@ -30291,7 +31047,7 @@ class CSOQuestProgress :
                &_CSOQuestProgress_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    123;
+    126;
 
   friend void swap(CSOQuestProgress& a, CSOQuestProgress& b) {
     a.Swap(&b);
@@ -30481,7 +31237,7 @@ class CSOAccountSeasonalOperation :
                &_CSOAccountSeasonalOperation_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    124;
+    127;
 
   friend void swap(CSOAccountSeasonalOperation& a, CSOAccountSeasonalOperation& b) {
     a.Swap(&b);
@@ -30731,7 +31487,7 @@ class CSOAccountRecurringSubscription :
                &_CSOAccountRecurringSubscription_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    125;
+    128;
 
   friend void swap(CSOAccountRecurringSubscription& a, CSOAccountRecurringSubscription& b) {
     a.Swap(&b);
@@ -30906,7 +31662,7 @@ class CSOGameAccountSteamChina :
                &_CSOGameAccountSteamChina_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    126;
+    129;
 
   friend void swap(CSOGameAccountSteamChina& a, CSOGameAccountSteamChina& b) {
     a.Swap(&b);
@@ -31096,7 +31852,7 @@ class CSOPersonaDataPublic :
                &_CSOPersonaDataPublic_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    127;
+    130;
 
   friend void swap(CSOPersonaDataPublic& a, CSOPersonaDataPublic& b) {
     a.Swap(&b);
@@ -31169,12 +31925,32 @@ class CSOPersonaDataPublic :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kClanTagFieldNumber = 7,
     kCommendationFieldNumber = 2,
     kPlayerLevelFieldNumber = 1,
     kElevatedStateFieldNumber = 3,
     kXpTrailTimestampRefreshFieldNumber = 4,
     kXpTrailLevelFieldNumber = 5,
+    kClanIdFieldNumber = 6,
   };
+  // optional string clan_tag = 7;
+  bool has_clan_tag() const;
+  private:
+  bool _internal_has_clan_tag() const;
+  public:
+  void clear_clan_tag();
+  const std::string& clan_tag() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_clan_tag(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_clan_tag();
+  PROTOBUF_NODISCARD std::string* release_clan_tag();
+  void set_allocated_clan_tag(std::string* clan_tag);
+  private:
+  const std::string& _internal_clan_tag() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_clan_tag(const std::string& value);
+  std::string* _internal_mutable_clan_tag();
+  public:
+
   // optional .PlayerCommendationInfo commendation = 2;
   bool has_commendation() const;
   private:
@@ -31245,6 +32021,19 @@ class CSOPersonaDataPublic :
   void _internal_set_xp_trail_level(uint32_t value);
   public:
 
+  // optional uint32 clan_id = 6;
+  bool has_clan_id() const;
+  private:
+  bool _internal_has_clan_id() const;
+  public:
+  void clear_clan_id();
+  uint32_t clan_id() const;
+  void set_clan_id(uint32_t value);
+  private:
+  uint32_t _internal_clan_id() const;
+  void _internal_set_clan_id(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:CSOPersonaDataPublic)
  private:
   class _Internal;
@@ -31255,11 +32044,13 @@ class CSOPersonaDataPublic :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr clan_tag_;
     ::PlayerCommendationInfo* commendation_;
     int32_t player_level_;
     bool elevated_state_;
     uint32_t xp_trail_timestamp_refresh_;
     uint32_t xp_trail_level_;
+    uint32_t clan_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
@@ -31321,7 +32112,7 @@ class CSOAccountRecurringMission :
                &_CSOAccountRecurringMission_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    128;
+    131;
 
   friend void swap(CSOAccountRecurringMission& a, CSOAccountRecurringMission& b) {
     a.Swap(&b);
@@ -31526,7 +32317,7 @@ class CMsgGCCStrike15_v2_GC2ClientNotifyXPShop :
                &_CMsgGCCStrike15_v2_GC2ClientNotifyXPShop_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    129;
+    132;
 
   friend void swap(CMsgGCCStrike15_v2_GC2ClientNotifyXPShop& a, CMsgGCCStrike15_v2_GC2ClientNotifyXPShop& b) {
     a.Swap(&b);
@@ -31740,7 +32531,7 @@ class CMsgGCCStrike15_v2_Client2GcAckXPShopTracks :
                &_CMsgGCCStrike15_v2_Client2GcAckXPShopTracks_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    130;
+    133;
 
   friend void swap(CMsgGCCStrike15_v2_Client2GcAckXPShopTracks& a, CMsgGCCStrike15_v2_Client2GcAckXPShopTracks& b) {
     a.Swap(&b);
@@ -31866,7 +32657,7 @@ class CMsgGCCStrike15_v2_MatchmakingGC2ClientSearchStats :
                &_CMsgGCCStrike15_v2_MatchmakingGC2ClientSearchStats_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    131;
+    134;
 
   friend void swap(CMsgGCCStrike15_v2_MatchmakingGC2ClientSearchStats& a, CMsgGCCStrike15_v2_MatchmakingGC2ClientSearchStats& b) {
     a.Swap(&b);
@@ -32086,7 +32877,7 @@ class CMsgGC_GlobalGame_Subscribe :
                &_CMsgGC_GlobalGame_Subscribe_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    132;
+    135;
 
   friend void swap(CMsgGC_GlobalGame_Subscribe& a, CMsgGC_GlobalGame_Subscribe& b) {
     a.Swap(&b);
@@ -32246,7 +33037,7 @@ class CMsgGC_GlobalGame_Unsubscribe :
                &_CMsgGC_GlobalGame_Unsubscribe_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    133;
+    136;
 
   friend void swap(CMsgGC_GlobalGame_Unsubscribe& a, CMsgGC_GlobalGame_Unsubscribe& b) {
     a.Swap(&b);
@@ -32406,7 +33197,7 @@ class CMsgGC_GlobalGame_Play :
                &_CMsgGC_GlobalGame_Play_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    134;
+    137;
 
   friend void swap(CMsgGC_GlobalGame_Play& a, CMsgGC_GlobalGame_Play& b) {
     a.Swap(&b);
@@ -32596,7 +33387,7 @@ class CMsgGCCStrike15_v2_AcknowledgePenalty :
                &_CMsgGCCStrike15_v2_AcknowledgePenalty_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    135;
+    138;
 
   friend void swap(CMsgGCCStrike15_v2_AcknowledgePenalty& a, CMsgGCCStrike15_v2_AcknowledgePenalty& b) {
     a.Swap(&b);
@@ -32756,7 +33547,7 @@ class CMsgGCCStrike15_v2_Client2GCRequestPrestigeCoin :
                &_CMsgGCCStrike15_v2_Client2GCRequestPrestigeCoin_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    136;
+    139;
 
   friend void swap(CMsgGCCStrike15_v2_Client2GCRequestPrestigeCoin& a, CMsgGCCStrike15_v2_Client2GCRequestPrestigeCoin& b) {
     a.Swap(&b);
@@ -32961,7 +33752,7 @@ class CMsgGCCStrike15_v2_Client2GCStreamUnlock :
                &_CMsgGCCStrike15_v2_Client2GCStreamUnlock_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    137;
+    140;
 
   friend void swap(CMsgGCCStrike15_v2_Client2GCStreamUnlock& a, CMsgGCCStrike15_v2_Client2GCStreamUnlock& b) {
     a.Swap(&b);
@@ -33136,7 +33927,7 @@ class CMsgGCCStrike15_v2_ClientToGCRequestElevate :
                &_CMsgGCCStrike15_v2_ClientToGCRequestElevate_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    138;
+    141;
 
   friend void swap(CMsgGCCStrike15_v2_ClientToGCRequestElevate& a, CMsgGCCStrike15_v2_ClientToGCRequestElevate& b) {
     a.Swap(&b);
@@ -33296,7 +34087,7 @@ class CMsgGCCStrike15_v2_ClientToGCChat :
                &_CMsgGCCStrike15_v2_ClientToGCChat_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    139;
+    142;
 
   friend void swap(CMsgGCCStrike15_v2_ClientToGCChat& a, CMsgGCCStrike15_v2_ClientToGCChat& b) {
     a.Swap(&b);
@@ -33476,7 +34267,7 @@ class CMsgGCCStrike15_v2_GCToClientChat :
                &_CMsgGCCStrike15_v2_GCToClientChat_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    140;
+    143;
 
   friend void swap(CMsgGCCStrike15_v2_GCToClientChat& a, CMsgGCCStrike15_v2_GCToClientChat& b) {
     a.Swap(&b);
@@ -33656,7 +34447,7 @@ class CMsgGCCStrike15_v2_ClientAuthKeyCode :
                &_CMsgGCCStrike15_v2_ClientAuthKeyCode_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    141;
+    144;
 
   friend void swap(CMsgGCCStrike15_v2_ClientAuthKeyCode& a, CMsgGCCStrike15_v2_ClientAuthKeyCode& b) {
     a.Swap(&b);
@@ -33836,7 +34627,7 @@ class CMsgGCCStrike15_GotvSyncPacket :
                &_CMsgGCCStrike15_GotvSyncPacket_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    142;
+    145;
 
   friend void swap(CMsgGCCStrike15_GotvSyncPacket& a, CMsgGCCStrike15_GotvSyncPacket& b) {
     a.Swap(&b);
@@ -34001,7 +34792,7 @@ class PlayerDecalDigitalSignature :
                &_PlayerDecalDigitalSignature_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    143;
+    146;
 
   friend void swap(PlayerDecalDigitalSignature& a, PlayerDecalDigitalSignature& b) {
     a.Swap(&b);
@@ -34397,7 +35188,7 @@ class CMsgGCCStrike15_v2_ClientPlayerDecalSign :
                &_CMsgGCCStrike15_v2_ClientPlayerDecalSign_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    144;
+    147;
 
   friend void swap(CMsgGCCStrike15_v2_ClientPlayerDecalSign& a, CMsgGCCStrike15_v2_ClientPlayerDecalSign& b) {
     a.Swap(&b);
@@ -34577,7 +35368,7 @@ class CMsgGCCStrike15_v2_BetaEnrollment :
                &_CMsgGCCStrike15_v2_BetaEnrollment_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    145;
+    148;
 
   friend void swap(CMsgGCCStrike15_v2_BetaEnrollment& a, CMsgGCCStrike15_v2_BetaEnrollment& b) {
     a.Swap(&b);
@@ -34737,7 +35528,7 @@ class CMsgGCCStrike15_v2_ClientLogonFatalError :
                &_CMsgGCCStrike15_v2_ClientLogonFatalError_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    146;
+    149;
 
   friend void swap(CMsgGCCStrike15_v2_ClientLogonFatalError& a, CMsgGCCStrike15_v2_ClientLogonFatalError& b) {
     a.Swap(&b);
@@ -34937,7 +35728,7 @@ class CMsgGCCStrike15_v2_ClientPollState :
                &_CMsgGCCStrike15_v2_ClientPollState_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    147;
+    150;
 
   friend void swap(CMsgGCCStrike15_v2_ClientPollState& a, CMsgGCCStrike15_v2_ClientPollState& b) {
     a.Swap(&b);
@@ -35147,7 +35938,7 @@ class CMsgGCCStrike15_v2_Party_Register :
                &_CMsgGCCStrike15_v2_Party_Register_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    148;
+    151;
 
   friend void swap(CMsgGCCStrike15_v2_Party_Register& a, CMsgGCCStrike15_v2_Party_Register& b) {
     a.Swap(&b);
@@ -35427,7 +36218,7 @@ class CMsgGCCStrike15_v2_Party_Search :
                &_CMsgGCCStrike15_v2_Party_Search_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    149;
+    152;
 
   friend void swap(CMsgGCCStrike15_v2_Party_Search& a, CMsgGCCStrike15_v2_Party_Search& b) {
     a.Swap(&b);
@@ -35671,7 +36462,7 @@ class CMsgGCCStrike15_v2_Party_SearchResults_Entry :
                &_CMsgGCCStrike15_v2_Party_SearchResults_Entry_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    150;
+    153;
 
   friend void swap(CMsgGCCStrike15_v2_Party_SearchResults_Entry& a, CMsgGCCStrike15_v2_Party_SearchResults_Entry& b) {
     a.Swap(&b);
@@ -35921,7 +36712,7 @@ class CMsgGCCStrike15_v2_Party_SearchResults :
                &_CMsgGCCStrike15_v2_Party_SearchResults_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    151;
+    154;
 
   friend void swap(CMsgGCCStrike15_v2_Party_SearchResults& a, CMsgGCCStrike15_v2_Party_SearchResults& b) {
     a.Swap(&b);
@@ -36087,7 +36878,7 @@ class CMsgGCCStrike15_v2_Party_Invite :
                &_CMsgGCCStrike15_v2_Party_Invite_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    152;
+    155;
 
   friend void swap(CMsgGCCStrike15_v2_Party_Invite& a, CMsgGCCStrike15_v2_Party_Invite& b) {
     a.Swap(&b);
@@ -36262,7 +37053,7 @@ class CMsgGCCStrike15_v2_Account_RequestCoPlays_Player :
                &_CMsgGCCStrike15_v2_Account_RequestCoPlays_Player_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    153;
+    156;
 
   friend void swap(CMsgGCCStrike15_v2_Account_RequestCoPlays_Player& a, CMsgGCCStrike15_v2_Account_RequestCoPlays_Player& b) {
     a.Swap(&b);
@@ -36452,7 +37243,7 @@ class CMsgGCCStrike15_v2_Account_RequestCoPlays :
                &_CMsgGCCStrike15_v2_Account_RequestCoPlays_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    154;
+    157;
 
   friend void swap(CMsgGCCStrike15_v2_Account_RequestCoPlays& a, CMsgGCCStrike15_v2_Account_RequestCoPlays& b) {
     a.Swap(&b);
@@ -36634,7 +37425,7 @@ class CMsgGCCStrike15_v2_ClientToGCRequestTicket :
                &_CMsgGCCStrike15_v2_ClientToGCRequestTicket_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    155;
+    158;
 
   friend void swap(CMsgGCCStrike15_v2_ClientToGCRequestTicket& a, CMsgGCCStrike15_v2_ClientToGCRequestTicket& b) {
     a.Swap(&b);
@@ -36844,7 +37635,7 @@ class CMsgGCToClientSteamDatagramTicket :
                &_CMsgGCToClientSteamDatagramTicket_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    156;
+    159;
 
   friend void swap(CMsgGCToClientSteamDatagramTicket& a, CMsgGCToClientSteamDatagramTicket& b) {
     a.Swap(&b);
@@ -37008,7 +37799,7 @@ class CMsgGCCStrike15_v2_ClientRequestOffers :
                &_CMsgGCCStrike15_v2_ClientRequestOffers_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    157;
+    160;
 
   friend void swap(CMsgGCCStrike15_v2_ClientRequestOffers& a, CMsgGCCStrike15_v2_ClientRequestOffers& b) {
     a.Swap(&b);
@@ -37134,7 +37925,7 @@ class CMsgGCCStrike15_v2_ClientRequestSouvenir :
                &_CMsgGCCStrike15_v2_ClientRequestSouvenir_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    158;
+    161;
 
   friend void swap(CMsgGCCStrike15_v2_ClientRequestSouvenir& a, CMsgGCCStrike15_v2_ClientRequestSouvenir& b) {
     a.Swap(&b);
@@ -37324,7 +38115,7 @@ class CMsgGCCStrike15_v2_ClientAccountBalance :
                &_CMsgGCCStrike15_v2_ClientAccountBalance_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    159;
+    162;
 
   friend void swap(CMsgGCCStrike15_v2_ClientAccountBalance& a, CMsgGCCStrike15_v2_ClientAccountBalance& b) {
     a.Swap(&b);
@@ -37449,6 +38240,166 @@ class CMsgGCCStrike15_v2_ClientAccountBalance :
 };
 // -------------------------------------------------------------------
 
+class CMsgGCCStrike15_v2_SetClanId :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_SetClanId) */ {
+ public:
+  inline CMsgGCCStrike15_v2_SetClanId() : CMsgGCCStrike15_v2_SetClanId(nullptr) {}
+  ~CMsgGCCStrike15_v2_SetClanId() override;
+  explicit PROTOBUF_CONSTEXPR CMsgGCCStrike15_v2_SetClanId(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CMsgGCCStrike15_v2_SetClanId(const CMsgGCCStrike15_v2_SetClanId& from);
+  CMsgGCCStrike15_v2_SetClanId(CMsgGCCStrike15_v2_SetClanId&& from) noexcept
+    : CMsgGCCStrike15_v2_SetClanId() {
+    *this = ::std::move(from);
+  }
+
+  inline CMsgGCCStrike15_v2_SetClanId& operator=(const CMsgGCCStrike15_v2_SetClanId& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CMsgGCCStrike15_v2_SetClanId& operator=(CMsgGCCStrike15_v2_SetClanId&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CMsgGCCStrike15_v2_SetClanId& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CMsgGCCStrike15_v2_SetClanId* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCCStrike15_v2_SetClanId*>(
+               &_CMsgGCCStrike15_v2_SetClanId_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    163;
+
+  friend void swap(CMsgGCCStrike15_v2_SetClanId& a, CMsgGCCStrike15_v2_SetClanId& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CMsgGCCStrike15_v2_SetClanId* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CMsgGCCStrike15_v2_SetClanId* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CMsgGCCStrike15_v2_SetClanId* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CMsgGCCStrike15_v2_SetClanId>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CMsgGCCStrike15_v2_SetClanId& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CMsgGCCStrike15_v2_SetClanId& from) {
+    CMsgGCCStrike15_v2_SetClanId::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CMsgGCCStrike15_v2_SetClanId* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CMsgGCCStrike15_v2_SetClanId";
+  }
+  protected:
+  explicit CMsgGCCStrike15_v2_SetClanId(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kClanIdFieldNumber = 1,
+  };
+  // optional uint32 clan_id = 1;
+  bool has_clan_id() const;
+  private:
+  bool _internal_has_clan_id() const;
+  public:
+  void clear_clan_id();
+  uint32_t clan_id() const;
+  void set_clan_id(uint32_t value);
+  private:
+  uint32_t _internal_clan_id() const;
+  void _internal_set_clan_id(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_SetClanId)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t clan_id_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
+};
+// -------------------------------------------------------------------
+
 class CMsgGCCStrike15_v2_ClientPartyJoinRelay :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_ClientPartyJoinRelay) */ {
  public:
@@ -37504,7 +38455,7 @@ class CMsgGCCStrike15_v2_ClientPartyJoinRelay :
                &_CMsgGCCStrike15_v2_ClientPartyJoinRelay_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    160;
+    164;
 
   friend void swap(CMsgGCCStrike15_v2_ClientPartyJoinRelay& a, CMsgGCCStrike15_v2_ClientPartyJoinRelay& b) {
     a.Swap(&b);
@@ -37679,7 +38630,7 @@ class CMsgGCCStrike15_v2_ClientPartyWarning_Entry :
                &_CMsgGCCStrike15_v2_ClientPartyWarning_Entry_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    161;
+    165;
 
   friend void swap(CMsgGCCStrike15_v2_ClientPartyWarning_Entry& a, CMsgGCCStrike15_v2_ClientPartyWarning_Entry& b) {
     a.Swap(&b);
@@ -37854,7 +38805,7 @@ class CMsgGCCStrike15_v2_ClientPartyWarning :
                &_CMsgGCCStrike15_v2_ClientPartyWarning_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    162;
+    166;
 
   friend void swap(CMsgGCCStrike15_v2_ClientPartyWarning& a, CMsgGCCStrike15_v2_ClientPartyWarning& b) {
     a.Swap(&b);
@@ -38020,7 +38971,7 @@ class CMsgGCCStrike15_v2_SetEventFavorite :
                &_CMsgGCCStrike15_v2_SetEventFavorite_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    163;
+    167;
 
   friend void swap(CMsgGCCStrike15_v2_SetEventFavorite& a, CMsgGCCStrike15_v2_SetEventFavorite& b) {
     a.Swap(&b);
@@ -38195,7 +39146,7 @@ class CMsgGCCStrike15_v2_GetEventFavorites_Request :
                &_CMsgGCCStrike15_v2_GetEventFavorites_Request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    164;
+    168;
 
   friend void swap(CMsgGCCStrike15_v2_GetEventFavorites_Request& a, CMsgGCCStrike15_v2_GetEventFavorites_Request& b) {
     a.Swap(&b);
@@ -38355,7 +39306,7 @@ class CMsgGCCStrike15_v2_GetEventFavorites_Response :
                &_CMsgGCCStrike15_v2_GetEventFavorites_Response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    165;
+    169;
 
   friend void swap(CMsgGCCStrike15_v2_GetEventFavorites_Response& a, CMsgGCCStrike15_v2_GetEventFavorites_Response& b) {
     a.Swap(&b);
@@ -38555,7 +39506,7 @@ class CMsgGCCStrike15_v2_ClientPerfReport_Entry :
                &_CMsgGCCStrike15_v2_ClientPerfReport_Entry_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    166;
+    170;
 
   friend void swap(CMsgGCCStrike15_v2_ClientPerfReport_Entry& a, CMsgGCCStrike15_v2_ClientPerfReport_Entry& b) {
     a.Swap(&b);
@@ -38800,7 +39751,7 @@ class CMsgGCCStrike15_v2_ClientPerfReport :
                &_CMsgGCCStrike15_v2_ClientPerfReport_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    167;
+    171;
 
   friend void swap(CMsgGCCStrike15_v2_ClientPerfReport& a, CMsgGCCStrike15_v2_ClientPerfReport& b) {
     a.Swap(&b);
@@ -38966,7 +39917,7 @@ class CVDiagnostic :
                &_CVDiagnostic_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    168;
+    172;
 
   friend void swap(CVDiagnostic& a, CVDiagnostic& b) {
     a.Swap(&b);
@@ -39121,1556 +40072,6 @@ class CVDiagnostic :
 };
 // -------------------------------------------------------------------
 
-class CMsgGCCStrike15_v2_ClientReportValidation :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_ClientReportValidation) */ {
- public:
-  inline CMsgGCCStrike15_v2_ClientReportValidation() : CMsgGCCStrike15_v2_ClientReportValidation(nullptr) {}
-  ~CMsgGCCStrike15_v2_ClientReportValidation() override;
-  explicit PROTOBUF_CONSTEXPR CMsgGCCStrike15_v2_ClientReportValidation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  CMsgGCCStrike15_v2_ClientReportValidation(const CMsgGCCStrike15_v2_ClientReportValidation& from);
-  CMsgGCCStrike15_v2_ClientReportValidation(CMsgGCCStrike15_v2_ClientReportValidation&& from) noexcept
-    : CMsgGCCStrike15_v2_ClientReportValidation() {
-    *this = ::std::move(from);
-  }
-
-  inline CMsgGCCStrike15_v2_ClientReportValidation& operator=(const CMsgGCCStrike15_v2_ClientReportValidation& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CMsgGCCStrike15_v2_ClientReportValidation& operator=(CMsgGCCStrike15_v2_ClientReportValidation&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const CMsgGCCStrike15_v2_ClientReportValidation& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const CMsgGCCStrike15_v2_ClientReportValidation* internal_default_instance() {
-    return reinterpret_cast<const CMsgGCCStrike15_v2_ClientReportValidation*>(
-               &_CMsgGCCStrike15_v2_ClientReportValidation_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    169;
-
-  friend void swap(CMsgGCCStrike15_v2_ClientReportValidation& a, CMsgGCCStrike15_v2_ClientReportValidation& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CMsgGCCStrike15_v2_ClientReportValidation* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CMsgGCCStrike15_v2_ClientReportValidation* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  CMsgGCCStrike15_v2_ClientReportValidation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CMsgGCCStrike15_v2_ClientReportValidation>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const CMsgGCCStrike15_v2_ClientReportValidation& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CMsgGCCStrike15_v2_ClientReportValidation& from) {
-    CMsgGCCStrike15_v2_ClientReportValidation::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CMsgGCCStrike15_v2_ClientReportValidation* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "CMsgGCCStrike15_v2_ClientReportValidation";
-  }
-  protected:
-  explicit CMsgGCCStrike15_v2_ClientReportValidation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kDiagnosticsFieldNumber = 20,
-    kFileReportFieldNumber = 1,
-    kCommandLineFieldNumber = 2,
-    kLastLaunchDataFieldNumber = 15,
-    kTotalFilesFieldNumber = 3,
-    kInternalErrorFieldNumber = 4,
-    kTrustTimeFieldNumber = 5,
-    kCountPendingFieldNumber = 6,
-    kCountCompletedFieldNumber = 7,
-    kProcessIdFieldNumber = 8,
-    kOsversionFieldNumber = 9,
-    kClientreportversionFieldNumber = 10,
-    kStatusIdFieldNumber = 11,
-    kDiagnostic1FieldNumber = 12,
-    kDiagnostic2FieldNumber = 13,
-    kDiagnostic3FieldNumber = 14,
-    kClientTimeFieldNumber = 17,
-    kDiagnostic4FieldNumber = 18,
-    kDiagnostic5FieldNumber = 19,
-    kReportCountFieldNumber = 16,
-  };
-  // repeated .CVDiagnostic diagnostics = 20;
-  int diagnostics_size() const;
-  private:
-  int _internal_diagnostics_size() const;
-  public:
-  void clear_diagnostics();
-  ::CVDiagnostic* mutable_diagnostics(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CVDiagnostic >*
-      mutable_diagnostics();
-  private:
-  const ::CVDiagnostic& _internal_diagnostics(int index) const;
-  ::CVDiagnostic* _internal_add_diagnostics();
-  public:
-  const ::CVDiagnostic& diagnostics(int index) const;
-  ::CVDiagnostic* add_diagnostics();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CVDiagnostic >&
-      diagnostics() const;
-
-  // optional string file_report = 1;
-  bool has_file_report() const;
-  private:
-  bool _internal_has_file_report() const;
-  public:
-  void clear_file_report();
-  const std::string& file_report() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_file_report(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_file_report();
-  PROTOBUF_NODISCARD std::string* release_file_report();
-  void set_allocated_file_report(std::string* file_report);
-  private:
-  const std::string& _internal_file_report() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_file_report(const std::string& value);
-  std::string* _internal_mutable_file_report();
-  public:
-
-  // optional string command_line = 2;
-  bool has_command_line() const;
-  private:
-  bool _internal_has_command_line() const;
-  public:
-  void clear_command_line();
-  const std::string& command_line() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_command_line(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_command_line();
-  PROTOBUF_NODISCARD std::string* release_command_line();
-  void set_allocated_command_line(std::string* command_line);
-  private:
-  const std::string& _internal_command_line() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_command_line(const std::string& value);
-  std::string* _internal_mutable_command_line();
-  public:
-
-  // optional string last_launch_data = 15;
-  bool has_last_launch_data() const;
-  private:
-  bool _internal_has_last_launch_data() const;
-  public:
-  void clear_last_launch_data();
-  const std::string& last_launch_data() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_last_launch_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_last_launch_data();
-  PROTOBUF_NODISCARD std::string* release_last_launch_data();
-  void set_allocated_last_launch_data(std::string* last_launch_data);
-  private:
-  const std::string& _internal_last_launch_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_last_launch_data(const std::string& value);
-  std::string* _internal_mutable_last_launch_data();
-  public:
-
-  // optional uint32 total_files = 3;
-  bool has_total_files() const;
-  private:
-  bool _internal_has_total_files() const;
-  public:
-  void clear_total_files();
-  uint32_t total_files() const;
-  void set_total_files(uint32_t value);
-  private:
-  uint32_t _internal_total_files() const;
-  void _internal_set_total_files(uint32_t value);
-  public:
-
-  // optional uint32 internal_error = 4;
-  bool has_internal_error() const;
-  private:
-  bool _internal_has_internal_error() const;
-  public:
-  void clear_internal_error();
-  uint32_t internal_error() const;
-  void set_internal_error(uint32_t value);
-  private:
-  uint32_t _internal_internal_error() const;
-  void _internal_set_internal_error(uint32_t value);
-  public:
-
-  // optional uint32 trust_time = 5;
-  bool has_trust_time() const;
-  private:
-  bool _internal_has_trust_time() const;
-  public:
-  void clear_trust_time();
-  uint32_t trust_time() const;
-  void set_trust_time(uint32_t value);
-  private:
-  uint32_t _internal_trust_time() const;
-  void _internal_set_trust_time(uint32_t value);
-  public:
-
-  // optional uint32 count_pending = 6;
-  bool has_count_pending() const;
-  private:
-  bool _internal_has_count_pending() const;
-  public:
-  void clear_count_pending();
-  uint32_t count_pending() const;
-  void set_count_pending(uint32_t value);
-  private:
-  uint32_t _internal_count_pending() const;
-  void _internal_set_count_pending(uint32_t value);
-  public:
-
-  // optional uint32 count_completed = 7;
-  bool has_count_completed() const;
-  private:
-  bool _internal_has_count_completed() const;
-  public:
-  void clear_count_completed();
-  uint32_t count_completed() const;
-  void set_count_completed(uint32_t value);
-  private:
-  uint32_t _internal_count_completed() const;
-  void _internal_set_count_completed(uint32_t value);
-  public:
-
-  // optional uint32 process_id = 8;
-  bool has_process_id() const;
-  private:
-  bool _internal_has_process_id() const;
-  public:
-  void clear_process_id();
-  uint32_t process_id() const;
-  void set_process_id(uint32_t value);
-  private:
-  uint32_t _internal_process_id() const;
-  void _internal_set_process_id(uint32_t value);
-  public:
-
-  // optional int32 osversion = 9;
-  bool has_osversion() const;
-  private:
-  bool _internal_has_osversion() const;
-  public:
-  void clear_osversion();
-  int32_t osversion() const;
-  void set_osversion(int32_t value);
-  private:
-  int32_t _internal_osversion() const;
-  void _internal_set_osversion(int32_t value);
-  public:
-
-  // optional uint32 clientreportversion = 10;
-  bool has_clientreportversion() const;
-  private:
-  bool _internal_has_clientreportversion() const;
-  public:
-  void clear_clientreportversion();
-  uint32_t clientreportversion() const;
-  void set_clientreportversion(uint32_t value);
-  private:
-  uint32_t _internal_clientreportversion() const;
-  void _internal_set_clientreportversion(uint32_t value);
-  public:
-
-  // optional uint32 status_id = 11;
-  bool has_status_id() const;
-  private:
-  bool _internal_has_status_id() const;
-  public:
-  void clear_status_id();
-  uint32_t status_id() const;
-  void set_status_id(uint32_t value);
-  private:
-  uint32_t _internal_status_id() const;
-  void _internal_set_status_id(uint32_t value);
-  public:
-
-  // optional uint32 diagnostic1 = 12;
-  bool has_diagnostic1() const;
-  private:
-  bool _internal_has_diagnostic1() const;
-  public:
-  void clear_diagnostic1();
-  uint32_t diagnostic1() const;
-  void set_diagnostic1(uint32_t value);
-  private:
-  uint32_t _internal_diagnostic1() const;
-  void _internal_set_diagnostic1(uint32_t value);
-  public:
-
-  // optional uint64 diagnostic2 = 13;
-  bool has_diagnostic2() const;
-  private:
-  bool _internal_has_diagnostic2() const;
-  public:
-  void clear_diagnostic2();
-  uint64_t diagnostic2() const;
-  void set_diagnostic2(uint64_t value);
-  private:
-  uint64_t _internal_diagnostic2() const;
-  void _internal_set_diagnostic2(uint64_t value);
-  public:
-
-  // optional uint64 diagnostic3 = 14;
-  bool has_diagnostic3() const;
-  private:
-  bool _internal_has_diagnostic3() const;
-  public:
-  void clear_diagnostic3();
-  uint64_t diagnostic3() const;
-  void set_diagnostic3(uint64_t value);
-  private:
-  uint64_t _internal_diagnostic3() const;
-  void _internal_set_diagnostic3(uint64_t value);
-  public:
-
-  // optional uint64 client_time = 17;
-  bool has_client_time() const;
-  private:
-  bool _internal_has_client_time() const;
-  public:
-  void clear_client_time();
-  uint64_t client_time() const;
-  void set_client_time(uint64_t value);
-  private:
-  uint64_t _internal_client_time() const;
-  void _internal_set_client_time(uint64_t value);
-  public:
-
-  // optional uint64 diagnostic4 = 18;
-  bool has_diagnostic4() const;
-  private:
-  bool _internal_has_diagnostic4() const;
-  public:
-  void clear_diagnostic4();
-  uint64_t diagnostic4() const;
-  void set_diagnostic4(uint64_t value);
-  private:
-  uint64_t _internal_diagnostic4() const;
-  void _internal_set_diagnostic4(uint64_t value);
-  public:
-
-  // optional uint64 diagnostic5 = 19;
-  bool has_diagnostic5() const;
-  private:
-  bool _internal_has_diagnostic5() const;
-  public:
-  void clear_diagnostic5();
-  uint64_t diagnostic5() const;
-  void set_diagnostic5(uint64_t value);
-  private:
-  uint64_t _internal_diagnostic5() const;
-  void _internal_set_diagnostic5(uint64_t value);
-  public:
-
-  // optional uint32 report_count = 16;
-  bool has_report_count() const;
-  private:
-  bool _internal_has_report_count() const;
-  public:
-  void clear_report_count();
-  uint32_t report_count() const;
-  void set_report_count(uint32_t value);
-  private:
-  uint32_t _internal_report_count() const;
-  void _internal_set_report_count(uint32_t value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_ClientReportValidation)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CVDiagnostic > diagnostics_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr file_report_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr command_line_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr last_launch_data_;
-    uint32_t total_files_;
-    uint32_t internal_error_;
-    uint32_t trust_time_;
-    uint32_t count_pending_;
-    uint32_t count_completed_;
-    uint32_t process_id_;
-    int32_t osversion_;
-    uint32_t clientreportversion_;
-    uint32_t status_id_;
-    uint32_t diagnostic1_;
-    uint64_t diagnostic2_;
-    uint64_t diagnostic3_;
-    uint64_t client_time_;
-    uint64_t diagnostic4_;
-    uint64_t diagnostic5_;
-    uint32_t report_count_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
-};
-// -------------------------------------------------------------------
-
-class CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode) */ {
- public:
-  inline CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode() : CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode(nullptr) {}
-  ~CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode() override;
-  explicit PROTOBUF_CONSTEXPR CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode(const CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& from);
-  CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode(CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode&& from) noexcept
-    : CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode() {
-    *this = ::std::move(from);
-  }
-
-  inline CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& operator=(const CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& operator=(CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode* internal_default_instance() {
-    return reinterpret_cast<const CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode*>(
-               &_CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    170;
-
-  friend void swap(CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& a, CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode& from) {
-    CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode";
-  }
-  protected:
-  explicit CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kFileReportFieldNumber = 1,
-    kFilesPreventedTrustedFieldNumber = 9,
-    kOfferInsecureModeFieldNumber = 2,
-    kOfferSecureModeFieldNumber = 3,
-    kShowUnsignedUiFieldNumber = 4,
-    kKickUserFieldNumber = 5,
-    kShowTrustedUiFieldNumber = 6,
-    kShowWarningNotTrustedFieldNumber = 7,
-    kShowWarningNotTrusted2FieldNumber = 8,
-  };
-  // optional string file_report = 1;
-  bool has_file_report() const;
-  private:
-  bool _internal_has_file_report() const;
-  public:
-  void clear_file_report();
-  const std::string& file_report() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_file_report(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_file_report();
-  PROTOBUF_NODISCARD std::string* release_file_report();
-  void set_allocated_file_report(std::string* file_report);
-  private:
-  const std::string& _internal_file_report() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_file_report(const std::string& value);
-  std::string* _internal_mutable_file_report();
-  public:
-
-  // optional string files_prevented_trusted = 9;
-  bool has_files_prevented_trusted() const;
-  private:
-  bool _internal_has_files_prevented_trusted() const;
-  public:
-  void clear_files_prevented_trusted();
-  const std::string& files_prevented_trusted() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_files_prevented_trusted(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_files_prevented_trusted();
-  PROTOBUF_NODISCARD std::string* release_files_prevented_trusted();
-  void set_allocated_files_prevented_trusted(std::string* files_prevented_trusted);
-  private:
-  const std::string& _internal_files_prevented_trusted() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_files_prevented_trusted(const std::string& value);
-  std::string* _internal_mutable_files_prevented_trusted();
-  public:
-
-  // optional bool offer_insecure_mode = 2;
-  bool has_offer_insecure_mode() const;
-  private:
-  bool _internal_has_offer_insecure_mode() const;
-  public:
-  void clear_offer_insecure_mode();
-  bool offer_insecure_mode() const;
-  void set_offer_insecure_mode(bool value);
-  private:
-  bool _internal_offer_insecure_mode() const;
-  void _internal_set_offer_insecure_mode(bool value);
-  public:
-
-  // optional bool offer_secure_mode = 3;
-  bool has_offer_secure_mode() const;
-  private:
-  bool _internal_has_offer_secure_mode() const;
-  public:
-  void clear_offer_secure_mode();
-  bool offer_secure_mode() const;
-  void set_offer_secure_mode(bool value);
-  private:
-  bool _internal_offer_secure_mode() const;
-  void _internal_set_offer_secure_mode(bool value);
-  public:
-
-  // optional bool show_unsigned_ui = 4;
-  bool has_show_unsigned_ui() const;
-  private:
-  bool _internal_has_show_unsigned_ui() const;
-  public:
-  void clear_show_unsigned_ui();
-  bool show_unsigned_ui() const;
-  void set_show_unsigned_ui(bool value);
-  private:
-  bool _internal_show_unsigned_ui() const;
-  void _internal_set_show_unsigned_ui(bool value);
-  public:
-
-  // optional bool kick_user = 5;
-  bool has_kick_user() const;
-  private:
-  bool _internal_has_kick_user() const;
-  public:
-  void clear_kick_user();
-  bool kick_user() const;
-  void set_kick_user(bool value);
-  private:
-  bool _internal_kick_user() const;
-  void _internal_set_kick_user(bool value);
-  public:
-
-  // optional bool show_trusted_ui = 6;
-  bool has_show_trusted_ui() const;
-  private:
-  bool _internal_has_show_trusted_ui() const;
-  public:
-  void clear_show_trusted_ui();
-  bool show_trusted_ui() const;
-  void set_show_trusted_ui(bool value);
-  private:
-  bool _internal_show_trusted_ui() const;
-  void _internal_set_show_trusted_ui(bool value);
-  public:
-
-  // optional bool show_warning_not_trusted = 7;
-  bool has_show_warning_not_trusted() const;
-  private:
-  bool _internal_has_show_warning_not_trusted() const;
-  public:
-  void clear_show_warning_not_trusted();
-  bool show_warning_not_trusted() const;
-  void set_show_warning_not_trusted(bool value);
-  private:
-  bool _internal_show_warning_not_trusted() const;
-  void _internal_set_show_warning_not_trusted(bool value);
-  public:
-
-  // optional bool show_warning_not_trusted_2 = 8;
-  bool has_show_warning_not_trusted_2() const;
-  private:
-  bool _internal_has_show_warning_not_trusted_2() const;
-  public:
-  void clear_show_warning_not_trusted_2();
-  bool show_warning_not_trusted_2() const;
-  void set_show_warning_not_trusted_2(bool value);
-  private:
-  bool _internal_show_warning_not_trusted_2() const;
-  void _internal_set_show_warning_not_trusted_2(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr file_report_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr files_prevented_trusted_;
-    bool offer_insecure_mode_;
-    bool offer_secure_mode_;
-    bool show_unsigned_ui_;
-    bool kick_user_;
-    bool show_trusted_ui_;
-    bool show_warning_not_trusted_;
-    bool show_warning_not_trusted_2_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
-};
-// -------------------------------------------------------------------
-
-class CMsgGCCStrike15_v2_GC2ClientRequestValidation :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_GC2ClientRequestValidation) */ {
- public:
-  inline CMsgGCCStrike15_v2_GC2ClientRequestValidation() : CMsgGCCStrike15_v2_GC2ClientRequestValidation(nullptr) {}
-  ~CMsgGCCStrike15_v2_GC2ClientRequestValidation() override;
-  explicit PROTOBUF_CONSTEXPR CMsgGCCStrike15_v2_GC2ClientRequestValidation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  CMsgGCCStrike15_v2_GC2ClientRequestValidation(const CMsgGCCStrike15_v2_GC2ClientRequestValidation& from);
-  CMsgGCCStrike15_v2_GC2ClientRequestValidation(CMsgGCCStrike15_v2_GC2ClientRequestValidation&& from) noexcept
-    : CMsgGCCStrike15_v2_GC2ClientRequestValidation() {
-    *this = ::std::move(from);
-  }
-
-  inline CMsgGCCStrike15_v2_GC2ClientRequestValidation& operator=(const CMsgGCCStrike15_v2_GC2ClientRequestValidation& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CMsgGCCStrike15_v2_GC2ClientRequestValidation& operator=(CMsgGCCStrike15_v2_GC2ClientRequestValidation&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const CMsgGCCStrike15_v2_GC2ClientRequestValidation& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const CMsgGCCStrike15_v2_GC2ClientRequestValidation* internal_default_instance() {
-    return reinterpret_cast<const CMsgGCCStrike15_v2_GC2ClientRequestValidation*>(
-               &_CMsgGCCStrike15_v2_GC2ClientRequestValidation_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    171;
-
-  friend void swap(CMsgGCCStrike15_v2_GC2ClientRequestValidation& a, CMsgGCCStrike15_v2_GC2ClientRequestValidation& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CMsgGCCStrike15_v2_GC2ClientRequestValidation* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CMsgGCCStrike15_v2_GC2ClientRequestValidation* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  CMsgGCCStrike15_v2_GC2ClientRequestValidation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CMsgGCCStrike15_v2_GC2ClientRequestValidation>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const CMsgGCCStrike15_v2_GC2ClientRequestValidation& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CMsgGCCStrike15_v2_GC2ClientRequestValidation& from) {
-    CMsgGCCStrike15_v2_GC2ClientRequestValidation::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CMsgGCCStrike15_v2_GC2ClientRequestValidation* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "CMsgGCCStrike15_v2_GC2ClientRequestValidation";
-  }
-  protected:
-  explicit CMsgGCCStrike15_v2_GC2ClientRequestValidation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kModuleFieldNumber = 2,
-    kFullReportFieldNumber = 1,
-  };
-  // optional string module = 2;
-  bool has_module() const;
-  private:
-  bool _internal_has_module() const;
-  public:
-  void clear_module();
-  const std::string& module() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_module(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_module();
-  PROTOBUF_NODISCARD std::string* release_module();
-  void set_allocated_module(std::string* module);
-  private:
-  const std::string& _internal_module() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_module(const std::string& value);
-  std::string* _internal_mutable_module();
-  public:
-
-  // optional bool full_report = 1;
-  bool has_full_report() const;
-  private:
-  bool _internal_has_full_report() const;
-  public:
-  void clear_full_report();
-  bool full_report() const;
-  void set_full_report(bool value);
-  private:
-  bool _internal_full_report() const;
-  void _internal_set_full_report(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_GC2ClientRequestValidation)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr module_;
-    bool full_report_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
-};
-// -------------------------------------------------------------------
-
-class CMsgGCCStrike15_v2_GC2ClientInitSystem :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_GC2ClientInitSystem) */ {
- public:
-  inline CMsgGCCStrike15_v2_GC2ClientInitSystem() : CMsgGCCStrike15_v2_GC2ClientInitSystem(nullptr) {}
-  ~CMsgGCCStrike15_v2_GC2ClientInitSystem() override;
-  explicit PROTOBUF_CONSTEXPR CMsgGCCStrike15_v2_GC2ClientInitSystem(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  CMsgGCCStrike15_v2_GC2ClientInitSystem(const CMsgGCCStrike15_v2_GC2ClientInitSystem& from);
-  CMsgGCCStrike15_v2_GC2ClientInitSystem(CMsgGCCStrike15_v2_GC2ClientInitSystem&& from) noexcept
-    : CMsgGCCStrike15_v2_GC2ClientInitSystem() {
-    *this = ::std::move(from);
-  }
-
-  inline CMsgGCCStrike15_v2_GC2ClientInitSystem& operator=(const CMsgGCCStrike15_v2_GC2ClientInitSystem& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CMsgGCCStrike15_v2_GC2ClientInitSystem& operator=(CMsgGCCStrike15_v2_GC2ClientInitSystem&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const CMsgGCCStrike15_v2_GC2ClientInitSystem& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const CMsgGCCStrike15_v2_GC2ClientInitSystem* internal_default_instance() {
-    return reinterpret_cast<const CMsgGCCStrike15_v2_GC2ClientInitSystem*>(
-               &_CMsgGCCStrike15_v2_GC2ClientInitSystem_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    172;
-
-  friend void swap(CMsgGCCStrike15_v2_GC2ClientInitSystem& a, CMsgGCCStrike15_v2_GC2ClientInitSystem& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CMsgGCCStrike15_v2_GC2ClientInitSystem* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CMsgGCCStrike15_v2_GC2ClientInitSystem* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  CMsgGCCStrike15_v2_GC2ClientInitSystem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CMsgGCCStrike15_v2_GC2ClientInitSystem>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const CMsgGCCStrike15_v2_GC2ClientInitSystem& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CMsgGCCStrike15_v2_GC2ClientInitSystem& from) {
-    CMsgGCCStrike15_v2_GC2ClientInitSystem::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CMsgGCCStrike15_v2_GC2ClientInitSystem* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "CMsgGCCStrike15_v2_GC2ClientInitSystem";
-  }
-  protected:
-  explicit CMsgGCCStrike15_v2_GC2ClientInitSystem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kNameFieldNumber = 2,
-    kOutputnameFieldNumber = 3,
-    kKeyDataFieldNumber = 4,
-    kShaHashFieldNumber = 5,
-    kManifestFieldNumber = 7,
-    kSystemPackageFieldNumber = 8,
-    kLoadFieldNumber = 1,
-    kLoadSystemFieldNumber = 9,
-    kCookieFieldNumber = 6,
-  };
-  // optional string name = 2;
-  bool has_name() const;
-  private:
-  bool _internal_has_name() const;
-  public:
-  void clear_name();
-  const std::string& name() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
-  private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
-  public:
-
-  // optional string outputname = 3;
-  bool has_outputname() const;
-  private:
-  bool _internal_has_outputname() const;
-  public:
-  void clear_outputname();
-  const std::string& outputname() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_outputname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_outputname();
-  PROTOBUF_NODISCARD std::string* release_outputname();
-  void set_allocated_outputname(std::string* outputname);
-  private:
-  const std::string& _internal_outputname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_outputname(const std::string& value);
-  std::string* _internal_mutable_outputname();
-  public:
-
-  // optional bytes key_data = 4;
-  bool has_key_data() const;
-  private:
-  bool _internal_has_key_data() const;
-  public:
-  void clear_key_data();
-  const std::string& key_data() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key_data();
-  PROTOBUF_NODISCARD std::string* release_key_data();
-  void set_allocated_key_data(std::string* key_data);
-  private:
-  const std::string& _internal_key_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key_data(const std::string& value);
-  std::string* _internal_mutable_key_data();
-  public:
-
-  // optional bytes sha_hash = 5;
-  bool has_sha_hash() const;
-  private:
-  bool _internal_has_sha_hash() const;
-  public:
-  void clear_sha_hash();
-  const std::string& sha_hash() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sha_hash(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sha_hash();
-  PROTOBUF_NODISCARD std::string* release_sha_hash();
-  void set_allocated_sha_hash(std::string* sha_hash);
-  private:
-  const std::string& _internal_sha_hash() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sha_hash(const std::string& value);
-  std::string* _internal_mutable_sha_hash();
-  public:
-
-  // optional string manifest = 7;
-  bool has_manifest() const;
-  private:
-  bool _internal_has_manifest() const;
-  public:
-  void clear_manifest();
-  const std::string& manifest() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_manifest(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_manifest();
-  PROTOBUF_NODISCARD std::string* release_manifest();
-  void set_allocated_manifest(std::string* manifest);
-  private:
-  const std::string& _internal_manifest() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_manifest(const std::string& value);
-  std::string* _internal_mutable_manifest();
-  public:
-
-  // optional bytes system_package = 8;
-  bool has_system_package() const;
-  private:
-  bool _internal_has_system_package() const;
-  public:
-  void clear_system_package();
-  const std::string& system_package() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_system_package(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_system_package();
-  PROTOBUF_NODISCARD std::string* release_system_package();
-  void set_allocated_system_package(std::string* system_package);
-  private:
-  const std::string& _internal_system_package() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_system_package(const std::string& value);
-  std::string* _internal_mutable_system_package();
-  public:
-
-  // optional bool load = 1;
-  bool has_load() const;
-  private:
-  bool _internal_has_load() const;
-  public:
-  void clear_load();
-  bool load() const;
-  void set_load(bool value);
-  private:
-  bool _internal_load() const;
-  void _internal_set_load(bool value);
-  public:
-
-  // optional bool load_system = 9;
-  bool has_load_system() const;
-  private:
-  bool _internal_has_load_system() const;
-  public:
-  void clear_load_system();
-  bool load_system() const;
-  void set_load_system(bool value);
-  private:
-  bool _internal_load_system() const;
-  void _internal_set_load_system(bool value);
-  public:
-
-  // optional int32 cookie = 6;
-  bool has_cookie() const;
-  private:
-  bool _internal_has_cookie() const;
-  public:
-  void clear_cookie();
-  int32_t cookie() const;
-  void set_cookie(int32_t value);
-  private:
-  int32_t _internal_cookie() const;
-  void _internal_set_cookie(int32_t value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_GC2ClientInitSystem)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr outputname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_data_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sha_hash_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr manifest_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr system_package_;
-    bool load_;
-    bool load_system_;
-    int32_t cookie_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
-};
-// -------------------------------------------------------------------
-
-class CMsgGCCStrike15_v2_GC2ClientInitSystem_Response :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response) */ {
- public:
-  inline CMsgGCCStrike15_v2_GC2ClientInitSystem_Response() : CMsgGCCStrike15_v2_GC2ClientInitSystem_Response(nullptr) {}
-  ~CMsgGCCStrike15_v2_GC2ClientInitSystem_Response() override;
-  explicit PROTOBUF_CONSTEXPR CMsgGCCStrike15_v2_GC2ClientInitSystem_Response(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  CMsgGCCStrike15_v2_GC2ClientInitSystem_Response(const CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& from);
-  CMsgGCCStrike15_v2_GC2ClientInitSystem_Response(CMsgGCCStrike15_v2_GC2ClientInitSystem_Response&& from) noexcept
-    : CMsgGCCStrike15_v2_GC2ClientInitSystem_Response() {
-    *this = ::std::move(from);
-  }
-
-  inline CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& operator=(const CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& operator=(CMsgGCCStrike15_v2_GC2ClientInitSystem_Response&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const CMsgGCCStrike15_v2_GC2ClientInitSystem_Response* internal_default_instance() {
-    return reinterpret_cast<const CMsgGCCStrike15_v2_GC2ClientInitSystem_Response*>(
-               &_CMsgGCCStrike15_v2_GC2ClientInitSystem_Response_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    173;
-
-  friend void swap(CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& a, CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CMsgGCCStrike15_v2_GC2ClientInitSystem_Response* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CMsgGCCStrike15_v2_GC2ClientInitSystem_Response* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  CMsgGCCStrike15_v2_GC2ClientInitSystem_Response* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CMsgGCCStrike15_v2_GC2ClientInitSystem_Response>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CMsgGCCStrike15_v2_GC2ClientInitSystem_Response& from) {
-    CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CMsgGCCStrike15_v2_GC2ClientInitSystem_Response* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "CMsgGCCStrike15_v2_GC2ClientInitSystem_Response";
-  }
-  protected:
-  explicit CMsgGCCStrike15_v2_GC2ClientInitSystem_Response(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kDiagnosticFieldNumber = 2,
-    kShaHashFieldNumber = 3,
-    kSuccessFieldNumber = 1,
-    kResponseFieldNumber = 4,
-    kErrorCode1FieldNumber = 5,
-    kErrorCode2FieldNumber = 6,
-    kHandleFieldNumber = 7,
-    kEinitResultFieldNumber = 8,
-    kAuxSystem1FieldNumber = 9,
-    kAuxSystem2FieldNumber = 10,
-  };
-  // optional string diagnostic = 2;
-  bool has_diagnostic() const;
-  private:
-  bool _internal_has_diagnostic() const;
-  public:
-  void clear_diagnostic();
-  const std::string& diagnostic() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_diagnostic(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_diagnostic();
-  PROTOBUF_NODISCARD std::string* release_diagnostic();
-  void set_allocated_diagnostic(std::string* diagnostic);
-  private:
-  const std::string& _internal_diagnostic() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_diagnostic(const std::string& value);
-  std::string* _internal_mutable_diagnostic();
-  public:
-
-  // optional bytes sha_hash = 3;
-  bool has_sha_hash() const;
-  private:
-  bool _internal_has_sha_hash() const;
-  public:
-  void clear_sha_hash();
-  const std::string& sha_hash() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sha_hash(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sha_hash();
-  PROTOBUF_NODISCARD std::string* release_sha_hash();
-  void set_allocated_sha_hash(std::string* sha_hash);
-  private:
-  const std::string& _internal_sha_hash() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sha_hash(const std::string& value);
-  std::string* _internal_mutable_sha_hash();
-  public:
-
-  // optional bool success = 1;
-  bool has_success() const;
-  private:
-  bool _internal_has_success() const;
-  public:
-  void clear_success();
-  bool success() const;
-  void set_success(bool value);
-  private:
-  bool _internal_success() const;
-  void _internal_set_success(bool value);
-  public:
-
-  // optional int32 response = 4;
-  bool has_response() const;
-  private:
-  bool _internal_has_response() const;
-  public:
-  void clear_response();
-  int32_t response() const;
-  void set_response(int32_t value);
-  private:
-  int32_t _internal_response() const;
-  void _internal_set_response(int32_t value);
-  public:
-
-  // optional int32 error_code1 = 5;
-  bool has_error_code1() const;
-  private:
-  bool _internal_has_error_code1() const;
-  public:
-  void clear_error_code1();
-  int32_t error_code1() const;
-  void set_error_code1(int32_t value);
-  private:
-  int32_t _internal_error_code1() const;
-  void _internal_set_error_code1(int32_t value);
-  public:
-
-  // optional int32 error_code2 = 6;
-  bool has_error_code2() const;
-  private:
-  bool _internal_has_error_code2() const;
-  public:
-  void clear_error_code2();
-  int32_t error_code2() const;
-  void set_error_code2(int32_t value);
-  private:
-  int32_t _internal_error_code2() const;
-  void _internal_set_error_code2(int32_t value);
-  public:
-
-  // optional int64 handle = 7;
-  bool has_handle() const;
-  private:
-  bool _internal_has_handle() const;
-  public:
-  void clear_handle();
-  int64_t handle() const;
-  void set_handle(int64_t value);
-  private:
-  int64_t _internal_handle() const;
-  void _internal_set_handle(int64_t value);
-  public:
-
-  // optional .EInitSystemResult einit_result = 8 [default = k_EInitSystemResult_Invalid];
-  bool has_einit_result() const;
-  private:
-  bool _internal_has_einit_result() const;
-  public:
-  void clear_einit_result();
-  ::EInitSystemResult einit_result() const;
-  void set_einit_result(::EInitSystemResult value);
-  private:
-  ::EInitSystemResult _internal_einit_result() const;
-  void _internal_set_einit_result(::EInitSystemResult value);
-  public:
-
-  // optional int32 aux_system1 = 9;
-  bool has_aux_system1() const;
-  private:
-  bool _internal_has_aux_system1() const;
-  public:
-  void clear_aux_system1();
-  int32_t aux_system1() const;
-  void set_aux_system1(int32_t value);
-  private:
-  int32_t _internal_aux_system1() const;
-  void _internal_set_aux_system1(int32_t value);
-  public:
-
-  // optional int32 aux_system2 = 10;
-  bool has_aux_system2() const;
-  private:
-  bool _internal_has_aux_system2() const;
-  public:
-  void clear_aux_system2();
-  int32_t aux_system2() const;
-  void set_aux_system2(int32_t value);
-  private:
-  int32_t _internal_aux_system2() const;
-  void _internal_set_aux_system2(int32_t value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr diagnostic_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sha_hash_;
-    bool success_;
-    int32_t response_;
-    int32_t error_code1_;
-    int32_t error_code2_;
-    int64_t handle_;
-    int einit_result_;
-    int32_t aux_system1_;
-    int32_t aux_system2_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_cstrike15_5fgcmessages_2eproto;
-};
-// -------------------------------------------------------------------
-
 class CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName) */ {
  public:
@@ -40726,7 +40127,7 @@ class CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName :
                &_CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    174;
+    173;
 
   friend void swap(CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName& a, CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName& b) {
     a.Swap(&b);
@@ -40890,7 +40291,7 @@ class CMsgRequestRecurringMissionSchedule :
                &_CMsgRequestRecurringMissionSchedule_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    175;
+    174;
 
   friend void swap(CMsgRequestRecurringMissionSchedule& a, CMsgRequestRecurringMissionSchedule& b) {
     a.Swap(&b);
@@ -41016,7 +40417,7 @@ class CMsgRecurringMissionSchema_MissionTemplateList :
                &_CMsgRecurringMissionSchema_MissionTemplateList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    176;
+    175;
 
   friend void swap(CMsgRecurringMissionSchema_MissionTemplateList& a, CMsgRecurringMissionSchema_MissionTemplateList& b) {
     a.Swap(&b);
@@ -41202,7 +40603,7 @@ class CMsgRecurringMissionSchema :
                &_CMsgRecurringMissionSchema_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    177;
+    176;
 
   friend void swap(CMsgRecurringMissionSchema& a, CMsgRecurringMissionSchema& b) {
     a.Swap(&b);
@@ -51763,6 +51164,81 @@ inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::set_match_id_additio
   // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.match_id_additional)
 }
 
+// repeated string clan_tags = 23;
+inline int CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::_internal_clan_tags_size() const {
+  return _impl_.clan_tags_.size();
+}
+inline int CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::clan_tags_size() const {
+  return _internal_clan_tags_size();
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::clear_clan_tags() {
+  _impl_.clan_tags_.Clear();
+}
+inline std::string* CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::add_clan_tags() {
+  std::string* _s = _internal_add_clan_tags();
+  // @@protoc_insertion_point(field_add_mutable:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+  return _s;
+}
+inline const std::string& CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::_internal_clan_tags(int index) const {
+  return _impl_.clan_tags_.Get(index);
+}
+inline const std::string& CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::clan_tags(int index) const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+  return _internal_clan_tags(index);
+}
+inline std::string* CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::mutable_clan_tags(int index) {
+  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+  return _impl_.clan_tags_.Mutable(index);
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::set_clan_tags(int index, const std::string& value) {
+  _impl_.clan_tags_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::set_clan_tags(int index, std::string&& value) {
+  _impl_.clan_tags_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::set_clan_tags(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  _impl_.clan_tags_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::set_clan_tags(int index, const char* value, size_t size) {
+  _impl_.clan_tags_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline std::string* CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::_internal_add_clan_tags() {
+  return _impl_.clan_tags_.Add();
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::add_clan_tags(const std::string& value) {
+  _impl_.clan_tags_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::add_clan_tags(std::string&& value) {
+  _impl_.clan_tags_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::add_clan_tags(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  _impl_.clan_tags_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline void CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::add_clan_tags(const char* value, size_t size) {
+  _impl_.clan_tags_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::clan_tags() const {
+  // @@protoc_insertion_point(field_list:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+  return _impl_.clan_tags_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve::mutable_clan_tags() {
+  // @@protoc_insertion_point(field_mutable_list:CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve.clan_tags)
+  return &_impl_.clan_tags_;
+}
+
 // -------------------------------------------------------------------
 
 // CMsgGCCStrike15_v2_MatchmakingServerReservationResponse
@@ -56077,6 +55553,34 @@ inline void CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::set_communicati
   // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ServerNotificationForUserPenalty.communication_cooldown)
 }
 
+// optional uint32 cheating_penalty_level = 5;
+inline bool CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::_internal_has_cheating_penalty_level() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::has_cheating_penalty_level() const {
+  return _internal_has_cheating_penalty_level();
+}
+inline void CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::clear_cheating_penalty_level() {
+  _impl_.cheating_penalty_level_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline uint32_t CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::_internal_cheating_penalty_level() const {
+  return _impl_.cheating_penalty_level_;
+}
+inline uint32_t CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::cheating_penalty_level() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ServerNotificationForUserPenalty.cheating_penalty_level)
+  return _internal_cheating_penalty_level();
+}
+inline void CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::_internal_set_cheating_penalty_level(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.cheating_penalty_level_ = value;
+}
+inline void CMsgGCCStrike15_v2_ServerNotificationForUserPenalty::set_cheating_penalty_level(uint32_t value) {
+  _internal_set_cheating_penalty_level(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ServerNotificationForUserPenalty.cheating_penalty_level)
+}
+
 // -------------------------------------------------------------------
 
 // CMsgGCCStrike15_v2_ClientReportPlayer
@@ -57820,6 +57324,34 @@ inline void CMsgGCCStrike15_v2_ClientRequestJoinFriendData::set_allocated_errorm
   // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_ClientRequestJoinFriendData.errormsg)
 }
 
+// optional bool is_local_server = 7;
+inline bool CMsgGCCStrike15_v2_ClientRequestJoinFriendData::_internal_has_is_local_server() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_ClientRequestJoinFriendData::has_is_local_server() const {
+  return _internal_has_is_local_server();
+}
+inline void CMsgGCCStrike15_v2_ClientRequestJoinFriendData::clear_is_local_server() {
+  _impl_.is_local_server_ = false;
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline bool CMsgGCCStrike15_v2_ClientRequestJoinFriendData::_internal_is_local_server() const {
+  return _impl_.is_local_server_;
+}
+inline bool CMsgGCCStrike15_v2_ClientRequestJoinFriendData::is_local_server() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientRequestJoinFriendData.is_local_server)
+  return _internal_is_local_server();
+}
+inline void CMsgGCCStrike15_v2_ClientRequestJoinFriendData::_internal_set_is_local_server(bool value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.is_local_server_ = value;
+}
+inline void CMsgGCCStrike15_v2_ClientRequestJoinFriendData::set_is_local_server(bool value) {
+  _internal_set_is_local_server(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientRequestJoinFriendData.is_local_server)
+}
+
 // -------------------------------------------------------------------
 
 // CMsgGCCStrike15_v2_ClientRequestJoinServerData
@@ -58240,7 +57772,7 @@ inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::set_expected_cost(uint
 
 // optional int32 bid_control = 5;
 inline bool CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_has_bid_control() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool CMsgGCCstrike15_v2_ClientRedeemMissionReward::has_bid_control() const {
@@ -58248,7 +57780,7 @@ inline bool CMsgGCCstrike15_v2_ClientRedeemMissionReward::has_bid_control() cons
 }
 inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::clear_bid_control() {
   _impl_.bid_control_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int32_t CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_bid_control() const {
   return _impl_.bid_control_;
@@ -58258,12 +57790,87 @@ inline int32_t CMsgGCCstrike15_v2_ClientRedeemMissionReward::bid_control() const
   return _internal_bid_control();
 }
 inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_set_bid_control(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.bid_control_ = value;
 }
 inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::set_bid_control(int32_t value) {
   _internal_set_bid_control(value);
   // @@protoc_insertion_point(field_set:CMsgGCCstrike15_v2_ClientRedeemMissionReward.bid_control)
+}
+
+// repeated uint64 volatile_shop = 6;
+inline int CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_volatile_shop_size() const {
+  return _impl_.volatile_shop_.size();
+}
+inline int CMsgGCCstrike15_v2_ClientRedeemMissionReward::volatile_shop_size() const {
+  return _internal_volatile_shop_size();
+}
+inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::clear_volatile_shop() {
+  _impl_.volatile_shop_.Clear();
+}
+inline uint64_t CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_volatile_shop(int index) const {
+  return _impl_.volatile_shop_.Get(index);
+}
+inline uint64_t CMsgGCCstrike15_v2_ClientRedeemMissionReward::volatile_shop(int index) const {
+  // @@protoc_insertion_point(field_get:CMsgGCCstrike15_v2_ClientRedeemMissionReward.volatile_shop)
+  return _internal_volatile_shop(index);
+}
+inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::set_volatile_shop(int index, uint64_t value) {
+  _impl_.volatile_shop_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CMsgGCCstrike15_v2_ClientRedeemMissionReward.volatile_shop)
+}
+inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_add_volatile_shop(uint64_t value) {
+  _impl_.volatile_shop_.Add(value);
+}
+inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::add_volatile_shop(uint64_t value) {
+  _internal_add_volatile_shop(value);
+  // @@protoc_insertion_point(field_add:CMsgGCCstrike15_v2_ClientRedeemMissionReward.volatile_shop)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_volatile_shop() const {
+  return _impl_.volatile_shop_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+CMsgGCCstrike15_v2_ClientRedeemMissionReward::volatile_shop() const {
+  // @@protoc_insertion_point(field_list:CMsgGCCstrike15_v2_ClientRedeemMissionReward.volatile_shop)
+  return _internal_volatile_shop();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_mutable_volatile_shop() {
+  return &_impl_.volatile_shop_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+CMsgGCCstrike15_v2_ClientRedeemMissionReward::mutable_volatile_shop() {
+  // @@protoc_insertion_point(field_mutable_list:CMsgGCCstrike15_v2_ClientRedeemMissionReward.volatile_shop)
+  return _internal_mutable_volatile_shop();
+}
+
+// optional uint64 souvenir_matchid = 7;
+inline bool CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_has_souvenir_matchid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool CMsgGCCstrike15_v2_ClientRedeemMissionReward::has_souvenir_matchid() const {
+  return _internal_has_souvenir_matchid();
+}
+inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::clear_souvenir_matchid() {
+  _impl_.souvenir_matchid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline uint64_t CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_souvenir_matchid() const {
+  return _impl_.souvenir_matchid_;
+}
+inline uint64_t CMsgGCCstrike15_v2_ClientRedeemMissionReward::souvenir_matchid() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCstrike15_v2_ClientRedeemMissionReward.souvenir_matchid)
+  return _internal_souvenir_matchid();
+}
+inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::_internal_set_souvenir_matchid(uint64_t value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.souvenir_matchid_ = value;
+}
+inline void CMsgGCCstrike15_v2_ClientRedeemMissionReward::set_souvenir_matchid(uint64_t value) {
+  _internal_set_souvenir_matchid(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCstrike15_v2_ClientRedeemMissionReward.souvenir_matchid)
 }
 
 // -------------------------------------------------------------------
@@ -61506,6 +61113,34 @@ inline void CEconItemPreviewDataBlock_Sticker::set_highlight_reel(uint32_t value
   // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.Sticker.highlight_reel)
 }
 
+// optional uint32 wrapped_sticker = 12;
+inline bool CEconItemPreviewDataBlock_Sticker::_internal_has_wrapped_sticker() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool CEconItemPreviewDataBlock_Sticker::has_wrapped_sticker() const {
+  return _internal_has_wrapped_sticker();
+}
+inline void CEconItemPreviewDataBlock_Sticker::clear_wrapped_sticker() {
+  _impl_.wrapped_sticker_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000800u;
+}
+inline uint32_t CEconItemPreviewDataBlock_Sticker::_internal_wrapped_sticker() const {
+  return _impl_.wrapped_sticker_;
+}
+inline uint32_t CEconItemPreviewDataBlock_Sticker::wrapped_sticker() const {
+  // @@protoc_insertion_point(field_get:CEconItemPreviewDataBlock.Sticker.wrapped_sticker)
+  return _internal_wrapped_sticker();
+}
+inline void CEconItemPreviewDataBlock_Sticker::_internal_set_wrapped_sticker(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000800u;
+  _impl_.wrapped_sticker_ = value;
+}
+inline void CEconItemPreviewDataBlock_Sticker::set_wrapped_sticker(uint32_t value) {
+  _internal_set_wrapped_sticker(value);
+  // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.Sticker.wrapped_sticker)
+}
+
 // -------------------------------------------------------------------
 
 // CEconItemPreviewDataBlock
@@ -61790,72 +61425,79 @@ inline void CEconItemPreviewDataBlock::set_killeatervalue(uint32_t value) {
   // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.killeatervalue)
 }
 
-// optional string customname = 11;
-inline bool CEconItemPreviewDataBlock::_internal_has_customname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
+// repeated string customnames = 11;
+inline int CEconItemPreviewDataBlock::_internal_customnames_size() const {
+  return _impl_.customnames_.size();
 }
-inline bool CEconItemPreviewDataBlock::has_customname() const {
-  return _internal_has_customname();
+inline int CEconItemPreviewDataBlock::customnames_size() const {
+  return _internal_customnames_size();
 }
-inline void CEconItemPreviewDataBlock::clear_customname() {
-  _impl_.customname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+inline void CEconItemPreviewDataBlock::clear_customnames() {
+  _impl_.customnames_.Clear();
 }
-inline const std::string& CEconItemPreviewDataBlock::customname() const {
-  // @@protoc_insertion_point(field_get:CEconItemPreviewDataBlock.customname)
-  return _internal_customname();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CEconItemPreviewDataBlock::set_customname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.customname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.customname)
-}
-inline std::string* CEconItemPreviewDataBlock::mutable_customname() {
-  std::string* _s = _internal_mutable_customname();
-  // @@protoc_insertion_point(field_mutable:CEconItemPreviewDataBlock.customname)
+inline std::string* CEconItemPreviewDataBlock::add_customnames() {
+  std::string* _s = _internal_add_customnames();
+  // @@protoc_insertion_point(field_add_mutable:CEconItemPreviewDataBlock.customnames)
   return _s;
 }
-inline const std::string& CEconItemPreviewDataBlock::_internal_customname() const {
-  return _impl_.customname_.Get();
+inline const std::string& CEconItemPreviewDataBlock::_internal_customnames(int index) const {
+  return _impl_.customnames_.Get(index);
 }
-inline void CEconItemPreviewDataBlock::_internal_set_customname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.customname_.Set(value, GetArenaForAllocation());
+inline const std::string& CEconItemPreviewDataBlock::customnames(int index) const {
+  // @@protoc_insertion_point(field_get:CEconItemPreviewDataBlock.customnames)
+  return _internal_customnames(index);
 }
-inline std::string* CEconItemPreviewDataBlock::_internal_mutable_customname() {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.customname_.Mutable(GetArenaForAllocation());
+inline std::string* CEconItemPreviewDataBlock::mutable_customnames(int index) {
+  // @@protoc_insertion_point(field_mutable:CEconItemPreviewDataBlock.customnames)
+  return _impl_.customnames_.Mutable(index);
 }
-inline std::string* CEconItemPreviewDataBlock::release_customname() {
-  // @@protoc_insertion_point(field_release:CEconItemPreviewDataBlock.customname)
-  if (!_internal_has_customname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.customname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.customname_.IsDefault()) {
-    _impl_.customname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+inline void CEconItemPreviewDataBlock::set_customnames(int index, const std::string& value) {
+  _impl_.customnames_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.customnames)
 }
-inline void CEconItemPreviewDataBlock::set_allocated_customname(std::string* customname) {
-  if (customname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.customname_.SetAllocated(customname, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.customname_.IsDefault()) {
-    _impl_.customname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CEconItemPreviewDataBlock.customname)
+inline void CEconItemPreviewDataBlock::set_customnames(int index, std::string&& value) {
+  _impl_.customnames_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.customnames)
+}
+inline void CEconItemPreviewDataBlock::set_customnames(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  _impl_.customnames_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:CEconItemPreviewDataBlock.customnames)
+}
+inline void CEconItemPreviewDataBlock::set_customnames(int index, const char* value, size_t size) {
+  _impl_.customnames_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:CEconItemPreviewDataBlock.customnames)
+}
+inline std::string* CEconItemPreviewDataBlock::_internal_add_customnames() {
+  return _impl_.customnames_.Add();
+}
+inline void CEconItemPreviewDataBlock::add_customnames(const std::string& value) {
+  _impl_.customnames_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:CEconItemPreviewDataBlock.customnames)
+}
+inline void CEconItemPreviewDataBlock::add_customnames(std::string&& value) {
+  _impl_.customnames_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:CEconItemPreviewDataBlock.customnames)
+}
+inline void CEconItemPreviewDataBlock::add_customnames(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  _impl_.customnames_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:CEconItemPreviewDataBlock.customnames)
+}
+inline void CEconItemPreviewDataBlock::add_customnames(const char* value, size_t size) {
+  _impl_.customnames_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:CEconItemPreviewDataBlock.customnames)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+CEconItemPreviewDataBlock::customnames() const {
+  // @@protoc_insertion_point(field_list:CEconItemPreviewDataBlock.customnames)
+  return _impl_.customnames_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+CEconItemPreviewDataBlock::mutable_customnames() {
+  // @@protoc_insertion_point(field_mutable_list:CEconItemPreviewDataBlock.customnames)
+  return &_impl_.customnames_;
 }
 
 // repeated .CEconItemPreviewDataBlock.Sticker stickers = 12;
@@ -62228,6 +61870,102 @@ inline void CEconItemPreviewDataBlock::_internal_set_upgrade_level(uint32_t valu
 inline void CEconItemPreviewDataBlock::set_upgrade_level(uint32_t value) {
   _internal_set_upgrade_level(value);
   // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.upgrade_level)
+}
+
+// optional uint32 pet_food_expiration_date = 24;
+inline bool CEconItemPreviewDataBlock::_internal_has_pet_food_expiration_date() const {
+  bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
+  return value;
+}
+inline bool CEconItemPreviewDataBlock::has_pet_food_expiration_date() const {
+  return _internal_has_pet_food_expiration_date();
+}
+inline void CEconItemPreviewDataBlock::clear_pet_food_expiration_date() {
+  _impl_.pet_food_expiration_date_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00100000u;
+}
+inline uint32_t CEconItemPreviewDataBlock::_internal_pet_food_expiration_date() const {
+  return _impl_.pet_food_expiration_date_;
+}
+inline uint32_t CEconItemPreviewDataBlock::pet_food_expiration_date() const {
+  // @@protoc_insertion_point(field_get:CEconItemPreviewDataBlock.pet_food_expiration_date)
+  return _internal_pet_food_expiration_date();
+}
+inline void CEconItemPreviewDataBlock::_internal_set_pet_food_expiration_date(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00100000u;
+  _impl_.pet_food_expiration_date_ = value;
+}
+inline void CEconItemPreviewDataBlock::set_pet_food_expiration_date(uint32_t value) {
+  _internal_set_pet_food_expiration_date(value);
+  // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.pet_food_expiration_date)
+}
+
+// optional bytes blobdata = 25;
+inline bool CEconItemPreviewDataBlock::_internal_has_blobdata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CEconItemPreviewDataBlock::has_blobdata() const {
+  return _internal_has_blobdata();
+}
+inline void CEconItemPreviewDataBlock::clear_blobdata() {
+  _impl_.blobdata_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CEconItemPreviewDataBlock::blobdata() const {
+  // @@protoc_insertion_point(field_get:CEconItemPreviewDataBlock.blobdata)
+  return _internal_blobdata();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CEconItemPreviewDataBlock::set_blobdata(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.blobdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:CEconItemPreviewDataBlock.blobdata)
+}
+inline std::string* CEconItemPreviewDataBlock::mutable_blobdata() {
+  std::string* _s = _internal_mutable_blobdata();
+  // @@protoc_insertion_point(field_mutable:CEconItemPreviewDataBlock.blobdata)
+  return _s;
+}
+inline const std::string& CEconItemPreviewDataBlock::_internal_blobdata() const {
+  return _impl_.blobdata_.Get();
+}
+inline void CEconItemPreviewDataBlock::_internal_set_blobdata(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.blobdata_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CEconItemPreviewDataBlock::_internal_mutable_blobdata() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.blobdata_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CEconItemPreviewDataBlock::release_blobdata() {
+  // @@protoc_insertion_point(field_release:CEconItemPreviewDataBlock.blobdata)
+  if (!_internal_has_blobdata()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.blobdata_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.blobdata_.IsDefault()) {
+    _impl_.blobdata_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CEconItemPreviewDataBlock::set_allocated_blobdata(std::string* blobdata) {
+  if (blobdata != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.blobdata_.SetAllocated(blobdata, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.blobdata_.IsDefault()) {
+    _impl_.blobdata_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:CEconItemPreviewDataBlock.blobdata)
 }
 
 // -------------------------------------------------------------------
@@ -67034,6 +66772,442 @@ inline void CSOAccountXpShopBids::set_generation_time(uint32_t value) {
 
 // -------------------------------------------------------------------
 
+// CSOVolatileItemOffer
+
+// optional uint32 defidx = 1 [(.key_field) = true];
+inline bool CSOVolatileItemOffer::_internal_has_defidx() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CSOVolatileItemOffer::has_defidx() const {
+  return _internal_has_defidx();
+}
+inline void CSOVolatileItemOffer::clear_defidx() {
+  _impl_.defidx_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline uint32_t CSOVolatileItemOffer::_internal_defidx() const {
+  return _impl_.defidx_;
+}
+inline uint32_t CSOVolatileItemOffer::defidx() const {
+  // @@protoc_insertion_point(field_get:CSOVolatileItemOffer.defidx)
+  return _internal_defidx();
+}
+inline void CSOVolatileItemOffer::_internal_set_defidx(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.defidx_ = value;
+}
+inline void CSOVolatileItemOffer::set_defidx(uint32_t value) {
+  _internal_set_defidx(value);
+  // @@protoc_insertion_point(field_set:CSOVolatileItemOffer.defidx)
+}
+
+// repeated uint64 faux_itemid = 2;
+inline int CSOVolatileItemOffer::_internal_faux_itemid_size() const {
+  return _impl_.faux_itemid_.size();
+}
+inline int CSOVolatileItemOffer::faux_itemid_size() const {
+  return _internal_faux_itemid_size();
+}
+inline void CSOVolatileItemOffer::clear_faux_itemid() {
+  _impl_.faux_itemid_.Clear();
+}
+inline uint64_t CSOVolatileItemOffer::_internal_faux_itemid(int index) const {
+  return _impl_.faux_itemid_.Get(index);
+}
+inline uint64_t CSOVolatileItemOffer::faux_itemid(int index) const {
+  // @@protoc_insertion_point(field_get:CSOVolatileItemOffer.faux_itemid)
+  return _internal_faux_itemid(index);
+}
+inline void CSOVolatileItemOffer::set_faux_itemid(int index, uint64_t value) {
+  _impl_.faux_itemid_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CSOVolatileItemOffer.faux_itemid)
+}
+inline void CSOVolatileItemOffer::_internal_add_faux_itemid(uint64_t value) {
+  _impl_.faux_itemid_.Add(value);
+}
+inline void CSOVolatileItemOffer::add_faux_itemid(uint64_t value) {
+  _internal_add_faux_itemid(value);
+  // @@protoc_insertion_point(field_add:CSOVolatileItemOffer.faux_itemid)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+CSOVolatileItemOffer::_internal_faux_itemid() const {
+  return _impl_.faux_itemid_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+CSOVolatileItemOffer::faux_itemid() const {
+  // @@protoc_insertion_point(field_list:CSOVolatileItemOffer.faux_itemid)
+  return _internal_faux_itemid();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+CSOVolatileItemOffer::_internal_mutable_faux_itemid() {
+  return &_impl_.faux_itemid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+CSOVolatileItemOffer::mutable_faux_itemid() {
+  // @@protoc_insertion_point(field_mutable_list:CSOVolatileItemOffer.faux_itemid)
+  return _internal_mutable_faux_itemid();
+}
+
+// repeated uint32 generation_time = 3;
+inline int CSOVolatileItemOffer::_internal_generation_time_size() const {
+  return _impl_.generation_time_.size();
+}
+inline int CSOVolatileItemOffer::generation_time_size() const {
+  return _internal_generation_time_size();
+}
+inline void CSOVolatileItemOffer::clear_generation_time() {
+  _impl_.generation_time_.Clear();
+}
+inline uint32_t CSOVolatileItemOffer::_internal_generation_time(int index) const {
+  return _impl_.generation_time_.Get(index);
+}
+inline uint32_t CSOVolatileItemOffer::generation_time(int index) const {
+  // @@protoc_insertion_point(field_get:CSOVolatileItemOffer.generation_time)
+  return _internal_generation_time(index);
+}
+inline void CSOVolatileItemOffer::set_generation_time(int index, uint32_t value) {
+  _impl_.generation_time_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CSOVolatileItemOffer.generation_time)
+}
+inline void CSOVolatileItemOffer::_internal_add_generation_time(uint32_t value) {
+  _impl_.generation_time_.Add(value);
+}
+inline void CSOVolatileItemOffer::add_generation_time(uint32_t value) {
+  _internal_add_generation_time(value);
+  // @@protoc_insertion_point(field_add:CSOVolatileItemOffer.generation_time)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CSOVolatileItemOffer::_internal_generation_time() const {
+  return _impl_.generation_time_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CSOVolatileItemOffer::generation_time() const {
+  // @@protoc_insertion_point(field_list:CSOVolatileItemOffer.generation_time)
+  return _internal_generation_time();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+CSOVolatileItemOffer::_internal_mutable_generation_time() {
+  return &_impl_.generation_time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+CSOVolatileItemOffer::mutable_generation_time() {
+  // @@protoc_insertion_point(field_mutable_list:CSOVolatileItemOffer.generation_time)
+  return _internal_mutable_generation_time();
+}
+
+// -------------------------------------------------------------------
+
+// CSOVolatileItemClaimedRewards
+
+// optional uint32 defidx = 1 [(.key_field) = true];
+inline bool CSOVolatileItemClaimedRewards::_internal_has_defidx() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CSOVolatileItemClaimedRewards::has_defidx() const {
+  return _internal_has_defidx();
+}
+inline void CSOVolatileItemClaimedRewards::clear_defidx() {
+  _impl_.defidx_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline uint32_t CSOVolatileItemClaimedRewards::_internal_defidx() const {
+  return _impl_.defidx_;
+}
+inline uint32_t CSOVolatileItemClaimedRewards::defidx() const {
+  // @@protoc_insertion_point(field_get:CSOVolatileItemClaimedRewards.defidx)
+  return _internal_defidx();
+}
+inline void CSOVolatileItemClaimedRewards::_internal_set_defidx(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.defidx_ = value;
+}
+inline void CSOVolatileItemClaimedRewards::set_defidx(uint32_t value) {
+  _internal_set_defidx(value);
+  // @@protoc_insertion_point(field_set:CSOVolatileItemClaimedRewards.defidx)
+}
+
+// repeated uint32 reward = 2;
+inline int CSOVolatileItemClaimedRewards::_internal_reward_size() const {
+  return _impl_.reward_.size();
+}
+inline int CSOVolatileItemClaimedRewards::reward_size() const {
+  return _internal_reward_size();
+}
+inline void CSOVolatileItemClaimedRewards::clear_reward() {
+  _impl_.reward_.Clear();
+}
+inline uint32_t CSOVolatileItemClaimedRewards::_internal_reward(int index) const {
+  return _impl_.reward_.Get(index);
+}
+inline uint32_t CSOVolatileItemClaimedRewards::reward(int index) const {
+  // @@protoc_insertion_point(field_get:CSOVolatileItemClaimedRewards.reward)
+  return _internal_reward(index);
+}
+inline void CSOVolatileItemClaimedRewards::set_reward(int index, uint32_t value) {
+  _impl_.reward_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CSOVolatileItemClaimedRewards.reward)
+}
+inline void CSOVolatileItemClaimedRewards::_internal_add_reward(uint32_t value) {
+  _impl_.reward_.Add(value);
+}
+inline void CSOVolatileItemClaimedRewards::add_reward(uint32_t value) {
+  _internal_add_reward(value);
+  // @@protoc_insertion_point(field_add:CSOVolatileItemClaimedRewards.reward)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CSOVolatileItemClaimedRewards::_internal_reward() const {
+  return _impl_.reward_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CSOVolatileItemClaimedRewards::reward() const {
+  // @@protoc_insertion_point(field_list:CSOVolatileItemClaimedRewards.reward)
+  return _internal_reward();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+CSOVolatileItemClaimedRewards::_internal_mutable_reward() {
+  return &_impl_.reward_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+CSOVolatileItemClaimedRewards::mutable_reward() {
+  // @@protoc_insertion_point(field_mutable_list:CSOVolatileItemClaimedRewards.reward)
+  return _internal_mutable_reward();
+}
+
+// repeated uint32 generation_time = 3;
+inline int CSOVolatileItemClaimedRewards::_internal_generation_time_size() const {
+  return _impl_.generation_time_.size();
+}
+inline int CSOVolatileItemClaimedRewards::generation_time_size() const {
+  return _internal_generation_time_size();
+}
+inline void CSOVolatileItemClaimedRewards::clear_generation_time() {
+  _impl_.generation_time_.Clear();
+}
+inline uint32_t CSOVolatileItemClaimedRewards::_internal_generation_time(int index) const {
+  return _impl_.generation_time_.Get(index);
+}
+inline uint32_t CSOVolatileItemClaimedRewards::generation_time(int index) const {
+  // @@protoc_insertion_point(field_get:CSOVolatileItemClaimedRewards.generation_time)
+  return _internal_generation_time(index);
+}
+inline void CSOVolatileItemClaimedRewards::set_generation_time(int index, uint32_t value) {
+  _impl_.generation_time_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CSOVolatileItemClaimedRewards.generation_time)
+}
+inline void CSOVolatileItemClaimedRewards::_internal_add_generation_time(uint32_t value) {
+  _impl_.generation_time_.Add(value);
+}
+inline void CSOVolatileItemClaimedRewards::add_generation_time(uint32_t value) {
+  _internal_add_generation_time(value);
+  // @@protoc_insertion_point(field_add:CSOVolatileItemClaimedRewards.generation_time)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CSOVolatileItemClaimedRewards::_internal_generation_time() const {
+  return _impl_.generation_time_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CSOVolatileItemClaimedRewards::generation_time() const {
+  // @@protoc_insertion_point(field_list:CSOVolatileItemClaimedRewards.generation_time)
+  return _internal_generation_time();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+CSOVolatileItemClaimedRewards::_internal_mutable_generation_time() {
+  return &_impl_.generation_time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+CSOVolatileItemClaimedRewards::mutable_generation_time() {
+  // @@protoc_insertion_point(field_mutable_list:CSOVolatileItemClaimedRewards.generation_time)
+  return _internal_mutable_generation_time();
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCCStrike15_v2_VolatileShopSubscribe
+
+// optional uint32 defidx = 1;
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_has_defidx() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::has_defidx() const {
+  return _internal_has_defidx();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::clear_defidx() {
+  _impl_.defidx_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline uint32_t CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_defidx() const {
+  return _impl_.defidx_;
+}
+inline uint32_t CMsgGCCStrike15_v2_VolatileShopSubscribe::defidx() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_VolatileShopSubscribe.defidx)
+  return _internal_defidx();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_set_defidx(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.defidx_ = value;
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::set_defidx(uint32_t value) {
+  _internal_set_defidx(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_VolatileShopSubscribe.defidx)
+}
+
+// optional uint64 psid = 2;
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_has_psid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::has_psid() const {
+  return _internal_has_psid();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::clear_psid() {
+  _impl_.psid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline uint64_t CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_psid() const {
+  return _impl_.psid_;
+}
+inline uint64_t CMsgGCCStrike15_v2_VolatileShopSubscribe::psid() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_VolatileShopSubscribe.psid)
+  return _internal_psid();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_set_psid(uint64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.psid_ = value;
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::set_psid(uint64_t value) {
+  _internal_set_psid(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_VolatileShopSubscribe.psid)
+}
+
+// optional uint32 upnext = 3;
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_has_upnext() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::has_upnext() const {
+  return _internal_has_upnext();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::clear_upnext() {
+  _impl_.upnext_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline uint32_t CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_upnext() const {
+  return _impl_.upnext_;
+}
+inline uint32_t CMsgGCCStrike15_v2_VolatileShopSubscribe::upnext() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_VolatileShopSubscribe.upnext)
+  return _internal_upnext();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_set_upnext(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.upnext_ = value;
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::set_upnext(uint32_t value) {
+  _internal_set_upnext(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_VolatileShopSubscribe.upnext)
+}
+
+// optional uint32 gctime = 4;
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_has_gctime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::has_gctime() const {
+  return _internal_has_gctime();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::clear_gctime() {
+  _impl_.gctime_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline uint32_t CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_gctime() const {
+  return _impl_.gctime_;
+}
+inline uint32_t CMsgGCCStrike15_v2_VolatileShopSubscribe::gctime() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_VolatileShopSubscribe.gctime)
+  return _internal_gctime();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_set_gctime(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.gctime_ = value;
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::set_gctime(uint32_t value) {
+  _internal_set_gctime(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_VolatileShopSubscribe.gctime)
+}
+
+// optional bytes payload = 5;
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_has_payload() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_VolatileShopSubscribe::has_payload() const {
+  return _internal_has_payload();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::clear_payload() {
+  _impl_.payload_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CMsgGCCStrike15_v2_VolatileShopSubscribe::payload() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_VolatileShopSubscribe.payload)
+  return _internal_payload();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CMsgGCCStrike15_v2_VolatileShopSubscribe::set_payload(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.payload_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_VolatileShopSubscribe.payload)
+}
+inline std::string* CMsgGCCStrike15_v2_VolatileShopSubscribe::mutable_payload() {
+  std::string* _s = _internal_mutable_payload();
+  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_VolatileShopSubscribe.payload)
+  return _s;
+}
+inline const std::string& CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_payload() const {
+  return _impl_.payload_.Get();
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_set_payload(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.payload_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CMsgGCCStrike15_v2_VolatileShopSubscribe::_internal_mutable_payload() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.payload_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CMsgGCCStrike15_v2_VolatileShopSubscribe::release_payload() {
+  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_VolatileShopSubscribe.payload)
+  if (!_internal_has_payload()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.payload_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.payload_.IsDefault()) {
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CMsgGCCStrike15_v2_VolatileShopSubscribe::set_allocated_payload(std::string* payload) {
+  if (payload != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.payload_.SetAllocated(payload, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.payload_.IsDefault()) {
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_VolatileShopSubscribe.payload)
+}
+
+// -------------------------------------------------------------------
+
 // CSOAccountKeychainRemoveToolCharges
 
 // optional uint32 charges = 1;
@@ -67506,7 +67680,7 @@ inline void CSOGameAccountSteamChina::set_time_play_ban(uint32_t value) {
 
 // optional int32 player_level = 1;
 inline bool CSOPersonaDataPublic::_internal_has_player_level() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool CSOPersonaDataPublic::has_player_level() const {
@@ -67514,7 +67688,7 @@ inline bool CSOPersonaDataPublic::has_player_level() const {
 }
 inline void CSOPersonaDataPublic::clear_player_level() {
   _impl_.player_level_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t CSOPersonaDataPublic::_internal_player_level() const {
   return _impl_.player_level_;
@@ -67524,7 +67698,7 @@ inline int32_t CSOPersonaDataPublic::player_level() const {
   return _internal_player_level();
 }
 inline void CSOPersonaDataPublic::_internal_set_player_level(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.player_level_ = value;
 }
 inline void CSOPersonaDataPublic::set_player_level(int32_t value) {
@@ -67534,7 +67708,7 @@ inline void CSOPersonaDataPublic::set_player_level(int32_t value) {
 
 // optional .PlayerCommendationInfo commendation = 2;
 inline bool CSOPersonaDataPublic::_internal_has_commendation() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.commendation_ != nullptr);
   return value;
 }
@@ -67543,7 +67717,7 @@ inline bool CSOPersonaDataPublic::has_commendation() const {
 }
 inline void CSOPersonaDataPublic::clear_commendation() {
   if (_impl_.commendation_ != nullptr) _impl_.commendation_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::PlayerCommendationInfo& CSOPersonaDataPublic::_internal_commendation() const {
   const ::PlayerCommendationInfo* p = _impl_.commendation_;
@@ -67561,14 +67735,14 @@ inline void CSOPersonaDataPublic::unsafe_arena_set_allocated_commendation(
   }
   _impl_.commendation_ = commendation;
   if (commendation) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:CSOPersonaDataPublic.commendation)
 }
 inline ::PlayerCommendationInfo* CSOPersonaDataPublic::release_commendation() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::PlayerCommendationInfo* temp = _impl_.commendation_;
   _impl_.commendation_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -67584,13 +67758,13 @@ inline ::PlayerCommendationInfo* CSOPersonaDataPublic::release_commendation() {
 }
 inline ::PlayerCommendationInfo* CSOPersonaDataPublic::unsafe_arena_release_commendation() {
   // @@protoc_insertion_point(field_release:CSOPersonaDataPublic.commendation)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::PlayerCommendationInfo* temp = _impl_.commendation_;
   _impl_.commendation_ = nullptr;
   return temp;
 }
 inline ::PlayerCommendationInfo* CSOPersonaDataPublic::_internal_mutable_commendation() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.commendation_ == nullptr) {
     auto* p = CreateMaybeMessage<::PlayerCommendationInfo>(GetArenaForAllocation());
     _impl_.commendation_ = p;
@@ -67614,9 +67788,9 @@ inline void CSOPersonaDataPublic::set_allocated_commendation(::PlayerCommendatio
       commendation = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, commendation, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.commendation_ = commendation;
   // @@protoc_insertion_point(field_set_allocated:CSOPersonaDataPublic.commendation)
@@ -67624,7 +67798,7 @@ inline void CSOPersonaDataPublic::set_allocated_commendation(::PlayerCommendatio
 
 // optional bool elevated_state = 3;
 inline bool CSOPersonaDataPublic::_internal_has_elevated_state() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool CSOPersonaDataPublic::has_elevated_state() const {
@@ -67632,7 +67806,7 @@ inline bool CSOPersonaDataPublic::has_elevated_state() const {
 }
 inline void CSOPersonaDataPublic::clear_elevated_state() {
   _impl_.elevated_state_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool CSOPersonaDataPublic::_internal_elevated_state() const {
   return _impl_.elevated_state_;
@@ -67642,7 +67816,7 @@ inline bool CSOPersonaDataPublic::elevated_state() const {
   return _internal_elevated_state();
 }
 inline void CSOPersonaDataPublic::_internal_set_elevated_state(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.elevated_state_ = value;
 }
 inline void CSOPersonaDataPublic::set_elevated_state(bool value) {
@@ -67652,7 +67826,7 @@ inline void CSOPersonaDataPublic::set_elevated_state(bool value) {
 
 // optional uint32 xp_trail_timestamp_refresh = 4;
 inline bool CSOPersonaDataPublic::_internal_has_xp_trail_timestamp_refresh() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool CSOPersonaDataPublic::has_xp_trail_timestamp_refresh() const {
@@ -67660,7 +67834,7 @@ inline bool CSOPersonaDataPublic::has_xp_trail_timestamp_refresh() const {
 }
 inline void CSOPersonaDataPublic::clear_xp_trail_timestamp_refresh() {
   _impl_.xp_trail_timestamp_refresh_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t CSOPersonaDataPublic::_internal_xp_trail_timestamp_refresh() const {
   return _impl_.xp_trail_timestamp_refresh_;
@@ -67670,7 +67844,7 @@ inline uint32_t CSOPersonaDataPublic::xp_trail_timestamp_refresh() const {
   return _internal_xp_trail_timestamp_refresh();
 }
 inline void CSOPersonaDataPublic::_internal_set_xp_trail_timestamp_refresh(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.xp_trail_timestamp_refresh_ = value;
 }
 inline void CSOPersonaDataPublic::set_xp_trail_timestamp_refresh(uint32_t value) {
@@ -67680,7 +67854,7 @@ inline void CSOPersonaDataPublic::set_xp_trail_timestamp_refresh(uint32_t value)
 
 // optional uint32 xp_trail_level = 5;
 inline bool CSOPersonaDataPublic::_internal_has_xp_trail_level() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool CSOPersonaDataPublic::has_xp_trail_level() const {
@@ -67688,7 +67862,7 @@ inline bool CSOPersonaDataPublic::has_xp_trail_level() const {
 }
 inline void CSOPersonaDataPublic::clear_xp_trail_level() {
   _impl_.xp_trail_level_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t CSOPersonaDataPublic::_internal_xp_trail_level() const {
   return _impl_.xp_trail_level_;
@@ -67698,12 +67872,108 @@ inline uint32_t CSOPersonaDataPublic::xp_trail_level() const {
   return _internal_xp_trail_level();
 }
 inline void CSOPersonaDataPublic::_internal_set_xp_trail_level(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.xp_trail_level_ = value;
 }
 inline void CSOPersonaDataPublic::set_xp_trail_level(uint32_t value) {
   _internal_set_xp_trail_level(value);
   // @@protoc_insertion_point(field_set:CSOPersonaDataPublic.xp_trail_level)
+}
+
+// optional uint32 clan_id = 6;
+inline bool CSOPersonaDataPublic::_internal_has_clan_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool CSOPersonaDataPublic::has_clan_id() const {
+  return _internal_has_clan_id();
+}
+inline void CSOPersonaDataPublic::clear_clan_id() {
+  _impl_.clan_id_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline uint32_t CSOPersonaDataPublic::_internal_clan_id() const {
+  return _impl_.clan_id_;
+}
+inline uint32_t CSOPersonaDataPublic::clan_id() const {
+  // @@protoc_insertion_point(field_get:CSOPersonaDataPublic.clan_id)
+  return _internal_clan_id();
+}
+inline void CSOPersonaDataPublic::_internal_set_clan_id(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.clan_id_ = value;
+}
+inline void CSOPersonaDataPublic::set_clan_id(uint32_t value) {
+  _internal_set_clan_id(value);
+  // @@protoc_insertion_point(field_set:CSOPersonaDataPublic.clan_id)
+}
+
+// optional string clan_tag = 7;
+inline bool CSOPersonaDataPublic::_internal_has_clan_tag() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CSOPersonaDataPublic::has_clan_tag() const {
+  return _internal_has_clan_tag();
+}
+inline void CSOPersonaDataPublic::clear_clan_tag() {
+  _impl_.clan_tag_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CSOPersonaDataPublic::clan_tag() const {
+  // @@protoc_insertion_point(field_get:CSOPersonaDataPublic.clan_tag)
+  return _internal_clan_tag();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CSOPersonaDataPublic::set_clan_tag(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.clan_tag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:CSOPersonaDataPublic.clan_tag)
+}
+inline std::string* CSOPersonaDataPublic::mutable_clan_tag() {
+  std::string* _s = _internal_mutable_clan_tag();
+  // @@protoc_insertion_point(field_mutable:CSOPersonaDataPublic.clan_tag)
+  return _s;
+}
+inline const std::string& CSOPersonaDataPublic::_internal_clan_tag() const {
+  return _impl_.clan_tag_.Get();
+}
+inline void CSOPersonaDataPublic::_internal_set_clan_tag(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.clan_tag_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CSOPersonaDataPublic::_internal_mutable_clan_tag() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.clan_tag_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CSOPersonaDataPublic::release_clan_tag() {
+  // @@protoc_insertion_point(field_release:CSOPersonaDataPublic.clan_tag)
+  if (!_internal_has_clan_tag()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.clan_tag_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.clan_tag_.IsDefault()) {
+    _impl_.clan_tag_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CSOPersonaDataPublic::set_allocated_clan_tag(std::string* clan_tag) {
+  if (clan_tag != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.clan_tag_.SetAllocated(clan_tag, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.clan_tag_.IsDefault()) {
+    _impl_.clan_tag_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:CSOPersonaDataPublic.clan_tag)
 }
 
 // -------------------------------------------------------------------
@@ -71314,6 +71584,38 @@ inline void CMsgGCCStrike15_v2_ClientAccountBalance::set_allocated_url(std::stri
 
 // -------------------------------------------------------------------
 
+// CMsgGCCStrike15_v2_SetClanId
+
+// optional uint32 clan_id = 1;
+inline bool CMsgGCCStrike15_v2_SetClanId::_internal_has_clan_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CMsgGCCStrike15_v2_SetClanId::has_clan_id() const {
+  return _internal_has_clan_id();
+}
+inline void CMsgGCCStrike15_v2_SetClanId::clear_clan_id() {
+  _impl_.clan_id_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline uint32_t CMsgGCCStrike15_v2_SetClanId::_internal_clan_id() const {
+  return _impl_.clan_id_;
+}
+inline uint32_t CMsgGCCStrike15_v2_SetClanId::clan_id() const {
+  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_SetClanId.clan_id)
+  return _internal_clan_id();
+}
+inline void CMsgGCCStrike15_v2_SetClanId::_internal_set_clan_id(uint32_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.clan_id_ = value;
+}
+inline void CMsgGCCStrike15_v2_SetClanId::set_clan_id(uint32_t value) {
+  _internal_set_clan_id(value);
+  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_SetClanId.clan_id)
+}
+
+// -------------------------------------------------------------------
+
 // CMsgGCCStrike15_v2_ClientPartyJoinRelay
 
 // optional uint32 accountid = 1;
@@ -72190,1999 +72492,6 @@ inline void CVDiagnostic::set_allocated_string_value(std::string* string_value) 
 
 // -------------------------------------------------------------------
 
-// CMsgGCCStrike15_v2_ClientReportValidation
-
-// optional string file_report = 1;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_file_report() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_file_report() const {
-  return _internal_has_file_report();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_file_report() {
-  _impl_.file_report_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& CMsgGCCStrike15_v2_ClientReportValidation::file_report() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.file_report)
-  return _internal_file_report();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_ClientReportValidation::set_file_report(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.file_report_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.file_report)
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::mutable_file_report() {
-  std::string* _s = _internal_mutable_file_report();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_ClientReportValidation.file_report)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_ClientReportValidation::_internal_file_report() const {
-  return _impl_.file_report_.Get();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_file_report(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.file_report_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::_internal_mutable_file_report() {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.file_report_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::release_file_report() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_ClientReportValidation.file_report)
-  if (!_internal_has_file_report()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.file_report_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.file_report_.IsDefault()) {
-    _impl_.file_report_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_allocated_file_report(std::string* file_report) {
-  if (file_report != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.file_report_.SetAllocated(file_report, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.file_report_.IsDefault()) {
-    _impl_.file_report_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_ClientReportValidation.file_report)
-}
-
-// optional string command_line = 2;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_command_line() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_command_line() const {
-  return _internal_has_command_line();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_command_line() {
-  _impl_.command_line_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& CMsgGCCStrike15_v2_ClientReportValidation::command_line() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.command_line)
-  return _internal_command_line();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_ClientReportValidation::set_command_line(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.command_line_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.command_line)
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::mutable_command_line() {
-  std::string* _s = _internal_mutable_command_line();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_ClientReportValidation.command_line)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_ClientReportValidation::_internal_command_line() const {
-  return _impl_.command_line_.Get();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_command_line(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.command_line_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::_internal_mutable_command_line() {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.command_line_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::release_command_line() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_ClientReportValidation.command_line)
-  if (!_internal_has_command_line()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.command_line_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.command_line_.IsDefault()) {
-    _impl_.command_line_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_allocated_command_line(std::string* command_line) {
-  if (command_line != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
-  }
-  _impl_.command_line_.SetAllocated(command_line, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.command_line_.IsDefault()) {
-    _impl_.command_line_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_ClientReportValidation.command_line)
-}
-
-// optional uint32 total_files = 3;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_total_files() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_total_files() const {
-  return _internal_has_total_files();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_total_files() {
-  _impl_.total_files_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_total_files() const {
-  return _impl_.total_files_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::total_files() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.total_files)
-  return _internal_total_files();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_total_files(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.total_files_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_total_files(uint32_t value) {
-  _internal_set_total_files(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.total_files)
-}
-
-// optional uint32 internal_error = 4;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_internal_error() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_internal_error() const {
-  return _internal_has_internal_error();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_internal_error() {
-  _impl_.internal_error_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_internal_error() const {
-  return _impl_.internal_error_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::internal_error() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.internal_error)
-  return _internal_internal_error();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_internal_error(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.internal_error_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_internal_error(uint32_t value) {
-  _internal_set_internal_error(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.internal_error)
-}
-
-// optional uint32 trust_time = 5;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_trust_time() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_trust_time() const {
-  return _internal_has_trust_time();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_trust_time() {
-  _impl_.trust_time_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000020u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_trust_time() const {
-  return _impl_.trust_time_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::trust_time() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.trust_time)
-  return _internal_trust_time();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_trust_time(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.trust_time_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_trust_time(uint32_t value) {
-  _internal_set_trust_time(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.trust_time)
-}
-
-// optional uint32 count_pending = 6;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_count_pending() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_count_pending() const {
-  return _internal_has_count_pending();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_count_pending() {
-  _impl_.count_pending_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000040u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_count_pending() const {
-  return _impl_.count_pending_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::count_pending() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.count_pending)
-  return _internal_count_pending();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_count_pending(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.count_pending_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_count_pending(uint32_t value) {
-  _internal_set_count_pending(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.count_pending)
-}
-
-// optional uint32 count_completed = 7;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_count_completed() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_count_completed() const {
-  return _internal_has_count_completed();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_count_completed() {
-  _impl_.count_completed_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000080u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_count_completed() const {
-  return _impl_.count_completed_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::count_completed() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.count_completed)
-  return _internal_count_completed();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_count_completed(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.count_completed_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_count_completed(uint32_t value) {
-  _internal_set_count_completed(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.count_completed)
-}
-
-// optional uint32 process_id = 8;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_process_id() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_process_id() const {
-  return _internal_has_process_id();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_process_id() {
-  _impl_.process_id_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000100u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_process_id() const {
-  return _impl_.process_id_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::process_id() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.process_id)
-  return _internal_process_id();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_process_id(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.process_id_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_process_id(uint32_t value) {
-  _internal_set_process_id(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.process_id)
-}
-
-// optional int32 osversion = 9;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_osversion() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_osversion() const {
-  return _internal_has_osversion();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_osversion() {
-  _impl_.osversion_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000200u;
-}
-inline int32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_osversion() const {
-  return _impl_.osversion_;
-}
-inline int32_t CMsgGCCStrike15_v2_ClientReportValidation::osversion() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.osversion)
-  return _internal_osversion();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_osversion(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
-  _impl_.osversion_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_osversion(int32_t value) {
-  _internal_set_osversion(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.osversion)
-}
-
-// optional uint32 clientreportversion = 10;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_clientreportversion() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_clientreportversion() const {
-  return _internal_has_clientreportversion();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_clientreportversion() {
-  _impl_.clientreportversion_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000400u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_clientreportversion() const {
-  return _impl_.clientreportversion_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::clientreportversion() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.clientreportversion)
-  return _internal_clientreportversion();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_clientreportversion(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
-  _impl_.clientreportversion_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_clientreportversion(uint32_t value) {
-  _internal_set_clientreportversion(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.clientreportversion)
-}
-
-// optional uint32 status_id = 11;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_status_id() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_status_id() const {
-  return _internal_has_status_id();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_status_id() {
-  _impl_.status_id_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000800u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_status_id() const {
-  return _impl_.status_id_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::status_id() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.status_id)
-  return _internal_status_id();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_status_id(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000800u;
-  _impl_.status_id_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_status_id(uint32_t value) {
-  _internal_set_status_id(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.status_id)
-}
-
-// optional uint32 diagnostic1 = 12;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_diagnostic1() const {
-  bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_diagnostic1() const {
-  return _internal_has_diagnostic1();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_diagnostic1() {
-  _impl_.diagnostic1_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00001000u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_diagnostic1() const {
-  return _impl_.diagnostic1_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::diagnostic1() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic1)
-  return _internal_diagnostic1();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_diagnostic1(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00001000u;
-  _impl_.diagnostic1_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_diagnostic1(uint32_t value) {
-  _internal_set_diagnostic1(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic1)
-}
-
-// optional uint64 diagnostic2 = 13;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_diagnostic2() const {
-  bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_diagnostic2() const {
-  return _internal_has_diagnostic2();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_diagnostic2() {
-  _impl_.diagnostic2_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00002000u;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_diagnostic2() const {
-  return _impl_.diagnostic2_;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::diagnostic2() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic2)
-  return _internal_diagnostic2();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_diagnostic2(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00002000u;
-  _impl_.diagnostic2_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_diagnostic2(uint64_t value) {
-  _internal_set_diagnostic2(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic2)
-}
-
-// optional uint64 diagnostic3 = 14;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_diagnostic3() const {
-  bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_diagnostic3() const {
-  return _internal_has_diagnostic3();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_diagnostic3() {
-  _impl_.diagnostic3_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00004000u;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_diagnostic3() const {
-  return _impl_.diagnostic3_;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::diagnostic3() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic3)
-  return _internal_diagnostic3();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_diagnostic3(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00004000u;
-  _impl_.diagnostic3_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_diagnostic3(uint64_t value) {
-  _internal_set_diagnostic3(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic3)
-}
-
-// optional string last_launch_data = 15;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_last_launch_data() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_last_launch_data() const {
-  return _internal_has_last_launch_data();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_last_launch_data() {
-  _impl_.last_launch_data_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
-}
-inline const std::string& CMsgGCCStrike15_v2_ClientReportValidation::last_launch_data() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.last_launch_data)
-  return _internal_last_launch_data();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_ClientReportValidation::set_last_launch_data(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.last_launch_data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.last_launch_data)
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::mutable_last_launch_data() {
-  std::string* _s = _internal_mutable_last_launch_data();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_ClientReportValidation.last_launch_data)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_ClientReportValidation::_internal_last_launch_data() const {
-  return _impl_.last_launch_data_.Get();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_last_launch_data(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.last_launch_data_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::_internal_mutable_last_launch_data() {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.last_launch_data_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_ClientReportValidation::release_last_launch_data() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_ClientReportValidation.last_launch_data)
-  if (!_internal_has_last_launch_data()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.last_launch_data_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.last_launch_data_.IsDefault()) {
-    _impl_.last_launch_data_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_allocated_last_launch_data(std::string* last_launch_data) {
-  if (last_launch_data != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
-  }
-  _impl_.last_launch_data_.SetAllocated(last_launch_data, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.last_launch_data_.IsDefault()) {
-    _impl_.last_launch_data_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_ClientReportValidation.last_launch_data)
-}
-
-// optional uint32 report_count = 16;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_report_count() const {
-  bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_report_count() const {
-  return _internal_has_report_count();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_report_count() {
-  _impl_.report_count_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00040000u;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_report_count() const {
-  return _impl_.report_count_;
-}
-inline uint32_t CMsgGCCStrike15_v2_ClientReportValidation::report_count() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.report_count)
-  return _internal_report_count();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_report_count(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00040000u;
-  _impl_.report_count_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_report_count(uint32_t value) {
-  _internal_set_report_count(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.report_count)
-}
-
-// optional uint64 client_time = 17;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_client_time() const {
-  bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_client_time() const {
-  return _internal_has_client_time();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_client_time() {
-  _impl_.client_time_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00008000u;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_client_time() const {
-  return _impl_.client_time_;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::client_time() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.client_time)
-  return _internal_client_time();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_client_time(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00008000u;
-  _impl_.client_time_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_client_time(uint64_t value) {
-  _internal_set_client_time(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.client_time)
-}
-
-// optional uint64 diagnostic4 = 18;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_diagnostic4() const {
-  bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_diagnostic4() const {
-  return _internal_has_diagnostic4();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_diagnostic4() {
-  _impl_.diagnostic4_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00010000u;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_diagnostic4() const {
-  return _impl_.diagnostic4_;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::diagnostic4() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic4)
-  return _internal_diagnostic4();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_diagnostic4(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00010000u;
-  _impl_.diagnostic4_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_diagnostic4(uint64_t value) {
-  _internal_set_diagnostic4(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic4)
-}
-
-// optional uint64 diagnostic5 = 19;
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::_internal_has_diagnostic5() const {
-  bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_ClientReportValidation::has_diagnostic5() const {
-  return _internal_has_diagnostic5();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_diagnostic5() {
-  _impl_.diagnostic5_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00020000u;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::_internal_diagnostic5() const {
-  return _impl_.diagnostic5_;
-}
-inline uint64_t CMsgGCCStrike15_v2_ClientReportValidation::diagnostic5() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic5)
-  return _internal_diagnostic5();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::_internal_set_diagnostic5(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00020000u;
-  _impl_.diagnostic5_ = value;
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::set_diagnostic5(uint64_t value) {
-  _internal_set_diagnostic5(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_ClientReportValidation.diagnostic5)
-}
-
-// repeated .CVDiagnostic diagnostics = 20;
-inline int CMsgGCCStrike15_v2_ClientReportValidation::_internal_diagnostics_size() const {
-  return _impl_.diagnostics_.size();
-}
-inline int CMsgGCCStrike15_v2_ClientReportValidation::diagnostics_size() const {
-  return _internal_diagnostics_size();
-}
-inline void CMsgGCCStrike15_v2_ClientReportValidation::clear_diagnostics() {
-  _impl_.diagnostics_.Clear();
-}
-inline ::CVDiagnostic* CMsgGCCStrike15_v2_ClientReportValidation::mutable_diagnostics(int index) {
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_ClientReportValidation.diagnostics)
-  return _impl_.diagnostics_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CVDiagnostic >*
-CMsgGCCStrike15_v2_ClientReportValidation::mutable_diagnostics() {
-  // @@protoc_insertion_point(field_mutable_list:CMsgGCCStrike15_v2_ClientReportValidation.diagnostics)
-  return &_impl_.diagnostics_;
-}
-inline const ::CVDiagnostic& CMsgGCCStrike15_v2_ClientReportValidation::_internal_diagnostics(int index) const {
-  return _impl_.diagnostics_.Get(index);
-}
-inline const ::CVDiagnostic& CMsgGCCStrike15_v2_ClientReportValidation::diagnostics(int index) const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_ClientReportValidation.diagnostics)
-  return _internal_diagnostics(index);
-}
-inline ::CVDiagnostic* CMsgGCCStrike15_v2_ClientReportValidation::_internal_add_diagnostics() {
-  return _impl_.diagnostics_.Add();
-}
-inline ::CVDiagnostic* CMsgGCCStrike15_v2_ClientReportValidation::add_diagnostics() {
-  ::CVDiagnostic* _add = _internal_add_diagnostics();
-  // @@protoc_insertion_point(field_add:CMsgGCCStrike15_v2_ClientReportValidation.diagnostics)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CVDiagnostic >&
-CMsgGCCStrike15_v2_ClientReportValidation::diagnostics() const {
-  // @@protoc_insertion_point(field_list:CMsgGCCStrike15_v2_ClientReportValidation.diagnostics)
-  return _impl_.diagnostics_;
-}
-
-// -------------------------------------------------------------------
-
-// CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode
-
-// optional string file_report = 1;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_file_report() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_file_report() const {
-  return _internal_has_file_report();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_file_report() {
-  _impl_.file_report_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::file_report() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.file_report)
-  return _internal_file_report();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_file_report(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.file_report_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.file_report)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::mutable_file_report() {
-  std::string* _s = _internal_mutable_file_report();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.file_report)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_file_report() const {
-  return _impl_.file_report_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_file_report(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.file_report_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_mutable_file_report() {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.file_report_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::release_file_report() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.file_report)
-  if (!_internal_has_file_report()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.file_report_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.file_report_.IsDefault()) {
-    _impl_.file_report_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_allocated_file_report(std::string* file_report) {
-  if (file_report != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.file_report_.SetAllocated(file_report, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.file_report_.IsDefault()) {
-    _impl_.file_report_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.file_report)
-}
-
-// optional bool offer_insecure_mode = 2;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_offer_insecure_mode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_offer_insecure_mode() const {
-  return _internal_has_offer_insecure_mode();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_offer_insecure_mode() {
-  _impl_.offer_insecure_mode_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_offer_insecure_mode() const {
-  return _impl_.offer_insecure_mode_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::offer_insecure_mode() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.offer_insecure_mode)
-  return _internal_offer_insecure_mode();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_offer_insecure_mode(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.offer_insecure_mode_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_offer_insecure_mode(bool value) {
-  _internal_set_offer_insecure_mode(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.offer_insecure_mode)
-}
-
-// optional bool offer_secure_mode = 3;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_offer_secure_mode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_offer_secure_mode() const {
-  return _internal_has_offer_secure_mode();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_offer_secure_mode() {
-  _impl_.offer_secure_mode_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_offer_secure_mode() const {
-  return _impl_.offer_secure_mode_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::offer_secure_mode() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.offer_secure_mode)
-  return _internal_offer_secure_mode();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_offer_secure_mode(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.offer_secure_mode_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_offer_secure_mode(bool value) {
-  _internal_set_offer_secure_mode(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.offer_secure_mode)
-}
-
-// optional bool show_unsigned_ui = 4;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_show_unsigned_ui() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_show_unsigned_ui() const {
-  return _internal_has_show_unsigned_ui();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_show_unsigned_ui() {
-  _impl_.show_unsigned_ui_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_show_unsigned_ui() const {
-  return _impl_.show_unsigned_ui_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::show_unsigned_ui() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_unsigned_ui)
-  return _internal_show_unsigned_ui();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_show_unsigned_ui(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.show_unsigned_ui_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_show_unsigned_ui(bool value) {
-  _internal_set_show_unsigned_ui(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_unsigned_ui)
-}
-
-// optional bool kick_user = 5;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_kick_user() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_kick_user() const {
-  return _internal_has_kick_user();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_kick_user() {
-  _impl_.kick_user_ = false;
-  _impl_._has_bits_[0] &= ~0x00000020u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_kick_user() const {
-  return _impl_.kick_user_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::kick_user() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.kick_user)
-  return _internal_kick_user();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_kick_user(bool value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.kick_user_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_kick_user(bool value) {
-  _internal_set_kick_user(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.kick_user)
-}
-
-// optional bool show_trusted_ui = 6;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_show_trusted_ui() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_show_trusted_ui() const {
-  return _internal_has_show_trusted_ui();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_show_trusted_ui() {
-  _impl_.show_trusted_ui_ = false;
-  _impl_._has_bits_[0] &= ~0x00000040u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_show_trusted_ui() const {
-  return _impl_.show_trusted_ui_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::show_trusted_ui() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_trusted_ui)
-  return _internal_show_trusted_ui();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_show_trusted_ui(bool value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.show_trusted_ui_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_show_trusted_ui(bool value) {
-  _internal_set_show_trusted_ui(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_trusted_ui)
-}
-
-// optional bool show_warning_not_trusted = 7;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_show_warning_not_trusted() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_show_warning_not_trusted() const {
-  return _internal_has_show_warning_not_trusted();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_show_warning_not_trusted() {
-  _impl_.show_warning_not_trusted_ = false;
-  _impl_._has_bits_[0] &= ~0x00000080u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_show_warning_not_trusted() const {
-  return _impl_.show_warning_not_trusted_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::show_warning_not_trusted() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_warning_not_trusted)
-  return _internal_show_warning_not_trusted();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_show_warning_not_trusted(bool value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.show_warning_not_trusted_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_show_warning_not_trusted(bool value) {
-  _internal_set_show_warning_not_trusted(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_warning_not_trusted)
-}
-
-// optional bool show_warning_not_trusted_2 = 8;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_show_warning_not_trusted_2() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_show_warning_not_trusted_2() const {
-  return _internal_has_show_warning_not_trusted_2();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_show_warning_not_trusted_2() {
-  _impl_.show_warning_not_trusted_2_ = false;
-  _impl_._has_bits_[0] &= ~0x00000100u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_show_warning_not_trusted_2() const {
-  return _impl_.show_warning_not_trusted_2_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::show_warning_not_trusted_2() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_warning_not_trusted_2)
-  return _internal_show_warning_not_trusted_2();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_show_warning_not_trusted_2(bool value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.show_warning_not_trusted_2_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_show_warning_not_trusted_2(bool value) {
-  _internal_set_show_warning_not_trusted_2(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.show_warning_not_trusted_2)
-}
-
-// optional string files_prevented_trusted = 9;
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_has_files_prevented_trusted() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::has_files_prevented_trusted() const {
-  return _internal_has_files_prevented_trusted();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::clear_files_prevented_trusted() {
-  _impl_.files_prevented_trusted_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::files_prevented_trusted() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.files_prevented_trusted)
-  return _internal_files_prevented_trusted();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_files_prevented_trusted(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.files_prevented_trusted_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.files_prevented_trusted)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::mutable_files_prevented_trusted() {
-  std::string* _s = _internal_mutable_files_prevented_trusted();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.files_prevented_trusted)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_files_prevented_trusted() const {
-  return _impl_.files_prevented_trusted_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_set_files_prevented_trusted(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.files_prevented_trusted_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::_internal_mutable_files_prevented_trusted() {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.files_prevented_trusted_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::release_files_prevented_trusted() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.files_prevented_trusted)
-  if (!_internal_has_files_prevented_trusted()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.files_prevented_trusted_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.files_prevented_trusted_.IsDefault()) {
-    _impl_.files_prevented_trusted_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode::set_allocated_files_prevented_trusted(std::string* files_prevented_trusted) {
-  if (files_prevented_trusted != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
-  }
-  _impl_.files_prevented_trusted_.SetAllocated(files_prevented_trusted, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.files_prevented_trusted_.IsDefault()) {
-    _impl_.files_prevented_trusted_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode.files_prevented_trusted)
-}
-
-// -------------------------------------------------------------------
-
-// CMsgGCCStrike15_v2_GC2ClientRequestValidation
-
-// optional bool full_report = 1;
-inline bool CMsgGCCStrike15_v2_GC2ClientRequestValidation::_internal_has_full_report() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRequestValidation::has_full_report() const {
-  return _internal_has_full_report();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRequestValidation::clear_full_report() {
-  _impl_.full_report_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRequestValidation::_internal_full_report() const {
-  return _impl_.full_report_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRequestValidation::full_report() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRequestValidation.full_report)
-  return _internal_full_report();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRequestValidation::_internal_set_full_report(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.full_report_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRequestValidation::set_full_report(bool value) {
-  _internal_set_full_report(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRequestValidation.full_report)
-}
-
-// optional string module = 2;
-inline bool CMsgGCCStrike15_v2_GC2ClientRequestValidation::_internal_has_module() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientRequestValidation::has_module() const {
-  return _internal_has_module();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRequestValidation::clear_module() {
-  _impl_.module_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientRequestValidation::module() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientRequestValidation.module)
-  return _internal_module();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientRequestValidation::set_module(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.module_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientRequestValidation.module)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRequestValidation::mutable_module() {
-  std::string* _s = _internal_mutable_module();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientRequestValidation.module)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientRequestValidation::_internal_module() const {
-  return _impl_.module_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRequestValidation::_internal_set_module(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.module_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRequestValidation::_internal_mutable_module() {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.module_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientRequestValidation::release_module() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientRequestValidation.module)
-  if (!_internal_has_module()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.module_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.module_.IsDefault()) {
-    _impl_.module_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientRequestValidation::set_allocated_module(std::string* module) {
-  if (module != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.module_.SetAllocated(module, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.module_.IsDefault()) {
-    _impl_.module_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientRequestValidation.module)
-}
-
-// -------------------------------------------------------------------
-
-// CMsgGCCStrike15_v2_GC2ClientInitSystem
-
-// optional bool load = 1;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_load() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_load() const {
-  return _internal_has_load();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_load() {
-  _impl_.load_ = false;
-  _impl_._has_bits_[0] &= ~0x00000040u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_load() const {
-  return _impl_.load_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::load() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.load)
-  return _internal_load();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_load(bool value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.load_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_load(bool value) {
-  _internal_set_load(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.load)
-}
-
-// optional string name = 2;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_name() const {
-  return _internal_has_name();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_name() {
-  _impl_.name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::name() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.name)
-  return _internal_name();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.name)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem.name)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_name() const {
-  return _impl_.name_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_mutable_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::release_name() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem.name)
-  if (!_internal_has_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem.name)
-}
-
-// optional string outputname = 3;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_outputname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_outputname() const {
-  return _internal_has_outputname();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_outputname() {
-  _impl_.outputname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::outputname() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.outputname)
-  return _internal_outputname();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_outputname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.outputname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.outputname)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::mutable_outputname() {
-  std::string* _s = _internal_mutable_outputname();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem.outputname)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_outputname() const {
-  return _impl_.outputname_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_outputname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.outputname_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_mutable_outputname() {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.outputname_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::release_outputname() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem.outputname)
-  if (!_internal_has_outputname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.outputname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.outputname_.IsDefault()) {
-    _impl_.outputname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_allocated_outputname(std::string* outputname) {
-  if (outputname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
-  }
-  _impl_.outputname_.SetAllocated(outputname, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.outputname_.IsDefault()) {
-    _impl_.outputname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem.outputname)
-}
-
-// optional bytes key_data = 4;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_key_data() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_key_data() const {
-  return _internal_has_key_data();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_key_data() {
-  _impl_.key_data_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::key_data() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.key_data)
-  return _internal_key_data();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_key_data(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.key_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.key_data)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::mutable_key_data() {
-  std::string* _s = _internal_mutable_key_data();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem.key_data)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_key_data() const {
-  return _impl_.key_data_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_key_data(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.key_data_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_mutable_key_data() {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.key_data_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::release_key_data() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem.key_data)
-  if (!_internal_has_key_data()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.key_data_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_data_.IsDefault()) {
-    _impl_.key_data_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_allocated_key_data(std::string* key_data) {
-  if (key_data != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
-  }
-  _impl_.key_data_.SetAllocated(key_data, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_data_.IsDefault()) {
-    _impl_.key_data_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem.key_data)
-}
-
-// optional bytes sha_hash = 5;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_sha_hash() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_sha_hash() const {
-  return _internal_has_sha_hash();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_sha_hash() {
-  _impl_.sha_hash_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::sha_hash() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.sha_hash)
-  return _internal_sha_hash();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_sha_hash(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.sha_hash_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.sha_hash)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::mutable_sha_hash() {
-  std::string* _s = _internal_mutable_sha_hash();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem.sha_hash)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_sha_hash() const {
-  return _impl_.sha_hash_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_sha_hash(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.sha_hash_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_mutable_sha_hash() {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.sha_hash_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::release_sha_hash() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem.sha_hash)
-  if (!_internal_has_sha_hash()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.sha_hash_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sha_hash_.IsDefault()) {
-    _impl_.sha_hash_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_allocated_sha_hash(std::string* sha_hash) {
-  if (sha_hash != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
-  }
-  _impl_.sha_hash_.SetAllocated(sha_hash, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sha_hash_.IsDefault()) {
-    _impl_.sha_hash_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem.sha_hash)
-}
-
-// optional int32 cookie = 6;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_cookie() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_cookie() const {
-  return _internal_has_cookie();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_cookie() {
-  _impl_.cookie_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000100u;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_cookie() const {
-  return _impl_.cookie_;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem::cookie() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.cookie)
-  return _internal_cookie();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_cookie(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.cookie_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_cookie(int32_t value) {
-  _internal_set_cookie(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.cookie)
-}
-
-// optional string manifest = 7;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_manifest() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_manifest() const {
-  return _internal_has_manifest();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_manifest() {
-  _impl_.manifest_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::manifest() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.manifest)
-  return _internal_manifest();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_manifest(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.manifest_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.manifest)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::mutable_manifest() {
-  std::string* _s = _internal_mutable_manifest();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem.manifest)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_manifest() const {
-  return _impl_.manifest_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_manifest(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.manifest_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_mutable_manifest() {
-  _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.manifest_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::release_manifest() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem.manifest)
-  if (!_internal_has_manifest()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.manifest_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.manifest_.IsDefault()) {
-    _impl_.manifest_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_allocated_manifest(std::string* manifest) {
-  if (manifest != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
-  }
-  _impl_.manifest_.SetAllocated(manifest, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.manifest_.IsDefault()) {
-    _impl_.manifest_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem.manifest)
-}
-
-// optional bytes system_package = 8;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_system_package() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_system_package() const {
-  return _internal_has_system_package();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_system_package() {
-  _impl_.system_package_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000020u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::system_package() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.system_package)
-  return _internal_system_package();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_system_package(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.system_package_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.system_package)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::mutable_system_package() {
-  std::string* _s = _internal_mutable_system_package();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem.system_package)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_system_package() const {
-  return _impl_.system_package_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_system_package(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.system_package_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_mutable_system_package() {
-  _impl_._has_bits_[0] |= 0x00000020u;
-  return _impl_.system_package_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem::release_system_package() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem.system_package)
-  if (!_internal_has_system_package()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.system_package_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.system_package_.IsDefault()) {
-    _impl_.system_package_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_allocated_system_package(std::string* system_package) {
-  if (system_package != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000020u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
-  }
-  _impl_.system_package_.SetAllocated(system_package, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.system_package_.IsDefault()) {
-    _impl_.system_package_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem.system_package)
-}
-
-// optional bool load_system = 9;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_has_load_system() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::has_load_system() const {
-  return _internal_has_load_system();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::clear_load_system() {
-  _impl_.load_system_ = false;
-  _impl_._has_bits_[0] &= ~0x00000080u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_load_system() const {
-  return _impl_.load_system_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem::load_system() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem.load_system)
-  return _internal_load_system();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::_internal_set_load_system(bool value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.load_system_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem::set_load_system(bool value) {
-  _internal_set_load_system(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem.load_system)
-}
-
-// -------------------------------------------------------------------
-
-// CMsgGCCStrike15_v2_GC2ClientInitSystem_Response
-
-// optional bool success = 1;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_success() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_success() const {
-  return _internal_has_success();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_success() {
-  _impl_.success_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_success() const {
-  return _impl_.success_;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::success() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.success)
-  return _internal_success();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_success(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.success_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_success(bool value) {
-  _internal_set_success(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.success)
-}
-
-// optional string diagnostic = 2;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_diagnostic() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_diagnostic() const {
-  return _internal_has_diagnostic();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_diagnostic() {
-  _impl_.diagnostic_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::diagnostic() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.diagnostic)
-  return _internal_diagnostic();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_diagnostic(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.diagnostic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.diagnostic)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::mutable_diagnostic() {
-  std::string* _s = _internal_mutable_diagnostic();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.diagnostic)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_diagnostic() const {
-  return _impl_.diagnostic_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_diagnostic(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.diagnostic_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_mutable_diagnostic() {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.diagnostic_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::release_diagnostic() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.diagnostic)
-  if (!_internal_has_diagnostic()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.diagnostic_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.diagnostic_.IsDefault()) {
-    _impl_.diagnostic_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_allocated_diagnostic(std::string* diagnostic) {
-  if (diagnostic != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.diagnostic_.SetAllocated(diagnostic, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.diagnostic_.IsDefault()) {
-    _impl_.diagnostic_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.diagnostic)
-}
-
-// optional bytes sha_hash = 3;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_sha_hash() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_sha_hash() const {
-  return _internal_has_sha_hash();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_sha_hash() {
-  _impl_.sha_hash_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::sha_hash() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.sha_hash)
-  return _internal_sha_hash();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_sha_hash(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.sha_hash_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.sha_hash)
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::mutable_sha_hash() {
-  std::string* _s = _internal_mutable_sha_hash();
-  // @@protoc_insertion_point(field_mutable:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.sha_hash)
-  return _s;
-}
-inline const std::string& CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_sha_hash() const {
-  return _impl_.sha_hash_.Get();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_sha_hash(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.sha_hash_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_mutable_sha_hash() {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.sha_hash_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::release_sha_hash() {
-  // @@protoc_insertion_point(field_release:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.sha_hash)
-  if (!_internal_has_sha_hash()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.sha_hash_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sha_hash_.IsDefault()) {
-    _impl_.sha_hash_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_allocated_sha_hash(std::string* sha_hash) {
-  if (sha_hash != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
-  }
-  _impl_.sha_hash_.SetAllocated(sha_hash, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sha_hash_.IsDefault()) {
-    _impl_.sha_hash_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.sha_hash)
-}
-
-// optional int32 response = 4;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_response() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_response() const {
-  return _internal_has_response();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_response() {
-  _impl_.response_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_response() const {
-  return _impl_.response_;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::response() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.response)
-  return _internal_response();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_response(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.response_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_response(int32_t value) {
-  _internal_set_response(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.response)
-}
-
-// optional int32 error_code1 = 5;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_error_code1() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_error_code1() const {
-  return _internal_has_error_code1();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_error_code1() {
-  _impl_.error_code1_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_error_code1() const {
-  return _impl_.error_code1_;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::error_code1() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.error_code1)
-  return _internal_error_code1();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_error_code1(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.error_code1_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_error_code1(int32_t value) {
-  _internal_set_error_code1(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.error_code1)
-}
-
-// optional int32 error_code2 = 6;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_error_code2() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_error_code2() const {
-  return _internal_has_error_code2();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_error_code2() {
-  _impl_.error_code2_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000020u;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_error_code2() const {
-  return _impl_.error_code2_;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::error_code2() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.error_code2)
-  return _internal_error_code2();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_error_code2(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.error_code2_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_error_code2(int32_t value) {
-  _internal_set_error_code2(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.error_code2)
-}
-
-// optional int64 handle = 7;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_handle() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_handle() const {
-  return _internal_has_handle();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_handle() {
-  _impl_.handle_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000040u;
-}
-inline int64_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_handle() const {
-  return _impl_.handle_;
-}
-inline int64_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::handle() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.handle)
-  return _internal_handle();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_handle(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.handle_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_handle(int64_t value) {
-  _internal_set_handle(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.handle)
-}
-
-// optional .EInitSystemResult einit_result = 8 [default = k_EInitSystemResult_Invalid];
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_einit_result() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_einit_result() const {
-  return _internal_has_einit_result();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_einit_result() {
-  _impl_.einit_result_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000080u;
-}
-inline ::EInitSystemResult CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_einit_result() const {
-  return static_cast< ::EInitSystemResult >(_impl_.einit_result_);
-}
-inline ::EInitSystemResult CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::einit_result() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.einit_result)
-  return _internal_einit_result();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_einit_result(::EInitSystemResult value) {
-  assert(::EInitSystemResult_IsValid(value));
-  _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.einit_result_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_einit_result(::EInitSystemResult value) {
-  _internal_set_einit_result(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.einit_result)
-}
-
-// optional int32 aux_system1 = 9;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_aux_system1() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_aux_system1() const {
-  return _internal_has_aux_system1();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_aux_system1() {
-  _impl_.aux_system1_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000100u;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_aux_system1() const {
-  return _impl_.aux_system1_;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::aux_system1() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.aux_system1)
-  return _internal_aux_system1();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_aux_system1(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.aux_system1_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_aux_system1(int32_t value) {
-  _internal_set_aux_system1(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.aux_system1)
-}
-
-// optional int32 aux_system2 = 10;
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_has_aux_system2() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::has_aux_system2() const {
-  return _internal_has_aux_system2();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::clear_aux_system2() {
-  _impl_.aux_system2_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000200u;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_aux_system2() const {
-  return _impl_.aux_system2_;
-}
-inline int32_t CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::aux_system2() const {
-  // @@protoc_insertion_point(field_get:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.aux_system2)
-  return _internal_aux_system2();
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::_internal_set_aux_system2(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
-  _impl_.aux_system2_ = value;
-}
-inline void CMsgGCCStrike15_v2_GC2ClientInitSystem_Response::set_aux_system2(int32_t value) {
-  _internal_set_aux_system2(value);
-  // @@protoc_insertion_point(field_set:CMsgGCCStrike15_v2_GC2ClientInitSystem_Response.aux_system2)
-}
-
-// -------------------------------------------------------------------
-
 // CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName
 
 // optional string leaderboard_safe_name = 1;
@@ -74763,8 +73072,6 @@ CMsgRecurringMissionSchema::missions() const {
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -74790,11 +73097,6 @@ template <> struct is_proto_enum< ::EClientReportingVersion> : ::std::true_type 
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::EClientReportingVersion>() {
   return ::EClientReportingVersion_descriptor();
-}
-template <> struct is_proto_enum< ::EInitSystemResult> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::EInitSystemResult>() {
-  return ::EInitSystemResult_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

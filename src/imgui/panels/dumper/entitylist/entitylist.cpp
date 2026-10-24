@@ -20,6 +20,7 @@
 #include "entitylist.h"
 #include "imgui/main.h"
 #include "entity2/entitysystem.h"
+#include "gameentitysystem.h"
 #include "interfaces.h"
 #include <string>
 #include "entity2/entityclass.h"

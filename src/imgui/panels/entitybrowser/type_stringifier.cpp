@@ -20,6 +20,7 @@
 #include "type_stringifier.h"
 #include "schemasystem/schemasystem.h"
 #include <entity2/entitysystem.h>
+#include "gameentitysystem.h"
 #include <entity2/entityinstance.h>
 #include <format>
 #include <imgui.h>
@@ -212,17 +213,17 @@ void DumpStringValue(void* ptr, CSchemaType* pType, bool* isNested, const char* 
 		auto enumType = static_cast<CSchemaType_DeclaredEnum*>(pType);
 		if (enumType->m_pEnumInfo)
 		{
-			for (int i = 0; i < enumType->m_pEnumInfo->m_nEnumeratorCount; i++)
+			for (int i = 0; i < enumType->m_pEnumInfo->m_nNumEnumerators; i++)
 			{
 				auto& _enum = enumType->m_pEnumInfo->m_pEnumerators[i];
-				if (enumType->m_pEnumInfo->m_nSize == 1 && _enum.m_nValue == *(int8*)(ptr))
-					return ImGui::Text("%s (%i)", _enum.m_pszName, *(int8*)(ptr));
-				else if (enumType->m_pEnumInfo->m_nSize == 2 && _enum.m_nValue == *(int16*)(ptr))
-					return ImGui::Text("%s (%i)", _enum.m_pszName, *(int16*)(ptr));
-				else if (enumType->m_pEnumInfo->m_nSize == 4 && _enum.m_nValue == *(int32*)(ptr))
-					return ImGui::Text("%s (%i)", _enum.m_pszName, *(int32*)(ptr));
-				else if (enumType->m_pEnumInfo->m_nSize == 8 && _enum.m_nValue == *(int64*)(ptr))
-					return ImGui::Text("%s (%i)", _enum.m_pszName, *(int64*)(ptr));
+				if (enumType->m_pEnumInfo->m_nSizeOf == 1 && _enum.m_nValue == *(int8*)(ptr))
+					return ImGui::Text("%s (%i)", _enum.m_pName, *(int8*)(ptr));
+				else if (enumType->m_pEnumInfo->m_nSizeOf == 2 && _enum.m_nValue == *(int16*)(ptr))
+					return ImGui::Text("%s (%i)", _enum.m_pName, *(int16*)(ptr));
+				else if (enumType->m_pEnumInfo->m_nSizeOf == 4 && _enum.m_nValue == *(int32*)(ptr))
+					return ImGui::Text("%s (%i)", _enum.m_pName, *(int32*)(ptr));
+				else if (enumType->m_pEnumInfo->m_nSizeOf == 8 && _enum.m_nValue == *(int64*)(ptr))
+					return ImGui::Text("%s (%i)", _enum.m_pName, *(int64*)(ptr));
 			}
 
 			return ImGui::Text("? (Enum)");

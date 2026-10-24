@@ -33,6 +33,7 @@ void GUI::MenuBar::Draw()
 			ImGui::MenuItem("String Tables", nullptr, &g_GUICtx.m_WindowStates.m_bStringTables);
 			ImGui::MenuItem("Dumper", nullptr, &g_GUICtx.m_WindowStates.m_bDumper);
 			ImGui::MenuItem("Event Logger", nullptr, &g_GUICtx.m_WindowStates.m_bEventLogger);
+			ImGui::MenuItem("Movement Recorder", nullptr, &g_GUICtx.m_WindowStates.m_bMovementRecorder);
 			ImGui::MenuItem("Demo Window", nullptr, &g_GUICtx.m_WindowStates.m_bDemoWindow);
 			ImGui::EndMenu();
 		}

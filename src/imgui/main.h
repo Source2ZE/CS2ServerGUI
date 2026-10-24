@@ -30,6 +30,7 @@ struct WindowStates
 	bool m_bDumper = false;
 	bool m_bDemoWindow = false;
 	bool m_bEventLogger = false;
+	bool m_bMovementRecorder = false;
 };
 
 class GUICtx

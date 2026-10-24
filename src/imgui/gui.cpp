@@ -27,6 +27,7 @@
 #include "panels/dumper/convarlist/convarlist.h"
 #include "panels/dumper/commandlist/commandlist.h"
 #include "panels/eventlogger/eventlogger.h"
+#include "panels/movementrecorder/movementrecorder.h"
 #include <ImGuiFileDialog.h>
 #include "extension.h"
 
@@ -56,6 +57,9 @@ void DrawMainWindow()
 	if (g_GUICtx.m_WindowStates.m_bEventLogger)
 		EventLogger::Draw(&g_GUICtx.m_WindowStates.m_bEventLogger);
 
+	if (g_GUICtx.m_WindowStates.m_bMovementRecorder)
+		MovementRecorder::Draw(&g_GUICtx.m_WindowStates.m_bMovementRecorder);
+
 	MenuBar::Draw();
 
 	DrawFileDialogs();
@@ -84,6 +88,15 @@ void DrawFileDialogs()
 			std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
 			GUI::Dumper::CommandList::DumpToJSON(filePathName);
 		}
+
+		ImGuiFileDialog::Instance()->Close();
+	}
+
+	ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
+	if (ImGuiFileDialog::Instance()->Display("SaveMovementRecordingDlg", ImGuiWindowFlags_NoCollapse, ImVec2(0, 0)))
+	{
+		if (ImGuiFileDialog::Instance()->IsOk())
+			GUI::MovementRecorder::SaveToFile(ImGuiFileDialog::Instance()->GetFilePathName());
 
 		ImGuiFileDialog::Instance()->Close();
 	}

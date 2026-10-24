@@ -19,7 +19,6 @@
 
 #include <stdio.h>
 #include "extension.h"
-#include <iserver.h>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -28,16 +27,21 @@
 #include <thread>
 #include <schemasystem/schemasystem.h>
 #include <entity2/entitysystem.h>
+#include "gameentitysystem.h"
 #include "interfaces.h"
 #include "networkstringtabledefs.h"
 #include "igameeventsystem.h"
 #include "imgui/panels/eventlogger/eventlogger.h"
-#include "../protobufs/generated/netmessages.pb.h"
-#include "../protobufs/generated/usercmd.pb.h"
-#include "../protobufs/generated/cs_usercmd.pb.h"
+#include "netmessages.pb.h"
+#include "usercmd.pb.h"
+#include "cs_usercmd.pb.h"
 #include "networksystem/inetworkmessages.h"
-#include "cs2_sdk/serversideclient.h"
+#include "engine2/serversideclient.h"
+#include "engine2/inetworkserverservice.h"
+#include "engine2/networkgameserverbase.h"
+#include "engine2/igameresourceservice.h"
 #include "utils/module.h"
+#include "movement/movementrecorder.h"
 
 #ifdef _WIN32
 #define ROOTBIN "/bin/win64/"
@@ -50,32 +54,22 @@
 CS2ServerGUI g_CS2ServerGUI;
 std::thread g_thread;
 
-KHook::Virtual<INetworkMessageProcessingPreFilterCustom, bool, CNetMessage*, void*> filterMessageHook(0U, &g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage, nullptr);
-KHook::Virtual<CServerSideClient, bool, CNetMessage*, NetChannelBufType_t> sendNetMessageHook(15U, &g_CS2ServerGUI, &CS2ServerGUI::Hook_SendNetMessage, nullptr);
+KHook::Virtual<INetworkMessageProcessingPreFilter, bool, const CNetMessage*, INetChannel*> filterMessageHook(0U, &g_CS2ServerGUI, &CS2ServerGUI::Hook_FilterMessage, nullptr);
+KHook::Virtual<CServerSideClient, bool, const CNetMessage*, NetChannelBufType_t> sendNetMessageHook(15U, &g_CS2ServerGUI, &CS2ServerGUI::Hook_SendNetMessage, nullptr);
 
-INetworkMessageProcessingPreFilterCustom* g_pNetworkMessageProcessingPreFilterCustomVTable = nullptr;
+INetworkMessageProcessingPreFilter* g_pNetworkMessageProcessingPreFilterVTable = nullptr;
 CServerSideClient* g_pServerSideClientVTable = nullptr;
-
-CGameEntitySystem* GameEntitySystem()
-{
-#ifdef WIN32
-	static int offset = 88;
-#else
-	static int offset = 80;
-#endif
-	return *reinterpret_cast<CGameEntitySystem**>((uintptr_t)(g_pGameResourceServiceServer)+offset);
-}
 
 // Should only be called within the active game loop (i e map should be loaded and active)
 // otherwise that'll be nullptr!
 CGlobalVars* GetGameGlobals()
 {
-	INetworkGameServer* server = g_pNetworkServerService->GetIGameServer();
+	CNetworkGameServerBase* server = g_pNetworkServerService->GetIGameServer();
 
 	if (!server)
 		return nullptr;
 
-	return g_pNetworkServerService->GetIGameServer()->GetGlobals();
+	return server->GetGlobals();
 }
 
 CON_COMMAND_F(gui, "Opens server GUI", FCVAR_LINKED_CONCOMMAND | FCVAR_SPONLY)
@@ -126,7 +120,7 @@ bool ReadPBFromBuffer(bf_read& buffer, T& pb)
 	return true;
 }
 
-KHook::Return<bool> CS2ServerGUI::Hook_FilterMessage(INetworkMessageProcessingPreFilterCustom* player, CNetMessage* pData, void* pNetChan)
+KHook::Return<bool> CS2ServerGUI::Hook_FilterMessage(INetworkMessageProcessingPreFilter* pFilter, const CNetMessage* pData, INetChannel* pChannel)
 {
 	if (!GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
 	{
@@ -136,6 +130,8 @@ KHook::Return<bool> CS2ServerGUI::Hook_FilterMessage(INetworkMessageProcessingPr
 	NetMessageInfo_t* info = pData->GetNetMessage()->GetNetMessageInfo();
 	if (info)
 	{
+		auto client = static_cast<CServerSideClientBase*>(pFilter);
+
 		if (info->m_MessageId == CLC_Messages::clc_Move)
 		{
 			auto msg = pData->ToPB<CCLCMsg_Move>();
@@ -145,7 +141,7 @@ KHook::Return<bool> CS2ServerGUI::Hook_FilterMessage(INetworkMessageProcessingPr
 				bf_read buffer(msg->data().data(), msg->data().size());
 				CSGOUserCmdPB userCmd;
 				if (ReadPBFromBuffer(buffer, userCmd))
-					GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true, std::string(player->GetClientName()));
+					GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(userCmd.DebugString().c_str()), true, std::string(client->GetClientName()));
 			}
 		}
 		else
@@ -153,14 +149,14 @@ KHook::Return<bool> CS2ServerGUI::Hook_FilterMessage(INetworkMessageProcessingPr
 			CUtlString str;
 			info->m_pBinding->ToString(pData, str);
 
-			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), true, std::string(player->GetClientName()));
+			GUI::EventLogger::AddEventLog(std::string(info->m_pBinding->GetName()), std::string(str.String()), true, std::string(client->GetClientName()));
 		}
 	}
 
 	return {KHook::Action::Ignore};
 }
 
-KHook::Return<bool> CS2ServerGUI::Hook_SendNetMessage(CServerSideClient* client, CNetMessage* pData, NetChannelBufType_t bufType)
+KHook::Return<bool> CS2ServerGUI::Hook_SendNetMessage(CServerSideClient* client, const CNetMessage* pData, NetChannelBufType_t bufType)
 {
 	if (GUI::g_GUICtx.m_WindowStates.m_bEventLogger)
 	{
@@ -182,16 +178,16 @@ void SetupHook()
 	CModule engineModule(ROOTBIN, "engine2");
 	
 #ifdef _WIN32
-	g_pNetworkMessageProcessingPreFilterCustomVTable = reinterpret_cast<INetworkMessageProcessingPreFilterCustom*>(engineModule.FindVirtualTable("CServerSideClient", 8));
+	g_pNetworkMessageProcessingPreFilterVTable = reinterpret_cast<INetworkMessageProcessingPreFilter*>(engineModule.FindVirtualTable("CServerSideClient", 8));
 	g_pServerSideClientVTable = reinterpret_cast<CServerSideClient*>(engineModule.FindVirtualTable("CServerSideClient", 0));
 #else
-	g_pNetworkMessageProcessingPreFilterCustomVTable = reinterpret_cast<INetworkMessageProcessingPreFilterCustom*>(engineModule.FindVirtualTable("CServerSideClient", -64));
+	g_pNetworkMessageProcessingPreFilterVTable = reinterpret_cast<INetworkMessageProcessingPreFilter*>(engineModule.FindVirtualTable("CServerSideClient", -64));
 	g_pServerSideClientVTable = nullptr;
 #endif
 
-	if (!g_pNetworkMessageProcessingPreFilterCustomVTable)
+	if (!g_pNetworkMessageProcessingPreFilterVTable)
 	{
-		META_CONPRINTF("[CS2ServerGUI] Failed to find NetworkMessageProcessingPreFilterCustom VTable\n");
+		META_CONPRINTF("[CS2ServerGUI] Failed to find NetworkMessageProcessingPreFilter VTable\n");
 		return;
 	}
 	if (!g_pServerSideClientVTable)
@@ -200,7 +196,7 @@ void SetupHook()
 		return;
 	}
 
-	filterMessageHook.AddGlobal(reinterpret_cast<INetworkMessageProcessingPreFilterCustom*>(&g_pNetworkMessageProcessingPreFilterCustomVTable));
+	filterMessageHook.AddGlobal(reinterpret_cast<INetworkMessageProcessingPreFilter*>(&g_pNetworkMessageProcessingPreFilterVTable));
 	sendNetMessageHook.AddGlobal(reinterpret_cast<CServerSideClient*>(&g_pServerSideClientVTable));
 
 	return;
@@ -213,12 +209,12 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	m_config.SetPath((std::filesystem::path(Plat_GetGameDirectory()) / "csgo/addons/CS2ServerGUI/config.json"));
 	m_config.LoadConfig();
 
-	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::engine, IVEngineServer, INTERFACEVERSION_VENGINESERVER);
+	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::engine, IVEngineServer2, INTERFACEVERSION_VENGINESERVER);
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::icvar, ICvar, CVAR_INTERFACE_VERSION);
-	GET_V_IFACE_ANY(GetServerFactory, Interfaces::server, IServerGameDLL, INTERFACEVERSION_SERVERGAMEDLL);
-	GET_V_IFACE_ANY(GetServerFactory, Interfaces::gameclients, IServerGameClients, INTERFACEVERSION_SERVERGAMECLIENTS);
+	GET_V_IFACE_ANY(GetServerFactory, Interfaces::server, ISource2Server, INTERFACEVERSION_SERVERGAMEDLL);
+	GET_V_IFACE_ANY(GetServerFactory, Interfaces::gameclients, ISource2GameClients, INTERFACEVERSION_SERVERGAMECLIENTS);
 	GET_V_IFACE_ANY(GetEngineFactory, g_pNetworkServerService, INetworkServerService, NETWORKSERVERSERVICE_INTERFACE_VERSION);
-	GET_V_IFACE_ANY(GetEngineFactory, g_pSchemaSystem, CSchemaSystem, SCHEMASYSTEM_INTERFACE_VERSION);
+	GET_V_IFACE_ANY(GetEngineFactory, g_pSchemaSystem, ISchemaSystem, SCHEMASYSTEM_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, g_pGameResourceServiceServer, IGameResourceService, GAMERESOURCESERVICESERVER_INTERFACE_VERSION);
 	GET_V_IFACE_CURRENT(GetEngineFactory, Interfaces::networkStringTableContainerServer, INetworkStringTableContainer, SOURCE2ENGINETOSERVERSTRINGTABLE_INTERFACE_VERSION);
 	GET_V_IFACE_ANY(GetEngineFactory, Interfaces::gameEventSystem, IGameEventSystem, GAMEEVENTSYSTEM_INTERFACE_VERSION);
@@ -230,6 +226,8 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 	g_pCVar = Interfaces::icvar;
 	META_CONVAR_REGISTER(FCVAR_RELEASE | FCVAR_CLIENT_CAN_EXECUTE | FCVAR_GAMEDLL);
 
+	Movement::Recorder::Init();
+
 	// InitializeGUI on another thread
 	g_thread = std::thread(GUI::InitializeGUI);
 	g_thread.detach();
@@ -238,8 +236,10 @@ bool CS2ServerGUI::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, 
 
 bool CS2ServerGUI::Unload(char *error, size_t maxlen)
 {
-	if (g_pNetworkMessageProcessingPreFilterCustomVTable)
-		filterMessageHook.RemoveGlobal(reinterpret_cast<INetworkMessageProcessingPreFilterCustom*>(&g_pNetworkMessageProcessingPreFilterCustomVTable));
+	Movement::Recorder::Shutdown();
+
+	if (g_pNetworkMessageProcessingPreFilterVTable)
+		filterMessageHook.RemoveGlobal(reinterpret_cast<INetworkMessageProcessingPreFilter*>(&g_pNetworkMessageProcessingPreFilterVTable));
 	if (g_pServerSideClientVTable)
 		sendNetMessageHook.RemoveGlobal(reinterpret_cast<CServerSideClient*>(&g_pServerSideClientVTable));
 	return true;
@@ -257,6 +257,7 @@ void CS2ServerGUI::OnLevelInit( char const *pMapName,
 									 bool background )
 {
 	META_CONPRINTF("OnLevelInit(%s)\n", pMapName);
+	Movement::Recorder::SetMapName(pMapName);
 }
 
 void CS2ServerGUI::OnLevelShutdown()

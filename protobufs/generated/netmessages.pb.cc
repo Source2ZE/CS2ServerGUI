@@ -137,24 +137,6 @@ struct CCLCMsg_RespondCvarValueDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCLCMsg_RespondCvarValueDefaultTypeInternal _CCLCMsg_RespondCvarValue_default_instance_;
-PROTOBUF_CONSTEXPR CCLCMsg_FileCRCCheck::CCLCMsg_FileCRCCheck(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.path_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.code_path_)*/0
-  , /*decltype(_impl_.code_filename_)*/0
-  , /*decltype(_impl_.crc_)*/0u} {}
-struct CCLCMsg_FileCRCCheckDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CCLCMsg_FileCRCCheckDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CCLCMsg_FileCRCCheckDefaultTypeInternal() {}
-  union {
-    CCLCMsg_FileCRCCheck _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCLCMsg_FileCRCCheckDefaultTypeInternal _CCLCMsg_FileCRCCheck_default_instance_;
 PROTOBUF_CONSTEXPR CCLCMsg_LoadingProgress::CCLCMsg_LoadingProgress(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -254,124 +236,11 @@ struct CCLCMsg_RconServerDetailsDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCLCMsg_RconServerDetailsDefaultTypeInternal _CCLCMsg_RconServerDetails_default_instance_;
-PROTOBUF_CONSTEXPR CMsgSource2SystemSpecs::CMsgSource2SystemSpecs(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.cpu_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.cpu_brand_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.gpu_rendersystem_dll_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.gpu_driver_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.cpu_model_)*/0u
-  , /*decltype(_impl_.cpu_num_physical_)*/0u
-  , /*decltype(_impl_.ram_physical_total_mb_)*/0u
-  , /*decltype(_impl_.gpu_vendor_id_)*/0u
-  , /*decltype(_impl_.gpu_driver_version_high_)*/0u
-  , /*decltype(_impl_.gpu_driver_version_low_)*/0u
-  , /*decltype(_impl_.gpu_dx_support_level_)*/0u
-  , /*decltype(_impl_.gpu_texture_memory_size_mb_)*/0u} {}
-struct CMsgSource2SystemSpecsDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CMsgSource2SystemSpecsDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CMsgSource2SystemSpecsDefaultTypeInternal() {}
-  union {
-    CMsgSource2SystemSpecs _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CMsgSource2SystemSpecsDefaultTypeInternal _CMsgSource2SystemSpecs_default_instance_;
-PROTOBUF_CONSTEXPR CMsgSource2VProfLiteReportItem::CMsgSource2VProfLiteReportItem(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.active_samples_)*/0u
-  , /*decltype(_impl_.usec_max_)*/0u
-  , /*decltype(_impl_.active_samples_1secmax_)*/0u
-  , /*decltype(_impl_.usec_avg_active_)*/0u
-  , /*decltype(_impl_.usec_p50_active_)*/0u
-  , /*decltype(_impl_.usec_p99_active_)*/0u
-  , /*decltype(_impl_.usec_avg_all_)*/0u
-  , /*decltype(_impl_.usec_p50_all_)*/0u
-  , /*decltype(_impl_.usec_p99_all_)*/0u
-  , /*decltype(_impl_.usec_1secmax_avg_active_)*/0u
-  , /*decltype(_impl_.usec_1secmax_p50_active_)*/0u
-  , /*decltype(_impl_.usec_1secmax_p95_active_)*/0u
-  , /*decltype(_impl_.usec_1secmax_p99_active_)*/0u
-  , /*decltype(_impl_.usec_1secmax_avg_all_)*/0u
-  , /*decltype(_impl_.usec_1secmax_p50_all_)*/0u
-  , /*decltype(_impl_.usec_1secmax_p95_all_)*/0u
-  , /*decltype(_impl_.usec_1secmax_p99_all_)*/0u} {}
-struct CMsgSource2VProfLiteReportItemDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CMsgSource2VProfLiteReportItemDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CMsgSource2VProfLiteReportItemDefaultTypeInternal() {}
-  union {
-    CMsgSource2VProfLiteReportItem _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CMsgSource2VProfLiteReportItemDefaultTypeInternal _CMsgSource2VProfLiteReportItem_default_instance_;
-PROTOBUF_CONSTEXPR CMsgSource2VProfLiteReport::CMsgSource2VProfLiteReport(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.items_)*/{}
-  , /*decltype(_impl_.total_)*/nullptr
-  , /*decltype(_impl_.discarded_frames_)*/0u} {}
-struct CMsgSource2VProfLiteReportDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CMsgSource2VProfLiteReportDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CMsgSource2VProfLiteReportDefaultTypeInternal() {}
-  union {
-    CMsgSource2VProfLiteReport _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CMsgSource2VProfLiteReportDefaultTypeInternal _CMsgSource2VProfLiteReport_default_instance_;
-PROTOBUF_CONSTEXPR CMsgSource2NetworkFlowQuality::CMsgSource2NetworkFlowQuality(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.bytes_total_)*/uint64_t{0u}
-  , /*decltype(_impl_.duration_)*/0u
-  , /*decltype(_impl_.bytes_sec_p95_)*/0u
-  , /*decltype(_impl_.bytes_total_reliable_)*/uint64_t{0u}
-  , /*decltype(_impl_.bytes_total_voice_)*/uint64_t{0u}
-  , /*decltype(_impl_.bytes_sec_p99_)*/0u
-  , /*decltype(_impl_.enginemsgs_total_)*/0u
-  , /*decltype(_impl_.enginemsgs_sec_p95_)*/0u
-  , /*decltype(_impl_.enginemsgs_sec_p99_)*/0u
-  , /*decltype(_impl_.ticks_total_)*/0u
-  , /*decltype(_impl_.ticks_good_)*/0u
-  , /*decltype(_impl_.ticks_good_almost_late_)*/0u
-  , /*decltype(_impl_.ticks_fixed_dropped_)*/0u
-  , /*decltype(_impl_.ticks_fixed_late_)*/0u
-  , /*decltype(_impl_.ticks_bad_dropped_)*/0u
-  , /*decltype(_impl_.ticks_bad_late_)*/0u
-  , /*decltype(_impl_.ticks_bad_other_)*/0u
-  , /*decltype(_impl_.tick_missrate_samples_total_)*/0u
-  , /*decltype(_impl_.tick_missrate_samples_perfect_)*/0u
-  , /*decltype(_impl_.tick_missrate_samples_perfectnet_)*/0u
-  , /*decltype(_impl_.tick_missratenet_p75_x10_)*/0u
-  , /*decltype(_impl_.tick_missratenet_p95_x10_)*/0u
-  , /*decltype(_impl_.tick_missratenet_p99_x10_)*/0u
-  , /*decltype(_impl_.recvmargin_p1_)*/0
-  , /*decltype(_impl_.recvmargin_p5_)*/0
-  , /*decltype(_impl_.recvmargin_p25_)*/0
-  , /*decltype(_impl_.recvmargin_p50_)*/0
-  , /*decltype(_impl_.recvmargin_p75_)*/0
-  , /*decltype(_impl_.recvmargin_p95_)*/0} {}
-struct CMsgSource2NetworkFlowQualityDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CMsgSource2NetworkFlowQualityDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CMsgSource2NetworkFlowQualityDefaultTypeInternal() {}
-  union {
-    CMsgSource2NetworkFlowQuality _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CMsgSource2NetworkFlowQualityDefaultTypeInternal _CMsgSource2NetworkFlowQuality_default_instance_;
 PROTOBUF_CONSTEXPR CCLCMsg_Diagnostic::CCLCMsg_Diagnostic(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.perf_samples_)*/{}
   , /*decltype(_impl_.system_specs_)*/nullptr
   , /*decltype(_impl_.vprof_report_)*/nullptr
   , /*decltype(_impl_.downstream_flow_)*/nullptr
@@ -385,44 +254,6 @@ struct CCLCMsg_DiagnosticDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCLCMsg_DiagnosticDefaultTypeInternal _CCLCMsg_Diagnostic_default_instance_;
-PROTOBUF_CONSTEXPR CSource2Metrics_MatchPerfSummary_Notification_Client::CSource2Metrics_MatchPerfSummary_Notification_Client(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.system_specs_)*/nullptr
-  , /*decltype(_impl_.profile_)*/nullptr
-  , /*decltype(_impl_.downstream_flow_)*/nullptr
-  , /*decltype(_impl_.upstream_flow_)*/nullptr
-  , /*decltype(_impl_.steamid_)*/uint64_t{0u}
-  , /*decltype(_impl_.build_id_)*/0u} {}
-struct CSource2Metrics_MatchPerfSummary_Notification_ClientDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CSource2Metrics_MatchPerfSummary_Notification_ClientDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CSource2Metrics_MatchPerfSummary_Notification_ClientDefaultTypeInternal() {}
-  union {
-    CSource2Metrics_MatchPerfSummary_Notification_Client _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CSource2Metrics_MatchPerfSummary_Notification_ClientDefaultTypeInternal _CSource2Metrics_MatchPerfSummary_Notification_Client_default_instance_;
-PROTOBUF_CONSTEXPR CSource2Metrics_MatchPerfSummary_Notification::CSource2Metrics_MatchPerfSummary_Notification(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.clients_)*/{}
-  , /*decltype(_impl_.game_mode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.map_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.server_profile_)*/nullptr
-  , /*decltype(_impl_.appid_)*/0u
-  , /*decltype(_impl_.server_build_id_)*/0u} {}
-struct CSource2Metrics_MatchPerfSummary_NotificationDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CSource2Metrics_MatchPerfSummary_NotificationDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CSource2Metrics_MatchPerfSummary_NotificationDefaultTypeInternal() {}
-  union {
-    CSource2Metrics_MatchPerfSummary_Notification _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CSource2Metrics_MatchPerfSummary_NotificationDefaultTypeInternal _CSource2Metrics_MatchPerfSummary_Notification_default_instance_;
 PROTOBUF_CONSTEXPR CSVCMsg_ServerInfo::CSVCMsg_ServerInfo(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -937,11 +768,13 @@ PROTOBUF_CONSTEXPR CSVCMsg_VoiceData::CSVCMsg_VoiceData(
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.audio_)*/nullptr
   , /*decltype(_impl_.xuid_)*/uint64_t{0u}
-  , /*decltype(_impl_.proximity_)*/false
   , /*decltype(_impl_.audible_mask_)*/0
   , /*decltype(_impl_.tick_)*/0u
+  , /*decltype(_impl_.proximity_)*/false
+  , /*decltype(_impl_.caster_)*/false
   , /*decltype(_impl_.passthrough_)*/0
-  , /*decltype(_impl_.client_)*/-1} {}
+  , /*decltype(_impl_.client_deprecated_)*/-1
+  , /*decltype(_impl_.entity_)*/-1} {}
 struct CSVCMsg_VoiceDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CSVCMsg_VoiceDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -951,6 +784,21 @@ struct CSVCMsg_VoiceDataDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CSVCMsg_VoiceDataDefaultTypeInternal _CSVCMsg_VoiceData_default_instance_;
+PROTOBUF_CONSTEXPR CSVCMsg_EncryptedData::CSVCMsg_EncryptedData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.encrypted_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.key_type_)*/0} {}
+struct CSVCMsg_EncryptedDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CSVCMsg_EncryptedDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CSVCMsg_EncryptedDataDefaultTypeInternal() {}
+  union {
+    CSVCMsg_EncryptedData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CSVCMsg_EncryptedDataDefaultTypeInternal _CSVCMsg_EncryptedData_default_instance_;
 PROTOBUF_CONSTEXPR CSVCMsg_PacketReliable::CSVCMsg_PacketReliable(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -1121,11 +969,26 @@ struct ProtoFlattenedSerializerField_t_polymorphic_field_tDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ProtoFlattenedSerializerField_t_polymorphic_field_tDefaultTypeInternal _ProtoFlattenedSerializerField_t_polymorphic_field_t_default_instance_;
+PROTOBUF_CONSTEXPR ProtoFlattenedSerializerField_t_proto_enum_info_t::ProtoFlattenedSerializerField_t_proto_enum_info_t(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.is_signed_enum_)*/false} {}
+struct ProtoFlattenedSerializerField_t_proto_enum_info_tDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ProtoFlattenedSerializerField_t_proto_enum_info_tDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ProtoFlattenedSerializerField_t_proto_enum_info_tDefaultTypeInternal() {}
+  union {
+    ProtoFlattenedSerializerField_t_proto_enum_info_t _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ProtoFlattenedSerializerField_t_proto_enum_info_tDefaultTypeInternal _ProtoFlattenedSerializerField_t_proto_enum_info_t_default_instance_;
 PROTOBUF_CONSTEXPR ProtoFlattenedSerializerField_t::ProtoFlattenedSerializerField_t(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.polymorphic_types_)*/{}
+  , /*decltype(_impl_.var_enum_info_)*/nullptr
   , /*decltype(_impl_.var_type_sym_)*/0
   , /*decltype(_impl_.var_name_sym_)*/0
   , /*decltype(_impl_.bit_count_)*/0
@@ -1162,12 +1025,33 @@ struct ProtoFlattenedSerializer_tDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ProtoFlattenedSerializer_tDefaultTypeInternal _ProtoFlattenedSerializer_t_default_instance_;
+PROTOBUF_CONSTEXPR ProtoCoordSizeParams_t::ProtoCoordSizeParams_t(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.coord_integer_bits_)*/0
+  , /*decltype(_impl_.coord_fractional_bits_)*/0
+  , /*decltype(_impl_.coord_integer_bits_mp_)*/0
+  , /*decltype(_impl_.coord_fractional_bits_mp_)*/0
+  , /*decltype(_impl_.normal_fractional_bits_)*/0
+  , /*decltype(_impl_.angle_bits_)*/0} {}
+struct ProtoCoordSizeParams_tDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ProtoCoordSizeParams_tDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ProtoCoordSizeParams_tDefaultTypeInternal() {}
+  union {
+    ProtoCoordSizeParams_t _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ProtoCoordSizeParams_tDefaultTypeInternal _ProtoCoordSizeParams_t_default_instance_;
 PROTOBUF_CONSTEXPR CSVCMsg_FlattenedSerializer::CSVCMsg_FlattenedSerializer(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.serializers_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.serializers_)*/{}
   , /*decltype(_impl_.symbols_)*/{}
   , /*decltype(_impl_.fields_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.coord_size_params_)*/nullptr} {}
 struct CSVCMsg_FlattenedSerializerDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CSVCMsg_FlattenedSerializerDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -1407,9 +1291,11 @@ PROTOBUF_CONSTEXPR CMsgServerUserCmd::CMsgServerUserCmd(
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.delta_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.cmd_number_)*/0
   , /*decltype(_impl_.server_tick_executed_)*/0
   , /*decltype(_impl_.client_tick_)*/0
+  , /*decltype(_impl_.delta_processed_)*/false
   , /*decltype(_impl_.player_slot_)*/-1} {}
 struct CMsgServerUserCmdDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CMsgServerUserCmdDefaultTypeInternal()
@@ -1433,8 +1319,23 @@ struct CSVCMsg_UserCommandsDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CSVCMsg_UserCommandsDefaultTypeInternal _CSVCMsg_UserCommands_default_instance_;
-static ::_pb::Metadata file_level_metadata_netmessages_2eproto[80];
-static const ::_pb::EnumDescriptor* file_level_enum_descriptors_netmessages_2eproto[13];
+PROTOBUF_CONSTEXPR CSVCMsg_NextMsgPredicted::CSVCMsg_NextMsgPredicted(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.message_type_id_)*/0u
+  , /*decltype(_impl_.predicted_by_player_slot_)*/-1} {}
+struct CSVCMsg_NextMsgPredictedDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CSVCMsg_NextMsgPredictedDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CSVCMsg_NextMsgPredictedDefaultTypeInternal() {}
+  union {
+    CSVCMsg_NextMsgPredicted _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CSVCMsg_NextMsgPredictedDefaultTypeInternal _CSVCMsg_NextMsgPredicted_default_instance_;
+static ::_pb::Metadata file_level_metadata_netmessages_2eproto[77];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_netmessages_2eproto[12];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_netmessages_2eproto = nullptr;
 
 const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -1531,22 +1432,6 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   3,
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::CCLCMsg_FileCRCCheck, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CCLCMsg_FileCRCCheck, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CCLCMsg_FileCRCCheck, _impl_.code_path_),
-  PROTOBUF_FIELD_OFFSET(::CCLCMsg_FileCRCCheck, _impl_.path_),
-  PROTOBUF_FIELD_OFFSET(::CCLCMsg_FileCRCCheck, _impl_.code_filename_),
-  PROTOBUF_FIELD_OFFSET(::CCLCMsg_FileCRCCheck, _impl_.filename_),
-  PROTOBUF_FIELD_OFFSET(::CCLCMsg_FileCRCCheck, _impl_.crc_),
-  2,
-  0,
-  3,
-  1,
-  4,
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_LoadingProgress, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_LoadingProgress, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1605,154 +1490,6 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_RconServerDetails, _impl_.token_),
   0,
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.cpu_id_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.cpu_brand_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.cpu_model_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.cpu_num_physical_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.ram_physical_total_mb_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.gpu_rendersystem_dll_name_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.gpu_vendor_id_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.gpu_driver_name_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.gpu_driver_version_high_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.gpu_driver_version_low_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.gpu_dx_support_level_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2SystemSpecs, _impl_.gpu_texture_memory_size_mb_),
-  0,
-  1,
-  4,
-  5,
-  6,
-  2,
-  7,
-  3,
-  8,
-  9,
-  10,
-  11,
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.name_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.active_samples_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.active_samples_1secmax_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_max_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_avg_active_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_p50_active_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_p99_active_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_avg_all_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_p50_all_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_p99_all_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_avg_active_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_p50_active_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_p95_active_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_p99_active_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_avg_all_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_p50_all_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_p95_all_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_p99_all_),
-  0,
-  1,
-  3,
-  2,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16,
-  17,
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReport, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReport, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReport, _impl_.total_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReport, _impl_.items_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2VProfLiteReport, _impl_.discarded_frames_),
-  0,
-  ~0u,
-  1,
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.duration_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.bytes_total_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.bytes_total_reliable_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.bytes_total_voice_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.bytes_sec_p95_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.bytes_sec_p99_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.enginemsgs_total_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.enginemsgs_sec_p95_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.enginemsgs_sec_p99_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_total_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_good_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_good_almost_late_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_fixed_dropped_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_fixed_late_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_bad_dropped_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_bad_late_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.ticks_bad_other_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.tick_missrate_samples_total_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.tick_missrate_samples_perfect_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.tick_missrate_samples_perfectnet_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.tick_missratenet_p75_x10_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.tick_missratenet_p95_x10_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.tick_missratenet_p99_x10_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.recvmargin_p1_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.recvmargin_p5_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.recvmargin_p25_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.recvmargin_p50_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.recvmargin_p75_),
-  PROTOBUF_FIELD_OFFSET(::CMsgSource2NetworkFlowQuality, _impl_.recvmargin_p95_),
-  1,
-  0,
-  3,
-  4,
-  2,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16,
-  17,
-  18,
-  19,
-  20,
-  21,
-  22,
-  23,
-  24,
-  25,
-  26,
-  27,
-  28,
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_Diagnostic, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_Diagnostic, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1763,46 +1500,12 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_Diagnostic, _impl_.vprof_report_),
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_Diagnostic, _impl_.downstream_flow_),
   PROTOBUF_FIELD_OFFSET(::CCLCMsg_Diagnostic, _impl_.upstream_flow_),
+  PROTOBUF_FIELD_OFFSET(::CCLCMsg_Diagnostic, _impl_.perf_samples_),
   0,
   1,
   2,
   3,
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.system_specs_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.profile_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.build_id_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.downstream_flow_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.upstream_flow_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.steamid_),
-  0,
-  1,
-  5,
-  2,
-  3,
-  4,
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _impl_.appid_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _impl_.game_mode_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _impl_.server_build_id_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _impl_.server_profile_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _impl_.clients_),
-  PROTOBUF_FIELD_OFFSET(::CSource2Metrics_MatchPerfSummary_Notification, _impl_.map_),
-  3,
-  0,
-  4,
-  2,
   ~0u,
-  1,
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_ServerInfo, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_ServerInfo, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2245,19 +1948,33 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.audio_),
-  PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.client_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.client_deprecated_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.proximity_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.xuid_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.audible_mask_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.tick_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.passthrough_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.entity_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_VoiceData, _impl_.caster_),
   0,
-  6,
-  2,
-  1,
-  3,
+  7,
   4,
+  1,
+  2,
+  3,
+  6,
+  8,
   5,
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_EncryptedData, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_EncryptedData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_EncryptedData, _impl_.encrypted_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_EncryptedData, _impl_.key_type_),
+  0,
+  1,
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_PacketReliable, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_PacketReliable, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2379,6 +2096,14 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t_polymorphic_field_t, _impl_.polymorphic_field_serializer_version_),
   0,
   1,
+  PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t_proto_enum_info_t, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t_proto_enum_info_t, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t_proto_enum_info_t, _impl_.is_signed_enum_),
+  0,
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2397,7 +2122,7 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t, _impl_.var_encoder_sym_),
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t, _impl_.polymorphic_types_),
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t, _impl_.var_serializer_sym_),
-  0,
+  PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializerField_t, _impl_.var_enum_info_),
   1,
   2,
   3,
@@ -2407,8 +2132,10 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   7,
   8,
   9,
-  ~0u,
   10,
+  ~0u,
+  11,
+  0,
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializer_t, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::ProtoFlattenedSerializer_t, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2421,7 +2148,25 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   0,
   1,
   ~0u,
-  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _impl_.coord_integer_bits_),
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _impl_.coord_fractional_bits_),
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _impl_.coord_integer_bits_mp_),
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _impl_.coord_fractional_bits_mp_),
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _impl_.normal_fractional_bits_),
+  PROTOBUF_FIELD_OFFSET(::ProtoCoordSizeParams_t, _impl_.angle_bits_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_FlattenedSerializer, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_FlattenedSerializer, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -2430,6 +2175,11 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_FlattenedSerializer, _impl_.serializers_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_FlattenedSerializer, _impl_.symbols_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_FlattenedSerializer, _impl_.fields_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_FlattenedSerializer, _impl_.coord_size_params_),
+  ~0u,
+  ~0u,
+  ~0u,
+  0,
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_StopSound, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_StopSound, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2651,11 +2401,15 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.player_slot_),
   PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.server_tick_executed_),
   PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.client_tick_),
+  PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.delta_data_),
+  PROTOBUF_FIELD_OFFSET(::CMsgServerUserCmd, _impl_.delta_processed_),
   0,
-  1,
-  4,
   2,
+  6,
   3,
+  4,
+  1,
+  5,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_UserCommands, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2663,6 +2417,16 @@ const uint32_t TableStruct_netmessages_2eproto::offsets[] PROTOBUF_SECTION_VARIA
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::CSVCMsg_UserCommands, _impl_.commands_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_NextMsgPredicted, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_NextMsgPredicted, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_NextMsgPredicted, _impl_.predicted_by_player_slot_),
+  PROTOBUF_FIELD_OFFSET(::CSVCMsg_NextMsgPredicted, _impl_.message_type_id_),
+  1,
+  0,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 11, -1, sizeof(::CCLCMsg_ClientInfo)},
@@ -2672,79 +2436,76 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 62, 70, -1, sizeof(::CCLCMsg_BaselineAck)},
   { 72, -1, -1, sizeof(::CCLCMsg_ListenEvents)},
   { 79, 89, -1, sizeof(::CCLCMsg_RespondCvarValue)},
-  { 93, 104, -1, sizeof(::CCLCMsg_FileCRCCheck)},
-  { 109, 116, -1, sizeof(::CCLCMsg_LoadingProgress)},
-  { 117, 124, -1, sizeof(::CCLCMsg_SplitPlayerConnect)},
-  { 125, 132, -1, sizeof(::CCLCMsg_SplitPlayerDisconnect)},
-  { 133, 140, -1, sizeof(::CCLCMsg_ServerStatus)},
-  { 141, 149, -1, sizeof(::CCLCMsg_RequestPause)},
-  { 151, 158, -1, sizeof(::CCLCMsg_CmdKeyValues)},
-  { 159, 166, -1, sizeof(::CCLCMsg_RconServerDetails)},
-  { 167, 185, -1, sizeof(::CMsgSource2SystemSpecs)},
-  { 197, 221, -1, sizeof(::CMsgSource2VProfLiteReportItem)},
-  { 239, 248, -1, sizeof(::CMsgSource2VProfLiteReport)},
-  { 251, 286, -1, sizeof(::CMsgSource2NetworkFlowQuality)},
-  { 315, 325, -1, sizeof(::CCLCMsg_Diagnostic)},
-  { 329, 341, -1, sizeof(::CSource2Metrics_MatchPerfSummary_Notification_Client)},
-  { 347, 359, -1, sizeof(::CSource2Metrics_MatchPerfSummary_Notification)},
-  { 365, 387, -1, sizeof(::CSVCMsg_ServerInfo)},
-  { 403, 411, -1, sizeof(::CSVCMsg_ClassInfo_class_t)},
-  { 413, 421, -1, sizeof(::CSVCMsg_ClassInfo)},
-  { 423, 430, -1, sizeof(::CSVCMsg_SetPause)},
-  { 431, 440, -1, sizeof(::CSVCMsg_VoiceInit)},
-  { 443, 450, -1, sizeof(::CSVCMsg_Print)},
-  { 451, 476, -1, sizeof(::CSVCMsg_Sounds_sounddata_t)},
-  { 495, 503, -1, sizeof(::CSVCMsg_Sounds)},
-  { 505, 513, -1, sizeof(::CSVCMsg_Prefetch)},
-  { 515, 523, -1, sizeof(::CSVCMsg_SetView)},
-  { 525, 533, -1, sizeof(::CSVCMsg_FixAngle)},
-  { 535, 542, -1, sizeof(::CSVCMsg_CrosshairAngle)},
-  { 543, 554, -1, sizeof(::CSVCMsg_BSPDecal)},
-  { 559, 568, -1, sizeof(::CSVCMsg_SplitScreen)},
-  { 571, 579, -1, sizeof(::CSVCMsg_GetCvarValue)},
-  { 581, 589, -1, sizeof(::CSVCMsg_Menu)},
-  { 591, 600, -1, sizeof(::CSVCMsg_UserMessage)},
-  { 603, 618, -1, sizeof(::CSVCMsg_SendTable_sendprop_t)},
-  { 627, 637, -1, sizeof(::CSVCMsg_SendTable)},
-  { 641, 649, -1, sizeof(::CSVCMsg_GameEventList_key_t)},
-  { 651, 660, -1, sizeof(::CSVCMsg_GameEventList_descriptor_t)},
-  { 663, -1, -1, sizeof(::CSVCMsg_GameEventList)},
-  { 670, 678, -1, sizeof(::CSVCMsg_PacketEntities_alternate_baseline_t)},
-  { 680, 688, -1, sizeof(::CSVCMsg_PacketEntities_non_transmitted_entities_t)},
-  { 690, 698, -1, sizeof(::CSVCMsg_PacketEntities_outofpvs_entity_updates_t)},
-  { 700, 728, -1, sizeof(::CSVCMsg_PacketEntities)},
-  { 750, 759, -1, sizeof(::CSVCMsg_TempEntities)},
-  { 762, 778, -1, sizeof(::CSVCMsg_CreateStringTable)},
-  { 788, 797, -1, sizeof(::CSVCMsg_UpdateStringTable)},
-  { 800, 813, -1, sizeof(::CSVCMsg_VoiceData)},
-  { 820, 829, -1, sizeof(::CSVCMsg_PacketReliable)},
-  { 832, 842, -1, sizeof(::CSVCMsg_FullFrameSplit)},
-  { 846, 856, -1, sizeof(::CSVCMsg_HLTVStatus)},
-  { 860, 867, -1, sizeof(::CSVCMsg_ServerSteamID)},
-  { 868, 875, -1, sizeof(::CSVCMsg_CmdKeyValues)},
-  { 876, 884, -1, sizeof(::CSVCMsg_RconServerDetails)},
-  { 886, 894, -1, sizeof(::CMsgIPCAddress)},
-  { 896, 908, -1, sizeof(::CMsgServerPeer)},
-  { 914, -1, -1, sizeof(::CSVCMsg_PeerList)},
-  { 921, 929, -1, sizeof(::CSVCMsg_ClearAllStringTables)},
-  { 931, 939, -1, sizeof(::ProtoFlattenedSerializerField_t_polymorphic_field_t)},
-  { 941, 959, -1, sizeof(::ProtoFlattenedSerializerField_t)},
-  { 971, 980, -1, sizeof(::ProtoFlattenedSerializer_t)},
-  { 983, -1, -1, sizeof(::CSVCMsg_FlattenedSerializer)},
-  { 992, 999, -1, sizeof(::CSVCMsg_StopSound)},
-  { 1000, 1010, -1, sizeof(::CBidirMsg_RebroadcastGameEvent)},
-  { 1014, 1021, -1, sizeof(::CBidirMsg_RebroadcastSource)},
-  { 1022, 1032, -1, sizeof(::CBidirMsg_PredictionEvent)},
-  { 1036, 1044, -1, sizeof(::CMsgServerNetworkStats_Port)},
-  { 1046, 1060, -1, sizeof(::CMsgServerNetworkStats_Player)},
-  { 1068, 1099, -1, sizeof(::CMsgServerNetworkStats)},
-  { 1124, 1138, -1, sizeof(::CSVCMsg_HltvReplay)},
-  { 1146, 1157, -1, sizeof(::CCLCMsg_HltvReplay)},
-  { 1162, 1169, -1, sizeof(::CSVCMsg_Broadcast_Command)},
-  { 1170, 1184, -1, sizeof(::CCLCMsg_HltvFixupOperatorTick)},
-  { 1192, 1200, -1, sizeof(::CSVCMsg_HltvFixupOperatorStatus)},
-  { 1202, 1213, -1, sizeof(::CMsgServerUserCmd)},
-  { 1218, -1, -1, sizeof(::CSVCMsg_UserCommands)},
+  { 93, 100, -1, sizeof(::CCLCMsg_LoadingProgress)},
+  { 101, 108, -1, sizeof(::CCLCMsg_SplitPlayerConnect)},
+  { 109, 116, -1, sizeof(::CCLCMsg_SplitPlayerDisconnect)},
+  { 117, 124, -1, sizeof(::CCLCMsg_ServerStatus)},
+  { 125, 133, -1, sizeof(::CCLCMsg_RequestPause)},
+  { 135, 142, -1, sizeof(::CCLCMsg_CmdKeyValues)},
+  { 143, 150, -1, sizeof(::CCLCMsg_RconServerDetails)},
+  { 151, 162, -1, sizeof(::CCLCMsg_Diagnostic)},
+  { 167, 189, -1, sizeof(::CSVCMsg_ServerInfo)},
+  { 205, 213, -1, sizeof(::CSVCMsg_ClassInfo_class_t)},
+  { 215, 223, -1, sizeof(::CSVCMsg_ClassInfo)},
+  { 225, 232, -1, sizeof(::CSVCMsg_SetPause)},
+  { 233, 242, -1, sizeof(::CSVCMsg_VoiceInit)},
+  { 245, 252, -1, sizeof(::CSVCMsg_Print)},
+  { 253, 278, -1, sizeof(::CSVCMsg_Sounds_sounddata_t)},
+  { 297, 305, -1, sizeof(::CSVCMsg_Sounds)},
+  { 307, 315, -1, sizeof(::CSVCMsg_Prefetch)},
+  { 317, 325, -1, sizeof(::CSVCMsg_SetView)},
+  { 327, 335, -1, sizeof(::CSVCMsg_FixAngle)},
+  { 337, 344, -1, sizeof(::CSVCMsg_CrosshairAngle)},
+  { 345, 356, -1, sizeof(::CSVCMsg_BSPDecal)},
+  { 361, 370, -1, sizeof(::CSVCMsg_SplitScreen)},
+  { 373, 381, -1, sizeof(::CSVCMsg_GetCvarValue)},
+  { 383, 391, -1, sizeof(::CSVCMsg_Menu)},
+  { 393, 402, -1, sizeof(::CSVCMsg_UserMessage)},
+  { 405, 420, -1, sizeof(::CSVCMsg_SendTable_sendprop_t)},
+  { 429, 439, -1, sizeof(::CSVCMsg_SendTable)},
+  { 443, 451, -1, sizeof(::CSVCMsg_GameEventList_key_t)},
+  { 453, 462, -1, sizeof(::CSVCMsg_GameEventList_descriptor_t)},
+  { 465, -1, -1, sizeof(::CSVCMsg_GameEventList)},
+  { 472, 480, -1, sizeof(::CSVCMsg_PacketEntities_alternate_baseline_t)},
+  { 482, 490, -1, sizeof(::CSVCMsg_PacketEntities_non_transmitted_entities_t)},
+  { 492, 500, -1, sizeof(::CSVCMsg_PacketEntities_outofpvs_entity_updates_t)},
+  { 502, 530, -1, sizeof(::CSVCMsg_PacketEntities)},
+  { 552, 561, -1, sizeof(::CSVCMsg_TempEntities)},
+  { 564, 580, -1, sizeof(::CSVCMsg_CreateStringTable)},
+  { 590, 599, -1, sizeof(::CSVCMsg_UpdateStringTable)},
+  { 602, 617, -1, sizeof(::CSVCMsg_VoiceData)},
+  { 626, 634, -1, sizeof(::CSVCMsg_EncryptedData)},
+  { 636, 645, -1, sizeof(::CSVCMsg_PacketReliable)},
+  { 648, 658, -1, sizeof(::CSVCMsg_FullFrameSplit)},
+  { 662, 672, -1, sizeof(::CSVCMsg_HLTVStatus)},
+  { 676, 683, -1, sizeof(::CSVCMsg_ServerSteamID)},
+  { 684, 691, -1, sizeof(::CSVCMsg_CmdKeyValues)},
+  { 692, 700, -1, sizeof(::CSVCMsg_RconServerDetails)},
+  { 702, 710, -1, sizeof(::CMsgIPCAddress)},
+  { 712, 724, -1, sizeof(::CMsgServerPeer)},
+  { 730, -1, -1, sizeof(::CSVCMsg_PeerList)},
+  { 737, 745, -1, sizeof(::CSVCMsg_ClearAllStringTables)},
+  { 747, 755, -1, sizeof(::ProtoFlattenedSerializerField_t_polymorphic_field_t)},
+  { 757, 764, -1, sizeof(::ProtoFlattenedSerializerField_t_proto_enum_info_t)},
+  { 765, 784, -1, sizeof(::ProtoFlattenedSerializerField_t)},
+  { 797, 806, -1, sizeof(::ProtoFlattenedSerializer_t)},
+  { 809, 821, -1, sizeof(::ProtoCoordSizeParams_t)},
+  { 827, 837, -1, sizeof(::CSVCMsg_FlattenedSerializer)},
+  { 841, 848, -1, sizeof(::CSVCMsg_StopSound)},
+  { 849, 859, -1, sizeof(::CBidirMsg_RebroadcastGameEvent)},
+  { 863, 870, -1, sizeof(::CBidirMsg_RebroadcastSource)},
+  { 871, 881, -1, sizeof(::CBidirMsg_PredictionEvent)},
+  { 885, 893, -1, sizeof(::CMsgServerNetworkStats_Port)},
+  { 895, 909, -1, sizeof(::CMsgServerNetworkStats_Player)},
+  { 917, 948, -1, sizeof(::CMsgServerNetworkStats)},
+  { 973, 987, -1, sizeof(::CSVCMsg_HltvReplay)},
+  { 995, 1006, -1, sizeof(::CCLCMsg_HltvReplay)},
+  { 1011, 1018, -1, sizeof(::CSVCMsg_Broadcast_Command)},
+  { 1019, 1033, -1, sizeof(::CCLCMsg_HltvFixupOperatorTick)},
+  { 1041, 1049, -1, sizeof(::CSVCMsg_HltvFixupOperatorStatus)},
+  { 1051, 1064, -1, sizeof(::CMsgServerUserCmd)},
+  { 1071, -1, -1, sizeof(::CSVCMsg_UserCommands)},
+  { 1078, 1086, -1, sizeof(::CSVCMsg_NextMsgPredicted)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -2755,7 +2516,6 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CCLCMsg_BaselineAck_default_instance_._instance,
   &::_CCLCMsg_ListenEvents_default_instance_._instance,
   &::_CCLCMsg_RespondCvarValue_default_instance_._instance,
-  &::_CCLCMsg_FileCRCCheck_default_instance_._instance,
   &::_CCLCMsg_LoadingProgress_default_instance_._instance,
   &::_CCLCMsg_SplitPlayerConnect_default_instance_._instance,
   &::_CCLCMsg_SplitPlayerDisconnect_default_instance_._instance,
@@ -2763,13 +2523,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CCLCMsg_RequestPause_default_instance_._instance,
   &::_CCLCMsg_CmdKeyValues_default_instance_._instance,
   &::_CCLCMsg_RconServerDetails_default_instance_._instance,
-  &::_CMsgSource2SystemSpecs_default_instance_._instance,
-  &::_CMsgSource2VProfLiteReportItem_default_instance_._instance,
-  &::_CMsgSource2VProfLiteReport_default_instance_._instance,
-  &::_CMsgSource2NetworkFlowQuality_default_instance_._instance,
   &::_CCLCMsg_Diagnostic_default_instance_._instance,
-  &::_CSource2Metrics_MatchPerfSummary_Notification_Client_default_instance_._instance,
-  &::_CSource2Metrics_MatchPerfSummary_Notification_default_instance_._instance,
   &::_CSVCMsg_ServerInfo_default_instance_._instance,
   &::_CSVCMsg_ClassInfo_class_t_default_instance_._instance,
   &::_CSVCMsg_ClassInfo_default_instance_._instance,
@@ -2800,6 +2554,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CSVCMsg_CreateStringTable_default_instance_._instance,
   &::_CSVCMsg_UpdateStringTable_default_instance_._instance,
   &::_CSVCMsg_VoiceData_default_instance_._instance,
+  &::_CSVCMsg_EncryptedData_default_instance_._instance,
   &::_CSVCMsg_PacketReliable_default_instance_._instance,
   &::_CSVCMsg_FullFrameSplit_default_instance_._instance,
   &::_CSVCMsg_HLTVStatus_default_instance_._instance,
@@ -2811,8 +2566,10 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CSVCMsg_PeerList_default_instance_._instance,
   &::_CSVCMsg_ClearAllStringTables_default_instance_._instance,
   &::_ProtoFlattenedSerializerField_t_polymorphic_field_t_default_instance_._instance,
+  &::_ProtoFlattenedSerializerField_t_proto_enum_info_t_default_instance_._instance,
   &::_ProtoFlattenedSerializerField_t_default_instance_._instance,
   &::_ProtoFlattenedSerializer_t_default_instance_._instance,
+  &::_ProtoCoordSizeParams_t_default_instance_._instance,
   &::_CSVCMsg_FlattenedSerializer_default_instance_._instance,
   &::_CSVCMsg_StopSound_default_instance_._instance,
   &::_CBidirMsg_RebroadcastGameEvent_default_instance_._instance,
@@ -2828,357 +2585,315 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CSVCMsg_HltvFixupOperatorStatus_default_instance_._instance,
   &::_CMsgServerUserCmd_default_instance_._instance,
   &::_CSVCMsg_UserCommands_default_instance_._instance,
+  &::_CSVCMsg_NextMsgPredicted_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_netmessages_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\021netmessages.proto\032\026networkbasetypes.pr"
-  "oto\"}\n\022CCLCMsg_ClientInfo\022\026\n\016send_table_"
-  "crc\030\001 \001(\007\022\024\n\014server_count\030\002 \001(\r\022\017\n\007is_hl"
-  "tv\030\003 \001(\010\022\022\n\nfriends_id\030\005 \001(\r\022\024\n\014friends_"
-  "name\030\006 \001(\t\"9\n\014CCLCMsg_Move\022\014\n\004data\030\003 \001(\014"
-  "\022\033\n\023last_command_number\030\004 \001(\r\"\217\002\n\016CMsgVo"
-  "iceAudio\022:\n\006format\030\001 \001(\0162\022.VoiceDataForm"
-  "at_t:\026VOICEDATA_FORMAT_STEAM\022\022\n\nvoice_da"
-  "ta\030\002 \001(\014\022\026\n\016sequence_bytes\030\003 \001(\005\022\026\n\016sect"
-  "ion_number\030\004 \001(\r\022\023\n\013sample_rate\030\005 \001(\r\022\"\n"
-  "\032uncompressed_sample_offset\030\006 \001(\r\022\023\n\013num"
-  "_packets\030\007 \001(\r\022\032\n\016packet_offsets\030\010 \003(\rB\002"
-  "\020\001\022\023\n\013voice_level\030\t \001(\002\"O\n\021CCLCMsg_Voice"
-  "Data\022\036\n\005audio\030\001 \001(\0132\017.CMsgVoiceAudio\022\014\n\004"
-  "xuid\030\002 \001(\006\022\014\n\004tick\030\003 \001(\r\"A\n\023CCLCMsg_Base"
-  "lineAck\022\025\n\rbaseline_tick\030\001 \001(\005\022\023\n\013baseli"
-  "ne_nr\030\002 \001(\005\"*\n\024CCLCMsg_ListenEvents\022\022\n\ne"
-  "vent_mask\030\001 \003(\007\"\\\n\030CCLCMsg_RespondCvarVa"
-  "lue\022\016\n\006cookie\030\001 \001(\005\022\023\n\013status_code\030\002 \001(\005"
-  "\022\014\n\004name\030\003 \001(\t\022\r\n\005value\030\004 \001(\t\"m\n\024CCLCMsg"
-  "_FileCRCCheck\022\021\n\tcode_path\030\001 \001(\005\022\014\n\004path"
-  "\030\002 \001(\t\022\025\n\rcode_filename\030\003 \001(\005\022\020\n\010filenam"
-  "e\030\004 \001(\t\022\013\n\003crc\030\005 \001(\007\"+\n\027CCLCMsg_LoadingP"
-  "rogress\022\020\n\010progress\030\001 \001(\005\"0\n\032CCLCMsg_Spl"
-  "itPlayerConnect\022\022\n\nplayername\030\001 \001(\t\"-\n\035C"
-  "CLCMsg_SplitPlayerDisconnect\022\014\n\004slot\030\001 \001"
-  "(\005\"*\n\024CCLCMsg_ServerStatus\022\022\n\nsimplified"
-  "\030\001 \001(\010\"Z\n\024CCLCMsg_RequestPause\022-\n\npause_"
-  "type\030\001 \001(\0162\017.RequestPause_t:\010RP_PAUSE\022\023\n"
-  "\013pause_group\030\002 \001(\005\"$\n\024CCLCMsg_CmdKeyValu"
-  "es\022\014\n\004data\030\001 \001(\014\"*\n\031CCLCMsg_RconServerDe"
-  "tails\022\r\n\005token\030\001 \001(\014\"\335\002\n\026CMsgSource2Syst"
-  "emSpecs\022\016\n\006cpu_id\030\001 \001(\t\022\021\n\tcpu_brand\030\002 \001"
-  "(\t\022\021\n\tcpu_model\030\003 \001(\r\022\030\n\020cpu_num_physica"
-  "l\030\004 \001(\r\022\035\n\025ram_physical_total_mb\030\025 \001(\r\022!"
-  "\n\031gpu_rendersystem_dll_name\030) \001(\t\022\025\n\rgpu"
-  "_vendor_id\030* \001(\r\022\027\n\017gpu_driver_name\030+ \001("
-  "\t\022\037\n\027gpu_driver_version_high\030, \001(\r\022\036\n\026gp"
-  "u_driver_version_low\030- \001(\r\022\034\n\024gpu_dx_sup"
-  "port_level\030. \001(\r\022\"\n\032gpu_texture_memory_s"
-  "ize_mb\030/ \001(\r\"\201\004\n\036CMsgSource2VProfLiteRep"
-  "ortItem\022\014\n\004name\030\001 \001(\t\022\026\n\016active_samples\030"
-  "\002 \001(\r\022\036\n\026active_samples_1secmax\030\004 \001(\r\022\020\n"
-  "\010usec_max\030\003 \001(\r\022\027\n\017usec_avg_active\030\013 \001(\r"
-  "\022\027\n\017usec_p50_active\030\014 \001(\r\022\027\n\017usec_p99_ac"
-  "tive\030\r \001(\r\022\024\n\014usec_avg_all\030\025 \001(\r\022\024\n\014usec"
-  "_p50_all\030\026 \001(\r\022\024\n\014usec_p99_all\030\027 \001(\r\022\037\n\027"
-  "usec_1secmax_avg_active\030\037 \001(\r\022\037\n\027usec_1s"
-  "ecmax_p50_active\030  \001(\r\022\037\n\027usec_1secmax_p"
-  "95_active\030! \001(\r\022\037\n\027usec_1secmax_p99_acti"
-  "ve\030\" \001(\r\022\034\n\024usec_1secmax_avg_all\030) \001(\r\022\034"
-  "\n\024usec_1secmax_p50_all\030* \001(\r\022\034\n\024usec_1se"
-  "cmax_p95_all\030+ \001(\r\022\034\n\024usec_1secmax_p99_a"
-  "ll\030, \001(\r\"\226\001\n\032CMsgSource2VProfLiteReport\022"
-  ".\n\005total\030\001 \001(\0132\037.CMsgSource2VProfLiteRep"
-  "ortItem\022.\n\005items\030\002 \003(\0132\037.CMsgSource2VPro"
-  "fLiteReportItem\022\030\n\020discarded_frames\030\003 \001("
-  "\r\"\265\006\n\035CMsgSource2NetworkFlowQuality\022\020\n\010d"
-  "uration\030\001 \001(\r\022\023\n\013bytes_total\030\005 \001(\004\022\034\n\024by"
-  "tes_total_reliable\030\006 \001(\004\022\031\n\021bytes_total_"
-  "voice\030\007 \001(\004\022\025\n\rbytes_sec_p95\030\n \001(\r\022\025\n\rby"
-  "tes_sec_p99\030\013 \001(\r\022\030\n\020enginemsgs_total\030\024 "
-  "\001(\r\022\032\n\022enginemsgs_sec_p95\030\025 \001(\r\022\032\n\022engin"
-  "emsgs_sec_p99\030\026 \001(\r\022\023\n\013ticks_total\030( \001(\r"
-  "\022\022\n\nticks_good\030) \001(\r\022\036\n\026ticks_good_almos"
-  "t_late\030* \001(\r\022\033\n\023ticks_fixed_dropped\030+ \001("
-  "\r\022\030\n\020ticks_fixed_late\030, \001(\r\022\031\n\021ticks_bad"
-  "_dropped\030- \001(\r\022\026\n\016ticks_bad_late\030. \001(\r\022\027"
-  "\n\017ticks_bad_other\030/ \001(\r\022#\n\033tick_missrate"
-  "_samples_total\0302 \001(\r\022%\n\035tick_missrate_sa"
-  "mples_perfect\0303 \001(\r\022(\n tick_missrate_sam"
-  "ples_perfectnet\0304 \001(\r\022 \n\030tick_missratene"
-  "t_p75_x10\0305 \001(\r\022 \n\030tick_missratenet_p95_"
-  "x10\0306 \001(\r\022 \n\030tick_missratenet_p99_x10\0307 "
-  "\001(\r\022\025\n\rrecvmargin_p1\030= \001(\021\022\025\n\rrecvmargin"
-  "_p5\030> \001(\021\022\026\n\016recvmargin_p25\030\? \001(\021\022\026\n\016rec"
-  "vmargin_p50\030@ \001(\021\022\026\n\016recvmargin_p75\030A \001("
-  "\021\022\026\n\016recvmargin_p95\030B \001(\021\"\346\001\n\022CCLCMsg_Di"
-  "agnostic\022-\n\014system_specs\030\001 \001(\0132\027.CMsgSou"
-  "rce2SystemSpecs\0221\n\014vprof_report\030\002 \001(\0132\033."
-  "CMsgSource2VProfLiteReport\0227\n\017downstream"
-  "_flow\030\003 \001(\0132\036.CMsgSource2NetworkFlowQual"
-  "ity\0225\n\rupstream_flow\030\004 \001(\0132\036.CMsgSource2"
-  "NetworkFlowQuality\"\357\003\n-CSource2Metrics_M"
-  "atchPerfSummary_Notification\022\r\n\005appid\030\001 "
-  "\001(\r\022\021\n\tgame_mode\030\002 \001(\t\022\027\n\017server_build_i"
-  "d\030\003 \001(\r\0223\n\016server_profile\030\n \001(\0132\033.CMsgSo"
-  "urce2VProfLiteReport\022F\n\007clients\030\013 \003(\01325."
-  "CSource2Metrics_MatchPerfSummary_Notific"
-  "ation.Client\022\013\n\003map\030\024 \001(\t\032\370\001\n\006Client\022-\n\014"
-  "system_specs\030\001 \001(\0132\027.CMsgSource2SystemSp"
-  "ecs\022,\n\007profile\030\002 \001(\0132\033.CMsgSource2VProfL"
-  "iteReport\022\020\n\010build_id\030\003 \001(\r\0227\n\017downstrea"
-  "m_flow\030\004 \001(\0132\036.CMsgSource2NetworkFlowQua"
-  "lity\0225\n\rupstream_flow\030\005 \001(\0132\036.CMsgSource"
-  "2NetworkFlowQuality\022\017\n\007steamid\030\n \001(\006\"\207\003\n"
-  "\022CSVCMsg_ServerInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n"
-  "\014server_count\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001("
-  "\010\022\017\n\007is_hltv\030\004 \001(\010\022\014\n\004c_os\030\006 \001(\005\022\023\n\013max_"
-  "clients\030\n \001(\005\022\023\n\013max_classes\030\013 \001(\005\022\027\n\013pl"
-  "ayer_slot\030\014 \001(\005:\002-1\022\025\n\rtick_interval\030\r \001"
-  "(\002\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017 \001(\t\022\020"
-  "\n\010sky_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001(\t\022\022\n\na"
-  "ddon_name\030\022 \001(\t\022>\n\023game_session_config\030\023"
-  " \001(\0132!.CSVCMsg_GameSessionConfiguration\022"
-  "\035\n\025game_session_manifest\030\024 \001(\014\"\213\001\n\021CSVCM"
-  "sg_ClassInfo\022\030\n\020create_on_client\030\001 \001(\010\022+"
-  "\n\007classes\030\002 \003(\0132\032.CSVCMsg_ClassInfo.clas"
-  "s_t\032/\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\022\n\nclas"
-  "s_name\030\003 \001(\t\"\"\n\020CSVCMsg_SetPause\022\016\n\006paus"
-  "ed\030\001 \001(\010\"G\n\021CSVCMsg_VoiceInit\022\017\n\007quality"
-  "\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t\022\022\n\007version\030\003 \001(\005:\001"
-  "0\"\035\n\rCSVCMsg_Print\022\014\n\004text\030\001 \001(\t\"\343\003\n\016CSV"
-  "CMsg_Sounds\022\026\n\016reliable_sound\030\001 \001(\010\022+\n\006s"
-  "ounds\030\002 \003(\0132\033.CSVCMsg_Sounds.sounddata_t"
-  "\032\213\003\n\013sounddata_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010or"
-  "igin_y\030\002 \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume"
-  "\030\004 \001(\r\022\023\n\013delay_value\030\005 \001(\002\022\027\n\017sequence_"
-  "number\030\006 \001(\005\022\030\n\014entity_index\030\007 \001(\005:\002-1\022\017"
-  "\n\007channel\030\010 \001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030"
-  "\n \001(\005\022\021\n\tsound_num\030\013 \001(\r\022\030\n\020sound_num_ha"
-  "ndle\030\014 \001(\007\022\026\n\016speaker_entity\030\r \001(\005\022\023\n\013ra"
-  "ndom_seed\030\016 \001(\005\022\023\n\013sound_level\030\017 \001(\005\022\023\n\013"
-  "is_sentence\030\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n"
-  "\004guid\030\022 \001(\r\022\031\n\021sound_resource_id\030\023 \001(\006\"X"
-  "\n\020CSVCMsg_Prefetch\022\023\n\013sound_index\030\001 \001(\005\022"
-  "/\n\rresource_type\030\002 \001(\0162\r.PrefetchType:\tP"
-  "FT_SOUND\"=\n\017CSVCMsg_SetView\022\030\n\014entity_in"
-  "dex\030\001 \001(\005:\002-1\022\020\n\004slot\030\002 \001(\005:\002-1\"@\n\020CSVCM"
-  "sg_FixAngle\022\020\n\010relative\030\001 \001(\010\022\032\n\005angle\030\002"
-  " \001(\0132\013.CMsgQAngle\"4\n\026CSVCMsg_CrosshairAn"
-  "gle\022\032\n\005angle\030\001 \001(\0132\013.CMsgQAngle\"\216\001\n\020CSVC"
-  "Msg_BSPDecal\022\030\n\003pos\030\001 \001(\0132\013.CMsgVector\022\033"
-  "\n\023decal_texture_index\030\002 \001(\005\022\030\n\014entity_in"
-  "dex\030\003 \001(\005:\002-1\022\023\n\013model_index\030\004 \001(\005\022\024\n\014lo"
-  "w_priority\030\005 \001(\010\"~\n\023CSVCMsg_SplitScreen\022"
-  "\?\n\004type\030\001 \001(\0162\030.ESplitScreenMessageType:"
-  "\027MSG_SPLITSCREEN_ADDUSER\022\014\n\004slot\030\002 \001(\005\022\030"
-  "\n\014player_index\030\003 \001(\005:\002-1\"9\n\024CSVCMsg_GetC"
-  "varValue\022\016\n\006cookie\030\001 \001(\005\022\021\n\tcvar_name\030\002 "
-  "\001(\t\"<\n\014CSVCMsg_Menu\022\023\n\013dialog_type\030\001 \001(\005"
-  "\022\027\n\017menu_key_values\030\002 \001(\014\"N\n\023CSVCMsg_Use"
-  "rMessage\022\020\n\010msg_type\030\001 \001(\005\022\020\n\010msg_data\030\002"
-  " \001(\014\022\023\n\013passthrough\030\003 \001(\005\"\260\002\n\021CSVCMsg_Se"
-  "ndTable\022\016\n\006is_end\030\001 \001(\010\022\026\n\016net_table_nam"
-  "e\030\002 \001(\t\022\025\n\rneeds_decoder\030\003 \001(\010\022,\n\005props\030"
-  "\004 \003(\0132\035.CSVCMsg_SendTable.sendprop_t\032\255\001\n"
-  "\nsendprop_t\022\014\n\004type\030\001 \001(\005\022\020\n\010var_name\030\002 "
-  "\001(\t\022\r\n\005flags\030\003 \001(\005\022\020\n\010priority\030\004 \001(\005\022\017\n\007"
-  "dt_name\030\005 \001(\t\022\024\n\014num_elements\030\006 \001(\005\022\021\n\tl"
-  "ow_value\030\007 \001(\002\022\022\n\nhigh_value\030\010 \001(\002\022\020\n\010nu"
-  "m_bits\030\t \001(\005\"\321\001\n\025CSVCMsg_GameEventList\0228"
-  "\n\013descriptors\030\001 \003(\0132#.CSVCMsg_GameEventL"
-  "ist.descriptor_t\032#\n\005key_t\022\014\n\004type\030\001 \001(\005\022"
-  "\014\n\004name\030\002 \001(\t\032Y\n\014descriptor_t\022\017\n\007eventid"
-  "\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022*\n\004keys\030\003 \003(\0132\034.CSV"
-  "CMsg_GameEventList.key_t\"\347\007\n\026CSVCMsg_Pac"
-  "ketEntities\022\023\n\013max_entries\030\001 \001(\005\022\027\n\017upda"
-  "ted_entries\030\002 \001(\005\022\027\n\017legacy_is_delta\030\003 \001"
-  "(\010\022\027\n\017update_baseline\030\004 \001(\010\022\020\n\010baseline\030"
-  "\005 \001(\005\022\022\n\ndelta_from\030\006 \001(\005\022\023\n\013entity_data"
-  "\030\007 \001(\014\022\032\n\022pending_full_frame\030\010 \001(\010\022 \n\030ac"
-  "tive_spawngroup_handle\030\t \001(\r\022\'\n\037max_spaw"
-  "ngroup_creationsequence\030\n \001(\r\022 \n\030last_cm"
-  "d_number_executed\030\013 \001(\r\022\"\n\032last_cmd_numb"
-  "er_recv_delta\030\021 \001(\021\022\023\n\013server_tick\030\014 \001(\r"
-  "\022\033\n\023serialized_entities\030\r \001(\014\022I\n\023alterna"
-  "te_baselines\030\017 \003(\0132,.CSVCMsg_PacketEntit"
-  "ies.alternate_baseline_t\022#\n\033has_pvs_vis_"
-  "bits_deprecated\030\020 \001(\r\022\033\n\017cmd_recv_status"
-  "\030\026 \003(\021B\002\020\001\022T\n\030non_transmitted_entities\030\023"
-  " \001(\01322.CSVCMsg_PacketEntities.non_transm"
-  "itted_entities_t\022 \n\030cq_starved_command_t"
-  "icks\030\024 \001(\r\022\"\n\032cq_discarded_command_ticks"
-  "\030\025 \001(\r\022R\n\027outofpvs_entity_updates\030\027 \001(\0132"
-  "1.CSVCMsg_PacketEntities.outofpvs_entity"
-  "_updates_t\022\024\n\013dev_padding\030\347\007 \001(\014\032D\n\024alte"
-  "rnate_baseline_t\022\024\n\014entity_index\030\001 \001(\005\022\026"
-  "\n\016baseline_index\030\002 \001(\005\032@\n\032non_transmitte"
-  "d_entities_t\022\024\n\014header_count\030\001 \001(\005\022\014\n\004da"
-  "ta\030\002 \001(\014\0328\n\031outofpvs_entity_updates_t\022\r\n"
-  "\005count\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"R\n\024CSVCMsg_Te"
-  "mpEntities\022\020\n\010reliable\030\001 \001(\010\022\023\n\013num_entr"
-  "ies\030\002 \001(\005\022\023\n\013entity_data\030\003 \001(\014\"\211\002\n\031CSVCM"
-  "sg_CreateStringTable\022\014\n\004name\030\001 \001(\t\022\023\n\013nu"
-  "m_entries\030\002 \001(\005\022\034\n\024user_data_fixed_size\030"
-  "\003 \001(\010\022\026\n\016user_data_size\030\004 \001(\005\022\033\n\023user_da"
-  "ta_size_bits\030\005 \001(\005\022\r\n\005flags\030\006 \001(\005\022\023\n\013str"
-  "ing_data\030\007 \001(\014\022\031\n\021uncompressed_size\030\010 \001("
-  "\005\022\027\n\017data_compressed\030\t \001(\010\022\036\n\026using_vari"
-  "nt_bitcounts\030\n \001(\010\"_\n\031CSVCMsg_UpdateStri"
-  "ngTable\022\020\n\010table_id\030\001 \001(\005\022\033\n\023num_changed"
-  "_entries\030\002 \001(\005\022\023\n\013string_data\030\003 \001(\014\"\241\001\n\021"
-  "CSVCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMsgV"
-  "oiceAudio\022\022\n\006client\030\002 \001(\005:\002-1\022\021\n\tproximi"
-  "ty\030\003 \001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005"
-  " \001(\005\022\014\n\004tick\030\006 \001(\r\022\023\n\013passthrough\030\007 \001(\005\""
-  "K\n\026CSVCMsg_PacketReliable\022\014\n\004tick\030\001 \001(\005\022"
-  "\024\n\014messagessize\030\002 \001(\005\022\r\n\005state\030\003 \001(\010\"T\n\026"
-  "CSVCMsg_FullFrameSplit\022\014\n\004tick\030\001 \001(\005\022\017\n\007"
-  "section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030\004 \001"
-  "(\014\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006master\030\001 \001(\t"
-  "\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007prox"
-  "ies\030\004 \001(\005\")\n\025CSVCMsg_ServerSteamID\022\020\n\010st"
-  "eam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdKeyValues\022\014\n\004"
-  "data\030\001 \001(\014\";\n\031CSVCMsg_RconServerDetails\022"
-  "\r\n\005token\030\001 \001(\014\022\017\n\007details\030\002 \001(\t\";\n\016CMsgI"
-  "PCAddress\022\025\n\rcomputer_guid\030\001 \001(\006\022\022\n\nproc"
-  "ess_id\030\002 \001(\r\"\244\001\n\016CMsgServerPeer\022\027\n\013playe"
-  "r_slot\030\001 \001(\005:\002-1\022\017\n\007steamid\030\002 \001(\006\022\034\n\003ipc"
-  "\030\003 \001(\0132\017.CMsgIPCAddress\022\025\n\rthey_hear_you"
-  "\030\004 \001(\010\022\025\n\ryou_hear_them\030\005 \001(\010\022\034\n\024is_list"
-  "enserver_host\030\006 \001(\010\"1\n\020CSVCMsg_PeerList\022"
-  "\035\n\004peer\030\001 \003(\0132\017.CMsgServerPeer\"N\n\034CSVCMs"
-  "g_ClearAllStringTables\022\017\n\007mapname\030\001 \001(\t\022"
-  "\035\n\025create_tables_skipped\030\003 \001(\010\"\363\003\n\037Proto"
-  "FlattenedSerializerField_t\022\024\n\014var_type_s"
-  "ym\030\001 \001(\005\022\024\n\014var_name_sym\030\002 \001(\005\022\021\n\tbit_co"
-  "unt\030\003 \001(\005\022\021\n\tlow_value\030\004 \001(\002\022\022\n\nhigh_val"
-  "ue\030\005 \001(\002\022\024\n\014encode_flags\030\006 \001(\005\022!\n\031field_"
-  "serializer_name_sym\030\007 \001(\005\022 \n\030field_seria"
-  "lizer_version\030\010 \001(\005\022\025\n\rsend_node_sym\030\t \001"
-  "(\005\022\027\n\017var_encoder_sym\030\n \001(\005\022O\n\021polymorph"
-  "ic_types\030\013 \003(\01324.ProtoFlattenedSerialize"
-  "rField_t.polymorphic_field_t\022\032\n\022var_seri"
-  "alizer_sym\030\014 \001(\005\032r\n\023polymorphic_field_t\022"
-  "-\n%polymorphic_field_serializer_name_sym"
-  "\030\001 \001(\005\022,\n$polymorphic_field_serializer_v"
-  "ersion\030\002 \001(\005\"k\n\032ProtoFlattenedSerializer"
-  "_t\022\033\n\023serializer_name_sym\030\001 \001(\005\022\032\n\022seria"
-  "lizer_version\030\002 \001(\005\022\024\n\014fields_index\030\003 \003("
-  "\005\"\222\001\n\033CSVCMsg_FlattenedSerializer\0220\n\013ser"
-  "ializers\030\001 \003(\0132\033.ProtoFlattenedSerialize"
-  "r_t\022\017\n\007symbols\030\002 \003(\t\0220\n\006fields\030\003 \003(\0132 .P"
-  "rotoFlattenedSerializerField_t\"!\n\021CSVCMs"
-  "g_StopSound\022\014\n\004guid\030\001 \001(\007\"y\n\036CBidirMsg_R"
-  "ebroadcastGameEvent\022\024\n\014posttoserver\030\001 \001("
-  "\010\022\017\n\007buftype\030\002 \001(\005\022\026\n\016clientbitcount\030\003 \001"
-  "(\r\022\030\n\020receivingclients\030\004 \001(\004\"2\n\033CBidirMs"
-  "g_RebroadcastSource\022\023\n\013eventsource\030\001 \001(\005"
-  "\"\232\001\n\031CBidirMsg_PredictionEvent\022\020\n\010event_"
-  "id\030\001 \002(\r\022\022\n\nevent_data\030\002 \002(\014\022\021\n\tsync_typ"
-  "e\030\003 \001(\r\022\027\n\017sync_val_uint32\030\004 \001(\r\"+\n\tESyn"
-  "cType\022\013\n\007ST_Tick\020\000\022\021\n\rST_UserCmdNum\020\001\"\305\006"
-  "\n\026CMsgServerNetworkStats\022\021\n\tdedicated\030\001 "
-  "\001(\010\022\021\n\tcpu_usage\030\002 \001(\005\022\026\n\016memory_used_mb"
-  "\030\003 \001(\005\022\026\n\016memory_free_mb\030\004 \001(\005\022\016\n\006uptime"
-  "\030\005 \001(\005\022\023\n\013spawn_count\030\006 \001(\005\022\023\n\013num_clien"
-  "ts\030\010 \001(\005\022\020\n\010num_bots\030\t \001(\005\022\026\n\016num_specta"
-  "tors\030\n \001(\005\022\025\n\rnum_tv_relays\030\013 \001(\005\022\013\n\003fps"
-  "\030\014 \001(\002\022+\n\005ports\030\021 \003(\0132\034.CMsgServerNetwor"
-  "kStats.Port\022\023\n\013avg_ping_ms\030\022 \001(\002\022\036\n\026avg_"
-  "engine_latency_out\030\023 \001(\002\022\027\n\017avg_packets_"
-  "out\030\024 \001(\002\022\026\n\016avg_packets_in\030\025 \001(\002\022\024\n\014avg"
-  "_loss_out\030\026 \001(\002\022\023\n\013avg_loss_in\030\027 \001(\002\022\024\n\014"
-  "avg_data_out\030\030 \001(\002\022\023\n\013avg_data_in\030\031 \001(\002\022"
-  "\025\n\rtotal_data_in\030\032 \001(\004\022\030\n\020total_packets_"
-  "in\030\033 \001(\004\022\026\n\016total_data_out\030\034 \001(\004\022\031\n\021tota"
-  "l_packets_out\030\035 \001(\004\022/\n\007players\030\036 \003(\0132\036.C"
-  "MsgServerNetworkStats.Player\032\"\n\004Port\022\014\n\004"
-  "port\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032\252\001\n\006Player\022\017\n\007s"
-  "teamid\030\001 \001(\004\022\023\n\013remote_addr\030\002 \001(\t\022\023\n\013pin"
-  "g_avg_ms\030\004 \001(\005\022\027\n\017packet_loss_pct\030\005 \001(\002\022"
-  "\016\n\006is_bot\030\006 \001(\010\022\017\n\007loss_in\030\007 \001(\002\022\020\n\010loss"
-  "_out\030\010 \001(\002\022\031\n\021engine_latency_ms\030\t \001(\005\"\332\001"
-  "\n\022CSVCMsg_HltvReplay\022\r\n\005delay\030\001 \001(\005\022\032\n\016p"
-  "rimary_target\030\002 \001(\005:\002-1\022\026\n\016replay_stop_a"
-  "t\030\003 \001(\005\022\027\n\017replay_start_at\030\004 \001(\005\022\035\n\025repl"
-  "ay_slowdown_begin\030\005 \001(\005\022\033\n\023replay_slowdo"
-  "wn_end\030\006 \001(\005\022\034\n\024replay_slowdown_rate\030\007 \001"
-  "(\002\022\016\n\006reason\030\010 \001(\005\"\205\001\n\022CCLCMsg_HltvRepla"
-  "y\022\017\n\007request\030\001 \001(\005\022\027\n\017slowdown_length\030\002 "
-  "\001(\002\022\025\n\rslowdown_rate\030\003 \001(\002\022\032\n\016primary_ta"
-  "rget\030\004 \001(\005:\002-1\022\022\n\nevent_time\030\005 \001(\002\"(\n\031CS"
-  "VCMsg_Broadcast_Command\022\013\n\003cmd\030\001 \001(\t\"\357\001\n"
-  "\035CCLCMsg_HltvFixupOperatorTick\022\014\n\004tick\030\001"
-  " \001(\005\022\022\n\nprops_data\030\002 \001(\014\022\033\n\006origin\030\003 \001(\013"
-  "2\013.CMsgVector\022\037\n\neye_angles\030\004 \001(\0132\013.CMsg"
-  "QAngle\022\025\n\robserver_mode\030\005 \001(\005\022\034\n\024cameram"
-  "an_scoreboard\030\006 \001(\010\022\027\n\017observer_target\030\007"
-  " \001(\005\022 \n\013view_offset\030\010 \001(\0132\013.CMsgVector\"O"
-  "\n\037CSVCMsg_HltvFixupOperatorStatus\022\014\n\004mod"
-  "e\030\001 \001(\r\022\036\n\026override_operator_name\030\002 \001(\t\""
-  "\201\001\n\021CMsgServerUserCmd\022\014\n\004data\030\001 \001(\014\022\022\n\nc"
-  "md_number\030\002 \001(\005\022\027\n\013player_slot\030\003 \001(\005:\002-1"
-  "\022\034\n\024server_tick_executed\030\004 \001(\005\022\023\n\013client"
-  "_tick\030\005 \001(\005\"<\n\024CSVCMsg_UserCommands\022$\n\010c"
-  "ommands\030\001 \003(\0132\022.CMsgServerUserCmd*\341\002\n\014CL"
-  "C_Messages\022\022\n\016clc_ClientInfo\020\024\022\014\n\010clc_Mo"
-  "ve\020\025\022\021\n\rclc_VoiceData\020\026\022\023\n\017clc_BaselineA"
-  "ck\020\027\022\030\n\024clc_RespondCvarValue\020\031\022\024\n\020clc_Fi"
-  "leCRCCheck\020\032\022\027\n\023clc_LoadingProgress\020\033\022\032\n"
-  "\026clc_SplitPlayerConnect\020\034\022\035\n\031clc_SplitPl"
-  "ayerDisconnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\024"
-  "\n\020clc_RequestPause\020!\022\024\n\020clc_CmdKeyValues"
-  "\020\"\022\031\n\025clc_RconServerDetails\020#\022\022\n\016clc_Hlt"
-  "vReplay\020$\022\022\n\016clc_Diagnostic\020%*\227\005\n\014SVC_Me"
-  "ssages\022\022\n\016svc_ServerInfo\020(\022\033\n\027svc_Flatte"
-  "nedSerializer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014sv"
-  "c_SetPause\020+\022\031\n\025svc_CreateStringTable\020,\022"
-  "\031\n\025svc_UpdateStringTable\020-\022\021\n\rsvc_VoiceI"
-  "nit\020.\022\021\n\rsvc_VoiceData\020/\022\r\n\tsvc_Print\0200\022"
-  "\016\n\nsvc_Sounds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_"
-  "ClearAllStringTables\0203\022\024\n\020svc_CmdKeyValu"
-  "es\0204\022\020\n\014svc_BSPDecal\0205\022\023\n\017svc_SplitScree"
-  "n\0206\022\026\n\022svc_PacketEntities\0207\022\020\n\014svc_Prefe"
-  "tch\0208\022\014\n\010svc_Menu\0209\022\024\n\020svc_GetCvarValue\020"
-  ":\022\021\n\rsvc_StopSound\020;\022\020\n\014svc_PeerList\020<\022\026"
-  "\n\022svc_PacketReliable\020=\022\022\n\016svc_HLTVStatus"
-  "\020>\022\025\n\021svc_ServerSteamID\020\?\022\026\n\022svc_FullFra"
-  "meSplit\020F\022\031\n\025svc_RconServerDetails\020G\022\023\n\017"
-  "svc_UserMessage\020H\022\031\n\025svc_Broadcast_Comma"
-  "nd\020J\022\037\n\033svc_HltvFixupOperatorStatus\020K\022\020\n"
-  "\014svc_UserCmds\020L*g\n\021VoiceDataFormat_t\022\032\n\026"
-  "VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FO"
-  "RMAT_ENGINE\020\001\022\031\n\025VOICEDATA_FORMAT_OPUS\020\002"
-  "*B\n\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_U"
-  "NPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002*\035\n\014Prefetch"
-  "Type\022\r\n\tPFT_SOUND\020\000*V\n\027ESplitScreenMessa"
-  "geType\022\033\n\027MSG_SPLITSCREEN_ADDUSER\020\000\022\036\n\032M"
-  "SG_SPLITSCREEN_REMOVEUSER\020\001*\263\001\n\025EQueryCv"
-  "arValueStatus\022%\n!eQueryCvarValueStatus_V"
-  "alueIntact\020\000\022&\n\"eQueryCvarValueStatus_Cv"
-  "arNotFound\020\001\022\"\n\036eQueryCvarValueStatus_No"
-  "tACvar\020\002\022\'\n#eQueryCvarValueStatus_CvarPr"
-  "otected\020\003*h\n\013DIALOG_TYPE\022\016\n\nDIALOG_MSG\020\000"
-  "\022\017\n\013DIALOG_MENU\020\001\022\017\n\013DIALOG_TEXT\020\002\022\020\n\014DI"
-  "ALOG_ENTRY\020\003\022\025\n\021DIALOG_ASKCONNECT\020\004*+\n\031S"
-  "VC_Messages_LowFrequency\022\016\n\tsvc_dummy\020\330\004"
-  "*y\n\026Bidirectional_Messages\022\033\n\027bi_Rebroad"
-  "castGameEvent\020\020\022\030\n\024bi_RebroadcastSource\020"
-  "\021\022\020\n\014bi_GameEvent\020\022\022\026\n\022bi_PredictionEven"
-  "t\020\023*M\n#Bidirectional_Messages_LowFrequen"
-  "cy\022\021\n\014bi_RelayInfo\020\274\005\022\023\n\016bi_RelayPacket\020"
-  "\275\005*\241\001\n\021ReplayEventType_t\022\027\n\023REPLAY_EVENT"
-  "_CANCEL\020\000\022\026\n\022REPLAY_EVENT_DEATH\020\001\022\030\n\024REP"
-  "LAY_EVENT_GENERIC\020\002\022\'\n#REPLAY_EVENT_STUC"
-  "K_NEED_FULL_UPDATE\020\003\022\030\n\024REPLAY_EVENT_VIC"
-  "TORY\020\004"
+  "oto\032\031source2_steam_stats.proto\"}\n\022CCLCMs"
+  "g_ClientInfo\022\026\n\016send_table_crc\030\001 \001(\007\022\024\n\014"
+  "server_count\030\002 \001(\r\022\017\n\007is_hltv\030\003 \001(\010\022\022\n\nf"
+  "riends_id\030\005 \001(\r\022\024\n\014friends_name\030\006 \001(\t\"9\n"
+  "\014CCLCMsg_Move\022\014\n\004data\030\003 \001(\014\022\033\n\023last_comm"
+  "and_number\030\004 \001(\r\"\217\002\n\016CMsgVoiceAudio\022:\n\006f"
+  "ormat\030\001 \001(\0162\022.VoiceDataFormat_t:\026VOICEDA"
+  "TA_FORMAT_STEAM\022\022\n\nvoice_data\030\002 \001(\014\022\026\n\016s"
+  "equence_bytes\030\003 \001(\005\022\026\n\016section_number\030\004 "
+  "\001(\r\022\023\n\013sample_rate\030\005 \001(\r\022\"\n\032uncompressed"
+  "_sample_offset\030\006 \001(\r\022\023\n\013num_packets\030\007 \001("
+  "\r\022\032\n\016packet_offsets\030\010 \003(\rB\002\020\001\022\023\n\013voice_l"
+  "evel\030\t \001(\002\"O\n\021CCLCMsg_VoiceData\022\036\n\005audio"
+  "\030\001 \001(\0132\017.CMsgVoiceAudio\022\014\n\004xuid\030\002 \001(\006\022\014\n"
+  "\004tick\030\003 \001(\r\"A\n\023CCLCMsg_BaselineAck\022\025\n\rba"
+  "seline_tick\030\001 \001(\005\022\023\n\013baseline_nr\030\002 \001(\005\"*"
+  "\n\024CCLCMsg_ListenEvents\022\022\n\nevent_mask\030\001 \003"
+  "(\007\"\\\n\030CCLCMsg_RespondCvarValue\022\016\n\006cookie"
+  "\030\001 \001(\005\022\023\n\013status_code\030\002 \001(\005\022\014\n\004name\030\003 \001("
+  "\t\022\r\n\005value\030\004 \001(\t\"+\n\027CCLCMsg_LoadingProgr"
+  "ess\022\020\n\010progress\030\001 \001(\005\"0\n\032CCLCMsg_SplitPl"
+  "ayerConnect\022\022\n\nplayername\030\001 \001(\t\"-\n\035CCLCM"
+  "sg_SplitPlayerDisconnect\022\014\n\004slot\030\001 \001(\005\"*"
+  "\n\024CCLCMsg_ServerStatus\022\022\n\nsimplified\030\001 \001"
+  "(\010\"Z\n\024CCLCMsg_RequestPause\022-\n\npause_type"
+  "\030\001 \001(\0162\017.RequestPause_t:\010RP_PAUSE\022\023\n\013pau"
+  "se_group\030\002 \001(\005\"+\n\024CCLCMsg_CmdKeyValues\022\014"
+  "\n\004data\030\001 \001(\014:\005\200\265\030\334\013\"*\n\031CCLCMsg_RconServe"
+  "rDetails\022\r\n\005token\030\001 \001(\014\"\244\002\n\022CCLCMsg_Diag"
+  "nostic\022-\n\014system_specs\030\001 \001(\0132\027.CMsgSourc"
+  "e2SystemSpecs\0221\n\014vprof_report\030\002 \001(\0132\033.CM"
+  "sgSource2VProfLiteReport\0227\n\017downstream_f"
+  "low\030\003 \001(\0132\036.CMsgSource2NetworkFlowQualit"
+  "y\0225\n\rupstream_flow\030\004 \001(\0132\036.CMsgSource2Ne"
+  "tworkFlowQuality\0224\n\014perf_samples\030\005 \003(\0132\036"
+  ".CMsgSource2PerfIntervalSample:\006\200\265\030\200\200\001\"\217"
+  "\003\n\022CSVCMsg_ServerInfo\022\020\n\010protocol\030\001 \001(\005\022"
+  "\024\n\014server_count\030\002 \001(\005\022\024\n\014is_dedicated\030\003 "
+  "\001(\010\022\017\n\007is_hltv\030\004 \001(\010\022\014\n\004c_os\030\006 \001(\005\022\023\n\013ma"
+  "x_clients\030\n \001(\005\022\023\n\013max_classes\030\013 \001(\005\022\027\n\013"
+  "player_slot\030\014 \001(\005:\002-1\022\025\n\rtick_interval\030\r"
+  " \001(\002\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017 \001(\t"
+  "\022\020\n\010sky_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001(\t\022\022\n"
+  "\naddon_name\030\022 \001(\t\022>\n\023game_session_config"
+  "\030\023 \001(\0132!.CSVCMsg_GameSessionConfiguratio"
+  "n\022\035\n\025game_session_manifest\030\024 \001(\014:\006\200\265\030\200\200\031"
+  "\"\222\001\n\021CSVCMsg_ClassInfo\022\030\n\020create_on_clie"
+  "nt\030\001 \001(\010\022+\n\007classes\030\002 \003(\0132\032.CSVCMsg_Clas"
+  "sInfo.class_t\032/\n\007class_t\022\020\n\010class_id\030\001 \001"
+  "(\005\022\022\n\nclass_name\030\003 \001(\t:\005\200\265\030\200@\"\"\n\020CSVCMsg"
+  "_SetPause\022\016\n\006paused\030\001 \001(\010\"G\n\021CSVCMsg_Voi"
+  "ceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t\022\022"
+  "\n\007version\030\003 \001(\005:\0010\"$\n\rCSVCMsg_Print\022\014\n\004t"
+  "ext\030\001 \001(\t:\005\200\265\030\200@\"\343\003\n\016CSVCMsg_Sounds\022\026\n\016r"
+  "eliable_sound\030\001 \001(\010\022+\n\006sounds\030\002 \003(\0132\033.CS"
+  "VCMsg_Sounds.sounddata_t\032\213\003\n\013sounddata_t"
+  "\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 \001(\021\022\020\n\010"
+  "origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n\013delay_"
+  "value\030\005 \001(\002\022\027\n\017sequence_number\030\006 \001(\005\022\030\n\014"
+  "entity_index\030\007 \001(\005:\002-1\022\017\n\007channel\030\010 \001(\005\022"
+  "\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsound_n"
+  "um\030\013 \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n\016sp"
+  "eaker_entity\030\r \001(\005\022\023\n\013random_seed\030\016 \001(\005\022"
+  "\023\n\013sound_level\030\017 \001(\005\022\023\n\013is_sentence\030\020 \001("
+  "\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031\n\021s"
+  "ound_resource_id\030\023 \001(\006\"X\n\020CSVCMsg_Prefet"
+  "ch\022\023\n\013sound_index\030\001 \001(\005\022/\n\rresource_type"
+  "\030\002 \001(\0162\r.PrefetchType:\tPFT_SOUND\"=\n\017CSVC"
+  "Msg_SetView\022\030\n\014entity_index\030\001 \001(\005:\002-1\022\020\n"
+  "\004slot\030\002 \001(\005:\002-1\"@\n\020CSVCMsg_FixAngle\022\020\n\010r"
+  "elative\030\001 \001(\010\022\032\n\005angle\030\002 \001(\0132\013.CMsgQAngl"
+  "e\"4\n\026CSVCMsg_CrosshairAngle\022\032\n\005angle\030\001 \001"
+  "(\0132\013.CMsgQAngle\"\216\001\n\020CSVCMsg_BSPDecal\022\030\n\003"
+  "pos\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_texture_"
+  "index\030\002 \001(\005\022\030\n\014entity_index\030\003 \001(\005:\002-1\022\023\n"
+  "\013model_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010"
+  "\"~\n\023CSVCMsg_SplitScreen\022\?\n\004type\030\001 \001(\0162\030."
+  "ESplitScreenMessageType:\027MSG_SPLITSCREEN"
+  "_ADDUSER\022\014\n\004slot\030\002 \001(\005\022\030\n\014player_index\030\003"
+  " \001(\005:\002-1\"9\n\024CSVCMsg_GetCvarValue\022\016\n\006cook"
+  "ie\030\001 \001(\005\022\021\n\tcvar_name\030\002 \001(\t\"<\n\014CSVCMsg_M"
+  "enu\022\023\n\013dialog_type\030\001 \001(\005\022\027\n\017menu_key_val"
+  "ues\030\002 \001(\014\"N\n\023CSVCMsg_UserMessage\022\020\n\010msg_"
+  "type\030\001 \001(\005\022\020\n\010msg_data\030\002 \001(\014\022\023\n\013passthro"
+  "ugh\030\003 \001(\005\"\260\002\n\021CSVCMsg_SendTable\022\016\n\006is_en"
+  "d\030\001 \001(\010\022\026\n\016net_table_name\030\002 \001(\t\022\025\n\rneeds"
+  "_decoder\030\003 \001(\010\022,\n\005props\030\004 \003(\0132\035.CSVCMsg_"
+  "SendTable.sendprop_t\032\255\001\n\nsendprop_t\022\014\n\004t"
+  "ype\030\001 \001(\005\022\020\n\010var_name\030\002 \001(\t\022\r\n\005flags\030\003 \001"
+  "(\005\022\020\n\010priority\030\004 \001(\005\022\017\n\007dt_name\030\005 \001(\t\022\024\n"
+  "\014num_elements\030\006 \001(\005\022\021\n\tlow_value\030\007 \001(\002\022\022"
+  "\n\nhigh_value\030\010 \001(\002\022\020\n\010num_bits\030\t \001(\005\"\321\001\n"
+  "\025CSVCMsg_GameEventList\0228\n\013descriptors\030\001 "
+  "\003(\0132#.CSVCMsg_GameEventList.descriptor_t"
+  "\032#\n\005key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032Y\n"
+  "\014descriptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002"
+  " \001(\t\022*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEventLi"
+  "st.key_t\"\355\007\n\026CSVCMsg_PacketEntities\022\023\n\013m"
+  "ax_entries\030\001 \001(\005\022\027\n\017updated_entries\030\002 \001("
+  "\005\022\027\n\017legacy_is_delta\030\003 \001(\010\022\027\n\017update_bas"
+  "eline\030\004 \001(\010\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_f"
+  "rom\030\006 \001(\005\022\023\n\013entity_data\030\007 \001(\014\022\032\n\022pendin"
+  "g_full_frame\030\010 \001(\010\022 \n\030active_spawngroup_"
+  "handle\030\t \001(\r\022\'\n\037max_spawngroup_creations"
+  "equence\030\n \001(\r\022 \n\030last_cmd_number_execute"
+  "d\030\013 \001(\r\022\"\n\032last_cmd_number_recv_delta\030\021 "
+  "\001(\021\022\023\n\013server_tick\030\014 \001(\r\022\033\n\023serialized_e"
+  "ntities\030\r \001(\014\022I\n\023alternate_baselines\030\017 \003"
+  "(\0132,.CSVCMsg_PacketEntities.alternate_ba"
+  "seline_t\022#\n\033has_pvs_vis_bits_deprecated\030"
+  "\020 \001(\r\022\033\n\017cmd_recv_status\030\026 \003(\021B\002\020\001\022T\n\030no"
+  "n_transmitted_entities\030\023 \001(\01322.CSVCMsg_P"
+  "acketEntities.non_transmitted_entities_t"
+  "\022 \n\030cq_starved_command_ticks\030\024 \001(\r\022\"\n\032cq"
+  "_discarded_command_ticks\030\025 \001(\r\022R\n\027outofp"
+  "vs_entity_updates\030\027 \001(\01321.CSVCMsg_Packet"
+  "Entities.outofpvs_entity_updates_t\022\024\n\013de"
+  "v_padding\030\347\007 \001(\014\032D\n\024alternate_baseline_t"
+  "\022\024\n\014entity_index\030\001 \001(\005\022\026\n\016baseline_index"
+  "\030\002 \001(\005\032@\n\032non_transmitted_entities_t\022\024\n\014"
+  "header_count\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\0328\n\031outo"
+  "fpvs_entity_updates_t\022\r\n\005count\030\001 \001(\005\022\014\n\004"
+  "data\030\002 \001(\014:\004\200\265\030\000\"R\n\024CSVCMsg_TempEntities"
+  "\022\020\n\010reliable\030\001 \001(\010\022\023\n\013num_entries\030\002 \001(\005\022"
+  "\023\n\013entity_data\030\003 \001(\014\"\221\002\n\031CSVCMsg_CreateS"
+  "tringTable\022\014\n\004name\030\001 \001(\t\022\023\n\013num_entries\030"
+  "\002 \001(\005\022\034\n\024user_data_fixed_size\030\003 \001(\010\022\026\n\016u"
+  "ser_data_size\030\004 \001(\005\022\033\n\023user_data_size_bi"
+  "ts\030\005 \001(\005\022\r\n\005flags\030\006 \001(\005\022\023\n\013string_data\030\007"
+  " \001(\014\022\031\n\021uncompressed_size\030\010 \001(\005\022\027\n\017data_"
+  "compressed\030\t \001(\010\022\036\n\026using_varint_bitcoun"
+  "ts\030\n \001(\010:\006\200\265\030\200\240\006\"g\n\031CSVCMsg_UpdateString"
+  "Table\022\020\n\010table_id\030\001 \001(\005\022\033\n\023num_changed_e"
+  "ntries\030\002 \001(\005\022\023\n\013string_data\030\003 \001(\014:\006\200\265\030\200\200"
+  "\020\"\320\001\n\021CSVCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017"
+  ".CMsgVoiceAudio\022\035\n\021client_deprecated\030\002 \001"
+  "(\005:\002-1\022\021\n\tproximity\030\003 \001(\010\022\014\n\004xuid\030\004 \001(\006\022"
+  "\024\n\014audible_mask\030\005 \001(\005\022\014\n\004tick\030\006 \001(\r\022\023\n\013p"
+  "assthrough\030\007 \001(\005\022\022\n\006entity\030\010 \001(\005:\002-1\022\016\n\006"
+  "caster\030\t \001(\010\"<\n\025CSVCMsg_EncryptedData\022\021\n"
+  "\tencrypted\030\001 \001(\014\022\020\n\010key_type\030\002 \001(\005\"K\n\026CS"
+  "VCMsg_PacketReliable\022\014\n\004tick\030\001 \001(\005\022\024\n\014me"
+  "ssagessize\030\002 \001(\005\022\r\n\005state\030\003 \001(\010\"T\n\026CSVCM"
+  "sg_FullFrameSplit\022\014\n\004tick\030\001 \001(\005\022\017\n\007secti"
+  "on\030\002 \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\"U\n"
+  "\022CSVCMsg_HLTVStatus\022\016\n\006master\030\001 \001(\t\022\017\n\007c"
+  "lients\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007proxies\030\004"
+  " \001(\005\")\n\025CSVCMsg_ServerSteamID\022\020\n\010steam_i"
+  "d\030\001 \001(\004\"$\n\024CSVCMsg_CmdKeyValues\022\014\n\004data\030"
+  "\001 \001(\014\";\n\031CSVCMsg_RconServerDetails\022\r\n\005to"
+  "ken\030\001 \001(\014\022\017\n\007details\030\002 \001(\t\";\n\016CMsgIPCAdd"
+  "ress\022\025\n\rcomputer_guid\030\001 \001(\006\022\022\n\nprocess_i"
+  "d\030\002 \001(\r\"\244\001\n\016CMsgServerPeer\022\027\n\013player_slo"
+  "t\030\001 \001(\005:\002-1\022\017\n\007steamid\030\002 \001(\006\022\034\n\003ipc\030\003 \001("
+  "\0132\017.CMsgIPCAddress\022\025\n\rthey_hear_you\030\004 \001("
+  "\010\022\025\n\ryou_hear_them\030\005 \001(\010\022\034\n\024is_listenser"
+  "ver_host\030\006 \001(\010\"1\n\020CSVCMsg_PeerList\022\035\n\004pe"
+  "er\030\001 \003(\0132\017.CMsgServerPeer\"N\n\034CSVCMsg_Cle"
+  "arAllStringTables\022\017\n\007mapname\030\001 \001(\t\022\035\n\025cr"
+  "eate_tables_skipped\030\003 \001(\010\"\353\004\n\037ProtoFlatt"
+  "enedSerializerField_t\022\024\n\014var_type_sym\030\001 "
+  "\001(\005\022\024\n\014var_name_sym\030\002 \001(\005\022\021\n\tbit_count\030\003"
+  " \001(\005\022\021\n\tlow_value\030\004 \001(\002\022\022\n\nhigh_value\030\005 "
+  "\001(\002\022\024\n\014encode_flags\030\006 \001(\005\022!\n\031field_seria"
+  "lizer_name_sym\030\007 \001(\005\022 \n\030field_serializer"
+  "_version\030\010 \001(\005\022\025\n\rsend_node_sym\030\t \001(\005\022\027\n"
+  "\017var_encoder_sym\030\n \001(\005\022O\n\021polymorphic_ty"
+  "pes\030\013 \003(\01324.ProtoFlattenedSerializerFiel"
+  "d_t.polymorphic_field_t\022\032\n\022var_serialize"
+  "r_sym\030\014 \001(\005\022I\n\rvar_enum_info\030\r \001(\01322.Pro"
+  "toFlattenedSerializerField_t.proto_enum_"
+  "info_t\032r\n\023polymorphic_field_t\022-\n%polymor"
+  "phic_field_serializer_name_sym\030\001 \001(\005\022,\n$"
+  "polymorphic_field_serializer_version\030\002 \001"
+  "(\005\032+\n\021proto_enum_info_t\022\026\n\016is_signed_enu"
+  "m\030\001 \001(\010\"k\n\032ProtoFlattenedSerializer_t\022\033\n"
+  "\023serializer_name_sym\030\001 \001(\005\022\032\n\022serializer"
+  "_version\030\002 \001(\005\022\024\n\014fields_index\030\003 \003(\005\"\310\001\n"
+  "\026ProtoCoordSizeParams_t\022\032\n\022coord_integer"
+  "_bits\030\001 \001(\005\022\035\n\025coord_fractional_bits\030\002 \001"
+  "(\005\022\035\n\025coord_integer_bits_mp\030\003 \001(\005\022 \n\030coo"
+  "rd_fractional_bits_mp\030\004 \001(\005\022\036\n\026normal_fr"
+  "actional_bits\030\005 \001(\005\022\022\n\nangle_bits\030\006 \001(\005\""
+  "\314\001\n\033CSVCMsg_FlattenedSerializer\0220\n\013seria"
+  "lizers\030\001 \003(\0132\033.ProtoFlattenedSerializer_"
+  "t\022\017\n\007symbols\030\002 \003(\t\0220\n\006fields\030\003 \003(\0132 .Pro"
+  "toFlattenedSerializerField_t\0222\n\021coord_si"
+  "ze_params\030\004 \001(\0132\027.ProtoCoordSizeParams_t"
+  ":\004\200\265\030\000\"!\n\021CSVCMsg_StopSound\022\014\n\004guid\030\001 \001("
+  "\007\"y\n\036CBidirMsg_RebroadcastGameEvent\022\024\n\014p"
+  "osttoserver\030\001 \001(\010\022\017\n\007buftype\030\002 \001(\005\022\026\n\016cl"
+  "ientbitcount\030\003 \001(\r\022\030\n\020receivingclients\030\004"
+  " \001(\004\"2\n\033CBidirMsg_RebroadcastSource\022\023\n\013e"
+  "ventsource\030\001 \001(\005\"\232\001\n\031CBidirMsg_Predictio"
+  "nEvent\022\020\n\010event_id\030\001 \001(\r\022\022\n\nevent_data\030\002"
+  " \001(\014\022\021\n\tsync_type\030\003 \001(\r\022\027\n\017sync_val_uint"
+  "32\030\004 \001(\r\"+\n\tESyncType\022\013\n\007ST_Tick\020\000\022\021\n\rST"
+  "_UserCmdNum\020\001\"\305\006\n\026CMsgServerNetworkStats"
+  "\022\021\n\tdedicated\030\001 \001(\010\022\021\n\tcpu_usage\030\002 \001(\005\022\026"
+  "\n\016memory_used_mb\030\003 \001(\005\022\026\n\016memory_free_mb"
+  "\030\004 \001(\005\022\016\n\006uptime\030\005 \001(\005\022\023\n\013spawn_count\030\006 "
+  "\001(\005\022\023\n\013num_clients\030\010 \001(\005\022\020\n\010num_bots\030\t \001"
+  "(\005\022\026\n\016num_spectators\030\n \001(\005\022\025\n\rnum_tv_rel"
+  "ays\030\013 \001(\005\022\013\n\003fps\030\014 \001(\002\022+\n\005ports\030\021 \003(\0132\034."
+  "CMsgServerNetworkStats.Port\022\023\n\013avg_ping_"
+  "ms\030\022 \001(\002\022\036\n\026avg_engine_latency_out\030\023 \001(\002"
+  "\022\027\n\017avg_packets_out\030\024 \001(\002\022\026\n\016avg_packets"
+  "_in\030\025 \001(\002\022\024\n\014avg_loss_out\030\026 \001(\002\022\023\n\013avg_l"
+  "oss_in\030\027 \001(\002\022\024\n\014avg_data_out\030\030 \001(\002\022\023\n\013av"
+  "g_data_in\030\031 \001(\002\022\025\n\rtotal_data_in\030\032 \001(\004\022\030"
+  "\n\020total_packets_in\030\033 \001(\004\022\026\n\016total_data_o"
+  "ut\030\034 \001(\004\022\031\n\021total_packets_out\030\035 \001(\004\022/\n\007p"
+  "layers\030\036 \003(\0132\036.CMsgServerNetworkStats.Pl"
+  "ayer\032\"\n\004Port\022\014\n\004port\030\001 \001(\005\022\014\n\004name\030\002 \001(\t"
+  "\032\252\001\n\006Player\022\017\n\007steamid\030\001 \001(\004\022\023\n\013remote_a"
+  "ddr\030\002 \001(\t\022\023\n\013ping_avg_ms\030\004 \001(\005\022\027\n\017packet"
+  "_loss_pct\030\005 \001(\002\022\016\n\006is_bot\030\006 \001(\010\022\017\n\007loss_"
+  "in\030\007 \001(\002\022\020\n\010loss_out\030\010 \001(\002\022\031\n\021engine_lat"
+  "ency_ms\030\t \001(\005\"\332\001\n\022CSVCMsg_HltvReplay\022\r\n\005"
+  "delay\030\001 \001(\005\022\032\n\016primary_target\030\002 \001(\005:\002-1\022"
+  "\026\n\016replay_stop_at\030\003 \001(\005\022\027\n\017replay_start_"
+  "at\030\004 \001(\005\022\035\n\025replay_slowdown_begin\030\005 \001(\005\022"
+  "\033\n\023replay_slowdown_end\030\006 \001(\005\022\034\n\024replay_s"
+  "lowdown_rate\030\007 \001(\002\022\016\n\006reason\030\010 \001(\005\"\205\001\n\022C"
+  "CLCMsg_HltvReplay\022\017\n\007request\030\001 \001(\005\022\027\n\017sl"
+  "owdown_length\030\002 \001(\002\022\025\n\rslowdown_rate\030\003 \001"
+  "(\002\022\032\n\016primary_target\030\004 \001(\005:\002-1\022\022\n\nevent_"
+  "time\030\005 \001(\002\"(\n\031CSVCMsg_Broadcast_Command\022"
+  "\013\n\003cmd\030\001 \001(\t\"\357\001\n\035CCLCMsg_HltvFixupOperat"
+  "orTick\022\014\n\004tick\030\001 \001(\005\022\022\n\nprops_data\030\002 \001(\014"
+  "\022\033\n\006origin\030\003 \001(\0132\013.CMsgVector\022\037\n\neye_ang"
+  "les\030\004 \001(\0132\013.CMsgQAngle\022\025\n\robserver_mode\030"
+  "\005 \001(\005\022\034\n\024cameraman_scoreboard\030\006 \001(\010\022\027\n\017o"
+  "bserver_target\030\007 \001(\005\022 \n\013view_offset\030\010 \001("
+  "\0132\013.CMsgVector\"O\n\037CSVCMsg_HltvFixupOpera"
+  "torStatus\022\014\n\004mode\030\001 \001(\r\022\036\n\026override_oper"
+  "ator_name\030\002 \001(\t\"\256\001\n\021CMsgServerUserCmd\022\014\n"
+  "\004data\030\001 \001(\014\022\022\n\ncmd_number\030\002 \001(\005\022\027\n\013playe"
+  "r_slot\030\003 \001(\005:\002-1\022\034\n\024server_tick_executed"
+  "\030\004 \001(\005\022\023\n\013client_tick\030\005 \001(\005\022\022\n\ndelta_dat"
+  "a\030\006 \001(\014\022\027\n\017delta_processed\030\007 \001(\010\"<\n\024CSVC"
+  "Msg_UserCommands\022$\n\010commands\030\001 \003(\0132\022.CMs"
+  "gServerUserCmd\"Y\n\030CSVCMsg_NextMsgPredict"
+  "ed\022$\n\030predicted_by_player_slot\030\001 \001(\005:\002-1"
+  "\022\027\n\017message_type_id\030\002 \001(\r*\313\002\n\014CLC_Messag"
+  "es\022\022\n\016clc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\r"
+  "clc_VoiceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\030\n\024"
+  "clc_RespondCvarValue\020\031\022\027\n\023clc_LoadingPro"
+  "gress\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022\035\n\031c"
+  "lc_SplitPlayerDisconnect\020\036\022\024\n\020clc_Server"
+  "Status\020\037\022\024\n\020clc_RequestPause\020!\022\024\n\020clc_Cm"
+  "dKeyValues\020\"\022\031\n\025clc_RconServerDetails\020#\022"
+  "\022\n\016clc_HltvReplay\020$\022\022\n\016clc_Diagnostic\020%*"
+  "\310\005\n\014SVC_Messages\022\022\n\016svc_ServerInfo\020(\022\033\n\027"
+  "svc_FlattenedSerializer\020)\022\021\n\rsvc_ClassIn"
+  "fo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025svc_CreateStri"
+  "ngTable\020,\022\031\n\025svc_UpdateStringTable\020-\022\021\n\r"
+  "svc_VoiceInit\020.\022\021\n\rsvc_VoiceData\020/\022\r\n\tsv"
+  "c_Print\0200\022\016\n\nsvc_Sounds\0201\022\017\n\013svc_SetView"
+  "\0202\022\034\n\030svc_ClearAllStringTables\0203\022\024\n\020svc_"
+  "CmdKeyValues\0204\022\020\n\014svc_BSPDecal\0205\022\023\n\017svc_"
+  "SplitScreen\0206\022\026\n\022svc_PacketEntities\0207\022\020\n"
+  "\014svc_Prefetch\0208\022\014\n\010svc_Menu\0209\022\024\n\020svc_Get"
+  "CvarValue\020:\022\021\n\rsvc_StopSound\020;\022\020\n\014svc_Pe"
+  "erList\020<\022\026\n\022svc_PacketReliable\020=\022\022\n\016svc_"
+  "HLTVStatus\020>\022\025\n\021svc_ServerSteamID\020\?\022\026\n\022s"
+  "vc_FullFrameSplit\020F\022\031\n\025svc_RconServerDet"
+  "ails\020G\022\023\n\017svc_UserMessage\020H\022\031\n\025svc_Broad"
+  "cast_Command\020J\022\037\n\033svc_HltvFixupOperatorS"
+  "tatus\020K\022\020\n\014svc_UserCmds\020L\022\030\n\024svc_NextMsg"
+  "Predicted\020M\022\025\n\021svc_EncryptedData\020N*g\n\021Vo"
+  "iceDataFormat_t\022\032\n\026VOICEDATA_FORMAT_STEA"
+  "M\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001\022\031\n\025VOIC"
+  "EDATA_FORMAT_OPUS\020\002*B\n\016RequestPause_t\022\014\n"
+  "\010RP_PAUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLE"
+  "PAUSE\020\002*\035\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000*V"
+  "\n\027ESplitScreenMessageType\022\033\n\027MSG_SPLITSC"
+  "REEN_ADDUSER\020\000\022\036\n\032MSG_SPLITSCREEN_REMOVE"
+  "USER\020\001*\263\001\n\025EQueryCvarValueStatus\022%\n!eQue"
+  "ryCvarValueStatus_ValueIntact\020\000\022&\n\"eQuer"
+  "yCvarValueStatus_CvarNotFound\020\001\022\"\n\036eQuer"
+  "yCvarValueStatus_NotACvar\020\002\022\'\n#eQueryCva"
+  "rValueStatus_CvarProtected\020\003*h\n\013DIALOG_T"
+  "YPE\022\016\n\nDIALOG_MSG\020\000\022\017\n\013DIALOG_MENU\020\001\022\017\n\013"
+  "DIALOG_TEXT\020\002\022\020\n\014DIALOG_ENTRY\020\003\022\025\n\021DIALO"
+  "G_ASKCONNECT\020\004*+\n\031SVC_Messages_LowFreque"
+  "ncy\022\016\n\tsvc_dummy\020\330\004*\204\001\n\026Bidirectional_Me"
+  "ssages\022\033\n\027bi_RebroadcastGameEvent\020\020\022\030\n\024b"
+  "i_RebroadcastSource\020\021\022\033\n\027bi_GameEvent_DE"
+  "PRECATED\020\022\022\026\n\022bi_PredictionEvent\020\023*\241\001\n\021R"
+  "eplayEventType_t\022\027\n\023REPLAY_EVENT_CANCEL\020"
+  "\000\022\026\n\022REPLAY_EVENT_DEATH\020\001\022\030\n\024REPLAY_EVEN"
+  "T_GENERIC\020\002\022\'\n#REPLAY_EVENT_STUCK_NEED_F"
+  "ULL_UPDATE\020\003\022\030\n\024REPLAY_EVENT_VICTORY\020\004"
   ;
-static const ::_pbi::DescriptorTable* const descriptor_table_netmessages_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_netmessages_2eproto_deps[2] = {
   &::descriptor_table_networkbasetypes_2eproto,
+  &::descriptor_table_source2_5fsteam_5fstats_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_netmessages_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_netmessages_2eproto = {
-    false, false, 13526, descriptor_table_protodef_netmessages_2eproto,
+    false, false, 11798, descriptor_table_protodef_netmessages_2eproto,
     "netmessages.proto",
-    &descriptor_table_netmessages_2eproto_once, descriptor_table_netmessages_2eproto_deps, 1, 80,
+    &descriptor_table_netmessages_2eproto_once, descriptor_table_netmessages_2eproto_deps, 2, 77,
     schemas, file_default_instances, TableStruct_netmessages_2eproto::offsets,
     file_level_metadata_netmessages_2eproto, file_level_enum_descriptors_netmessages_2eproto,
     file_level_service_descriptors_netmessages_2eproto,
@@ -3221,7 +2936,6 @@ bool CLC_Messages_IsValid(int value) {
     case 22:
     case 23:
     case 25:
-    case 26:
     case 27:
     case 28:
     case 30:
@@ -3273,6 +2987,8 @@ bool SVC_Messages_IsValid(int value) {
     case 74:
     case 75:
     case 76:
+    case 77:
+    case 78:
       return true;
     default:
       return false;
@@ -3398,23 +3114,9 @@ bool Bidirectional_Messages_IsValid(int value) {
   }
 }
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Bidirectional_Messages_LowFrequency_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_netmessages_2eproto);
-  return file_level_enum_descriptors_netmessages_2eproto[11];
-}
-bool Bidirectional_Messages_LowFrequency_IsValid(int value) {
-  switch (value) {
-    case 700:
-    case 701:
-      return true;
-    default:
-      return false;
-  }
-}
-
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ReplayEventType_t_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_netmessages_2eproto);
-  return file_level_enum_descriptors_netmessages_2eproto[12];
+  return file_level_enum_descriptors_netmessages_2eproto[11];
 }
 bool ReplayEventType_t_IsValid(int value) {
   switch (value) {
@@ -5572,389 +5274,6 @@ void CCLCMsg_RespondCvarValue::InternalSwap(CCLCMsg_RespondCvarValue* other) {
 
 // ===================================================================
 
-class CCLCMsg_FileCRCCheck::_Internal {
- public:
-  using HasBits = decltype(std::declval<CCLCMsg_FileCRCCheck>()._impl_._has_bits_);
-  static void set_has_code_path(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_path(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_code_filename(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_filename(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_crc(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-};
-
-CCLCMsg_FileCRCCheck::CCLCMsg_FileCRCCheck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CCLCMsg_FileCRCCheck)
-}
-CCLCMsg_FileCRCCheck::CCLCMsg_FileCRCCheck(const CCLCMsg_FileCRCCheck& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CCLCMsg_FileCRCCheck* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.path_){}
-    , decltype(_impl_.filename_){}
-    , decltype(_impl_.code_path_){}
-    , decltype(_impl_.code_filename_){}
-    , decltype(_impl_.crc_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.path_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.path_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_path()) {
-    _this->_impl_.path_.Set(from._internal_path(), 
-      _this->GetArenaForAllocation());
-  }
-  _impl_.filename_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.filename_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_filename()) {
-    _this->_impl_.filename_.Set(from._internal_filename(), 
-      _this->GetArenaForAllocation());
-  }
-  ::memcpy(&_impl_.code_path_, &from._impl_.code_path_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.crc_) -
-    reinterpret_cast<char*>(&_impl_.code_path_)) + sizeof(_impl_.crc_));
-  // @@protoc_insertion_point(copy_constructor:CCLCMsg_FileCRCCheck)
-}
-
-inline void CCLCMsg_FileCRCCheck::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.path_){}
-    , decltype(_impl_.filename_){}
-    , decltype(_impl_.code_path_){0}
-    , decltype(_impl_.code_filename_){0}
-    , decltype(_impl_.crc_){0u}
-  };
-  _impl_.path_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.path_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.filename_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.filename_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-
-CCLCMsg_FileCRCCheck::~CCLCMsg_FileCRCCheck() {
-  // @@protoc_insertion_point(destructor:CCLCMsg_FileCRCCheck)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CCLCMsg_FileCRCCheck::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.path_.Destroy();
-  _impl_.filename_.Destroy();
-}
-
-void CCLCMsg_FileCRCCheck::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CCLCMsg_FileCRCCheck::Clear() {
-// @@protoc_insertion_point(message_clear_start:CCLCMsg_FileCRCCheck)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.path_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.filename_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x0000001cu) {
-    ::memset(&_impl_.code_path_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.crc_) -
-        reinterpret_cast<char*>(&_impl_.code_path_)) + sizeof(_impl_.crc_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CCLCMsg_FileCRCCheck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional int32 code_path = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_code_path(&has_bits);
-          _impl_.code_path_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional string path = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_path();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CCLCMsg_FileCRCCheck.path");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional int32 code_filename = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_code_filename(&has_bits);
-          _impl_.code_filename_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional string filename = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_filename();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CCLCMsg_FileCRCCheck.filename");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional fixed32 crc = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
-          _Internal::set_has_crc(&has_bits);
-          _impl_.crc_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr);
-          ptr += sizeof(uint32_t);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CCLCMsg_FileCRCCheck::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CCLCMsg_FileCRCCheck)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional int32 code_path = 1;
-  if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_code_path(), target);
-  }
-
-  // optional string path = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_path().data(), static_cast<int>(this->_internal_path().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CCLCMsg_FileCRCCheck.path");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_path(), target);
-  }
-
-  // optional int32 code_filename = 3;
-  if (cached_has_bits & 0x00000008u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_code_filename(), target);
-  }
-
-  // optional string filename = 4;
-  if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_filename().data(), static_cast<int>(this->_internal_filename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CCLCMsg_FileCRCCheck.filename");
-    target = stream->WriteStringMaybeAliased(
-        4, this->_internal_filename(), target);
-  }
-
-  // optional fixed32 crc = 5;
-  if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFixed32ToArray(5, this->_internal_crc(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CCLCMsg_FileCRCCheck)
-  return target;
-}
-
-size_t CCLCMsg_FileCRCCheck::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CCLCMsg_FileCRCCheck)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    // optional string path = 2;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_path());
-    }
-
-    // optional string filename = 4;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_filename());
-    }
-
-    // optional int32 code_path = 1;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_code_path());
-    }
-
-    // optional int32 code_filename = 3;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_code_filename());
-    }
-
-    // optional fixed32 crc = 5;
-    if (cached_has_bits & 0x00000010u) {
-      total_size += 1 + 4;
-    }
-
-  }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCLCMsg_FileCRCCheck::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CCLCMsg_FileCRCCheck::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCLCMsg_FileCRCCheck::GetClassData() const { return &_class_data_; }
-
-
-void CCLCMsg_FileCRCCheck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CCLCMsg_FileCRCCheck*>(&to_msg);
-  auto& from = static_cast<const CCLCMsg_FileCRCCheck&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CCLCMsg_FileCRCCheck)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_path(from._internal_path());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_filename(from._internal_filename());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.code_path_ = from._impl_.code_path_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.code_filename_ = from._impl_.code_filename_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.crc_ = from._impl_.crc_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CCLCMsg_FileCRCCheck::CopyFrom(const CCLCMsg_FileCRCCheck& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CCLCMsg_FileCRCCheck)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CCLCMsg_FileCRCCheck::IsInitialized() const {
-  return true;
-}
-
-void CCLCMsg_FileCRCCheck::InternalSwap(CCLCMsg_FileCRCCheck* other) {
-  using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.path_, lhs_arena,
-      &other->_impl_.path_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.filename_, lhs_arena,
-      &other->_impl_.filename_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CCLCMsg_FileCRCCheck, _impl_.crc_)
-      + sizeof(CCLCMsg_FileCRCCheck::_impl_.crc_)
-      - PROTOBUF_FIELD_OFFSET(CCLCMsg_FileCRCCheck, _impl_.code_path_)>(
-          reinterpret_cast<char*>(&_impl_.code_path_),
-          reinterpret_cast<char*>(&other->_impl_.code_path_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_FileCRCCheck::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[7]);
-}
-
-// ===================================================================
-
 class CCLCMsg_LoadingProgress::_Internal {
  public:
   using HasBits = decltype(std::declval<CCLCMsg_LoadingProgress>()._impl_._has_bits_);
@@ -6141,7 +5460,7 @@ void CCLCMsg_LoadingProgress::InternalSwap(CCLCMsg_LoadingProgress* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_LoadingProgress::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[8]);
+      file_level_metadata_netmessages_2eproto[7]);
 }
 
 // ===================================================================
@@ -6361,7 +5680,7 @@ void CCLCMsg_SplitPlayerConnect::InternalSwap(CCLCMsg_SplitPlayerConnect* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_SplitPlayerConnect::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[9]);
+      file_level_metadata_netmessages_2eproto[8]);
 }
 
 // ===================================================================
@@ -6552,7 +5871,7 @@ void CCLCMsg_SplitPlayerDisconnect::InternalSwap(CCLCMsg_SplitPlayerDisconnect* 
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_SplitPlayerDisconnect::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[10]);
+      file_level_metadata_netmessages_2eproto[9]);
 }
 
 // ===================================================================
@@ -6743,7 +6062,7 @@ void CCLCMsg_ServerStatus::InternalSwap(CCLCMsg_ServerStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_ServerStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[11]);
+      file_level_metadata_netmessages_2eproto[10]);
 }
 
 // ===================================================================
@@ -6986,7 +6305,7 @@ void CCLCMsg_RequestPause::InternalSwap(CCLCMsg_RequestPause* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_RequestPause::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[12]);
+      file_level_metadata_netmessages_2eproto[11]);
 }
 
 // ===================================================================
@@ -7199,7 +6518,7 @@ void CCLCMsg_CmdKeyValues::InternalSwap(CCLCMsg_CmdKeyValues* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_CmdKeyValues::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[13]);
+      file_level_metadata_netmessages_2eproto[12]);
 }
 
 // ===================================================================
@@ -7412,2774 +6731,7 @@ void CCLCMsg_RconServerDetails::InternalSwap(CCLCMsg_RconServerDetails* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_RconServerDetails::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[14]);
-}
-
-// ===================================================================
-
-class CMsgSource2SystemSpecs::_Internal {
- public:
-  using HasBits = decltype(std::declval<CMsgSource2SystemSpecs>()._impl_._has_bits_);
-  static void set_has_cpu_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_cpu_brand(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_cpu_model(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_cpu_num_physical(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_ram_physical_total_mb(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_gpu_rendersystem_dll_name(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_gpu_vendor_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_gpu_driver_name(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_gpu_driver_version_high(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static void set_has_gpu_driver_version_low(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
-  }
-  static void set_has_gpu_dx_support_level(HasBits* has_bits) {
-    (*has_bits)[0] |= 1024u;
-  }
-  static void set_has_gpu_texture_memory_size_mb(HasBits* has_bits) {
-    (*has_bits)[0] |= 2048u;
-  }
-};
-
-CMsgSource2SystemSpecs::CMsgSource2SystemSpecs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CMsgSource2SystemSpecs)
-}
-CMsgSource2SystemSpecs::CMsgSource2SystemSpecs(const CMsgSource2SystemSpecs& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CMsgSource2SystemSpecs* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.cpu_id_){}
-    , decltype(_impl_.cpu_brand_){}
-    , decltype(_impl_.gpu_rendersystem_dll_name_){}
-    , decltype(_impl_.gpu_driver_name_){}
-    , decltype(_impl_.cpu_model_){}
-    , decltype(_impl_.cpu_num_physical_){}
-    , decltype(_impl_.ram_physical_total_mb_){}
-    , decltype(_impl_.gpu_vendor_id_){}
-    , decltype(_impl_.gpu_driver_version_high_){}
-    , decltype(_impl_.gpu_driver_version_low_){}
-    , decltype(_impl_.gpu_dx_support_level_){}
-    , decltype(_impl_.gpu_texture_memory_size_mb_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.cpu_id_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cpu_id_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_cpu_id()) {
-    _this->_impl_.cpu_id_.Set(from._internal_cpu_id(), 
-      _this->GetArenaForAllocation());
-  }
-  _impl_.cpu_brand_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cpu_brand_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_cpu_brand()) {
-    _this->_impl_.cpu_brand_.Set(from._internal_cpu_brand(), 
-      _this->GetArenaForAllocation());
-  }
-  _impl_.gpu_rendersystem_dll_name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpu_rendersystem_dll_name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_gpu_rendersystem_dll_name()) {
-    _this->_impl_.gpu_rendersystem_dll_name_.Set(from._internal_gpu_rendersystem_dll_name(), 
-      _this->GetArenaForAllocation());
-  }
-  _impl_.gpu_driver_name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpu_driver_name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_gpu_driver_name()) {
-    _this->_impl_.gpu_driver_name_.Set(from._internal_gpu_driver_name(), 
-      _this->GetArenaForAllocation());
-  }
-  ::memcpy(&_impl_.cpu_model_, &from._impl_.cpu_model_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.gpu_texture_memory_size_mb_) -
-    reinterpret_cast<char*>(&_impl_.cpu_model_)) + sizeof(_impl_.gpu_texture_memory_size_mb_));
-  // @@protoc_insertion_point(copy_constructor:CMsgSource2SystemSpecs)
-}
-
-inline void CMsgSource2SystemSpecs::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.cpu_id_){}
-    , decltype(_impl_.cpu_brand_){}
-    , decltype(_impl_.gpu_rendersystem_dll_name_){}
-    , decltype(_impl_.gpu_driver_name_){}
-    , decltype(_impl_.cpu_model_){0u}
-    , decltype(_impl_.cpu_num_physical_){0u}
-    , decltype(_impl_.ram_physical_total_mb_){0u}
-    , decltype(_impl_.gpu_vendor_id_){0u}
-    , decltype(_impl_.gpu_driver_version_high_){0u}
-    , decltype(_impl_.gpu_driver_version_low_){0u}
-    , decltype(_impl_.gpu_dx_support_level_){0u}
-    , decltype(_impl_.gpu_texture_memory_size_mb_){0u}
-  };
-  _impl_.cpu_id_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cpu_id_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.cpu_brand_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cpu_brand_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.gpu_rendersystem_dll_name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpu_rendersystem_dll_name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.gpu_driver_name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpu_driver_name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-
-CMsgSource2SystemSpecs::~CMsgSource2SystemSpecs() {
-  // @@protoc_insertion_point(destructor:CMsgSource2SystemSpecs)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CMsgSource2SystemSpecs::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.cpu_id_.Destroy();
-  _impl_.cpu_brand_.Destroy();
-  _impl_.gpu_rendersystem_dll_name_.Destroy();
-  _impl_.gpu_driver_name_.Destroy();
-}
-
-void CMsgSource2SystemSpecs::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CMsgSource2SystemSpecs::Clear() {
-// @@protoc_insertion_point(message_clear_start:CMsgSource2SystemSpecs)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.cpu_id_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.cpu_brand_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.gpu_rendersystem_dll_name_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.gpu_driver_name_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x000000f0u) {
-    ::memset(&_impl_.cpu_model_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.gpu_vendor_id_) -
-        reinterpret_cast<char*>(&_impl_.cpu_model_)) + sizeof(_impl_.gpu_vendor_id_));
-  }
-  if (cached_has_bits & 0x00000f00u) {
-    ::memset(&_impl_.gpu_driver_version_high_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.gpu_texture_memory_size_mb_) -
-        reinterpret_cast<char*>(&_impl_.gpu_driver_version_high_)) + sizeof(_impl_.gpu_texture_memory_size_mb_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CMsgSource2SystemSpecs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional string cpu_id = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_cpu_id();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CMsgSource2SystemSpecs.cpu_id");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional string cpu_brand = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_cpu_brand();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CMsgSource2SystemSpecs.cpu_brand");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 cpu_model = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_cpu_model(&has_bits);
-          _impl_.cpu_model_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 cpu_num_physical = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_cpu_num_physical(&has_bits);
-          _impl_.cpu_num_physical_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ram_physical_total_mb = 21;
-      case 21:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
-          _Internal::set_has_ram_physical_total_mb(&has_bits);
-          _impl_.ram_physical_total_mb_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional string gpu_rendersystem_dll_name = 41;
-      case 41:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
-          auto str = _internal_mutable_gpu_rendersystem_dll_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CMsgSource2SystemSpecs.gpu_rendersystem_dll_name");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 gpu_vendor_id = 42;
-      case 42:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          _Internal::set_has_gpu_vendor_id(&has_bits);
-          _impl_.gpu_vendor_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional string gpu_driver_name = 43;
-      case 43:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
-          auto str = _internal_mutable_gpu_driver_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CMsgSource2SystemSpecs.gpu_driver_name");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 gpu_driver_version_high = 44;
-      case 44:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_gpu_driver_version_high(&has_bits);
-          _impl_.gpu_driver_version_high_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 gpu_driver_version_low = 45;
-      case 45:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
-          _Internal::set_has_gpu_driver_version_low(&has_bits);
-          _impl_.gpu_driver_version_low_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 gpu_dx_support_level = 46;
-      case 46:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
-          _Internal::set_has_gpu_dx_support_level(&has_bits);
-          _impl_.gpu_dx_support_level_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 gpu_texture_memory_size_mb = 47;
-      case 47:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
-          _Internal::set_has_gpu_texture_memory_size_mb(&has_bits);
-          _impl_.gpu_texture_memory_size_mb_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CMsgSource2SystemSpecs::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CMsgSource2SystemSpecs)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional string cpu_id = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_cpu_id().data(), static_cast<int>(this->_internal_cpu_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CMsgSource2SystemSpecs.cpu_id");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_cpu_id(), target);
-  }
-
-  // optional string cpu_brand = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_cpu_brand().data(), static_cast<int>(this->_internal_cpu_brand().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CMsgSource2SystemSpecs.cpu_brand");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_cpu_brand(), target);
-  }
-
-  // optional uint32 cpu_model = 3;
-  if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_cpu_model(), target);
-  }
-
-  // optional uint32 cpu_num_physical = 4;
-  if (cached_has_bits & 0x00000020u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_cpu_num_physical(), target);
-  }
-
-  // optional uint32 ram_physical_total_mb = 21;
-  if (cached_has_bits & 0x00000040u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(21, this->_internal_ram_physical_total_mb(), target);
-  }
-
-  // optional string gpu_rendersystem_dll_name = 41;
-  if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_gpu_rendersystem_dll_name().data(), static_cast<int>(this->_internal_gpu_rendersystem_dll_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CMsgSource2SystemSpecs.gpu_rendersystem_dll_name");
-    target = stream->WriteStringMaybeAliased(
-        41, this->_internal_gpu_rendersystem_dll_name(), target);
-  }
-
-  // optional uint32 gpu_vendor_id = 42;
-  if (cached_has_bits & 0x00000080u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(42, this->_internal_gpu_vendor_id(), target);
-  }
-
-  // optional string gpu_driver_name = 43;
-  if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_gpu_driver_name().data(), static_cast<int>(this->_internal_gpu_driver_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CMsgSource2SystemSpecs.gpu_driver_name");
-    target = stream->WriteStringMaybeAliased(
-        43, this->_internal_gpu_driver_name(), target);
-  }
-
-  // optional uint32 gpu_driver_version_high = 44;
-  if (cached_has_bits & 0x00000100u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(44, this->_internal_gpu_driver_version_high(), target);
-  }
-
-  // optional uint32 gpu_driver_version_low = 45;
-  if (cached_has_bits & 0x00000200u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(45, this->_internal_gpu_driver_version_low(), target);
-  }
-
-  // optional uint32 gpu_dx_support_level = 46;
-  if (cached_has_bits & 0x00000400u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(46, this->_internal_gpu_dx_support_level(), target);
-  }
-
-  // optional uint32 gpu_texture_memory_size_mb = 47;
-  if (cached_has_bits & 0x00000800u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(47, this->_internal_gpu_texture_memory_size_mb(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CMsgSource2SystemSpecs)
-  return target;
-}
-
-size_t CMsgSource2SystemSpecs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CMsgSource2SystemSpecs)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    // optional string cpu_id = 1;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_cpu_id());
-    }
-
-    // optional string cpu_brand = 2;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_cpu_brand());
-    }
-
-    // optional string gpu_rendersystem_dll_name = 41;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_gpu_rendersystem_dll_name());
-    }
-
-    // optional string gpu_driver_name = 43;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_gpu_driver_name());
-    }
-
-    // optional uint32 cpu_model = 3;
-    if (cached_has_bits & 0x00000010u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_cpu_model());
-    }
-
-    // optional uint32 cpu_num_physical = 4;
-    if (cached_has_bits & 0x00000020u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_cpu_num_physical());
-    }
-
-    // optional uint32 ram_physical_total_mb = 21;
-    if (cached_has_bits & 0x00000040u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ram_physical_total_mb());
-    }
-
-    // optional uint32 gpu_vendor_id = 42;
-    if (cached_has_bits & 0x00000080u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_gpu_vendor_id());
-    }
-
-  }
-  if (cached_has_bits & 0x00000f00u) {
-    // optional uint32 gpu_driver_version_high = 44;
-    if (cached_has_bits & 0x00000100u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_gpu_driver_version_high());
-    }
-
-    // optional uint32 gpu_driver_version_low = 45;
-    if (cached_has_bits & 0x00000200u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_gpu_driver_version_low());
-    }
-
-    // optional uint32 gpu_dx_support_level = 46;
-    if (cached_has_bits & 0x00000400u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_gpu_dx_support_level());
-    }
-
-    // optional uint32 gpu_texture_memory_size_mb = 47;
-    if (cached_has_bits & 0x00000800u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_gpu_texture_memory_size_mb());
-    }
-
-  }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CMsgSource2SystemSpecs::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CMsgSource2SystemSpecs::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CMsgSource2SystemSpecs::GetClassData() const { return &_class_data_; }
-
-
-void CMsgSource2SystemSpecs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CMsgSource2SystemSpecs*>(&to_msg);
-  auto& from = static_cast<const CMsgSource2SystemSpecs&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CMsgSource2SystemSpecs)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_cpu_id(from._internal_cpu_id());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_cpu_brand(from._internal_cpu_brand());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_gpu_rendersystem_dll_name(from._internal_gpu_rendersystem_dll_name());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_gpu_driver_name(from._internal_gpu_driver_name());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.cpu_model_ = from._impl_.cpu_model_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.cpu_num_physical_ = from._impl_.cpu_num_physical_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.ram_physical_total_mb_ = from._impl_.ram_physical_total_mb_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.gpu_vendor_id_ = from._impl_.gpu_vendor_id_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x00000f00u) {
-    if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.gpu_driver_version_high_ = from._impl_.gpu_driver_version_high_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.gpu_driver_version_low_ = from._impl_.gpu_driver_version_low_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.gpu_dx_support_level_ = from._impl_.gpu_dx_support_level_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      _this->_impl_.gpu_texture_memory_size_mb_ = from._impl_.gpu_texture_memory_size_mb_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CMsgSource2SystemSpecs::CopyFrom(const CMsgSource2SystemSpecs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CMsgSource2SystemSpecs)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CMsgSource2SystemSpecs::IsInitialized() const {
-  return true;
-}
-
-void CMsgSource2SystemSpecs::InternalSwap(CMsgSource2SystemSpecs* other) {
-  using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.cpu_id_, lhs_arena,
-      &other->_impl_.cpu_id_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.cpu_brand_, lhs_arena,
-      &other->_impl_.cpu_brand_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.gpu_rendersystem_dll_name_, lhs_arena,
-      &other->_impl_.gpu_rendersystem_dll_name_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.gpu_driver_name_, lhs_arena,
-      &other->_impl_.gpu_driver_name_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CMsgSource2SystemSpecs, _impl_.gpu_texture_memory_size_mb_)
-      + sizeof(CMsgSource2SystemSpecs::_impl_.gpu_texture_memory_size_mb_)
-      - PROTOBUF_FIELD_OFFSET(CMsgSource2SystemSpecs, _impl_.cpu_model_)>(
-          reinterpret_cast<char*>(&_impl_.cpu_model_),
-          reinterpret_cast<char*>(&other->_impl_.cpu_model_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CMsgSource2SystemSpecs::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[15]);
-}
-
-// ===================================================================
-
-class CMsgSource2VProfLiteReportItem::_Internal {
- public:
-  using HasBits = decltype(std::declval<CMsgSource2VProfLiteReportItem>()._impl_._has_bits_);
-  static void set_has_name(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_active_samples(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_active_samples_1secmax(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_usec_max(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_usec_avg_active(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_usec_p50_active(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_usec_p99_active(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_usec_avg_all(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_usec_p50_all(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static void set_has_usec_p99_all(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
-  }
-  static void set_has_usec_1secmax_avg_active(HasBits* has_bits) {
-    (*has_bits)[0] |= 1024u;
-  }
-  static void set_has_usec_1secmax_p50_active(HasBits* has_bits) {
-    (*has_bits)[0] |= 2048u;
-  }
-  static void set_has_usec_1secmax_p95_active(HasBits* has_bits) {
-    (*has_bits)[0] |= 4096u;
-  }
-  static void set_has_usec_1secmax_p99_active(HasBits* has_bits) {
-    (*has_bits)[0] |= 8192u;
-  }
-  static void set_has_usec_1secmax_avg_all(HasBits* has_bits) {
-    (*has_bits)[0] |= 16384u;
-  }
-  static void set_has_usec_1secmax_p50_all(HasBits* has_bits) {
-    (*has_bits)[0] |= 32768u;
-  }
-  static void set_has_usec_1secmax_p95_all(HasBits* has_bits) {
-    (*has_bits)[0] |= 65536u;
-  }
-  static void set_has_usec_1secmax_p99_all(HasBits* has_bits) {
-    (*has_bits)[0] |= 131072u;
-  }
-};
-
-CMsgSource2VProfLiteReportItem::CMsgSource2VProfLiteReportItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CMsgSource2VProfLiteReportItem)
-}
-CMsgSource2VProfLiteReportItem::CMsgSource2VProfLiteReportItem(const CMsgSource2VProfLiteReportItem& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CMsgSource2VProfLiteReportItem* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.active_samples_){}
-    , decltype(_impl_.usec_max_){}
-    , decltype(_impl_.active_samples_1secmax_){}
-    , decltype(_impl_.usec_avg_active_){}
-    , decltype(_impl_.usec_p50_active_){}
-    , decltype(_impl_.usec_p99_active_){}
-    , decltype(_impl_.usec_avg_all_){}
-    , decltype(_impl_.usec_p50_all_){}
-    , decltype(_impl_.usec_p99_all_){}
-    , decltype(_impl_.usec_1secmax_avg_active_){}
-    , decltype(_impl_.usec_1secmax_p50_active_){}
-    , decltype(_impl_.usec_1secmax_p95_active_){}
-    , decltype(_impl_.usec_1secmax_p99_active_){}
-    , decltype(_impl_.usec_1secmax_avg_all_){}
-    , decltype(_impl_.usec_1secmax_p50_all_){}
-    , decltype(_impl_.usec_1secmax_p95_all_){}
-    , decltype(_impl_.usec_1secmax_p99_all_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
-      _this->GetArenaForAllocation());
-  }
-  ::memcpy(&_impl_.active_samples_, &from._impl_.active_samples_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.usec_1secmax_p99_all_) -
-    reinterpret_cast<char*>(&_impl_.active_samples_)) + sizeof(_impl_.usec_1secmax_p99_all_));
-  // @@protoc_insertion_point(copy_constructor:CMsgSource2VProfLiteReportItem)
-}
-
-inline void CMsgSource2VProfLiteReportItem::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.active_samples_){0u}
-    , decltype(_impl_.usec_max_){0u}
-    , decltype(_impl_.active_samples_1secmax_){0u}
-    , decltype(_impl_.usec_avg_active_){0u}
-    , decltype(_impl_.usec_p50_active_){0u}
-    , decltype(_impl_.usec_p99_active_){0u}
-    , decltype(_impl_.usec_avg_all_){0u}
-    , decltype(_impl_.usec_p50_all_){0u}
-    , decltype(_impl_.usec_p99_all_){0u}
-    , decltype(_impl_.usec_1secmax_avg_active_){0u}
-    , decltype(_impl_.usec_1secmax_p50_active_){0u}
-    , decltype(_impl_.usec_1secmax_p95_active_){0u}
-    , decltype(_impl_.usec_1secmax_p99_active_){0u}
-    , decltype(_impl_.usec_1secmax_avg_all_){0u}
-    , decltype(_impl_.usec_1secmax_p50_all_){0u}
-    , decltype(_impl_.usec_1secmax_p95_all_){0u}
-    , decltype(_impl_.usec_1secmax_p99_all_){0u}
-  };
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-
-CMsgSource2VProfLiteReportItem::~CMsgSource2VProfLiteReportItem() {
-  // @@protoc_insertion_point(destructor:CMsgSource2VProfLiteReportItem)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CMsgSource2VProfLiteReportItem::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
-}
-
-void CMsgSource2VProfLiteReportItem::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CMsgSource2VProfLiteReportItem::Clear() {
-// @@protoc_insertion_point(message_clear_start:CMsgSource2VProfLiteReportItem)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.name_.ClearNonDefaultToEmpty();
-  }
-  if (cached_has_bits & 0x000000feu) {
-    ::memset(&_impl_.active_samples_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.usec_avg_all_) -
-        reinterpret_cast<char*>(&_impl_.active_samples_)) + sizeof(_impl_.usec_avg_all_));
-  }
-  if (cached_has_bits & 0x0000ff00u) {
-    ::memset(&_impl_.usec_p50_all_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.usec_1secmax_p50_all_) -
-        reinterpret_cast<char*>(&_impl_.usec_p50_all_)) + sizeof(_impl_.usec_1secmax_p50_all_));
-  }
-  if (cached_has_bits & 0x00030000u) {
-    ::memset(&_impl_.usec_1secmax_p95_all_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.usec_1secmax_p99_all_) -
-        reinterpret_cast<char*>(&_impl_.usec_1secmax_p95_all_)) + sizeof(_impl_.usec_1secmax_p99_all_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CMsgSource2VProfLiteReportItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional string name = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CMsgSource2VProfLiteReportItem.name");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 active_samples = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_active_samples(&has_bits);
-          _impl_.active_samples_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_max = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_usec_max(&has_bits);
-          _impl_.usec_max_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 active_samples_1secmax = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_active_samples_1secmax(&has_bits);
-          _impl_.active_samples_1secmax_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_avg_active = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
-          _Internal::set_has_usec_avg_active(&has_bits);
-          _impl_.usec_avg_active_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_p50_active = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_usec_p50_active(&has_bits);
-          _impl_.usec_p50_active_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_p99_active = 13;
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
-          _Internal::set_has_usec_p99_active(&has_bits);
-          _impl_.usec_p99_active_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_avg_all = 21;
-      case 21:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
-          _Internal::set_has_usec_avg_all(&has_bits);
-          _impl_.usec_avg_all_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_p50_all = 22;
-      case 22:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
-          _Internal::set_has_usec_p50_all(&has_bits);
-          _impl_.usec_p50_all_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_p99_all = 23;
-      case 23:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 184)) {
-          _Internal::set_has_usec_p99_all(&has_bits);
-          _impl_.usec_p99_all_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_avg_active = 31;
-      case 31:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 248)) {
-          _Internal::set_has_usec_1secmax_avg_active(&has_bits);
-          _impl_.usec_1secmax_avg_active_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_p50_active = 32;
-      case 32:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 0)) {
-          _Internal::set_has_usec_1secmax_p50_active(&has_bits);
-          _impl_.usec_1secmax_p50_active_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_p95_active = 33;
-      case 33:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_usec_1secmax_p95_active(&has_bits);
-          _impl_.usec_1secmax_p95_active_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_p99_active = 34;
-      case 34:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_usec_1secmax_p99_active(&has_bits);
-          _impl_.usec_1secmax_p99_active_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_avg_all = 41;
-      case 41:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
-          _Internal::set_has_usec_1secmax_avg_all(&has_bits);
-          _impl_.usec_1secmax_avg_all_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_p50_all = 42;
-      case 42:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          _Internal::set_has_usec_1secmax_p50_all(&has_bits);
-          _impl_.usec_1secmax_p50_all_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_p95_all = 43;
-      case 43:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
-          _Internal::set_has_usec_1secmax_p95_all(&has_bits);
-          _impl_.usec_1secmax_p95_all_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 usec_1secmax_p99_all = 44;
-      case 44:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_usec_1secmax_p99_all(&has_bits);
-          _impl_.usec_1secmax_p99_all_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CMsgSource2VProfLiteReportItem::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CMsgSource2VProfLiteReportItem)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional string name = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CMsgSource2VProfLiteReportItem.name");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_name(), target);
-  }
-
-  // optional uint32 active_samples = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_active_samples(), target);
-  }
-
-  // optional uint32 usec_max = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_usec_max(), target);
-  }
-
-  // optional uint32 active_samples_1secmax = 4;
-  if (cached_has_bits & 0x00000008u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_active_samples_1secmax(), target);
-  }
-
-  // optional uint32 usec_avg_active = 11;
-  if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_usec_avg_active(), target);
-  }
-
-  // optional uint32 usec_p50_active = 12;
-  if (cached_has_bits & 0x00000020u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(12, this->_internal_usec_p50_active(), target);
-  }
-
-  // optional uint32 usec_p99_active = 13;
-  if (cached_has_bits & 0x00000040u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(13, this->_internal_usec_p99_active(), target);
-  }
-
-  // optional uint32 usec_avg_all = 21;
-  if (cached_has_bits & 0x00000080u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(21, this->_internal_usec_avg_all(), target);
-  }
-
-  // optional uint32 usec_p50_all = 22;
-  if (cached_has_bits & 0x00000100u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(22, this->_internal_usec_p50_all(), target);
-  }
-
-  // optional uint32 usec_p99_all = 23;
-  if (cached_has_bits & 0x00000200u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(23, this->_internal_usec_p99_all(), target);
-  }
-
-  // optional uint32 usec_1secmax_avg_active = 31;
-  if (cached_has_bits & 0x00000400u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(31, this->_internal_usec_1secmax_avg_active(), target);
-  }
-
-  // optional uint32 usec_1secmax_p50_active = 32;
-  if (cached_has_bits & 0x00000800u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(32, this->_internal_usec_1secmax_p50_active(), target);
-  }
-
-  // optional uint32 usec_1secmax_p95_active = 33;
-  if (cached_has_bits & 0x00001000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(33, this->_internal_usec_1secmax_p95_active(), target);
-  }
-
-  // optional uint32 usec_1secmax_p99_active = 34;
-  if (cached_has_bits & 0x00002000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(34, this->_internal_usec_1secmax_p99_active(), target);
-  }
-
-  // optional uint32 usec_1secmax_avg_all = 41;
-  if (cached_has_bits & 0x00004000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(41, this->_internal_usec_1secmax_avg_all(), target);
-  }
-
-  // optional uint32 usec_1secmax_p50_all = 42;
-  if (cached_has_bits & 0x00008000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(42, this->_internal_usec_1secmax_p50_all(), target);
-  }
-
-  // optional uint32 usec_1secmax_p95_all = 43;
-  if (cached_has_bits & 0x00010000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(43, this->_internal_usec_1secmax_p95_all(), target);
-  }
-
-  // optional uint32 usec_1secmax_p99_all = 44;
-  if (cached_has_bits & 0x00020000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(44, this->_internal_usec_1secmax_p99_all(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CMsgSource2VProfLiteReportItem)
-  return target;
-}
-
-size_t CMsgSource2VProfLiteReportItem::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CMsgSource2VProfLiteReportItem)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    // optional string name = 1;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_name());
-    }
-
-    // optional uint32 active_samples = 2;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_active_samples());
-    }
-
-    // optional uint32 usec_max = 3;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_usec_max());
-    }
-
-    // optional uint32 active_samples_1secmax = 4;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_active_samples_1secmax());
-    }
-
-    // optional uint32 usec_avg_active = 11;
-    if (cached_has_bits & 0x00000010u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_usec_avg_active());
-    }
-
-    // optional uint32 usec_p50_active = 12;
-    if (cached_has_bits & 0x00000020u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_usec_p50_active());
-    }
-
-    // optional uint32 usec_p99_active = 13;
-    if (cached_has_bits & 0x00000040u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_usec_p99_active());
-    }
-
-    // optional uint32 usec_avg_all = 21;
-    if (cached_has_bits & 0x00000080u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_avg_all());
-    }
-
-  }
-  if (cached_has_bits & 0x0000ff00u) {
-    // optional uint32 usec_p50_all = 22;
-    if (cached_has_bits & 0x00000100u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_p50_all());
-    }
-
-    // optional uint32 usec_p99_all = 23;
-    if (cached_has_bits & 0x00000200u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_p99_all());
-    }
-
-    // optional uint32 usec_1secmax_avg_active = 31;
-    if (cached_has_bits & 0x00000400u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_avg_active());
-    }
-
-    // optional uint32 usec_1secmax_p50_active = 32;
-    if (cached_has_bits & 0x00000800u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_p50_active());
-    }
-
-    // optional uint32 usec_1secmax_p95_active = 33;
-    if (cached_has_bits & 0x00001000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_p95_active());
-    }
-
-    // optional uint32 usec_1secmax_p99_active = 34;
-    if (cached_has_bits & 0x00002000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_p99_active());
-    }
-
-    // optional uint32 usec_1secmax_avg_all = 41;
-    if (cached_has_bits & 0x00004000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_avg_all());
-    }
-
-    // optional uint32 usec_1secmax_p50_all = 42;
-    if (cached_has_bits & 0x00008000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_p50_all());
-    }
-
-  }
-  if (cached_has_bits & 0x00030000u) {
-    // optional uint32 usec_1secmax_p95_all = 43;
-    if (cached_has_bits & 0x00010000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_p95_all());
-    }
-
-    // optional uint32 usec_1secmax_p99_all = 44;
-    if (cached_has_bits & 0x00020000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_usec_1secmax_p99_all());
-    }
-
-  }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CMsgSource2VProfLiteReportItem::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CMsgSource2VProfLiteReportItem::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CMsgSource2VProfLiteReportItem::GetClassData() const { return &_class_data_; }
-
-
-void CMsgSource2VProfLiteReportItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CMsgSource2VProfLiteReportItem*>(&to_msg);
-  auto& from = static_cast<const CMsgSource2VProfLiteReportItem&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CMsgSource2VProfLiteReportItem)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_name(from._internal_name());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.active_samples_ = from._impl_.active_samples_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.usec_max_ = from._impl_.usec_max_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.active_samples_1secmax_ = from._impl_.active_samples_1secmax_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.usec_avg_active_ = from._impl_.usec_avg_active_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.usec_p50_active_ = from._impl_.usec_p50_active_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.usec_p99_active_ = from._impl_.usec_p99_active_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.usec_avg_all_ = from._impl_.usec_avg_all_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x0000ff00u) {
-    if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.usec_p50_all_ = from._impl_.usec_p50_all_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.usec_p99_all_ = from._impl_.usec_p99_all_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.usec_1secmax_avg_active_ = from._impl_.usec_1secmax_avg_active_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      _this->_impl_.usec_1secmax_p50_active_ = from._impl_.usec_1secmax_p50_active_;
-    }
-    if (cached_has_bits & 0x00001000u) {
-      _this->_impl_.usec_1secmax_p95_active_ = from._impl_.usec_1secmax_p95_active_;
-    }
-    if (cached_has_bits & 0x00002000u) {
-      _this->_impl_.usec_1secmax_p99_active_ = from._impl_.usec_1secmax_p99_active_;
-    }
-    if (cached_has_bits & 0x00004000u) {
-      _this->_impl_.usec_1secmax_avg_all_ = from._impl_.usec_1secmax_avg_all_;
-    }
-    if (cached_has_bits & 0x00008000u) {
-      _this->_impl_.usec_1secmax_p50_all_ = from._impl_.usec_1secmax_p50_all_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x00030000u) {
-    if (cached_has_bits & 0x00010000u) {
-      _this->_impl_.usec_1secmax_p95_all_ = from._impl_.usec_1secmax_p95_all_;
-    }
-    if (cached_has_bits & 0x00020000u) {
-      _this->_impl_.usec_1secmax_p99_all_ = from._impl_.usec_1secmax_p99_all_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CMsgSource2VProfLiteReportItem::CopyFrom(const CMsgSource2VProfLiteReportItem& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CMsgSource2VProfLiteReportItem)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CMsgSource2VProfLiteReportItem::IsInitialized() const {
-  return true;
-}
-
-void CMsgSource2VProfLiteReportItem::InternalSwap(CMsgSource2VProfLiteReportItem* other) {
-  using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CMsgSource2VProfLiteReportItem, _impl_.usec_1secmax_p99_all_)
-      + sizeof(CMsgSource2VProfLiteReportItem::_impl_.usec_1secmax_p99_all_)
-      - PROTOBUF_FIELD_OFFSET(CMsgSource2VProfLiteReportItem, _impl_.active_samples_)>(
-          reinterpret_cast<char*>(&_impl_.active_samples_),
-          reinterpret_cast<char*>(&other->_impl_.active_samples_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CMsgSource2VProfLiteReportItem::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[16]);
-}
-
-// ===================================================================
-
-class CMsgSource2VProfLiteReport::_Internal {
- public:
-  using HasBits = decltype(std::declval<CMsgSource2VProfLiteReport>()._impl_._has_bits_);
-  static const ::CMsgSource2VProfLiteReportItem& total(const CMsgSource2VProfLiteReport* msg);
-  static void set_has_total(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_discarded_frames(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-};
-
-const ::CMsgSource2VProfLiteReportItem&
-CMsgSource2VProfLiteReport::_Internal::total(const CMsgSource2VProfLiteReport* msg) {
-  return *msg->_impl_.total_;
-}
-CMsgSource2VProfLiteReport::CMsgSource2VProfLiteReport(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CMsgSource2VProfLiteReport)
-}
-CMsgSource2VProfLiteReport::CMsgSource2VProfLiteReport(const CMsgSource2VProfLiteReport& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CMsgSource2VProfLiteReport* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.items_){from._impl_.items_}
-    , decltype(_impl_.total_){nullptr}
-    , decltype(_impl_.discarded_frames_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_total()) {
-    _this->_impl_.total_ = new ::CMsgSource2VProfLiteReportItem(*from._impl_.total_);
-  }
-  _this->_impl_.discarded_frames_ = from._impl_.discarded_frames_;
-  // @@protoc_insertion_point(copy_constructor:CMsgSource2VProfLiteReport)
-}
-
-inline void CMsgSource2VProfLiteReport::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.items_){arena}
-    , decltype(_impl_.total_){nullptr}
-    , decltype(_impl_.discarded_frames_){0u}
-  };
-}
-
-CMsgSource2VProfLiteReport::~CMsgSource2VProfLiteReport() {
-  // @@protoc_insertion_point(destructor:CMsgSource2VProfLiteReport)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CMsgSource2VProfLiteReport::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.items_.~RepeatedPtrField();
-  if (this != internal_default_instance()) delete _impl_.total_;
-}
-
-void CMsgSource2VProfLiteReport::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CMsgSource2VProfLiteReport::Clear() {
-// @@protoc_insertion_point(message_clear_start:CMsgSource2VProfLiteReport)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.items_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.total_ != nullptr);
-    _impl_.total_->Clear();
-  }
-  _impl_.discarded_frames_ = 0u;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CMsgSource2VProfLiteReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional .CMsgSource2VProfLiteReportItem total = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_total(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .CMsgSource2VProfLiteReportItem items = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_items(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 discarded_frames = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_discarded_frames(&has_bits);
-          _impl_.discarded_frames_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CMsgSource2VProfLiteReport::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CMsgSource2VProfLiteReport)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional .CMsgSource2VProfLiteReportItem total = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::total(this),
-        _Internal::total(this).GetCachedSize(), target, stream);
-  }
-
-  // repeated .CMsgSource2VProfLiteReportItem items = 2;
-  for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_items_size()); i < n; i++) {
-    const auto& repfield = this->_internal_items(i);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
-  }
-
-  // optional uint32 discarded_frames = 3;
-  if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_discarded_frames(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CMsgSource2VProfLiteReport)
-  return target;
-}
-
-size_t CMsgSource2VProfLiteReport::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CMsgSource2VProfLiteReport)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // repeated .CMsgSource2VProfLiteReportItem items = 2;
-  total_size += 1UL * this->_internal_items_size();
-  for (const auto& msg : this->_impl_.items_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    // optional .CMsgSource2VProfLiteReportItem total = 1;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.total_);
-    }
-
-    // optional uint32 discarded_frames = 3;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_discarded_frames());
-    }
-
-  }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CMsgSource2VProfLiteReport::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CMsgSource2VProfLiteReport::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CMsgSource2VProfLiteReport::GetClassData() const { return &_class_data_; }
-
-
-void CMsgSource2VProfLiteReport::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CMsgSource2VProfLiteReport*>(&to_msg);
-  auto& from = static_cast<const CMsgSource2VProfLiteReport&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CMsgSource2VProfLiteReport)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_impl_.items_.MergeFrom(from._impl_.items_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_total()->::CMsgSource2VProfLiteReportItem::MergeFrom(
-          from._internal_total());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.discarded_frames_ = from._impl_.discarded_frames_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CMsgSource2VProfLiteReport::CopyFrom(const CMsgSource2VProfLiteReport& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CMsgSource2VProfLiteReport)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CMsgSource2VProfLiteReport::IsInitialized() const {
-  return true;
-}
-
-void CMsgSource2VProfLiteReport::InternalSwap(CMsgSource2VProfLiteReport* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.items_.InternalSwap(&other->_impl_.items_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CMsgSource2VProfLiteReport, _impl_.discarded_frames_)
-      + sizeof(CMsgSource2VProfLiteReport::_impl_.discarded_frames_)
-      - PROTOBUF_FIELD_OFFSET(CMsgSource2VProfLiteReport, _impl_.total_)>(
-          reinterpret_cast<char*>(&_impl_.total_),
-          reinterpret_cast<char*>(&other->_impl_.total_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CMsgSource2VProfLiteReport::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[17]);
-}
-
-// ===================================================================
-
-class CMsgSource2NetworkFlowQuality::_Internal {
- public:
-  using HasBits = decltype(std::declval<CMsgSource2NetworkFlowQuality>()._impl_._has_bits_);
-  static void set_has_duration(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_bytes_total(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_bytes_total_reliable(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_bytes_total_voice(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_bytes_sec_p95(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_bytes_sec_p99(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_enginemsgs_total(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_enginemsgs_sec_p95(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_enginemsgs_sec_p99(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static void set_has_ticks_total(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
-  }
-  static void set_has_ticks_good(HasBits* has_bits) {
-    (*has_bits)[0] |= 1024u;
-  }
-  static void set_has_ticks_good_almost_late(HasBits* has_bits) {
-    (*has_bits)[0] |= 2048u;
-  }
-  static void set_has_ticks_fixed_dropped(HasBits* has_bits) {
-    (*has_bits)[0] |= 4096u;
-  }
-  static void set_has_ticks_fixed_late(HasBits* has_bits) {
-    (*has_bits)[0] |= 8192u;
-  }
-  static void set_has_ticks_bad_dropped(HasBits* has_bits) {
-    (*has_bits)[0] |= 16384u;
-  }
-  static void set_has_ticks_bad_late(HasBits* has_bits) {
-    (*has_bits)[0] |= 32768u;
-  }
-  static void set_has_ticks_bad_other(HasBits* has_bits) {
-    (*has_bits)[0] |= 65536u;
-  }
-  static void set_has_tick_missrate_samples_total(HasBits* has_bits) {
-    (*has_bits)[0] |= 131072u;
-  }
-  static void set_has_tick_missrate_samples_perfect(HasBits* has_bits) {
-    (*has_bits)[0] |= 262144u;
-  }
-  static void set_has_tick_missrate_samples_perfectnet(HasBits* has_bits) {
-    (*has_bits)[0] |= 524288u;
-  }
-  static void set_has_tick_missratenet_p75_x10(HasBits* has_bits) {
-    (*has_bits)[0] |= 1048576u;
-  }
-  static void set_has_tick_missratenet_p95_x10(HasBits* has_bits) {
-    (*has_bits)[0] |= 2097152u;
-  }
-  static void set_has_tick_missratenet_p99_x10(HasBits* has_bits) {
-    (*has_bits)[0] |= 4194304u;
-  }
-  static void set_has_recvmargin_p1(HasBits* has_bits) {
-    (*has_bits)[0] |= 8388608u;
-  }
-  static void set_has_recvmargin_p5(HasBits* has_bits) {
-    (*has_bits)[0] |= 16777216u;
-  }
-  static void set_has_recvmargin_p25(HasBits* has_bits) {
-    (*has_bits)[0] |= 33554432u;
-  }
-  static void set_has_recvmargin_p50(HasBits* has_bits) {
-    (*has_bits)[0] |= 67108864u;
-  }
-  static void set_has_recvmargin_p75(HasBits* has_bits) {
-    (*has_bits)[0] |= 134217728u;
-  }
-  static void set_has_recvmargin_p95(HasBits* has_bits) {
-    (*has_bits)[0] |= 268435456u;
-  }
-};
-
-CMsgSource2NetworkFlowQuality::CMsgSource2NetworkFlowQuality(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CMsgSource2NetworkFlowQuality)
-}
-CMsgSource2NetworkFlowQuality::CMsgSource2NetworkFlowQuality(const CMsgSource2NetworkFlowQuality& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CMsgSource2NetworkFlowQuality* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.bytes_total_){}
-    , decltype(_impl_.duration_){}
-    , decltype(_impl_.bytes_sec_p95_){}
-    , decltype(_impl_.bytes_total_reliable_){}
-    , decltype(_impl_.bytes_total_voice_){}
-    , decltype(_impl_.bytes_sec_p99_){}
-    , decltype(_impl_.enginemsgs_total_){}
-    , decltype(_impl_.enginemsgs_sec_p95_){}
-    , decltype(_impl_.enginemsgs_sec_p99_){}
-    , decltype(_impl_.ticks_total_){}
-    , decltype(_impl_.ticks_good_){}
-    , decltype(_impl_.ticks_good_almost_late_){}
-    , decltype(_impl_.ticks_fixed_dropped_){}
-    , decltype(_impl_.ticks_fixed_late_){}
-    , decltype(_impl_.ticks_bad_dropped_){}
-    , decltype(_impl_.ticks_bad_late_){}
-    , decltype(_impl_.ticks_bad_other_){}
-    , decltype(_impl_.tick_missrate_samples_total_){}
-    , decltype(_impl_.tick_missrate_samples_perfect_){}
-    , decltype(_impl_.tick_missrate_samples_perfectnet_){}
-    , decltype(_impl_.tick_missratenet_p75_x10_){}
-    , decltype(_impl_.tick_missratenet_p95_x10_){}
-    , decltype(_impl_.tick_missratenet_p99_x10_){}
-    , decltype(_impl_.recvmargin_p1_){}
-    , decltype(_impl_.recvmargin_p5_){}
-    , decltype(_impl_.recvmargin_p25_){}
-    , decltype(_impl_.recvmargin_p50_){}
-    , decltype(_impl_.recvmargin_p75_){}
-    , decltype(_impl_.recvmargin_p95_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&_impl_.bytes_total_, &from._impl_.bytes_total_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.recvmargin_p95_) -
-    reinterpret_cast<char*>(&_impl_.bytes_total_)) + sizeof(_impl_.recvmargin_p95_));
-  // @@protoc_insertion_point(copy_constructor:CMsgSource2NetworkFlowQuality)
-}
-
-inline void CMsgSource2NetworkFlowQuality::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.bytes_total_){uint64_t{0u}}
-    , decltype(_impl_.duration_){0u}
-    , decltype(_impl_.bytes_sec_p95_){0u}
-    , decltype(_impl_.bytes_total_reliable_){uint64_t{0u}}
-    , decltype(_impl_.bytes_total_voice_){uint64_t{0u}}
-    , decltype(_impl_.bytes_sec_p99_){0u}
-    , decltype(_impl_.enginemsgs_total_){0u}
-    , decltype(_impl_.enginemsgs_sec_p95_){0u}
-    , decltype(_impl_.enginemsgs_sec_p99_){0u}
-    , decltype(_impl_.ticks_total_){0u}
-    , decltype(_impl_.ticks_good_){0u}
-    , decltype(_impl_.ticks_good_almost_late_){0u}
-    , decltype(_impl_.ticks_fixed_dropped_){0u}
-    , decltype(_impl_.ticks_fixed_late_){0u}
-    , decltype(_impl_.ticks_bad_dropped_){0u}
-    , decltype(_impl_.ticks_bad_late_){0u}
-    , decltype(_impl_.ticks_bad_other_){0u}
-    , decltype(_impl_.tick_missrate_samples_total_){0u}
-    , decltype(_impl_.tick_missrate_samples_perfect_){0u}
-    , decltype(_impl_.tick_missrate_samples_perfectnet_){0u}
-    , decltype(_impl_.tick_missratenet_p75_x10_){0u}
-    , decltype(_impl_.tick_missratenet_p95_x10_){0u}
-    , decltype(_impl_.tick_missratenet_p99_x10_){0u}
-    , decltype(_impl_.recvmargin_p1_){0}
-    , decltype(_impl_.recvmargin_p5_){0}
-    , decltype(_impl_.recvmargin_p25_){0}
-    , decltype(_impl_.recvmargin_p50_){0}
-    , decltype(_impl_.recvmargin_p75_){0}
-    , decltype(_impl_.recvmargin_p95_){0}
-  };
-}
-
-CMsgSource2NetworkFlowQuality::~CMsgSource2NetworkFlowQuality() {
-  // @@protoc_insertion_point(destructor:CMsgSource2NetworkFlowQuality)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CMsgSource2NetworkFlowQuality::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void CMsgSource2NetworkFlowQuality::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CMsgSource2NetworkFlowQuality::Clear() {
-// @@protoc_insertion_point(message_clear_start:CMsgSource2NetworkFlowQuality)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    ::memset(&_impl_.bytes_total_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.enginemsgs_sec_p95_) -
-        reinterpret_cast<char*>(&_impl_.bytes_total_)) + sizeof(_impl_.enginemsgs_sec_p95_));
-  }
-  if (cached_has_bits & 0x0000ff00u) {
-    ::memset(&_impl_.enginemsgs_sec_p99_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.ticks_bad_late_) -
-        reinterpret_cast<char*>(&_impl_.enginemsgs_sec_p99_)) + sizeof(_impl_.ticks_bad_late_));
-  }
-  if (cached_has_bits & 0x00ff0000u) {
-    ::memset(&_impl_.ticks_bad_other_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.recvmargin_p1_) -
-        reinterpret_cast<char*>(&_impl_.ticks_bad_other_)) + sizeof(_impl_.recvmargin_p1_));
-  }
-  if (cached_has_bits & 0x1f000000u) {
-    ::memset(&_impl_.recvmargin_p5_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.recvmargin_p95_) -
-        reinterpret_cast<char*>(&_impl_.recvmargin_p5_)) + sizeof(_impl_.recvmargin_p95_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CMsgSource2NetworkFlowQuality::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional uint32 duration = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_duration(&has_bits);
-          _impl_.duration_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint64 bytes_total = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_bytes_total(&has_bits);
-          _impl_.bytes_total_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint64 bytes_total_reliable = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_bytes_total_reliable(&has_bits);
-          _impl_.bytes_total_reliable_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint64 bytes_total_voice = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _Internal::set_has_bytes_total_voice(&has_bits);
-          _impl_.bytes_total_voice_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 bytes_sec_p95 = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          _Internal::set_has_bytes_sec_p95(&has_bits);
-          _impl_.bytes_sec_p95_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 bytes_sec_p99 = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
-          _Internal::set_has_bytes_sec_p99(&has_bits);
-          _impl_.bytes_sec_p99_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 enginemsgs_total = 20;
-      case 20:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
-          _Internal::set_has_enginemsgs_total(&has_bits);
-          _impl_.enginemsgs_total_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 enginemsgs_sec_p95 = 21;
-      case 21:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
-          _Internal::set_has_enginemsgs_sec_p95(&has_bits);
-          _impl_.enginemsgs_sec_p95_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 enginemsgs_sec_p99 = 22;
-      case 22:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
-          _Internal::set_has_enginemsgs_sec_p99(&has_bits);
-          _impl_.enginemsgs_sec_p99_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_total = 40;
-      case 40:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_ticks_total(&has_bits);
-          _impl_.ticks_total_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_good = 41;
-      case 41:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
-          _Internal::set_has_ticks_good(&has_bits);
-          _impl_.ticks_good_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_good_almost_late = 42;
-      case 42:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          _Internal::set_has_ticks_good_almost_late(&has_bits);
-          _impl_.ticks_good_almost_late_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_fixed_dropped = 43;
-      case 43:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
-          _Internal::set_has_ticks_fixed_dropped(&has_bits);
-          _impl_.ticks_fixed_dropped_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_fixed_late = 44;
-      case 44:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_ticks_fixed_late(&has_bits);
-          _impl_.ticks_fixed_late_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_bad_dropped = 45;
-      case 45:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
-          _Internal::set_has_ticks_bad_dropped(&has_bits);
-          _impl_.ticks_bad_dropped_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_bad_late = 46;
-      case 46:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
-          _Internal::set_has_ticks_bad_late(&has_bits);
-          _impl_.ticks_bad_late_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 ticks_bad_other = 47;
-      case 47:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
-          _Internal::set_has_ticks_bad_other(&has_bits);
-          _impl_.ticks_bad_other_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 tick_missrate_samples_total = 50;
-      case 50:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
-          _Internal::set_has_tick_missrate_samples_total(&has_bits);
-          _impl_.tick_missrate_samples_total_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 tick_missrate_samples_perfect = 51;
-      case 51:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
-          _Internal::set_has_tick_missrate_samples_perfect(&has_bits);
-          _impl_.tick_missrate_samples_perfect_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 tick_missrate_samples_perfectnet = 52;
-      case 52:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
-          _Internal::set_has_tick_missrate_samples_perfectnet(&has_bits);
-          _impl_.tick_missrate_samples_perfectnet_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 tick_missratenet_p75_x10 = 53;
-      case 53:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
-          _Internal::set_has_tick_missratenet_p75_x10(&has_bits);
-          _impl_.tick_missratenet_p75_x10_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 tick_missratenet_p95_x10 = 54;
-      case 54:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
-          _Internal::set_has_tick_missratenet_p95_x10(&has_bits);
-          _impl_.tick_missratenet_p95_x10_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 tick_missratenet_p99_x10 = 55;
-      case 55:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 184)) {
-          _Internal::set_has_tick_missratenet_p99_x10(&has_bits);
-          _impl_.tick_missratenet_p99_x10_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional sint32 recvmargin_p1 = 61;
-      case 61:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 232)) {
-          _Internal::set_has_recvmargin_p1(&has_bits);
-          _impl_.recvmargin_p1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional sint32 recvmargin_p5 = 62;
-      case 62:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 240)) {
-          _Internal::set_has_recvmargin_p5(&has_bits);
-          _impl_.recvmargin_p5_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional sint32 recvmargin_p25 = 63;
-      case 63:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 248)) {
-          _Internal::set_has_recvmargin_p25(&has_bits);
-          _impl_.recvmargin_p25_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional sint32 recvmargin_p50 = 64;
-      case 64:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 0)) {
-          _Internal::set_has_recvmargin_p50(&has_bits);
-          _impl_.recvmargin_p50_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional sint32 recvmargin_p75 = 65;
-      case 65:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_recvmargin_p75(&has_bits);
-          _impl_.recvmargin_p75_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional sint32 recvmargin_p95 = 66;
-      case 66:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_recvmargin_p95(&has_bits);
-          _impl_.recvmargin_p95_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CMsgSource2NetworkFlowQuality::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CMsgSource2NetworkFlowQuality)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional uint32 duration = 1;
-  if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_duration(), target);
-  }
-
-  // optional uint64 bytes_total = 5;
-  if (cached_has_bits & 0x00000001u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_bytes_total(), target);
-  }
-
-  // optional uint64 bytes_total_reliable = 6;
-  if (cached_has_bits & 0x00000008u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_bytes_total_reliable(), target);
-  }
-
-  // optional uint64 bytes_total_voice = 7;
-  if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(7, this->_internal_bytes_total_voice(), target);
-  }
-
-  // optional uint32 bytes_sec_p95 = 10;
-  if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_bytes_sec_p95(), target);
-  }
-
-  // optional uint32 bytes_sec_p99 = 11;
-  if (cached_has_bits & 0x00000020u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_bytes_sec_p99(), target);
-  }
-
-  // optional uint32 enginemsgs_total = 20;
-  if (cached_has_bits & 0x00000040u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(20, this->_internal_enginemsgs_total(), target);
-  }
-
-  // optional uint32 enginemsgs_sec_p95 = 21;
-  if (cached_has_bits & 0x00000080u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(21, this->_internal_enginemsgs_sec_p95(), target);
-  }
-
-  // optional uint32 enginemsgs_sec_p99 = 22;
-  if (cached_has_bits & 0x00000100u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(22, this->_internal_enginemsgs_sec_p99(), target);
-  }
-
-  // optional uint32 ticks_total = 40;
-  if (cached_has_bits & 0x00000200u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(40, this->_internal_ticks_total(), target);
-  }
-
-  // optional uint32 ticks_good = 41;
-  if (cached_has_bits & 0x00000400u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(41, this->_internal_ticks_good(), target);
-  }
-
-  // optional uint32 ticks_good_almost_late = 42;
-  if (cached_has_bits & 0x00000800u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(42, this->_internal_ticks_good_almost_late(), target);
-  }
-
-  // optional uint32 ticks_fixed_dropped = 43;
-  if (cached_has_bits & 0x00001000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(43, this->_internal_ticks_fixed_dropped(), target);
-  }
-
-  // optional uint32 ticks_fixed_late = 44;
-  if (cached_has_bits & 0x00002000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(44, this->_internal_ticks_fixed_late(), target);
-  }
-
-  // optional uint32 ticks_bad_dropped = 45;
-  if (cached_has_bits & 0x00004000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(45, this->_internal_ticks_bad_dropped(), target);
-  }
-
-  // optional uint32 ticks_bad_late = 46;
-  if (cached_has_bits & 0x00008000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(46, this->_internal_ticks_bad_late(), target);
-  }
-
-  // optional uint32 ticks_bad_other = 47;
-  if (cached_has_bits & 0x00010000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(47, this->_internal_ticks_bad_other(), target);
-  }
-
-  // optional uint32 tick_missrate_samples_total = 50;
-  if (cached_has_bits & 0x00020000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(50, this->_internal_tick_missrate_samples_total(), target);
-  }
-
-  // optional uint32 tick_missrate_samples_perfect = 51;
-  if (cached_has_bits & 0x00040000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(51, this->_internal_tick_missrate_samples_perfect(), target);
-  }
-
-  // optional uint32 tick_missrate_samples_perfectnet = 52;
-  if (cached_has_bits & 0x00080000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(52, this->_internal_tick_missrate_samples_perfectnet(), target);
-  }
-
-  // optional uint32 tick_missratenet_p75_x10 = 53;
-  if (cached_has_bits & 0x00100000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(53, this->_internal_tick_missratenet_p75_x10(), target);
-  }
-
-  // optional uint32 tick_missratenet_p95_x10 = 54;
-  if (cached_has_bits & 0x00200000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(54, this->_internal_tick_missratenet_p95_x10(), target);
-  }
-
-  // optional uint32 tick_missratenet_p99_x10 = 55;
-  if (cached_has_bits & 0x00400000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(55, this->_internal_tick_missratenet_p99_x10(), target);
-  }
-
-  // optional sint32 recvmargin_p1 = 61;
-  if (cached_has_bits & 0x00800000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(61, this->_internal_recvmargin_p1(), target);
-  }
-
-  // optional sint32 recvmargin_p5 = 62;
-  if (cached_has_bits & 0x01000000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(62, this->_internal_recvmargin_p5(), target);
-  }
-
-  // optional sint32 recvmargin_p25 = 63;
-  if (cached_has_bits & 0x02000000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(63, this->_internal_recvmargin_p25(), target);
-  }
-
-  // optional sint32 recvmargin_p50 = 64;
-  if (cached_has_bits & 0x04000000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(64, this->_internal_recvmargin_p50(), target);
-  }
-
-  // optional sint32 recvmargin_p75 = 65;
-  if (cached_has_bits & 0x08000000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(65, this->_internal_recvmargin_p75(), target);
-  }
-
-  // optional sint32 recvmargin_p95 = 66;
-  if (cached_has_bits & 0x10000000u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(66, this->_internal_recvmargin_p95(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CMsgSource2NetworkFlowQuality)
-  return target;
-}
-
-size_t CMsgSource2NetworkFlowQuality::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CMsgSource2NetworkFlowQuality)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    // optional uint64 bytes_total = 5;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_bytes_total());
-    }
-
-    // optional uint32 duration = 1;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_duration());
-    }
-
-    // optional uint32 bytes_sec_p95 = 10;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_bytes_sec_p95());
-    }
-
-    // optional uint64 bytes_total_reliable = 6;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_bytes_total_reliable());
-    }
-
-    // optional uint64 bytes_total_voice = 7;
-    if (cached_has_bits & 0x00000010u) {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_bytes_total_voice());
-    }
-
-    // optional uint32 bytes_sec_p99 = 11;
-    if (cached_has_bits & 0x00000020u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_bytes_sec_p99());
-    }
-
-    // optional uint32 enginemsgs_total = 20;
-    if (cached_has_bits & 0x00000040u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_enginemsgs_total());
-    }
-
-    // optional uint32 enginemsgs_sec_p95 = 21;
-    if (cached_has_bits & 0x00000080u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_enginemsgs_sec_p95());
-    }
-
-  }
-  if (cached_has_bits & 0x0000ff00u) {
-    // optional uint32 enginemsgs_sec_p99 = 22;
-    if (cached_has_bits & 0x00000100u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_enginemsgs_sec_p99());
-    }
-
-    // optional uint32 ticks_total = 40;
-    if (cached_has_bits & 0x00000200u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_total());
-    }
-
-    // optional uint32 ticks_good = 41;
-    if (cached_has_bits & 0x00000400u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_good());
-    }
-
-    // optional uint32 ticks_good_almost_late = 42;
-    if (cached_has_bits & 0x00000800u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_good_almost_late());
-    }
-
-    // optional uint32 ticks_fixed_dropped = 43;
-    if (cached_has_bits & 0x00001000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_fixed_dropped());
-    }
-
-    // optional uint32 ticks_fixed_late = 44;
-    if (cached_has_bits & 0x00002000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_fixed_late());
-    }
-
-    // optional uint32 ticks_bad_dropped = 45;
-    if (cached_has_bits & 0x00004000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_bad_dropped());
-    }
-
-    // optional uint32 ticks_bad_late = 46;
-    if (cached_has_bits & 0x00008000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_bad_late());
-    }
-
-  }
-  if (cached_has_bits & 0x00ff0000u) {
-    // optional uint32 ticks_bad_other = 47;
-    if (cached_has_bits & 0x00010000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_ticks_bad_other());
-    }
-
-    // optional uint32 tick_missrate_samples_total = 50;
-    if (cached_has_bits & 0x00020000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_tick_missrate_samples_total());
-    }
-
-    // optional uint32 tick_missrate_samples_perfect = 51;
-    if (cached_has_bits & 0x00040000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_tick_missrate_samples_perfect());
-    }
-
-    // optional uint32 tick_missrate_samples_perfectnet = 52;
-    if (cached_has_bits & 0x00080000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_tick_missrate_samples_perfectnet());
-    }
-
-    // optional uint32 tick_missratenet_p75_x10 = 53;
-    if (cached_has_bits & 0x00100000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_tick_missratenet_p75_x10());
-    }
-
-    // optional uint32 tick_missratenet_p95_x10 = 54;
-    if (cached_has_bits & 0x00200000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_tick_missratenet_p95_x10());
-    }
-
-    // optional uint32 tick_missratenet_p99_x10 = 55;
-    if (cached_has_bits & 0x00400000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::UInt32Size(
-          this->_internal_tick_missratenet_p99_x10());
-    }
-
-    // optional sint32 recvmargin_p1 = 61;
-    if (cached_has_bits & 0x00800000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::SInt32Size(
-          this->_internal_recvmargin_p1());
-    }
-
-  }
-  if (cached_has_bits & 0x1f000000u) {
-    // optional sint32 recvmargin_p5 = 62;
-    if (cached_has_bits & 0x01000000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::SInt32Size(
-          this->_internal_recvmargin_p5());
-    }
-
-    // optional sint32 recvmargin_p25 = 63;
-    if (cached_has_bits & 0x02000000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::SInt32Size(
-          this->_internal_recvmargin_p25());
-    }
-
-    // optional sint32 recvmargin_p50 = 64;
-    if (cached_has_bits & 0x04000000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::SInt32Size(
-          this->_internal_recvmargin_p50());
-    }
-
-    // optional sint32 recvmargin_p75 = 65;
-    if (cached_has_bits & 0x08000000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::SInt32Size(
-          this->_internal_recvmargin_p75());
-    }
-
-    // optional sint32 recvmargin_p95 = 66;
-    if (cached_has_bits & 0x10000000u) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::SInt32Size(
-          this->_internal_recvmargin_p95());
-    }
-
-  }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CMsgSource2NetworkFlowQuality::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CMsgSource2NetworkFlowQuality::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CMsgSource2NetworkFlowQuality::GetClassData() const { return &_class_data_; }
-
-
-void CMsgSource2NetworkFlowQuality::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CMsgSource2NetworkFlowQuality*>(&to_msg);
-  auto& from = static_cast<const CMsgSource2NetworkFlowQuality&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CMsgSource2NetworkFlowQuality)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.bytes_total_ = from._impl_.bytes_total_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.duration_ = from._impl_.duration_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.bytes_sec_p95_ = from._impl_.bytes_sec_p95_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.bytes_total_reliable_ = from._impl_.bytes_total_reliable_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.bytes_total_voice_ = from._impl_.bytes_total_voice_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.bytes_sec_p99_ = from._impl_.bytes_sec_p99_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.enginemsgs_total_ = from._impl_.enginemsgs_total_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.enginemsgs_sec_p95_ = from._impl_.enginemsgs_sec_p95_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x0000ff00u) {
-    if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.enginemsgs_sec_p99_ = from._impl_.enginemsgs_sec_p99_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.ticks_total_ = from._impl_.ticks_total_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.ticks_good_ = from._impl_.ticks_good_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      _this->_impl_.ticks_good_almost_late_ = from._impl_.ticks_good_almost_late_;
-    }
-    if (cached_has_bits & 0x00001000u) {
-      _this->_impl_.ticks_fixed_dropped_ = from._impl_.ticks_fixed_dropped_;
-    }
-    if (cached_has_bits & 0x00002000u) {
-      _this->_impl_.ticks_fixed_late_ = from._impl_.ticks_fixed_late_;
-    }
-    if (cached_has_bits & 0x00004000u) {
-      _this->_impl_.ticks_bad_dropped_ = from._impl_.ticks_bad_dropped_;
-    }
-    if (cached_has_bits & 0x00008000u) {
-      _this->_impl_.ticks_bad_late_ = from._impl_.ticks_bad_late_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x00ff0000u) {
-    if (cached_has_bits & 0x00010000u) {
-      _this->_impl_.ticks_bad_other_ = from._impl_.ticks_bad_other_;
-    }
-    if (cached_has_bits & 0x00020000u) {
-      _this->_impl_.tick_missrate_samples_total_ = from._impl_.tick_missrate_samples_total_;
-    }
-    if (cached_has_bits & 0x00040000u) {
-      _this->_impl_.tick_missrate_samples_perfect_ = from._impl_.tick_missrate_samples_perfect_;
-    }
-    if (cached_has_bits & 0x00080000u) {
-      _this->_impl_.tick_missrate_samples_perfectnet_ = from._impl_.tick_missrate_samples_perfectnet_;
-    }
-    if (cached_has_bits & 0x00100000u) {
-      _this->_impl_.tick_missratenet_p75_x10_ = from._impl_.tick_missratenet_p75_x10_;
-    }
-    if (cached_has_bits & 0x00200000u) {
-      _this->_impl_.tick_missratenet_p95_x10_ = from._impl_.tick_missratenet_p95_x10_;
-    }
-    if (cached_has_bits & 0x00400000u) {
-      _this->_impl_.tick_missratenet_p99_x10_ = from._impl_.tick_missratenet_p99_x10_;
-    }
-    if (cached_has_bits & 0x00800000u) {
-      _this->_impl_.recvmargin_p1_ = from._impl_.recvmargin_p1_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x1f000000u) {
-    if (cached_has_bits & 0x01000000u) {
-      _this->_impl_.recvmargin_p5_ = from._impl_.recvmargin_p5_;
-    }
-    if (cached_has_bits & 0x02000000u) {
-      _this->_impl_.recvmargin_p25_ = from._impl_.recvmargin_p25_;
-    }
-    if (cached_has_bits & 0x04000000u) {
-      _this->_impl_.recvmargin_p50_ = from._impl_.recvmargin_p50_;
-    }
-    if (cached_has_bits & 0x08000000u) {
-      _this->_impl_.recvmargin_p75_ = from._impl_.recvmargin_p75_;
-    }
-    if (cached_has_bits & 0x10000000u) {
-      _this->_impl_.recvmargin_p95_ = from._impl_.recvmargin_p95_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CMsgSource2NetworkFlowQuality::CopyFrom(const CMsgSource2NetworkFlowQuality& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CMsgSource2NetworkFlowQuality)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CMsgSource2NetworkFlowQuality::IsInitialized() const {
-  return true;
-}
-
-void CMsgSource2NetworkFlowQuality::InternalSwap(CMsgSource2NetworkFlowQuality* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CMsgSource2NetworkFlowQuality, _impl_.recvmargin_p95_)
-      + sizeof(CMsgSource2NetworkFlowQuality::_impl_.recvmargin_p95_)
-      - PROTOBUF_FIELD_OFFSET(CMsgSource2NetworkFlowQuality, _impl_.bytes_total_)>(
-          reinterpret_cast<char*>(&_impl_.bytes_total_),
-          reinterpret_cast<char*>(&other->_impl_.bytes_total_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CMsgSource2NetworkFlowQuality::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[18]);
+      file_level_metadata_netmessages_2eproto[13]);
 }
 
 // ===================================================================
@@ -10221,6 +6773,25 @@ const ::CMsgSource2NetworkFlowQuality&
 CCLCMsg_Diagnostic::_Internal::upstream_flow(const CCLCMsg_Diagnostic* msg) {
   return *msg->_impl_.upstream_flow_;
 }
+void CCLCMsg_Diagnostic::clear_system_specs() {
+  if (_impl_.system_specs_ != nullptr) _impl_.system_specs_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+void CCLCMsg_Diagnostic::clear_vprof_report() {
+  if (_impl_.vprof_report_ != nullptr) _impl_.vprof_report_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+void CCLCMsg_Diagnostic::clear_downstream_flow() {
+  if (_impl_.downstream_flow_ != nullptr) _impl_.downstream_flow_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+void CCLCMsg_Diagnostic::clear_upstream_flow() {
+  if (_impl_.upstream_flow_ != nullptr) _impl_.upstream_flow_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+void CCLCMsg_Diagnostic::clear_perf_samples() {
+  _impl_.perf_samples_.Clear();
+}
 CCLCMsg_Diagnostic::CCLCMsg_Diagnostic(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -10233,6 +6804,7 @@ CCLCMsg_Diagnostic::CCLCMsg_Diagnostic(const CCLCMsg_Diagnostic& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.perf_samples_){from._impl_.perf_samples_}
     , decltype(_impl_.system_specs_){nullptr}
     , decltype(_impl_.vprof_report_){nullptr}
     , decltype(_impl_.downstream_flow_){nullptr}
@@ -10261,6 +6833,7 @@ inline void CCLCMsg_Diagnostic::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.perf_samples_){arena}
     , decltype(_impl_.system_specs_){nullptr}
     , decltype(_impl_.vprof_report_){nullptr}
     , decltype(_impl_.downstream_flow_){nullptr}
@@ -10279,6 +6852,7 @@ CCLCMsg_Diagnostic::~CCLCMsg_Diagnostic() {
 
 inline void CCLCMsg_Diagnostic::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.perf_samples_.~RepeatedPtrField();
   if (this != internal_default_instance()) delete _impl_.system_specs_;
   if (this != internal_default_instance()) delete _impl_.vprof_report_;
   if (this != internal_default_instance()) delete _impl_.downstream_flow_;
@@ -10295,6 +6869,7 @@ void CCLCMsg_Diagnostic::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.perf_samples_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -10357,6 +6932,19 @@ const char* CCLCMsg_Diagnostic::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
+      // repeated .CMsgSource2PerfIntervalSample perf_samples = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_perf_samples(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -10416,6 +7004,14 @@ uint8_t* CCLCMsg_Diagnostic::_InternalSerialize(
         _Internal::upstream_flow(this).GetCachedSize(), target, stream);
   }
 
+  // repeated .CMsgSource2PerfIntervalSample perf_samples = 5;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_perf_samples_size()); i < n; i++) {
+    const auto& repfield = this->_internal_perf_samples(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -10431,6 +7027,13 @@ size_t CCLCMsg_Diagnostic::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // repeated .CMsgSource2PerfIntervalSample perf_samples = 5;
+  total_size += 1UL * this->_internal_perf_samples_size();
+  for (const auto& msg : this->_impl_.perf_samples_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
@@ -10481,6 +7084,7 @@ void CCLCMsg_Diagnostic::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  _this->_impl_.perf_samples_.MergeFrom(from._impl_.perf_samples_);
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -10518,6 +7122,7 @@ void CCLCMsg_Diagnostic::InternalSwap(CCLCMsg_Diagnostic* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.perf_samples_.InternalSwap(&other->_impl_.perf_samples_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CCLCMsg_Diagnostic, _impl_.upstream_flow_)
       + sizeof(CCLCMsg_Diagnostic::_impl_.upstream_flow_)
@@ -10529,855 +7134,7 @@ void CCLCMsg_Diagnostic::InternalSwap(CCLCMsg_Diagnostic* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_Diagnostic::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[19]);
-}
-
-// ===================================================================
-
-class CSource2Metrics_MatchPerfSummary_Notification_Client::_Internal {
- public:
-  using HasBits = decltype(std::declval<CSource2Metrics_MatchPerfSummary_Notification_Client>()._impl_._has_bits_);
-  static const ::CMsgSource2SystemSpecs& system_specs(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg);
-  static void set_has_system_specs(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static const ::CMsgSource2VProfLiteReport& profile(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg);
-  static void set_has_profile(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_build_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static const ::CMsgSource2NetworkFlowQuality& downstream_flow(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg);
-  static void set_has_downstream_flow(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static const ::CMsgSource2NetworkFlowQuality& upstream_flow(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg);
-  static void set_has_upstream_flow(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_steamid(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-};
-
-const ::CMsgSource2SystemSpecs&
-CSource2Metrics_MatchPerfSummary_Notification_Client::_Internal::system_specs(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg) {
-  return *msg->_impl_.system_specs_;
-}
-const ::CMsgSource2VProfLiteReport&
-CSource2Metrics_MatchPerfSummary_Notification_Client::_Internal::profile(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg) {
-  return *msg->_impl_.profile_;
-}
-const ::CMsgSource2NetworkFlowQuality&
-CSource2Metrics_MatchPerfSummary_Notification_Client::_Internal::downstream_flow(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg) {
-  return *msg->_impl_.downstream_flow_;
-}
-const ::CMsgSource2NetworkFlowQuality&
-CSource2Metrics_MatchPerfSummary_Notification_Client::_Internal::upstream_flow(const CSource2Metrics_MatchPerfSummary_Notification_Client* msg) {
-  return *msg->_impl_.upstream_flow_;
-}
-CSource2Metrics_MatchPerfSummary_Notification_Client::CSource2Metrics_MatchPerfSummary_Notification_Client(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CSource2Metrics_MatchPerfSummary_Notification.Client)
-}
-CSource2Metrics_MatchPerfSummary_Notification_Client::CSource2Metrics_MatchPerfSummary_Notification_Client(const CSource2Metrics_MatchPerfSummary_Notification_Client& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CSource2Metrics_MatchPerfSummary_Notification_Client* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.system_specs_){nullptr}
-    , decltype(_impl_.profile_){nullptr}
-    , decltype(_impl_.downstream_flow_){nullptr}
-    , decltype(_impl_.upstream_flow_){nullptr}
-    , decltype(_impl_.steamid_){}
-    , decltype(_impl_.build_id_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_system_specs()) {
-    _this->_impl_.system_specs_ = new ::CMsgSource2SystemSpecs(*from._impl_.system_specs_);
-  }
-  if (from._internal_has_profile()) {
-    _this->_impl_.profile_ = new ::CMsgSource2VProfLiteReport(*from._impl_.profile_);
-  }
-  if (from._internal_has_downstream_flow()) {
-    _this->_impl_.downstream_flow_ = new ::CMsgSource2NetworkFlowQuality(*from._impl_.downstream_flow_);
-  }
-  if (from._internal_has_upstream_flow()) {
-    _this->_impl_.upstream_flow_ = new ::CMsgSource2NetworkFlowQuality(*from._impl_.upstream_flow_);
-  }
-  ::memcpy(&_impl_.steamid_, &from._impl_.steamid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.build_id_) -
-    reinterpret_cast<char*>(&_impl_.steamid_)) + sizeof(_impl_.build_id_));
-  // @@protoc_insertion_point(copy_constructor:CSource2Metrics_MatchPerfSummary_Notification.Client)
-}
-
-inline void CSource2Metrics_MatchPerfSummary_Notification_Client::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.system_specs_){nullptr}
-    , decltype(_impl_.profile_){nullptr}
-    , decltype(_impl_.downstream_flow_){nullptr}
-    , decltype(_impl_.upstream_flow_){nullptr}
-    , decltype(_impl_.steamid_){uint64_t{0u}}
-    , decltype(_impl_.build_id_){0u}
-  };
-}
-
-CSource2Metrics_MatchPerfSummary_Notification_Client::~CSource2Metrics_MatchPerfSummary_Notification_Client() {
-  // @@protoc_insertion_point(destructor:CSource2Metrics_MatchPerfSummary_Notification.Client)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CSource2Metrics_MatchPerfSummary_Notification_Client::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.system_specs_;
-  if (this != internal_default_instance()) delete _impl_.profile_;
-  if (this != internal_default_instance()) delete _impl_.downstream_flow_;
-  if (this != internal_default_instance()) delete _impl_.upstream_flow_;
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification_Client::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification_Client::Clear() {
-// @@protoc_insertion_point(message_clear_start:CSource2Metrics_MatchPerfSummary_Notification.Client)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(_impl_.system_specs_ != nullptr);
-      _impl_.system_specs_->Clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.profile_ != nullptr);
-      _impl_.profile_->Clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.downstream_flow_ != nullptr);
-      _impl_.downstream_flow_->Clear();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(_impl_.upstream_flow_ != nullptr);
-      _impl_.upstream_flow_->Clear();
-    }
-  }
-  if (cached_has_bits & 0x00000030u) {
-    ::memset(&_impl_.steamid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.build_id_) -
-        reinterpret_cast<char*>(&_impl_.steamid_)) + sizeof(_impl_.build_id_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CSource2Metrics_MatchPerfSummary_Notification_Client::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional .CMsgSource2SystemSpecs system_specs = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_system_specs(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional .CMsgSource2VProfLiteReport profile = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_profile(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 build_id = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_build_id(&has_bits);
-          _impl_.build_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional .CMsgSource2NetworkFlowQuality downstream_flow = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_downstream_flow(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional .CMsgSource2NetworkFlowQuality upstream_flow = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_upstream_flow(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional fixed64 steamid = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 81)) {
-          _Internal::set_has_steamid(&has_bits);
-          _impl_.steamid_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint64_t>(ptr);
-          ptr += sizeof(uint64_t);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CSource2Metrics_MatchPerfSummary_Notification_Client::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CSource2Metrics_MatchPerfSummary_Notification.Client)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional .CMsgSource2SystemSpecs system_specs = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::system_specs(this),
-        _Internal::system_specs(this).GetCachedSize(), target, stream);
-  }
-
-  // optional .CMsgSource2VProfLiteReport profile = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::profile(this),
-        _Internal::profile(this).GetCachedSize(), target, stream);
-  }
-
-  // optional uint32 build_id = 3;
-  if (cached_has_bits & 0x00000020u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_build_id(), target);
-  }
-
-  // optional .CMsgSource2NetworkFlowQuality downstream_flow = 4;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::downstream_flow(this),
-        _Internal::downstream_flow(this).GetCachedSize(), target, stream);
-  }
-
-  // optional .CMsgSource2NetworkFlowQuality upstream_flow = 5;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, _Internal::upstream_flow(this),
-        _Internal::upstream_flow(this).GetCachedSize(), target, stream);
-  }
-
-  // optional fixed64 steamid = 10;
-  if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFixed64ToArray(10, this->_internal_steamid(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CSource2Metrics_MatchPerfSummary_Notification.Client)
-  return target;
-}
-
-size_t CSource2Metrics_MatchPerfSummary_Notification_Client::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CSource2Metrics_MatchPerfSummary_Notification.Client)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    // optional .CMsgSource2SystemSpecs system_specs = 1;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.system_specs_);
-    }
-
-    // optional .CMsgSource2VProfLiteReport profile = 2;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.profile_);
-    }
-
-    // optional .CMsgSource2NetworkFlowQuality downstream_flow = 4;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.downstream_flow_);
-    }
-
-    // optional .CMsgSource2NetworkFlowQuality upstream_flow = 5;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.upstream_flow_);
-    }
-
-    // optional fixed64 steamid = 10;
-    if (cached_has_bits & 0x00000010u) {
-      total_size += 1 + 8;
-    }
-
-    // optional uint32 build_id = 3;
-    if (cached_has_bits & 0x00000020u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_build_id());
-    }
-
-  }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CSource2Metrics_MatchPerfSummary_Notification_Client::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CSource2Metrics_MatchPerfSummary_Notification_Client::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CSource2Metrics_MatchPerfSummary_Notification_Client::GetClassData() const { return &_class_data_; }
-
-
-void CSource2Metrics_MatchPerfSummary_Notification_Client::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CSource2Metrics_MatchPerfSummary_Notification_Client*>(&to_msg);
-  auto& from = static_cast<const CSource2Metrics_MatchPerfSummary_Notification_Client&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CSource2Metrics_MatchPerfSummary_Notification.Client)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_system_specs()->::CMsgSource2SystemSpecs::MergeFrom(
-          from._internal_system_specs());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_profile()->::CMsgSource2VProfLiteReport::MergeFrom(
-          from._internal_profile());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_downstream_flow()->::CMsgSource2NetworkFlowQuality::MergeFrom(
-          from._internal_downstream_flow());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_mutable_upstream_flow()->::CMsgSource2NetworkFlowQuality::MergeFrom(
-          from._internal_upstream_flow());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.steamid_ = from._impl_.steamid_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.build_id_ = from._impl_.build_id_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification_Client::CopyFrom(const CSource2Metrics_MatchPerfSummary_Notification_Client& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CSource2Metrics_MatchPerfSummary_Notification.Client)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CSource2Metrics_MatchPerfSummary_Notification_Client::IsInitialized() const {
-  return true;
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification_Client::InternalSwap(CSource2Metrics_MatchPerfSummary_Notification_Client* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.build_id_)
-      + sizeof(CSource2Metrics_MatchPerfSummary_Notification_Client::_impl_.build_id_)
-      - PROTOBUF_FIELD_OFFSET(CSource2Metrics_MatchPerfSummary_Notification_Client, _impl_.system_specs_)>(
-          reinterpret_cast<char*>(&_impl_.system_specs_),
-          reinterpret_cast<char*>(&other->_impl_.system_specs_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CSource2Metrics_MatchPerfSummary_Notification_Client::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[20]);
-}
-
-// ===================================================================
-
-class CSource2Metrics_MatchPerfSummary_Notification::_Internal {
- public:
-  using HasBits = decltype(std::declval<CSource2Metrics_MatchPerfSummary_Notification>()._impl_._has_bits_);
-  static void set_has_appid(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_game_mode(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_server_build_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static const ::CMsgSource2VProfLiteReport& server_profile(const CSource2Metrics_MatchPerfSummary_Notification* msg);
-  static void set_has_server_profile(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_map(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-};
-
-const ::CMsgSource2VProfLiteReport&
-CSource2Metrics_MatchPerfSummary_Notification::_Internal::server_profile(const CSource2Metrics_MatchPerfSummary_Notification* msg) {
-  return *msg->_impl_.server_profile_;
-}
-CSource2Metrics_MatchPerfSummary_Notification::CSource2Metrics_MatchPerfSummary_Notification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CSource2Metrics_MatchPerfSummary_Notification)
-}
-CSource2Metrics_MatchPerfSummary_Notification::CSource2Metrics_MatchPerfSummary_Notification(const CSource2Metrics_MatchPerfSummary_Notification& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CSource2Metrics_MatchPerfSummary_Notification* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.clients_){from._impl_.clients_}
-    , decltype(_impl_.game_mode_){}
-    , decltype(_impl_.map_){}
-    , decltype(_impl_.server_profile_){nullptr}
-    , decltype(_impl_.appid_){}
-    , decltype(_impl_.server_build_id_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.game_mode_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.game_mode_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_game_mode()) {
-    _this->_impl_.game_mode_.Set(from._internal_game_mode(), 
-      _this->GetArenaForAllocation());
-  }
-  _impl_.map_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.map_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_map()) {
-    _this->_impl_.map_.Set(from._internal_map(), 
-      _this->GetArenaForAllocation());
-  }
-  if (from._internal_has_server_profile()) {
-    _this->_impl_.server_profile_ = new ::CMsgSource2VProfLiteReport(*from._impl_.server_profile_);
-  }
-  ::memcpy(&_impl_.appid_, &from._impl_.appid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.server_build_id_) -
-    reinterpret_cast<char*>(&_impl_.appid_)) + sizeof(_impl_.server_build_id_));
-  // @@protoc_insertion_point(copy_constructor:CSource2Metrics_MatchPerfSummary_Notification)
-}
-
-inline void CSource2Metrics_MatchPerfSummary_Notification::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.clients_){arena}
-    , decltype(_impl_.game_mode_){}
-    , decltype(_impl_.map_){}
-    , decltype(_impl_.server_profile_){nullptr}
-    , decltype(_impl_.appid_){0u}
-    , decltype(_impl_.server_build_id_){0u}
-  };
-  _impl_.game_mode_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.game_mode_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.map_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.map_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-
-CSource2Metrics_MatchPerfSummary_Notification::~CSource2Metrics_MatchPerfSummary_Notification() {
-  // @@protoc_insertion_point(destructor:CSource2Metrics_MatchPerfSummary_Notification)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CSource2Metrics_MatchPerfSummary_Notification::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.clients_.~RepeatedPtrField();
-  _impl_.game_mode_.Destroy();
-  _impl_.map_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.server_profile_;
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification::Clear() {
-// @@protoc_insertion_point(message_clear_start:CSource2Metrics_MatchPerfSummary_Notification)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.clients_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.game_mode_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.map_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.server_profile_ != nullptr);
-      _impl_.server_profile_->Clear();
-    }
-  }
-  if (cached_has_bits & 0x00000018u) {
-    ::memset(&_impl_.appid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.server_build_id_) -
-        reinterpret_cast<char*>(&_impl_.appid_)) + sizeof(_impl_.server_build_id_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CSource2Metrics_MatchPerfSummary_Notification::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional uint32 appid = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_appid(&has_bits);
-          _impl_.appid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional string game_mode = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_game_mode();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CSource2Metrics_MatchPerfSummary_Notification.game_mode");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // optional uint32 server_build_id = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_server_build_id(&has_bits);
-          _impl_.server_build_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // optional .CMsgSource2VProfLiteReport server_profile = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_server_profile(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .CSource2Metrics_MatchPerfSummary_Notification.Client clients = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_clients(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<90>(ptr));
-        } else
-          goto handle_unusual;
-        continue;
-      // optional string map = 20;
-      case 20:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 162)) {
-          auto str = _internal_mutable_map();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "CSource2Metrics_MatchPerfSummary_Notification.map");
-          #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CSource2Metrics_MatchPerfSummary_Notification::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CSource2Metrics_MatchPerfSummary_Notification)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional uint32 appid = 1;
-  if (cached_has_bits & 0x00000008u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_appid(), target);
-  }
-
-  // optional string game_mode = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_game_mode().data(), static_cast<int>(this->_internal_game_mode().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CSource2Metrics_MatchPerfSummary_Notification.game_mode");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_game_mode(), target);
-  }
-
-  // optional uint32 server_build_id = 3;
-  if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_server_build_id(), target);
-  }
-
-  // optional .CMsgSource2VProfLiteReport server_profile = 10;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(10, _Internal::server_profile(this),
-        _Internal::server_profile(this).GetCachedSize(), target, stream);
-  }
-
-  // repeated .CSource2Metrics_MatchPerfSummary_Notification.Client clients = 11;
-  for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_clients_size()); i < n; i++) {
-    const auto& repfield = this->_internal_clients(i);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(11, repfield, repfield.GetCachedSize(), target, stream);
-  }
-
-  // optional string map = 20;
-  if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_map().data(), static_cast<int>(this->_internal_map().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "CSource2Metrics_MatchPerfSummary_Notification.map");
-    target = stream->WriteStringMaybeAliased(
-        20, this->_internal_map(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CSource2Metrics_MatchPerfSummary_Notification)
-  return target;
-}
-
-size_t CSource2Metrics_MatchPerfSummary_Notification::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CSource2Metrics_MatchPerfSummary_Notification)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // repeated .CSource2Metrics_MatchPerfSummary_Notification.Client clients = 11;
-  total_size += 1UL * this->_internal_clients_size();
-  for (const auto& msg : this->_impl_.clients_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    // optional string game_mode = 2;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_game_mode());
-    }
-
-    // optional string map = 20;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_map());
-    }
-
-    // optional .CMsgSource2VProfLiteReport server_profile = 10;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.server_profile_);
-    }
-
-    // optional uint32 appid = 1;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_appid());
-    }
-
-    // optional uint32 server_build_id = 3;
-    if (cached_has_bits & 0x00000010u) {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_server_build_id());
-    }
-
-  }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CSource2Metrics_MatchPerfSummary_Notification::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CSource2Metrics_MatchPerfSummary_Notification::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CSource2Metrics_MatchPerfSummary_Notification::GetClassData() const { return &_class_data_; }
-
-
-void CSource2Metrics_MatchPerfSummary_Notification::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CSource2Metrics_MatchPerfSummary_Notification*>(&to_msg);
-  auto& from = static_cast<const CSource2Metrics_MatchPerfSummary_Notification&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CSource2Metrics_MatchPerfSummary_Notification)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_impl_.clients_.MergeFrom(from._impl_.clients_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_game_mode(from._internal_game_mode());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_map(from._internal_map());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_server_profile()->::CMsgSource2VProfLiteReport::MergeFrom(
-          from._internal_server_profile());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.appid_ = from._impl_.appid_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.server_build_id_ = from._impl_.server_build_id_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification::CopyFrom(const CSource2Metrics_MatchPerfSummary_Notification& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CSource2Metrics_MatchPerfSummary_Notification)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CSource2Metrics_MatchPerfSummary_Notification::IsInitialized() const {
-  return true;
-}
-
-void CSource2Metrics_MatchPerfSummary_Notification::InternalSwap(CSource2Metrics_MatchPerfSummary_Notification* other) {
-  using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.clients_.InternalSwap(&other->_impl_.clients_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.game_mode_, lhs_arena,
-      &other->_impl_.game_mode_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.map_, lhs_arena,
-      &other->_impl_.map_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CSource2Metrics_MatchPerfSummary_Notification, _impl_.server_build_id_)
-      + sizeof(CSource2Metrics_MatchPerfSummary_Notification::_impl_.server_build_id_)
-      - PROTOBUF_FIELD_OFFSET(CSource2Metrics_MatchPerfSummary_Notification, _impl_.server_profile_)>(
-          reinterpret_cast<char*>(&_impl_.server_profile_),
-          reinterpret_cast<char*>(&other->_impl_.server_profile_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CSource2Metrics_MatchPerfSummary_Notification::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[21]);
+      file_level_metadata_netmessages_2eproto[14]);
 }
 
 // ===================================================================
@@ -12205,7 +7962,7 @@ void CSVCMsg_ServerInfo::InternalSwap(CSVCMsg_ServerInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_ServerInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[22]);
+      file_level_metadata_netmessages_2eproto[15]);
 }
 
 // ===================================================================
@@ -12462,7 +8219,7 @@ void CSVCMsg_ClassInfo_class_t::InternalSwap(CSVCMsg_ClassInfo_class_t* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_ClassInfo_class_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[23]);
+      file_level_metadata_netmessages_2eproto[16]);
 }
 
 // ===================================================================
@@ -12687,7 +8444,7 @@ void CSVCMsg_ClassInfo::InternalSwap(CSVCMsg_ClassInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_ClassInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[24]);
+      file_level_metadata_netmessages_2eproto[17]);
 }
 
 // ===================================================================
@@ -12878,7 +8635,7 @@ void CSVCMsg_SetPause::InternalSwap(CSVCMsg_SetPause* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_SetPause::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[25]);
+      file_level_metadata_netmessages_2eproto[18]);
 }
 
 // ===================================================================
@@ -13174,7 +8931,7 @@ void CSVCMsg_VoiceInit::InternalSwap(CSVCMsg_VoiceInit* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_VoiceInit::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[26]);
+      file_level_metadata_netmessages_2eproto[19]);
 }
 
 // ===================================================================
@@ -13394,7 +9151,7 @@ void CSVCMsg_Print::InternalSwap(CSVCMsg_Print* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_Print::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[27]);
+      file_level_metadata_netmessages_2eproto[20]);
 }
 
 // ===================================================================
@@ -14131,7 +9888,7 @@ void CSVCMsg_Sounds_sounddata_t::InternalSwap(CSVCMsg_Sounds_sounddata_t* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_Sounds_sounddata_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[28]);
+      file_level_metadata_netmessages_2eproto[21]);
 }
 
 // ===================================================================
@@ -14356,7 +10113,7 @@ void CSVCMsg_Sounds::InternalSwap(CSVCMsg_Sounds* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_Sounds::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[29]);
+      file_level_metadata_netmessages_2eproto[22]);
 }
 
 // ===================================================================
@@ -14599,7 +10356,7 @@ void CSVCMsg_Prefetch::InternalSwap(CSVCMsg_Prefetch* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_Prefetch::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[30]);
+      file_level_metadata_netmessages_2eproto[23]);
 }
 
 // ===================================================================
@@ -14831,7 +10588,7 @@ void CSVCMsg_SetView::InternalSwap(CSVCMsg_SetView* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_SetView::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[31]);
+      file_level_metadata_netmessages_2eproto[24]);
 }
 
 // ===================================================================
@@ -15082,7 +10839,7 @@ void CSVCMsg_FixAngle::InternalSwap(CSVCMsg_FixAngle* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_FixAngle::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[32]);
+      file_level_metadata_netmessages_2eproto[25]);
 }
 
 // ===================================================================
@@ -15292,7 +11049,7 @@ void CSVCMsg_CrosshairAngle::InternalSwap(CSVCMsg_CrosshairAngle* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_CrosshairAngle::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[33]);
+      file_level_metadata_netmessages_2eproto[26]);
 }
 
 // ===================================================================
@@ -15635,7 +11392,7 @@ void CSVCMsg_BSPDecal::InternalSwap(CSVCMsg_BSPDecal* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_BSPDecal::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[34]);
+      file_level_metadata_netmessages_2eproto[27]);
 }
 
 // ===================================================================
@@ -15908,7 +11665,7 @@ void CSVCMsg_SplitScreen::InternalSwap(CSVCMsg_SplitScreen* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_SplitScreen::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[35]);
+      file_level_metadata_netmessages_2eproto[28]);
 }
 
 // ===================================================================
@@ -16165,7 +11922,7 @@ void CSVCMsg_GetCvarValue::InternalSwap(CSVCMsg_GetCvarValue* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_GetCvarValue::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[36]);
+      file_level_metadata_netmessages_2eproto[29]);
 }
 
 // ===================================================================
@@ -16415,7 +12172,7 @@ void CSVCMsg_Menu::InternalSwap(CSVCMsg_Menu* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_Menu::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[37]);
+      file_level_metadata_netmessages_2eproto[30]);
 }
 
 // ===================================================================
@@ -16704,7 +12461,7 @@ void CSVCMsg_UserMessage::InternalSwap(CSVCMsg_UserMessage* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_UserMessage::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[38]);
+      file_level_metadata_netmessages_2eproto[31]);
 }
 
 // ===================================================================
@@ -17200,7 +12957,7 @@ void CSVCMsg_SendTable_sendprop_t::InternalSwap(CSVCMsg_SendTable_sendprop_t* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_SendTable_sendprop_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[39]);
+      file_level_metadata_netmessages_2eproto[32]);
 }
 
 // ===================================================================
@@ -17528,7 +13285,7 @@ void CSVCMsg_SendTable::InternalSwap(CSVCMsg_SendTable* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_SendTable::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[40]);
+      file_level_metadata_netmessages_2eproto[33]);
 }
 
 // ===================================================================
@@ -17785,7 +13542,7 @@ void CSVCMsg_GameEventList_key_t::InternalSwap(CSVCMsg_GameEventList_key_t* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_GameEventList_key_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[41]);
+      file_level_metadata_netmessages_2eproto[34]);
 }
 
 // ===================================================================
@@ -18076,7 +13833,7 @@ void CSVCMsg_GameEventList_descriptor_t::InternalSwap(CSVCMsg_GameEventList_desc
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_GameEventList_descriptor_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[42]);
+      file_level_metadata_netmessages_2eproto[35]);
 }
 
 // ===================================================================
@@ -18261,7 +14018,7 @@ void CSVCMsg_GameEventList::InternalSwap(CSVCMsg_GameEventList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_GameEventList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[43]);
+      file_level_metadata_netmessages_2eproto[36]);
 }
 
 // ===================================================================
@@ -18498,7 +14255,7 @@ void CSVCMsg_PacketEntities_alternate_baseline_t::InternalSwap(CSVCMsg_PacketEnt
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_PacketEntities_alternate_baseline_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[44]);
+      file_level_metadata_netmessages_2eproto[37]);
 }
 
 // ===================================================================
@@ -18748,7 +14505,7 @@ void CSVCMsg_PacketEntities_non_transmitted_entities_t::InternalSwap(CSVCMsg_Pac
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_PacketEntities_non_transmitted_entities_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[45]);
+      file_level_metadata_netmessages_2eproto[38]);
 }
 
 // ===================================================================
@@ -18998,7 +14755,7 @@ void CSVCMsg_PacketEntities_outofpvs_entity_updates_t::InternalSwap(CSVCMsg_Pack
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_PacketEntities_outofpvs_entity_updates_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[46]);
+      file_level_metadata_netmessages_2eproto[39]);
 }
 
 // ===================================================================
@@ -19945,7 +15702,7 @@ void CSVCMsg_PacketEntities::InternalSwap(CSVCMsg_PacketEntities* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_PacketEntities::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[47]);
+      file_level_metadata_netmessages_2eproto[40]);
 }
 
 // ===================================================================
@@ -20234,7 +15991,7 @@ void CSVCMsg_TempEntities::InternalSwap(CSVCMsg_TempEntities* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_TempEntities::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[48]);
+      file_level_metadata_netmessages_2eproto[41]);
 }
 
 // ===================================================================
@@ -20760,7 +16517,7 @@ void CSVCMsg_CreateStringTable::InternalSwap(CSVCMsg_CreateStringTable* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_CreateStringTable::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[49]);
+      file_level_metadata_netmessages_2eproto[42]);
 }
 
 // ===================================================================
@@ -21049,7 +16806,7 @@ void CSVCMsg_UpdateStringTable::InternalSwap(CSVCMsg_UpdateStringTable* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_UpdateStringTable::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[50]);
+      file_level_metadata_netmessages_2eproto[43]);
 }
 
 // ===================================================================
@@ -21061,22 +16818,28 @@ class CSVCMsg_VoiceData::_Internal {
   static void set_has_audio(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_client(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
+  static void set_has_client_deprecated(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
   }
   static void set_has_proximity(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
+    (*has_bits)[0] |= 16u;
   }
   static void set_has_xuid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static void set_has_audible_mask(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
+    (*has_bits)[0] |= 4u;
   }
   static void set_has_tick(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
+    (*has_bits)[0] |= 8u;
   }
   static void set_has_passthrough(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_entity(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static void set_has_caster(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
 };
@@ -21099,19 +16862,21 @@ CSVCMsg_VoiceData::CSVCMsg_VoiceData(const CSVCMsg_VoiceData& from)
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.audio_){nullptr}
     , decltype(_impl_.xuid_){}
-    , decltype(_impl_.proximity_){}
     , decltype(_impl_.audible_mask_){}
     , decltype(_impl_.tick_){}
+    , decltype(_impl_.proximity_){}
+    , decltype(_impl_.caster_){}
     , decltype(_impl_.passthrough_){}
-    , decltype(_impl_.client_){}};
+    , decltype(_impl_.client_deprecated_){}
+    , decltype(_impl_.entity_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_audio()) {
     _this->_impl_.audio_ = new ::CMsgVoiceAudio(*from._impl_.audio_);
   }
   ::memcpy(&_impl_.xuid_, &from._impl_.xuid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.client_) -
-    reinterpret_cast<char*>(&_impl_.xuid_)) + sizeof(_impl_.client_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.entity_) -
+    reinterpret_cast<char*>(&_impl_.xuid_)) + sizeof(_impl_.entity_));
   // @@protoc_insertion_point(copy_constructor:CSVCMsg_VoiceData)
 }
 
@@ -21124,11 +16889,13 @@ inline void CSVCMsg_VoiceData::SharedCtor(
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.audio_){nullptr}
     , decltype(_impl_.xuid_){uint64_t{0u}}
-    , decltype(_impl_.proximity_){false}
     , decltype(_impl_.audible_mask_){0}
     , decltype(_impl_.tick_){0u}
+    , decltype(_impl_.proximity_){false}
+    , decltype(_impl_.caster_){false}
     , decltype(_impl_.passthrough_){0}
-    , decltype(_impl_.client_){-1}
+    , decltype(_impl_.client_deprecated_){-1}
+    , decltype(_impl_.entity_){-1}
   };
 }
 
@@ -21161,12 +16928,13 @@ void CSVCMsg_VoiceData::Clear() {
     GOOGLE_DCHECK(_impl_.audio_ != nullptr);
     _impl_.audio_->Clear();
   }
-  if (cached_has_bits & 0x0000007eu) {
+  if (cached_has_bits & 0x000000feu) {
     ::memset(&_impl_.xuid_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&_impl_.passthrough_) -
         reinterpret_cast<char*>(&_impl_.xuid_)) + sizeof(_impl_.passthrough_));
-    _impl_.client_ = -1;
+    _impl_.client_deprecated_ = -1;
   }
+  _impl_.entity_ = -1;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -21186,11 +16954,11 @@ const char* CSVCMsg_VoiceData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // optional int32 client = 2 [default = -1];
+      // optional int32 client_deprecated = 2 [default = -1];
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_client(&has_bits);
-          _impl_.client_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_client_deprecated(&has_bits);
+          _impl_.client_deprecated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -21240,6 +17008,24 @@ const char* CSVCMsg_VoiceData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
+      // optional int32 entity = 8 [default = -1];
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_entity(&has_bits);
+          _impl_.entity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bool caster = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          _Internal::set_has_caster(&has_bits);
+          _impl_.caster_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -21278,14 +17064,14 @@ uint8_t* CSVCMsg_VoiceData::_InternalSerialize(
         _Internal::audio(this).GetCachedSize(), target, stream);
   }
 
-  // optional int32 client = 2 [default = -1];
-  if (cached_has_bits & 0x00000040u) {
+  // optional int32 client_deprecated = 2 [default = -1];
+  if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_client(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_client_deprecated(), target);
   }
 
   // optional bool proximity = 3;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_proximity(), target);
   }
@@ -21297,21 +17083,33 @@ uint8_t* CSVCMsg_VoiceData::_InternalSerialize(
   }
 
   // optional int32 audible_mask = 5;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_audible_mask(), target);
   }
 
   // optional uint32 tick = 6;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_tick(), target);
   }
 
   // optional int32 passthrough = 7;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_passthrough(), target);
+  }
+
+  // optional int32 entity = 8 [default = -1];
+  if (cached_has_bits & 0x00000100u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_entity(), target);
+  }
+
+  // optional bool caster = 9;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_caster(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -21331,7 +17129,7 @@ size_t CSVCMsg_VoiceData::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000007fu) {
+  if (cached_has_bits & 0x000000ffu) {
     // optional .CMsgVoiceAudio audio = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -21344,32 +17142,42 @@ size_t CSVCMsg_VoiceData::ByteSizeLong() const {
       total_size += 1 + 8;
     }
 
-    // optional bool proximity = 3;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += 1 + 1;
-    }
-
     // optional int32 audible_mask = 5;
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000004u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_audible_mask());
     }
 
     // optional uint32 tick = 6;
-    if (cached_has_bits & 0x00000010u) {
+    if (cached_has_bits & 0x00000008u) {
       total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_tick());
     }
 
-    // optional int32 passthrough = 7;
+    // optional bool proximity = 3;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool caster = 9;
     if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
+    // optional int32 passthrough = 7;
+    if (cached_has_bits & 0x00000040u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_passthrough());
     }
 
-    // optional int32 client = 2 [default = -1];
-    if (cached_has_bits & 0x00000040u) {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_client());
+    // optional int32 client_deprecated = 2 [default = -1];
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_client_deprecated());
     }
 
   }
+  // optional int32 entity = 8 [default = -1];
+  if (cached_has_bits & 0x00000100u) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_entity());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -21389,7 +17197,7 @@ void CSVCMsg_VoiceData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000007fu) {
+  if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_mutable_audio()->::CMsgVoiceAudio::MergeFrom(
           from._internal_audio());
@@ -21398,21 +17206,27 @@ void CSVCMsg_VoiceData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
       _this->_impl_.xuid_ = from._impl_.xuid_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.proximity_ = from._impl_.proximity_;
-    }
-    if (cached_has_bits & 0x00000008u) {
       _this->_impl_.audible_mask_ = from._impl_.audible_mask_;
     }
-    if (cached_has_bits & 0x00000010u) {
+    if (cached_has_bits & 0x00000008u) {
       _this->_impl_.tick_ = from._impl_.tick_;
     }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.proximity_ = from._impl_.proximity_;
+    }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.passthrough_ = from._impl_.passthrough_;
+      _this->_impl_.caster_ = from._impl_.caster_;
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.client_ = from._impl_.client_;
+      _this->_impl_.passthrough_ = from._impl_.passthrough_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.client_deprecated_ = from._impl_.client_deprecated_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  if (cached_has_bits & 0x00000100u) {
+    _this->_internal_set_entity(from._internal_entity());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -21438,13 +17252,264 @@ void CSVCMsg_VoiceData::InternalSwap(CSVCMsg_VoiceData* other) {
       - PROTOBUF_FIELD_OFFSET(CSVCMsg_VoiceData, _impl_.audio_)>(
           reinterpret_cast<char*>(&_impl_.audio_),
           reinterpret_cast<char*>(&other->_impl_.audio_));
-  swap(_impl_.client_, other->_impl_.client_);
+  swap(_impl_.client_deprecated_, other->_impl_.client_deprecated_);
+  swap(_impl_.entity_, other->_impl_.entity_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_VoiceData::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[51]);
+      file_level_metadata_netmessages_2eproto[44]);
+}
+
+// ===================================================================
+
+class CSVCMsg_EncryptedData::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CSVCMsg_EncryptedData>()._impl_._has_bits_);
+  static void set_has_encrypted(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_key_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+CSVCMsg_EncryptedData::CSVCMsg_EncryptedData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CSVCMsg_EncryptedData)
+}
+CSVCMsg_EncryptedData::CSVCMsg_EncryptedData(const CSVCMsg_EncryptedData& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CSVCMsg_EncryptedData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.encrypted_){}
+    , decltype(_impl_.key_type_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.encrypted_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.encrypted_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_encrypted()) {
+    _this->_impl_.encrypted_.Set(from._internal_encrypted(), 
+      _this->GetArenaForAllocation());
+  }
+  _this->_impl_.key_type_ = from._impl_.key_type_;
+  // @@protoc_insertion_point(copy_constructor:CSVCMsg_EncryptedData)
+}
+
+inline void CSVCMsg_EncryptedData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.encrypted_){}
+    , decltype(_impl_.key_type_){0}
+  };
+  _impl_.encrypted_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.encrypted_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+CSVCMsg_EncryptedData::~CSVCMsg_EncryptedData() {
+  // @@protoc_insertion_point(destructor:CSVCMsg_EncryptedData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CSVCMsg_EncryptedData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.encrypted_.Destroy();
+}
+
+void CSVCMsg_EncryptedData::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CSVCMsg_EncryptedData::Clear() {
+// @@protoc_insertion_point(message_clear_start:CSVCMsg_EncryptedData)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.encrypted_.ClearNonDefaultToEmpty();
+  }
+  _impl_.key_type_ = 0;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CSVCMsg_EncryptedData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional bytes encrypted = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_encrypted();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 key_type = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_key_type(&has_bits);
+          _impl_.key_type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CSVCMsg_EncryptedData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CSVCMsg_EncryptedData)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional bytes encrypted = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->WriteBytesMaybeAliased(
+        1, this->_internal_encrypted(), target);
+  }
+
+  // optional int32 key_type = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_key_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CSVCMsg_EncryptedData)
+  return target;
+}
+
+size_t CSVCMsg_EncryptedData::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CSVCMsg_EncryptedData)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional bytes encrypted = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_encrypted());
+    }
+
+    // optional int32 key_type = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_key_type());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CSVCMsg_EncryptedData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CSVCMsg_EncryptedData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CSVCMsg_EncryptedData::GetClassData() const { return &_class_data_; }
+
+
+void CSVCMsg_EncryptedData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CSVCMsg_EncryptedData*>(&to_msg);
+  auto& from = static_cast<const CSVCMsg_EncryptedData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CSVCMsg_EncryptedData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_encrypted(from._internal_encrypted());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.key_type_ = from._impl_.key_type_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CSVCMsg_EncryptedData::CopyFrom(const CSVCMsg_EncryptedData& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CSVCMsg_EncryptedData)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CSVCMsg_EncryptedData::IsInitialized() const {
+  return true;
+}
+
+void CSVCMsg_EncryptedData::InternalSwap(CSVCMsg_EncryptedData* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.encrypted_, lhs_arena,
+      &other->_impl_.encrypted_, rhs_arena
+  );
+  swap(_impl_.key_type_, other->_impl_.key_type_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_EncryptedData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
+      file_level_metadata_netmessages_2eproto[45]);
 }
 
 // ===================================================================
@@ -21709,7 +17774,7 @@ void CSVCMsg_PacketReliable::InternalSwap(CSVCMsg_PacketReliable* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_PacketReliable::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[52]);
+      file_level_metadata_netmessages_2eproto[46]);
 }
 
 // ===================================================================
@@ -22026,7 +18091,7 @@ void CSVCMsg_FullFrameSplit::InternalSwap(CSVCMsg_FullFrameSplit* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_FullFrameSplit::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[53]);
+      file_level_metadata_netmessages_2eproto[47]);
 }
 
 // ===================================================================
@@ -22350,7 +18415,7 @@ void CSVCMsg_HLTVStatus::InternalSwap(CSVCMsg_HLTVStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_HLTVStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[54]);
+      file_level_metadata_netmessages_2eproto[48]);
 }
 
 // ===================================================================
@@ -22541,7 +18606,7 @@ void CSVCMsg_ServerSteamID::InternalSwap(CSVCMsg_ServerSteamID* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_ServerSteamID::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[55]);
+      file_level_metadata_netmessages_2eproto[49]);
 }
 
 // ===================================================================
@@ -22754,7 +18819,7 @@ void CSVCMsg_CmdKeyValues::InternalSwap(CSVCMsg_CmdKeyValues* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_CmdKeyValues::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[56]);
+      file_level_metadata_netmessages_2eproto[50]);
 }
 
 // ===================================================================
@@ -23031,7 +19096,7 @@ void CSVCMsg_RconServerDetails::InternalSwap(CSVCMsg_RconServerDetails* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_RconServerDetails::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[57]);
+      file_level_metadata_netmessages_2eproto[51]);
 }
 
 // ===================================================================
@@ -23268,7 +19333,7 @@ void CMsgIPCAddress::InternalSwap(CMsgIPCAddress* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CMsgIPCAddress::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[58]);
+      file_level_metadata_netmessages_2eproto[52]);
 }
 
 // ===================================================================
@@ -23635,7 +19700,7 @@ void CMsgServerPeer::InternalSwap(CMsgServerPeer* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CMsgServerPeer::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[59]);
+      file_level_metadata_netmessages_2eproto[53]);
 }
 
 // ===================================================================
@@ -23820,7 +19885,7 @@ void CSVCMsg_PeerList::InternalSwap(CSVCMsg_PeerList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_PeerList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[60]);
+      file_level_metadata_netmessages_2eproto[54]);
 }
 
 // ===================================================================
@@ -24077,7 +20142,7 @@ void CSVCMsg_ClearAllStringTables::InternalSwap(CSVCMsg_ClearAllStringTables* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_ClearAllStringTables::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[61]);
+      file_level_metadata_netmessages_2eproto[55]);
 }
 
 // ===================================================================
@@ -24314,7 +20379,198 @@ void ProtoFlattenedSerializerField_t_polymorphic_field_t::InternalSwap(ProtoFlat
 ::PROTOBUF_NAMESPACE_ID::Metadata ProtoFlattenedSerializerField_t_polymorphic_field_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[62]);
+      file_level_metadata_netmessages_2eproto[56]);
+}
+
+// ===================================================================
+
+class ProtoFlattenedSerializerField_t_proto_enum_info_t::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ProtoFlattenedSerializerField_t_proto_enum_info_t>()._impl_._has_bits_);
+  static void set_has_is_signed_enum(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+ProtoFlattenedSerializerField_t_proto_enum_info_t::ProtoFlattenedSerializerField_t_proto_enum_info_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+}
+ProtoFlattenedSerializerField_t_proto_enum_info_t::ProtoFlattenedSerializerField_t_proto_enum_info_t(const ProtoFlattenedSerializerField_t_proto_enum_info_t& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ProtoFlattenedSerializerField_t_proto_enum_info_t* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.is_signed_enum_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.is_signed_enum_ = from._impl_.is_signed_enum_;
+  // @@protoc_insertion_point(copy_constructor:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+}
+
+inline void ProtoFlattenedSerializerField_t_proto_enum_info_t::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.is_signed_enum_){false}
+  };
+}
+
+ProtoFlattenedSerializerField_t_proto_enum_info_t::~ProtoFlattenedSerializerField_t_proto_enum_info_t() {
+  // @@protoc_insertion_point(destructor:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ProtoFlattenedSerializerField_t_proto_enum_info_t::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void ProtoFlattenedSerializerField_t_proto_enum_info_t::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ProtoFlattenedSerializerField_t_proto_enum_info_t::Clear() {
+// @@protoc_insertion_point(message_clear_start:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.is_signed_enum_ = false;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ProtoFlattenedSerializerField_t_proto_enum_info_t::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional bool is_signed_enum = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_is_signed_enum(&has_bits);
+          _impl_.is_signed_enum_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ProtoFlattenedSerializerField_t_proto_enum_info_t::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional bool is_signed_enum = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_is_signed_enum(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+  return target;
+}
+
+size_t ProtoFlattenedSerializerField_t_proto_enum_info_t::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional bool is_signed_enum = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ProtoFlattenedSerializerField_t_proto_enum_info_t::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ProtoFlattenedSerializerField_t_proto_enum_info_t::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ProtoFlattenedSerializerField_t_proto_enum_info_t::GetClassData() const { return &_class_data_; }
+
+
+void ProtoFlattenedSerializerField_t_proto_enum_info_t::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ProtoFlattenedSerializerField_t_proto_enum_info_t*>(&to_msg);
+  auto& from = static_cast<const ProtoFlattenedSerializerField_t_proto_enum_info_t&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_is_signed_enum()) {
+    _this->_internal_set_is_signed_enum(from._internal_is_signed_enum());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ProtoFlattenedSerializerField_t_proto_enum_info_t::CopyFrom(const ProtoFlattenedSerializerField_t_proto_enum_info_t& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ProtoFlattenedSerializerField_t_proto_enum_info_t::IsInitialized() const {
+  return true;
+}
+
+void ProtoFlattenedSerializerField_t_proto_enum_info_t::InternalSwap(ProtoFlattenedSerializerField_t_proto_enum_info_t* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.is_signed_enum_, other->_impl_.is_signed_enum_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ProtoFlattenedSerializerField_t_proto_enum_info_t::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
+      file_level_metadata_netmessages_2eproto[57]);
 }
 
 // ===================================================================
@@ -24323,40 +20579,48 @@ class ProtoFlattenedSerializerField_t::_Internal {
  public:
   using HasBits = decltype(std::declval<ProtoFlattenedSerializerField_t>()._impl_._has_bits_);
   static void set_has_var_type_sym(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_var_name_sym(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_bit_count(HasBits* has_bits) {
+  static void set_has_var_name_sym(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_low_value(HasBits* has_bits) {
+  static void set_has_bit_count(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_high_value(HasBits* has_bits) {
+  static void set_has_low_value(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_encode_flags(HasBits* has_bits) {
+  static void set_has_high_value(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_field_serializer_name_sym(HasBits* has_bits) {
+  static void set_has_encode_flags(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_field_serializer_version(HasBits* has_bits) {
+  static void set_has_field_serializer_name_sym(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static void set_has_send_node_sym(HasBits* has_bits) {
+  static void set_has_field_serializer_version(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
-  static void set_has_var_encoder_sym(HasBits* has_bits) {
+  static void set_has_send_node_sym(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
-  static void set_has_var_serializer_sym(HasBits* has_bits) {
+  static void set_has_var_encoder_sym(HasBits* has_bits) {
     (*has_bits)[0] |= 1024u;
+  }
+  static void set_has_var_serializer_sym(HasBits* has_bits) {
+    (*has_bits)[0] |= 2048u;
+  }
+  static const ::ProtoFlattenedSerializerField_t_proto_enum_info_t& var_enum_info(const ProtoFlattenedSerializerField_t* msg);
+  static void set_has_var_enum_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
   }
 };
 
+const ::ProtoFlattenedSerializerField_t_proto_enum_info_t&
+ProtoFlattenedSerializerField_t::_Internal::var_enum_info(const ProtoFlattenedSerializerField_t* msg) {
+  return *msg->_impl_.var_enum_info_;
+}
 ProtoFlattenedSerializerField_t::ProtoFlattenedSerializerField_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -24370,6 +20634,7 @@ ProtoFlattenedSerializerField_t::ProtoFlattenedSerializerField_t(const ProtoFlat
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.polymorphic_types_){from._impl_.polymorphic_types_}
+    , decltype(_impl_.var_enum_info_){nullptr}
     , decltype(_impl_.var_type_sym_){}
     , decltype(_impl_.var_name_sym_){}
     , decltype(_impl_.bit_count_){}
@@ -24383,6 +20648,9 @@ ProtoFlattenedSerializerField_t::ProtoFlattenedSerializerField_t(const ProtoFlat
     , decltype(_impl_.var_serializer_sym_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_var_enum_info()) {
+    _this->_impl_.var_enum_info_ = new ::ProtoFlattenedSerializerField_t_proto_enum_info_t(*from._impl_.var_enum_info_);
+  }
   ::memcpy(&_impl_.var_type_sym_, &from._impl_.var_type_sym_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.var_serializer_sym_) -
     reinterpret_cast<char*>(&_impl_.var_type_sym_)) + sizeof(_impl_.var_serializer_sym_));
@@ -24397,6 +20665,7 @@ inline void ProtoFlattenedSerializerField_t::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.polymorphic_types_){arena}
+    , decltype(_impl_.var_enum_info_){nullptr}
     , decltype(_impl_.var_type_sym_){0}
     , decltype(_impl_.var_name_sym_){0}
     , decltype(_impl_.bit_count_){0}
@@ -24423,6 +20692,7 @@ ProtoFlattenedSerializerField_t::~ProtoFlattenedSerializerField_t() {
 inline void ProtoFlattenedSerializerField_t::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.polymorphic_types_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.var_enum_info_;
 }
 
 void ProtoFlattenedSerializerField_t::SetCachedSize(int size) const {
@@ -24437,15 +20707,19 @@ void ProtoFlattenedSerializerField_t::Clear() {
 
   _impl_.polymorphic_types_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    ::memset(&_impl_.var_type_sym_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.field_serializer_version_) -
-        reinterpret_cast<char*>(&_impl_.var_type_sym_)) + sizeof(_impl_.field_serializer_version_));
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.var_enum_info_ != nullptr);
+    _impl_.var_enum_info_->Clear();
   }
-  if (cached_has_bits & 0x00000700u) {
-    ::memset(&_impl_.send_node_sym_, 0, static_cast<size_t>(
+  if (cached_has_bits & 0x000000feu) {
+    ::memset(&_impl_.var_type_sym_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.field_serializer_name_sym_) -
+        reinterpret_cast<char*>(&_impl_.var_type_sym_)) + sizeof(_impl_.field_serializer_name_sym_));
+  }
+  if (cached_has_bits & 0x00000f00u) {
+    ::memset(&_impl_.field_serializer_version_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&_impl_.var_serializer_sym_) -
-        reinterpret_cast<char*>(&_impl_.send_node_sym_)) + sizeof(_impl_.var_serializer_sym_));
+        reinterpret_cast<char*>(&_impl_.field_serializer_version_)) + sizeof(_impl_.var_serializer_sym_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -24570,6 +20844,14 @@ const char* ProtoFlattenedSerializerField_t::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
+      // optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
+          ptr = ctx->ParseMessage(_internal_mutable_var_enum_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -24602,61 +20884,61 @@ uint8_t* ProtoFlattenedSerializerField_t::_InternalSerialize(
 
   cached_has_bits = _impl_._has_bits_[0];
   // optional int32 var_type_sym = 1;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_var_type_sym(), target);
   }
 
   // optional int32 var_name_sym = 2;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_var_name_sym(), target);
   }
 
   // optional int32 bit_count = 3;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_bit_count(), target);
   }
 
   // optional float low_value = 4;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_low_value(), target);
   }
 
   // optional float high_value = 5;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_high_value(), target);
   }
 
   // optional int32 encode_flags = 6;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_encode_flags(), target);
   }
 
   // optional int32 field_serializer_name_sym = 7;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_field_serializer_name_sym(), target);
   }
 
   // optional int32 field_serializer_version = 8;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_field_serializer_version(), target);
   }
 
   // optional int32 send_node_sym = 9;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(9, this->_internal_send_node_sym(), target);
   }
 
   // optional int32 var_encoder_sym = 10;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(10, this->_internal_var_encoder_sym(), target);
   }
@@ -24670,9 +20952,16 @@ uint8_t* ProtoFlattenedSerializerField_t::_InternalSerialize(
   }
 
   // optional int32 var_serializer_sym = 12;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(12, this->_internal_var_serializer_sym(), target);
+  }
+
+  // optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(13, _Internal::var_enum_info(this),
+        _Internal::var_enum_info(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -24700,60 +20989,67 @@ size_t ProtoFlattenedSerializerField_t::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
-    // optional int32 var_type_sym = 1;
+    // optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;
     if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.var_enum_info_);
+    }
+
+    // optional int32 var_type_sym = 1;
+    if (cached_has_bits & 0x00000002u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_var_type_sym());
     }
 
     // optional int32 var_name_sym = 2;
-    if (cached_has_bits & 0x00000002u) {
+    if (cached_has_bits & 0x00000004u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_var_name_sym());
     }
 
     // optional int32 bit_count = 3;
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000008u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_bit_count());
     }
 
     // optional float low_value = 4;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += 1 + 4;
-    }
-
-    // optional float high_value = 5;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 + 4;
     }
 
-    // optional int32 encode_flags = 6;
+    // optional float high_value = 5;
     if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 4;
+    }
+
+    // optional int32 encode_flags = 6;
+    if (cached_has_bits & 0x00000040u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_encode_flags());
     }
 
     // optional int32 field_serializer_name_sym = 7;
-    if (cached_has_bits & 0x00000040u) {
+    if (cached_has_bits & 0x00000080u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_field_serializer_name_sym());
     }
 
+  }
+  if (cached_has_bits & 0x00000f00u) {
     // optional int32 field_serializer_version = 8;
-    if (cached_has_bits & 0x00000080u) {
+    if (cached_has_bits & 0x00000100u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_field_serializer_version());
     }
 
-  }
-  if (cached_has_bits & 0x00000700u) {
     // optional int32 send_node_sym = 9;
-    if (cached_has_bits & 0x00000100u) {
+    if (cached_has_bits & 0x00000200u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_send_node_sym());
     }
 
     // optional int32 var_encoder_sym = 10;
-    if (cached_has_bits & 0x00000200u) {
+    if (cached_has_bits & 0x00000400u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_var_encoder_sym());
     }
 
     // optional int32 var_serializer_sym = 12;
-    if (cached_has_bits & 0x00000400u) {
+    if (cached_has_bits & 0x00000800u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_var_serializer_sym());
     }
 
@@ -24780,39 +21076,43 @@ void ProtoFlattenedSerializerField_t::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.var_type_sym_ = from._impl_.var_type_sym_;
+      _this->_internal_mutable_var_enum_info()->::ProtoFlattenedSerializerField_t_proto_enum_info_t::MergeFrom(
+          from._internal_var_enum_info());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.var_name_sym_ = from._impl_.var_name_sym_;
+      _this->_impl_.var_type_sym_ = from._impl_.var_type_sym_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.bit_count_ = from._impl_.bit_count_;
+      _this->_impl_.var_name_sym_ = from._impl_.var_name_sym_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.low_value_ = from._impl_.low_value_;
+      _this->_impl_.bit_count_ = from._impl_.bit_count_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.high_value_ = from._impl_.high_value_;
+      _this->_impl_.low_value_ = from._impl_.low_value_;
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.encode_flags_ = from._impl_.encode_flags_;
+      _this->_impl_.high_value_ = from._impl_.high_value_;
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.field_serializer_name_sym_ = from._impl_.field_serializer_name_sym_;
+      _this->_impl_.encode_flags_ = from._impl_.encode_flags_;
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.field_serializer_version_ = from._impl_.field_serializer_version_;
+      _this->_impl_.field_serializer_name_sym_ = from._impl_.field_serializer_name_sym_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x00000700u) {
+  if (cached_has_bits & 0x00000f00u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.send_node_sym_ = from._impl_.send_node_sym_;
+      _this->_impl_.field_serializer_version_ = from._impl_.field_serializer_version_;
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.var_encoder_sym_ = from._impl_.var_encoder_sym_;
+      _this->_impl_.send_node_sym_ = from._impl_.send_node_sym_;
     }
     if (cached_has_bits & 0x00000400u) {
+      _this->_impl_.var_encoder_sym_ = from._impl_.var_encoder_sym_;
+    }
+    if (cached_has_bits & 0x00000800u) {
       _this->_impl_.var_serializer_sym_ = from._impl_.var_serializer_sym_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -24839,15 +21139,15 @@ void ProtoFlattenedSerializerField_t::InternalSwap(ProtoFlattenedSerializerField
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ProtoFlattenedSerializerField_t, _impl_.var_serializer_sym_)
       + sizeof(ProtoFlattenedSerializerField_t::_impl_.var_serializer_sym_)
-      - PROTOBUF_FIELD_OFFSET(ProtoFlattenedSerializerField_t, _impl_.var_type_sym_)>(
-          reinterpret_cast<char*>(&_impl_.var_type_sym_),
-          reinterpret_cast<char*>(&other->_impl_.var_type_sym_));
+      - PROTOBUF_FIELD_OFFSET(ProtoFlattenedSerializerField_t, _impl_.var_enum_info_)>(
+          reinterpret_cast<char*>(&_impl_.var_enum_info_),
+          reinterpret_cast<char*>(&other->_impl_.var_enum_info_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ProtoFlattenedSerializerField_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[63]);
+      file_level_metadata_netmessages_2eproto[58]);
 }
 
 // ===================================================================
@@ -25121,15 +21421,373 @@ void ProtoFlattenedSerializer_t::InternalSwap(ProtoFlattenedSerializer_t* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata ProtoFlattenedSerializer_t::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[64]);
+      file_level_metadata_netmessages_2eproto[59]);
+}
+
+// ===================================================================
+
+class ProtoCoordSizeParams_t::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ProtoCoordSizeParams_t>()._impl_._has_bits_);
+  static void set_has_coord_integer_bits(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_coord_fractional_bits(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_coord_integer_bits_mp(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_coord_fractional_bits_mp(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_normal_fractional_bits(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_angle_bits(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+};
+
+ProtoCoordSizeParams_t::ProtoCoordSizeParams_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:ProtoCoordSizeParams_t)
+}
+ProtoCoordSizeParams_t::ProtoCoordSizeParams_t(const ProtoCoordSizeParams_t& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ProtoCoordSizeParams_t* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.coord_integer_bits_){}
+    , decltype(_impl_.coord_fractional_bits_){}
+    , decltype(_impl_.coord_integer_bits_mp_){}
+    , decltype(_impl_.coord_fractional_bits_mp_){}
+    , decltype(_impl_.normal_fractional_bits_){}
+    , decltype(_impl_.angle_bits_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.coord_integer_bits_, &from._impl_.coord_integer_bits_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.angle_bits_) -
+    reinterpret_cast<char*>(&_impl_.coord_integer_bits_)) + sizeof(_impl_.angle_bits_));
+  // @@protoc_insertion_point(copy_constructor:ProtoCoordSizeParams_t)
+}
+
+inline void ProtoCoordSizeParams_t::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.coord_integer_bits_){0}
+    , decltype(_impl_.coord_fractional_bits_){0}
+    , decltype(_impl_.coord_integer_bits_mp_){0}
+    , decltype(_impl_.coord_fractional_bits_mp_){0}
+    , decltype(_impl_.normal_fractional_bits_){0}
+    , decltype(_impl_.angle_bits_){0}
+  };
+}
+
+ProtoCoordSizeParams_t::~ProtoCoordSizeParams_t() {
+  // @@protoc_insertion_point(destructor:ProtoCoordSizeParams_t)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ProtoCoordSizeParams_t::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void ProtoCoordSizeParams_t::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ProtoCoordSizeParams_t::Clear() {
+// @@protoc_insertion_point(message_clear_start:ProtoCoordSizeParams_t)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    ::memset(&_impl_.coord_integer_bits_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.angle_bits_) -
+        reinterpret_cast<char*>(&_impl_.coord_integer_bits_)) + sizeof(_impl_.angle_bits_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ProtoCoordSizeParams_t::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int32 coord_integer_bits = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_coord_integer_bits(&has_bits);
+          _impl_.coord_integer_bits_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 coord_fractional_bits = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_coord_fractional_bits(&has_bits);
+          _impl_.coord_fractional_bits_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 coord_integer_bits_mp = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_coord_integer_bits_mp(&has_bits);
+          _impl_.coord_integer_bits_mp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 coord_fractional_bits_mp = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_coord_fractional_bits_mp(&has_bits);
+          _impl_.coord_fractional_bits_mp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 normal_fractional_bits = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_normal_fractional_bits(&has_bits);
+          _impl_.normal_fractional_bits_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 angle_bits = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_angle_bits(&has_bits);
+          _impl_.angle_bits_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ProtoCoordSizeParams_t::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ProtoCoordSizeParams_t)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int32 coord_integer_bits = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_coord_integer_bits(), target);
+  }
+
+  // optional int32 coord_fractional_bits = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_coord_fractional_bits(), target);
+  }
+
+  // optional int32 coord_integer_bits_mp = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_coord_integer_bits_mp(), target);
+  }
+
+  // optional int32 coord_fractional_bits_mp = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_coord_fractional_bits_mp(), target);
+  }
+
+  // optional int32 normal_fractional_bits = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_normal_fractional_bits(), target);
+  }
+
+  // optional int32 angle_bits = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_angle_bits(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ProtoCoordSizeParams_t)
+  return target;
+}
+
+size_t ProtoCoordSizeParams_t::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ProtoCoordSizeParams_t)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    // optional int32 coord_integer_bits = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_coord_integer_bits());
+    }
+
+    // optional int32 coord_fractional_bits = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_coord_fractional_bits());
+    }
+
+    // optional int32 coord_integer_bits_mp = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_coord_integer_bits_mp());
+    }
+
+    // optional int32 coord_fractional_bits_mp = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_coord_fractional_bits_mp());
+    }
+
+    // optional int32 normal_fractional_bits = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_normal_fractional_bits());
+    }
+
+    // optional int32 angle_bits = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_angle_bits());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ProtoCoordSizeParams_t::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ProtoCoordSizeParams_t::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ProtoCoordSizeParams_t::GetClassData() const { return &_class_data_; }
+
+
+void ProtoCoordSizeParams_t::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ProtoCoordSizeParams_t*>(&to_msg);
+  auto& from = static_cast<const ProtoCoordSizeParams_t&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ProtoCoordSizeParams_t)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.coord_integer_bits_ = from._impl_.coord_integer_bits_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.coord_fractional_bits_ = from._impl_.coord_fractional_bits_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.coord_integer_bits_mp_ = from._impl_.coord_integer_bits_mp_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.coord_fractional_bits_mp_ = from._impl_.coord_fractional_bits_mp_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.normal_fractional_bits_ = from._impl_.normal_fractional_bits_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.angle_bits_ = from._impl_.angle_bits_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ProtoCoordSizeParams_t::CopyFrom(const ProtoCoordSizeParams_t& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ProtoCoordSizeParams_t)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ProtoCoordSizeParams_t::IsInitialized() const {
+  return true;
+}
+
+void ProtoCoordSizeParams_t::InternalSwap(ProtoCoordSizeParams_t* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ProtoCoordSizeParams_t, _impl_.angle_bits_)
+      + sizeof(ProtoCoordSizeParams_t::_impl_.angle_bits_)
+      - PROTOBUF_FIELD_OFFSET(ProtoCoordSizeParams_t, _impl_.coord_integer_bits_)>(
+          reinterpret_cast<char*>(&_impl_.coord_integer_bits_),
+          reinterpret_cast<char*>(&other->_impl_.coord_integer_bits_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ProtoCoordSizeParams_t::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
+      file_level_metadata_netmessages_2eproto[60]);
 }
 
 // ===================================================================
 
 class CSVCMsg_FlattenedSerializer::_Internal {
  public:
+  using HasBits = decltype(std::declval<CSVCMsg_FlattenedSerializer>()._impl_._has_bits_);
+  static const ::ProtoCoordSizeParams_t& coord_size_params(const CSVCMsg_FlattenedSerializer* msg);
+  static void set_has_coord_size_params(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
 };
 
+const ::ProtoCoordSizeParams_t&
+CSVCMsg_FlattenedSerializer::_Internal::coord_size_params(const CSVCMsg_FlattenedSerializer* msg) {
+  return *msg->_impl_.coord_size_params_;
+}
 CSVCMsg_FlattenedSerializer::CSVCMsg_FlattenedSerializer(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -25140,12 +21798,17 @@ CSVCMsg_FlattenedSerializer::CSVCMsg_FlattenedSerializer(const CSVCMsg_Flattened
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CSVCMsg_FlattenedSerializer* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.serializers_){from._impl_.serializers_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.serializers_){from._impl_.serializers_}
     , decltype(_impl_.symbols_){from._impl_.symbols_}
     , decltype(_impl_.fields_){from._impl_.fields_}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.coord_size_params_){nullptr}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_coord_size_params()) {
+    _this->_impl_.coord_size_params_ = new ::ProtoCoordSizeParams_t(*from._impl_.coord_size_params_);
+  }
   // @@protoc_insertion_point(copy_constructor:CSVCMsg_FlattenedSerializer)
 }
 
@@ -25154,10 +21817,12 @@ inline void CSVCMsg_FlattenedSerializer::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.serializers_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.serializers_){arena}
     , decltype(_impl_.symbols_){arena}
     , decltype(_impl_.fields_){arena}
-    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.coord_size_params_){nullptr}
   };
 }
 
@@ -25175,6 +21840,7 @@ inline void CSVCMsg_FlattenedSerializer::SharedDtor() {
   _impl_.serializers_.~RepeatedPtrField();
   _impl_.symbols_.~RepeatedPtrField();
   _impl_.fields_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.coord_size_params_;
 }
 
 void CSVCMsg_FlattenedSerializer::SetCachedSize(int size) const {
@@ -25190,11 +21856,18 @@ void CSVCMsg_FlattenedSerializer::Clear() {
   _impl_.serializers_.Clear();
   _impl_.symbols_.Clear();
   _impl_.fields_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.coord_size_params_ != nullptr);
+    _impl_.coord_size_params_->Clear();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CSVCMsg_FlattenedSerializer::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -25242,6 +21915,14 @@ const char* CSVCMsg_FlattenedSerializer::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
+      // optional .ProtoCoordSizeParams_t coord_size_params = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_coord_size_params(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -25258,6 +21939,7 @@ const char* CSVCMsg_FlattenedSerializer::_InternalParse(const char* ptr, ::_pbi:
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -25295,6 +21977,14 @@ uint8_t* CSVCMsg_FlattenedSerializer::_InternalSerialize(
     const auto& repfield = this->_internal_fields(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .ProtoCoordSizeParams_t coord_size_params = 4;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::coord_size_params(this),
+        _Internal::coord_size_params(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -25335,6 +22025,14 @@ size_t CSVCMsg_FlattenedSerializer::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  // optional .ProtoCoordSizeParams_t coord_size_params = 4;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.coord_size_params_);
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -25356,6 +22054,10 @@ void CSVCMsg_FlattenedSerializer::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   _this->_impl_.serializers_.MergeFrom(from._impl_.serializers_);
   _this->_impl_.symbols_.MergeFrom(from._impl_.symbols_);
   _this->_impl_.fields_.MergeFrom(from._impl_.fields_);
+  if (from._internal_has_coord_size_params()) {
+    _this->_internal_mutable_coord_size_params()->::ProtoCoordSizeParams_t::MergeFrom(
+        from._internal_coord_size_params());
+  }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -25373,15 +22075,17 @@ bool CSVCMsg_FlattenedSerializer::IsInitialized() const {
 void CSVCMsg_FlattenedSerializer::InternalSwap(CSVCMsg_FlattenedSerializer* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.serializers_.InternalSwap(&other->_impl_.serializers_);
   _impl_.symbols_.InternalSwap(&other->_impl_.symbols_);
   _impl_.fields_.InternalSwap(&other->_impl_.fields_);
+  swap(_impl_.coord_size_params_, other->_impl_.coord_size_params_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_FlattenedSerializer::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[65]);
+      file_level_metadata_netmessages_2eproto[61]);
 }
 
 // ===================================================================
@@ -25572,7 +22276,7 @@ void CSVCMsg_StopSound::InternalSwap(CSVCMsg_StopSound* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_StopSound::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[66]);
+      file_level_metadata_netmessages_2eproto[62]);
 }
 
 // ===================================================================
@@ -25865,7 +22569,7 @@ void CBidirMsg_RebroadcastGameEvent::InternalSwap(CBidirMsg_RebroadcastGameEvent
 ::PROTOBUF_NAMESPACE_ID::Metadata CBidirMsg_RebroadcastGameEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[67]);
+      file_level_metadata_netmessages_2eproto[63]);
 }
 
 // ===================================================================
@@ -26056,7 +22760,7 @@ void CBidirMsg_RebroadcastSource::InternalSwap(CBidirMsg_RebroadcastSource* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata CBidirMsg_RebroadcastSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[68]);
+      file_level_metadata_netmessages_2eproto[64]);
 }
 
 // ===================================================================
@@ -26075,9 +22779,6 @@ class CBidirMsg_PredictionEvent::_Internal {
   }
   static void set_has_sync_val_uint32(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -26175,7 +22876,7 @@ const char* CBidirMsg_PredictionEvent::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 event_id = 1;
+      // optional uint32 event_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_event_id(&has_bits);
@@ -26184,7 +22885,7 @@ const char* CBidirMsg_PredictionEvent::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required bytes event_data = 2;
+      // optional bytes event_data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_event_data();
@@ -26242,13 +22943,13 @@ uint8_t* CBidirMsg_PredictionEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 event_id = 1;
+  // optional uint32 event_id = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_event_id(), target);
   }
 
-  // required bytes event_data = 2;
+  // optional bytes event_data = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_event_data(), target);
@@ -26274,46 +22975,28 @@ uint8_t* CBidirMsg_PredictionEvent::_InternalSerialize(
   return target;
 }
 
-size_t CBidirMsg_PredictionEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:CBidirMsg_PredictionEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_event_data()) {
-    // required bytes event_data = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_event_data());
-  }
-
-  if (_internal_has_event_id()) {
-    // required uint32 event_id = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_event_id());
-  }
-
-  return total_size;
-}
 size_t CBidirMsg_PredictionEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:CBidirMsg_PredictionEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes event_data = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_event_data());
-
-    // required uint32 event_id = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_event_id());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000cu) {
+  if (cached_has_bits & 0x0000000fu) {
+    // optional bytes event_data = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_event_data());
+    }
+
+    // optional uint32 event_id = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_event_id());
+    }
+
     // optional uint32 sync_type = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_sync_type());
@@ -26370,7 +23053,6 @@ void CBidirMsg_PredictionEvent::CopyFrom(const CBidirMsg_PredictionEvent& from) 
 }
 
 bool CBidirMsg_PredictionEvent::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -26395,7 +23077,7 @@ void CBidirMsg_PredictionEvent::InternalSwap(CBidirMsg_PredictionEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CBidirMsg_PredictionEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[69]);
+      file_level_metadata_netmessages_2eproto[65]);
 }
 
 // ===================================================================
@@ -26652,7 +23334,7 @@ void CMsgServerNetworkStats_Port::InternalSwap(CMsgServerNetworkStats_Port* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata CMsgServerNetworkStats_Port::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[70]);
+      file_level_metadata_netmessages_2eproto[66]);
 }
 
 // ===================================================================
@@ -27088,7 +23770,7 @@ void CMsgServerNetworkStats_Player::InternalSwap(CMsgServerNetworkStats_Player* 
 ::PROTOBUF_NAMESPACE_ID::Metadata CMsgServerNetworkStats_Player::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[71]);
+      file_level_metadata_netmessages_2eproto[67]);
 }
 
 // ===================================================================
@@ -28009,7 +24691,7 @@ void CMsgServerNetworkStats::InternalSwap(CMsgServerNetworkStats* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CMsgServerNetworkStats::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[72]);
+      file_level_metadata_netmessages_2eproto[68]);
 }
 
 // ===================================================================
@@ -28416,7 +25098,7 @@ void CSVCMsg_HltvReplay::InternalSwap(CSVCMsg_HltvReplay* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_HltvReplay::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[73]);
+      file_level_metadata_netmessages_2eproto[69]);
 }
 
 // ===================================================================
@@ -28739,7 +25421,7 @@ void CCLCMsg_HltvReplay::InternalSwap(CCLCMsg_HltvReplay* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_HltvReplay::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[74]);
+      file_level_metadata_netmessages_2eproto[70]);
 }
 
 // ===================================================================
@@ -28959,7 +25641,7 @@ void CSVCMsg_Broadcast_Command::InternalSwap(CSVCMsg_Broadcast_Command* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_Broadcast_Command::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[75]);
+      file_level_metadata_netmessages_2eproto[71]);
 }
 
 // ===================================================================
@@ -29450,7 +26132,7 @@ void CCLCMsg_HltvFixupOperatorTick::InternalSwap(CCLCMsg_HltvFixupOperatorTick* 
 ::PROTOBUF_NAMESPACE_ID::Metadata CCLCMsg_HltvFixupOperatorTick::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[76]);
+      file_level_metadata_netmessages_2eproto[72]);
 }
 
 // ===================================================================
@@ -29707,7 +26389,7 @@ void CSVCMsg_HltvFixupOperatorStatus::InternalSwap(CSVCMsg_HltvFixupOperatorStat
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_HltvFixupOperatorStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[77]);
+      file_level_metadata_netmessages_2eproto[73]);
 }
 
 // ===================================================================
@@ -29719,16 +26401,22 @@ class CMsgServerUserCmd::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static void set_has_cmd_number(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_player_slot(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_server_tick_executed(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_client_tick(HasBits* has_bits) {
+  static void set_has_player_slot(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_server_tick_executed(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
+  }
+  static void set_has_client_tick(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_delta_data(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_delta_processed(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
   }
 };
 
@@ -29745,9 +26433,11 @@ CMsgServerUserCmd::CMsgServerUserCmd(const CMsgServerUserCmd& from)
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.data_){}
+    , decltype(_impl_.delta_data_){}
     , decltype(_impl_.cmd_number_){}
     , decltype(_impl_.server_tick_executed_){}
     , decltype(_impl_.client_tick_){}
+    , decltype(_impl_.delta_processed_){}
     , decltype(_impl_.player_slot_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -29757,6 +26447,14 @@ CMsgServerUserCmd::CMsgServerUserCmd(const CMsgServerUserCmd& from)
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_data()) {
     _this->_impl_.data_.Set(from._internal_data(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.delta_data_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.delta_data_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_delta_data()) {
+    _this->_impl_.delta_data_.Set(from._internal_delta_data(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.cmd_number_, &from._impl_.cmd_number_,
@@ -29773,14 +26471,20 @@ inline void CMsgServerUserCmd::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.data_){}
+    , decltype(_impl_.delta_data_){}
     , decltype(_impl_.cmd_number_){0}
     , decltype(_impl_.server_tick_executed_){0}
     , decltype(_impl_.client_tick_){0}
+    , decltype(_impl_.delta_processed_){false}
     , decltype(_impl_.player_slot_){-1}
   };
   _impl_.data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.data_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.delta_data_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.delta_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -29796,6 +26500,7 @@ CMsgServerUserCmd::~CMsgServerUserCmd() {
 inline void CMsgServerUserCmd::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.data_.Destroy();
+  _impl_.delta_data_.Destroy();
 }
 
 void CMsgServerUserCmd::SetCachedSize(int size) const {
@@ -29809,13 +26514,18 @@ void CMsgServerUserCmd::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.data_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.data_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.delta_data_.ClearNonDefaultToEmpty();
+    }
   }
-  if (cached_has_bits & 0x0000001eu) {
+  if (cached_has_bits & 0x0000007cu) {
     ::memset(&_impl_.cmd_number_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.client_tick_) -
-        reinterpret_cast<char*>(&_impl_.cmd_number_)) + sizeof(_impl_.client_tick_));
+        reinterpret_cast<char*>(&_impl_.delta_processed_) -
+        reinterpret_cast<char*>(&_impl_.cmd_number_)) + sizeof(_impl_.delta_processed_));
     _impl_.player_slot_ = -1;
   }
   _impl_._has_bits_.Clear();
@@ -29874,6 +26584,24 @@ const char* CMsgServerUserCmd::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
+      // optional bytes delta_data = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          auto str = _internal_mutable_delta_data();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bool delta_processed = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_delta_processed(&has_bits);
+          _impl_.delta_processed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -29912,27 +26640,39 @@ uint8_t* CMsgServerUserCmd::_InternalSerialize(
   }
 
   // optional int32 cmd_number = 2;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_cmd_number(), target);
   }
 
   // optional int32 player_slot = 3 [default = -1];
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_player_slot(), target);
   }
 
   // optional int32 server_tick_executed = 4;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_server_tick_executed(), target);
   }
 
   // optional int32 client_tick = 5;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_client_tick(), target);
+  }
+
+  // optional bytes delta_data = 6;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->WriteBytesMaybeAliased(
+        6, this->_internal_delta_data(), target);
+  }
+
+  // optional bool delta_processed = 7;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_delta_processed(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -29952,7 +26692,7 @@ size_t CMsgServerUserCmd::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
+  if (cached_has_bits & 0x0000007fu) {
     // optional bytes data = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -29960,23 +26700,35 @@ size_t CMsgServerUserCmd::ByteSizeLong() const {
           this->_internal_data());
     }
 
-    // optional int32 cmd_number = 2;
+    // optional bytes delta_data = 6;
     if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_delta_data());
+    }
+
+    // optional int32 cmd_number = 2;
+    if (cached_has_bits & 0x00000004u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_cmd_number());
     }
 
     // optional int32 server_tick_executed = 4;
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000008u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_server_tick_executed());
     }
 
     // optional int32 client_tick = 5;
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000010u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_client_tick());
     }
 
+    // optional bool delta_processed = 7;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
     // optional int32 player_slot = 3 [default = -1];
-    if (cached_has_bits & 0x00000010u) {
+    if (cached_has_bits & 0x00000040u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_player_slot());
     }
 
@@ -30000,20 +26752,26 @@ void CMsgServerUserCmd::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
+  if (cached_has_bits & 0x0000007fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_data(from._internal_data());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.cmd_number_ = from._impl_.cmd_number_;
+      _this->_internal_set_delta_data(from._internal_delta_data());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.server_tick_executed_ = from._impl_.server_tick_executed_;
+      _this->_impl_.cmd_number_ = from._impl_.cmd_number_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.client_tick_ = from._impl_.client_tick_;
+      _this->_impl_.server_tick_executed_ = from._impl_.server_tick_executed_;
     }
     if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.client_tick_ = from._impl_.client_tick_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.delta_processed_ = from._impl_.delta_processed_;
+    }
+    if (cached_has_bits & 0x00000040u) {
       _this->_impl_.player_slot_ = from._impl_.player_slot_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -30042,9 +26800,13 @@ void CMsgServerUserCmd::InternalSwap(CMsgServerUserCmd* other) {
       &_impl_.data_, lhs_arena,
       &other->_impl_.data_, rhs_arena
   );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.delta_data_, lhs_arena,
+      &other->_impl_.delta_data_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CMsgServerUserCmd, _impl_.client_tick_)
-      + sizeof(CMsgServerUserCmd::_impl_.client_tick_)
+      PROTOBUF_FIELD_OFFSET(CMsgServerUserCmd, _impl_.delta_processed_)
+      + sizeof(CMsgServerUserCmd::_impl_.delta_processed_)
       - PROTOBUF_FIELD_OFFSET(CMsgServerUserCmd, _impl_.cmd_number_)>(
           reinterpret_cast<char*>(&_impl_.cmd_number_),
           reinterpret_cast<char*>(&other->_impl_.cmd_number_));
@@ -30054,7 +26816,7 @@ void CMsgServerUserCmd::InternalSwap(CMsgServerUserCmd* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CMsgServerUserCmd::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[78]);
+      file_level_metadata_netmessages_2eproto[74]);
 }
 
 // ===================================================================
@@ -30239,7 +27001,239 @@ void CSVCMsg_UserCommands::InternalSwap(CSVCMsg_UserCommands* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_UserCommands::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
-      file_level_metadata_netmessages_2eproto[79]);
+      file_level_metadata_netmessages_2eproto[75]);
+}
+
+// ===================================================================
+
+class CSVCMsg_NextMsgPredicted::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CSVCMsg_NextMsgPredicted>()._impl_._has_bits_);
+  static void set_has_predicted_by_player_slot(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_message_type_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+CSVCMsg_NextMsgPredicted::CSVCMsg_NextMsgPredicted(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CSVCMsg_NextMsgPredicted)
+}
+CSVCMsg_NextMsgPredicted::CSVCMsg_NextMsgPredicted(const CSVCMsg_NextMsgPredicted& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CSVCMsg_NextMsgPredicted* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.message_type_id_){}
+    , decltype(_impl_.predicted_by_player_slot_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.message_type_id_, &from._impl_.message_type_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.predicted_by_player_slot_) -
+    reinterpret_cast<char*>(&_impl_.message_type_id_)) + sizeof(_impl_.predicted_by_player_slot_));
+  // @@protoc_insertion_point(copy_constructor:CSVCMsg_NextMsgPredicted)
+}
+
+inline void CSVCMsg_NextMsgPredicted::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.message_type_id_){0u}
+    , decltype(_impl_.predicted_by_player_slot_){-1}
+  };
+}
+
+CSVCMsg_NextMsgPredicted::~CSVCMsg_NextMsgPredicted() {
+  // @@protoc_insertion_point(destructor:CSVCMsg_NextMsgPredicted)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CSVCMsg_NextMsgPredicted::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void CSVCMsg_NextMsgPredicted::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CSVCMsg_NextMsgPredicted::Clear() {
+// @@protoc_insertion_point(message_clear_start:CSVCMsg_NextMsgPredicted)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    _impl_.message_type_id_ = 0u;
+    _impl_.predicted_by_player_slot_ = -1;
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CSVCMsg_NextMsgPredicted::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int32 predicted_by_player_slot = 1 [default = -1];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_predicted_by_player_slot(&has_bits);
+          _impl_.predicted_by_player_slot_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional uint32 message_type_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_message_type_id(&has_bits);
+          _impl_.message_type_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CSVCMsg_NextMsgPredicted::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CSVCMsg_NextMsgPredicted)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int32 predicted_by_player_slot = 1 [default = -1];
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_predicted_by_player_slot(), target);
+  }
+
+  // optional uint32 message_type_id = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_message_type_id(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CSVCMsg_NextMsgPredicted)
+  return target;
+}
+
+size_t CSVCMsg_NextMsgPredicted::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CSVCMsg_NextMsgPredicted)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint32 message_type_id = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_message_type_id());
+    }
+
+    // optional int32 predicted_by_player_slot = 1 [default = -1];
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_predicted_by_player_slot());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CSVCMsg_NextMsgPredicted::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CSVCMsg_NextMsgPredicted::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CSVCMsg_NextMsgPredicted::GetClassData() const { return &_class_data_; }
+
+
+void CSVCMsg_NextMsgPredicted::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CSVCMsg_NextMsgPredicted*>(&to_msg);
+  auto& from = static_cast<const CSVCMsg_NextMsgPredicted&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CSVCMsg_NextMsgPredicted)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.message_type_id_ = from._impl_.message_type_id_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.predicted_by_player_slot_ = from._impl_.predicted_by_player_slot_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CSVCMsg_NextMsgPredicted::CopyFrom(const CSVCMsg_NextMsgPredicted& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CSVCMsg_NextMsgPredicted)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CSVCMsg_NextMsgPredicted::IsInitialized() const {
+  return true;
+}
+
+void CSVCMsg_NextMsgPredicted::InternalSwap(CSVCMsg_NextMsgPredicted* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.message_type_id_, other->_impl_.message_type_id_);
+  swap(_impl_.predicted_by_player_slot_, other->_impl_.predicted_by_player_slot_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CSVCMsg_NextMsgPredicted::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_netmessages_2eproto_getter, &descriptor_table_netmessages_2eproto_once,
+      file_level_metadata_netmessages_2eproto[76]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -30272,10 +27266,6 @@ template<> PROTOBUF_NOINLINE ::CCLCMsg_RespondCvarValue*
 Arena::CreateMaybeMessage< ::CCLCMsg_RespondCvarValue >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCLCMsg_RespondCvarValue >(arena);
 }
-template<> PROTOBUF_NOINLINE ::CCLCMsg_FileCRCCheck*
-Arena::CreateMaybeMessage< ::CCLCMsg_FileCRCCheck >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CCLCMsg_FileCRCCheck >(arena);
-}
 template<> PROTOBUF_NOINLINE ::CCLCMsg_LoadingProgress*
 Arena::CreateMaybeMessage< ::CCLCMsg_LoadingProgress >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCLCMsg_LoadingProgress >(arena);
@@ -30304,33 +27294,9 @@ template<> PROTOBUF_NOINLINE ::CCLCMsg_RconServerDetails*
 Arena::CreateMaybeMessage< ::CCLCMsg_RconServerDetails >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCLCMsg_RconServerDetails >(arena);
 }
-template<> PROTOBUF_NOINLINE ::CMsgSource2SystemSpecs*
-Arena::CreateMaybeMessage< ::CMsgSource2SystemSpecs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CMsgSource2SystemSpecs >(arena);
-}
-template<> PROTOBUF_NOINLINE ::CMsgSource2VProfLiteReportItem*
-Arena::CreateMaybeMessage< ::CMsgSource2VProfLiteReportItem >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CMsgSource2VProfLiteReportItem >(arena);
-}
-template<> PROTOBUF_NOINLINE ::CMsgSource2VProfLiteReport*
-Arena::CreateMaybeMessage< ::CMsgSource2VProfLiteReport >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CMsgSource2VProfLiteReport >(arena);
-}
-template<> PROTOBUF_NOINLINE ::CMsgSource2NetworkFlowQuality*
-Arena::CreateMaybeMessage< ::CMsgSource2NetworkFlowQuality >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CMsgSource2NetworkFlowQuality >(arena);
-}
 template<> PROTOBUF_NOINLINE ::CCLCMsg_Diagnostic*
 Arena::CreateMaybeMessage< ::CCLCMsg_Diagnostic >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCLCMsg_Diagnostic >(arena);
-}
-template<> PROTOBUF_NOINLINE ::CSource2Metrics_MatchPerfSummary_Notification_Client*
-Arena::CreateMaybeMessage< ::CSource2Metrics_MatchPerfSummary_Notification_Client >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CSource2Metrics_MatchPerfSummary_Notification_Client >(arena);
-}
-template<> PROTOBUF_NOINLINE ::CSource2Metrics_MatchPerfSummary_Notification*
-Arena::CreateMaybeMessage< ::CSource2Metrics_MatchPerfSummary_Notification >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CSource2Metrics_MatchPerfSummary_Notification >(arena);
 }
 template<> PROTOBUF_NOINLINE ::CSVCMsg_ServerInfo*
 Arena::CreateMaybeMessage< ::CSVCMsg_ServerInfo >(Arena* arena) {
@@ -30452,6 +27418,10 @@ template<> PROTOBUF_NOINLINE ::CSVCMsg_VoiceData*
 Arena::CreateMaybeMessage< ::CSVCMsg_VoiceData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CSVCMsg_VoiceData >(arena);
 }
+template<> PROTOBUF_NOINLINE ::CSVCMsg_EncryptedData*
+Arena::CreateMaybeMessage< ::CSVCMsg_EncryptedData >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CSVCMsg_EncryptedData >(arena);
+}
 template<> PROTOBUF_NOINLINE ::CSVCMsg_PacketReliable*
 Arena::CreateMaybeMessage< ::CSVCMsg_PacketReliable >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CSVCMsg_PacketReliable >(arena);
@@ -30496,6 +27466,10 @@ template<> PROTOBUF_NOINLINE ::ProtoFlattenedSerializerField_t_polymorphic_field
 Arena::CreateMaybeMessage< ::ProtoFlattenedSerializerField_t_polymorphic_field_t >(Arena* arena) {
   return Arena::CreateMessageInternal< ::ProtoFlattenedSerializerField_t_polymorphic_field_t >(arena);
 }
+template<> PROTOBUF_NOINLINE ::ProtoFlattenedSerializerField_t_proto_enum_info_t*
+Arena::CreateMaybeMessage< ::ProtoFlattenedSerializerField_t_proto_enum_info_t >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ProtoFlattenedSerializerField_t_proto_enum_info_t >(arena);
+}
 template<> PROTOBUF_NOINLINE ::ProtoFlattenedSerializerField_t*
 Arena::CreateMaybeMessage< ::ProtoFlattenedSerializerField_t >(Arena* arena) {
   return Arena::CreateMessageInternal< ::ProtoFlattenedSerializerField_t >(arena);
@@ -30503,6 +27477,10 @@ Arena::CreateMaybeMessage< ::ProtoFlattenedSerializerField_t >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::ProtoFlattenedSerializer_t*
 Arena::CreateMaybeMessage< ::ProtoFlattenedSerializer_t >(Arena* arena) {
   return Arena::CreateMessageInternal< ::ProtoFlattenedSerializer_t >(arena);
+}
+template<> PROTOBUF_NOINLINE ::ProtoCoordSizeParams_t*
+Arena::CreateMaybeMessage< ::ProtoCoordSizeParams_t >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ProtoCoordSizeParams_t >(arena);
 }
 template<> PROTOBUF_NOINLINE ::CSVCMsg_FlattenedSerializer*
 Arena::CreateMaybeMessage< ::CSVCMsg_FlattenedSerializer >(Arena* arena) {
@@ -30563,6 +27541,10 @@ Arena::CreateMaybeMessage< ::CMsgServerUserCmd >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::CSVCMsg_UserCommands*
 Arena::CreateMaybeMessage< ::CSVCMsg_UserCommands >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CSVCMsg_UserCommands >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CSVCMsg_NextMsgPredicted*
+Arena::CreateMaybeMessage< ::CSVCMsg_NextMsgPredicted >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CSVCMsg_NextMsgPredicted >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

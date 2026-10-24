@@ -8,8 +8,8 @@ add_requires("imgui-file-dialog", {debug = is_mode("debug")})
 
 includes("@builtin/xpack")
 
-local SDK_PATH = os.getenv("HL2SDKCS2")
---local SDK_PATH = "G:/hl2sdk-experimental/hl2sdk"
+--local SDK_PATH = os.getenv("HL2SDKCS2")
+local SDK_PATH = "G:/hl2sdk-experimental/s2sdk"
 local MM_PATH = os.getenv("MMSOURCE_DEV")
 
 target("CS2ServerGUI")
@@ -20,16 +20,17 @@ target("CS2ServerGUI")
     set_symbols("debug")
 
     add_files({
-        SDK_PATH.."/tier1/convar.cpp",
+        SDK_PATH.."/tier0_perproject/convar.cpp",
         SDK_PATH.."/public/tier0/memoverride.cpp",
         SDK_PATH.."/entity2/entitysystem.cpp",
         SDK_PATH.."/entity2/entityidentity.cpp",
         SDK_PATH.."/entity2/entitykeyvalues.cpp",
-        SDK_PATH.."/tier1/keyvalues3.cpp",
-        SDK_PATH.."/tier1/bitbuf.cpp",
+        SDK_PATH.."/tier0_perproject/keyvalues3.cpp",
+        SDK_PATH.."/tier0_perproject/bitbuf.cpp",
         "protobufs/generated/usermessages.pb.cc",
         "protobufs/generated/network_connection.pb.cc",
         "protobufs/generated/networkbasetypes.pb.cc",
+        "protobufs/generated/valveextensions.pb.cc",
         "protobufs/generated/engine_gcmessages.pb.cc",
         "protobufs/generated/steammessages.pb.cc",
         "protobufs/generated/gcsdk_gcmessages.pb.cc",
@@ -56,14 +57,14 @@ target("CS2ServerGUI")
     add_includedirs({
         "src",
         "vendor",
+        "protobufs/generated",
         -- sdk
         SDK_PATH,
         SDK_PATH.."/thirdparty/protobuf-3.21.8/src",
         SDK_PATH.."/common",
         SDK_PATH.."/game/shared",
-        SDK_PATH.."/game/server",
         SDK_PATH.."/public",
-        SDK_PATH.."/public/engine",
+        SDK_PATH.."/public/engine2",
         SDK_PATH.."/public/mathlib",
         SDK_PATH.."/public/tier0",
         SDK_PATH.."/public/tier1",

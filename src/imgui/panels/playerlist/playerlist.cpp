@@ -22,6 +22,7 @@
 #include "imgui/panels/entitybrowser/entitybrowser.h"
 #include "cs2_sdk/entity/cbaseplayercontroller.h"
 #include "entity2/entitysystem.h"
+#include "gameentitysystem.h"
 #include "interfaces.h"
 #include <string>
 #include <imgui.h>

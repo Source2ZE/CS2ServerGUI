@@ -423,6 +423,22 @@ struct CCSUsrMsg_WeaponSoundDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_WeaponSoundDefaultTypeInternal _CCSUsrMsg_WeaponSound_default_instance_;
+PROTOBUF_CONSTEXPR CCSUsrMsg_WeaponMagDrop::CCSUsrMsg_WeaponMagDrop(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.secondary_data_)*/0
+  , /*decltype(_impl_.server_event_)*/false
+  , /*decltype(_impl_.entidx_)*/-1} {}
+struct CCSUsrMsg_WeaponMagDropDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CCSUsrMsg_WeaponMagDropDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CCSUsrMsg_WeaponMagDropDefaultTypeInternal() {}
+  union {
+    CCSUsrMsg_WeaponMagDrop _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_WeaponMagDropDefaultTypeInternal _CCSUsrMsg_WeaponMagDrop_default_instance_;
 PROTOBUF_CONSTEXPR CCSUsrMsg_UpdateScreenHealthBar::CCSUsrMsg_UpdateScreenHealthBar(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -921,20 +937,6 @@ struct CCSUsrMsg_ItemDropDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_ItemDropDefaultTypeInternal _CCSUsrMsg_ItemDrop_default_instance_;
-PROTOBUF_CONSTEXPR CCSUsrMsg_GlowPropTurnOff::CCSUsrMsg_GlowPropTurnOff(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.entidx_)*/-1} {}
-struct CCSUsrMsg_GlowPropTurnOffDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CCSUsrMsg_GlowPropTurnOffDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CCSUsrMsg_GlowPropTurnOffDefaultTypeInternal() {}
-  union {
-    CCSUsrMsg_GlowPropTurnOff _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_GlowPropTurnOffDefaultTypeInternal _CCSUsrMsg_GlowPropTurnOff_default_instance_;
 PROTOBUF_CONSTEXPR CCSUsrMsg_RoundBackupFilenames::CCSUsrMsg_RoundBackupFilenames(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -1327,20 +1329,6 @@ struct CCSUsrMsg_DisconnectToLobbyDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_DisconnectToLobbyDefaultTypeInternal _CCSUsrMsg_DisconnectToLobby_default_instance_;
-PROTOBUF_CONSTEXPR CCSUsrMsg_WarmupHasEnded::CCSUsrMsg_WarmupHasEnded(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.dummy_)*/0} {}
-struct CCSUsrMsg_WarmupHasEndedDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CCSUsrMsg_WarmupHasEndedDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CCSUsrMsg_WarmupHasEndedDefaultTypeInternal() {}
-  union {
-    CCSUsrMsg_WarmupHasEnded _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_WarmupHasEndedDefaultTypeInternal _CCSUsrMsg_WarmupHasEnded_default_instance_;
 PROTOBUF_CONSTEXPR CCSUsrMsg_ClientInfo::CCSUsrMsg_ClientInfo(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -1437,7 +1425,94 @@ struct CCSUsrMsg_RecurringMissionSchemaDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_RecurringMissionSchemaDefaultTypeInternal _CCSUsrMsg_RecurringMissionSchema_default_instance_;
-static ::_pb::Metadata file_level_metadata_cstrike15_5fusermessages_2eproto[89];
+PROTOBUF_CONSTEXPR CCSUsrMsg_SendPlayerLoadout_LoadoutItem::CCSUsrMsg_SendPlayerLoadout_LoadoutItem(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.econ_item_)*/nullptr
+  , /*decltype(_impl_.team_)*/0
+  , /*decltype(_impl_.slot_)*/0} {}
+struct CCSUsrMsg_SendPlayerLoadout_LoadoutItemDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CCSUsrMsg_SendPlayerLoadout_LoadoutItemDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CCSUsrMsg_SendPlayerLoadout_LoadoutItemDefaultTypeInternal() {}
+  union {
+    CCSUsrMsg_SendPlayerLoadout_LoadoutItem _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_SendPlayerLoadout_LoadoutItemDefaultTypeInternal _CCSUsrMsg_SendPlayerLoadout_LoadoutItem_default_instance_;
+PROTOBUF_CONSTEXPR CCSUsrMsg_SendPlayerLoadout::CCSUsrMsg_SendPlayerLoadout(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.loadout_)*/{}
+  , /*decltype(_impl_.playerslot_)*/-1} {}
+struct CCSUsrMsg_SendPlayerLoadoutDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CCSUsrMsg_SendPlayerLoadoutDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CCSUsrMsg_SendPlayerLoadoutDefaultTypeInternal() {}
+  union {
+    CCSUsrMsg_SendPlayerLoadout _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_SendPlayerLoadoutDefaultTypeInternal _CCSUsrMsg_SendPlayerLoadout_default_instance_;
+PROTOBUF_CONSTEXPR CCSUsrMsg_CustomHudClicked::CCSUsrMsg_CustomHudClicked(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.button_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.custom_hud_layout_)*/16777215u} {}
+struct CCSUsrMsg_CustomHudClickedDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CCSUsrMsg_CustomHudClickedDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CCSUsrMsg_CustomHudClickedDefaultTypeInternal() {}
+  union {
+    CCSUsrMsg_CustomHudClicked _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CCSUsrMsg_CustomHudClickedDefaultTypeInternal _CCSUsrMsg_CustomHudClicked_default_instance_;
+PROTOBUF_CONSTEXPR CVacNet_GetReviewerInfo_Request::CVacNet_GetReviewerInfo_Request(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.appid_)*/0u} {}
+struct CVacNet_GetReviewerInfo_RequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CVacNet_GetReviewerInfo_RequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CVacNet_GetReviewerInfo_RequestDefaultTypeInternal() {}
+  union {
+    CVacNet_GetReviewerInfo_Request _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CVacNet_GetReviewerInfo_RequestDefaultTypeInternal _CVacNet_GetReviewerInfo_Request_default_instance_;
+PROTOBUF_CONSTEXPR CVacnetReviewerInfo::CVacnetReviewerInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.permissions_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CVacnetReviewerInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CVacnetReviewerInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CVacnetReviewerInfoDefaultTypeInternal() {}
+  union {
+    CVacnetReviewerInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CVacnetReviewerInfoDefaultTypeInternal _CVacnetReviewerInfo_default_instance_;
+PROTOBUF_CONSTEXPR CVacNet_GetReviewerInfo_Response::CVacNet_GetReviewerInfo_Response(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.reviewer_info_)*/nullptr} {}
+struct CVacNet_GetReviewerInfo_ResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CVacNet_GetReviewerInfo_ResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CVacNet_GetReviewerInfo_ResponseDefaultTypeInternal() {}
+  union {
+    CVacNet_GetReviewerInfo_Response _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CVacNet_GetReviewerInfo_ResponseDefaultTypeInternal _CVacNet_GetReviewerInfo_Response_default_instance_;
+static ::_pb::Metadata file_level_metadata_cstrike15_5fusermessages_2eproto[94];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_cstrike15_5fusermessages_2eproto[2];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_cstrike15_5fusermessages_2eproto = nullptr;
 
@@ -1750,6 +1825,18 @@ const uint32_t TableStruct_cstrike15_5fusermessages_2eproto::offsets[] PROTOBUF_
   0,
   4,
   5,
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WeaponMagDrop, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WeaponMagDrop, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WeaponMagDrop, _impl_.entidx_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WeaponMagDrop, _impl_.secondary_data_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WeaponMagDrop, _impl_.server_event_),
+  2,
+  0,
+  1,
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_UpdateScreenHealthBar, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_UpdateScreenHealthBar, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2108,14 +2195,6 @@ const uint32_t TableStruct_cstrike15_5fusermessages_2eproto::offsets[] PROTOBUF_
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_ItemDrop, _impl_.death_),
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_GlowPropTurnOff, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_GlowPropTurnOff, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_GlowPropTurnOff, _impl_.entidx_),
-  0,
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_RoundBackupFilenames, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_RoundBackupFilenames, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2420,14 +2499,6 @@ const uint32_t TableStruct_cstrike15_5fusermessages_2eproto::offsets[] PROTOBUF_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_DisconnectToLobby, _impl_.dummy_),
   0,
-  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WarmupHasEnded, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WarmupHasEnded, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_WarmupHasEnded, _impl_.dummy_),
-  0,
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_ClientInfo, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_ClientInfo, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2500,6 +2571,61 @@ const uint32_t TableStruct_cstrike15_5fusermessages_2eproto::offsets[] PROTOBUF_
   PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_RecurringMissionSchema, _impl_.mission_schema_),
   1,
   0,
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout_LoadoutItem, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout_LoadoutItem, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout_LoadoutItem, _impl_.econ_item_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout_LoadoutItem, _impl_.team_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout_LoadoutItem, _impl_.slot_),
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout, _impl_.loadout_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_SendPlayerLoadout, _impl_.playerslot_),
+  ~0u,
+  0,
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CustomHudClicked, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CustomHudClicked, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CustomHudClicked, _impl_.custom_hud_layout_),
+  PROTOBUF_FIELD_OFFSET(::CCSUsrMsg_CustomHudClicked, _impl_.button_id_),
+  1,
+  0,
+  PROTOBUF_FIELD_OFFSET(::CVacNet_GetReviewerInfo_Request, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CVacNet_GetReviewerInfo_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CVacNet_GetReviewerInfo_Request, _impl_.appid_),
+  0,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CVacnetReviewerInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CVacnetReviewerInfo, _impl_.permissions_),
+  PROTOBUF_FIELD_OFFSET(::CVacNet_GetReviewerInfo_Response, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CVacNet_GetReviewerInfo_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CVacNet_GetReviewerInfo_Response, _impl_.reviewer_info_),
+  0,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 8, -1, sizeof(::CCSUsrMsg_VGUIMenu_Keys)},
@@ -2527,70 +2653,75 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 262, 270, -1, sizeof(::CCSUsrMsg_SendPlayerItemFound)},
   { 272, 283, -1, sizeof(::CCSUsrMsg_ReloadEffect)},
   { 288, 301, -1, sizeof(::CCSUsrMsg_WeaponSound)},
-  { 308, 318, -1, sizeof(::CCSUsrMsg_UpdateScreenHealthBar)},
-  { 322, 330, -1, sizeof(::CCSUsrMsg_EntityOutlineHighlight)},
-  { 332, 339, -1, sizeof(::CCSUsrMsg_AdjustMoney)},
-  { 340, 350, -1, sizeof(::CCSUsrMsg_ReportHit)},
-  { 354, 363, -1, sizeof(::CCSUsrMsg_KillCam)},
-  { 366, 376, -1, sizeof(::CCSUsrMsg_DesiredTimescale)},
-  { 380, 387, -1, sizeof(::CCSUsrMsg_CurrentTimescale)},
-  { 388, 397, -1, sizeof(::CCSUsrMsg_AchievementEvent)},
-  { 400, 410, -1, sizeof(::CCSUsrMsg_MatchEndConditions)},
-  { 414, 422, -1, sizeof(::CCSUsrMsg_PlayerStatsUpdate_Stat)},
-  { 424, 434, -1, sizeof(::CCSUsrMsg_PlayerStatsUpdate)},
-  { 438, 448, -1, sizeof(::CCSUsrMsg_QuestProgress)},
-  { 452, 459, -1, sizeof(::CCSUsrMsg_ScoreLeaderboardData)},
-  { 460, 467, -1, sizeof(::CCSUsrMsg_PlayerDecalDigitalSignature)},
-  { 468, 476, -1, sizeof(::CCSUsrMsg_XRankGet)},
-  { 478, 487, -1, sizeof(::CCSUsrMsg_XRankUpd)},
-  { 490, 498, -1, sizeof(::CCSUsrMsg_CallVoteFailed)},
-  { 500, 514, -1, sizeof(::CCSUsrMsg_VoteStart)},
-  { 522, 532, -1, sizeof(::CCSUsrMsg_VotePass)},
-  { 536, 544, -1, sizeof(::CCSUsrMsg_VoteFailed)},
-  { 546, -1, -1, sizeof(::CCSUsrMsg_VoteSetup)},
-  { 553, 565, -1, sizeof(::CCSUsrMsg_SendLastKillerDamageToClient)},
-  { 571, 583, -1, sizeof(::CCSUsrMsg_ServerRankUpdate_RankUpdate)},
-  { 589, -1, -1, sizeof(::CCSUsrMsg_ServerRankUpdate)},
-  { 596, 603, -1, sizeof(::CCSUsrMsg_XpUpdate)},
-  { 604, 611, -1, sizeof(::CCSUsrMsg_ItemPickup)},
-  { 612, 621, -1, sizeof(::CCSUsrMsg_ShowMenu)},
-  { 624, 631, -1, sizeof(::CCSUsrMsg_BarTime)},
-  { 632, 639, -1, sizeof(::CCSUsrMsg_AmmoDenied)},
-  { 640, 647, -1, sizeof(::CCSUsrMsg_MarkAchievement)},
-  { 648, 655, -1, sizeof(::CCSUsrMsg_MatchStatsUpdate)},
-  { 656, 664, -1, sizeof(::CCSUsrMsg_ItemDrop)},
-  { 666, 673, -1, sizeof(::CCSUsrMsg_GlowPropTurnOff)},
-  { 674, 684, -1, sizeof(::CCSUsrMsg_RoundBackupFilenames)},
-  { 688, 697, -1, sizeof(::CCSUsrMsg_SSUI)},
-  { 700, 710, -1, sizeof(::CCSUsrMsg_SurvivalStats_Fact)},
-  { 714, 723, -1, sizeof(::CCSUsrMsg_SurvivalStats_Placement)},
-  { 726, 737, -1, sizeof(::CCSUsrMsg_SurvivalStats_Damage)},
-  { 742, 753, -1, sizeof(::CCSUsrMsg_SurvivalStats)},
-  { 758, 767, -1, sizeof(::CCSUsrMsg_EndOfMatchAllPlayersData_Accolade)},
-  { 770, 784, -1, sizeof(::CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData)},
-  { 792, 800, -1, sizeof(::CCSUsrMsg_EndOfMatchAllPlayersData)},
-  { 802, 814, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent_Victim)},
-  { 820, 827, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent_Objective)},
-  { 828, 840, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent_Damage)},
-  { 846, 859, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent)},
-  { 866, 875, -1, sizeof(::CCSUsrMsg_RoundEndReportData_InitialConditions)},
-  { 878, 886, -1, sizeof(::CCSUsrMsg_RoundEndReportData)},
-  { 888, 901, -1, sizeof(::CCSUsrMsg_PostRoundDamageReport)},
-  { 908, 915, -1, sizeof(::CCSUsrMsg_CurrentRoundOdds)},
-  { 916, 923, -1, sizeof(::CCSUsrMsg_DeepStats)},
-  { 924, 934, -1, sizeof(::CCSUsrMsg_ShootInfo)},
-  { 938, 945, -1, sizeof(::CCSUsrMsg_ResetHud)},
-  { 946, 953, -1, sizeof(::CCSUsrMsg_GameTitle)},
-  { 954, 961, -1, sizeof(::CCSUsrMsg_RequestState)},
-  { 962, 969, -1, sizeof(::CCSUsrMsg_StopSpectatorMode)},
-  { 970, 977, -1, sizeof(::CCSUsrMsg_DisconnectToLobby)},
-  { 978, 985, -1, sizeof(::CCSUsrMsg_WarmupHasEnded)},
-  { 986, 993, -1, sizeof(::CCSUsrMsg_ClientInfo)},
-  { 994, 1002, -1, sizeof(::CCSUsrMsg_ServerRankRevealAll)},
-  { 1004, 1013, -1, sizeof(::CCSUsrMsgPreMatchSayText)},
-  { 1016, 1024, -1, sizeof(::CCSUsrMsg_CounterStrafe)},
-  { 1026, 1040, -1, sizeof(::CCSUsrMsg_DamagePrediction)},
-  { 1048, 1056, -1, sizeof(::CCSUsrMsg_RecurringMissionSchema)},
+  { 308, 317, -1, sizeof(::CCSUsrMsg_WeaponMagDrop)},
+  { 320, 330, -1, sizeof(::CCSUsrMsg_UpdateScreenHealthBar)},
+  { 334, 342, -1, sizeof(::CCSUsrMsg_EntityOutlineHighlight)},
+  { 344, 351, -1, sizeof(::CCSUsrMsg_AdjustMoney)},
+  { 352, 362, -1, sizeof(::CCSUsrMsg_ReportHit)},
+  { 366, 375, -1, sizeof(::CCSUsrMsg_KillCam)},
+  { 378, 388, -1, sizeof(::CCSUsrMsg_DesiredTimescale)},
+  { 392, 399, -1, sizeof(::CCSUsrMsg_CurrentTimescale)},
+  { 400, 409, -1, sizeof(::CCSUsrMsg_AchievementEvent)},
+  { 412, 422, -1, sizeof(::CCSUsrMsg_MatchEndConditions)},
+  { 426, 434, -1, sizeof(::CCSUsrMsg_PlayerStatsUpdate_Stat)},
+  { 436, 446, -1, sizeof(::CCSUsrMsg_PlayerStatsUpdate)},
+  { 450, 460, -1, sizeof(::CCSUsrMsg_QuestProgress)},
+  { 464, 471, -1, sizeof(::CCSUsrMsg_ScoreLeaderboardData)},
+  { 472, 479, -1, sizeof(::CCSUsrMsg_PlayerDecalDigitalSignature)},
+  { 480, 488, -1, sizeof(::CCSUsrMsg_XRankGet)},
+  { 490, 499, -1, sizeof(::CCSUsrMsg_XRankUpd)},
+  { 502, 510, -1, sizeof(::CCSUsrMsg_CallVoteFailed)},
+  { 512, 526, -1, sizeof(::CCSUsrMsg_VoteStart)},
+  { 534, 544, -1, sizeof(::CCSUsrMsg_VotePass)},
+  { 548, 556, -1, sizeof(::CCSUsrMsg_VoteFailed)},
+  { 558, -1, -1, sizeof(::CCSUsrMsg_VoteSetup)},
+  { 565, 577, -1, sizeof(::CCSUsrMsg_SendLastKillerDamageToClient)},
+  { 583, 595, -1, sizeof(::CCSUsrMsg_ServerRankUpdate_RankUpdate)},
+  { 601, -1, -1, sizeof(::CCSUsrMsg_ServerRankUpdate)},
+  { 608, 615, -1, sizeof(::CCSUsrMsg_XpUpdate)},
+  { 616, 623, -1, sizeof(::CCSUsrMsg_ItemPickup)},
+  { 624, 633, -1, sizeof(::CCSUsrMsg_ShowMenu)},
+  { 636, 643, -1, sizeof(::CCSUsrMsg_BarTime)},
+  { 644, 651, -1, sizeof(::CCSUsrMsg_AmmoDenied)},
+  { 652, 659, -1, sizeof(::CCSUsrMsg_MarkAchievement)},
+  { 660, 667, -1, sizeof(::CCSUsrMsg_MatchStatsUpdate)},
+  { 668, 676, -1, sizeof(::CCSUsrMsg_ItemDrop)},
+  { 678, 688, -1, sizeof(::CCSUsrMsg_RoundBackupFilenames)},
+  { 692, 701, -1, sizeof(::CCSUsrMsg_SSUI)},
+  { 704, 714, -1, sizeof(::CCSUsrMsg_SurvivalStats_Fact)},
+  { 718, 727, -1, sizeof(::CCSUsrMsg_SurvivalStats_Placement)},
+  { 730, 741, -1, sizeof(::CCSUsrMsg_SurvivalStats_Damage)},
+  { 746, 757, -1, sizeof(::CCSUsrMsg_SurvivalStats)},
+  { 762, 771, -1, sizeof(::CCSUsrMsg_EndOfMatchAllPlayersData_Accolade)},
+  { 774, 788, -1, sizeof(::CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData)},
+  { 796, 804, -1, sizeof(::CCSUsrMsg_EndOfMatchAllPlayersData)},
+  { 806, 818, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent_Victim)},
+  { 824, 831, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent_Objective)},
+  { 832, 844, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent_Damage)},
+  { 850, 863, -1, sizeof(::CCSUsrMsg_RoundEndReportData_RerEvent)},
+  { 870, 879, -1, sizeof(::CCSUsrMsg_RoundEndReportData_InitialConditions)},
+  { 882, 890, -1, sizeof(::CCSUsrMsg_RoundEndReportData)},
+  { 892, 905, -1, sizeof(::CCSUsrMsg_PostRoundDamageReport)},
+  { 912, 919, -1, sizeof(::CCSUsrMsg_CurrentRoundOdds)},
+  { 920, 927, -1, sizeof(::CCSUsrMsg_DeepStats)},
+  { 928, 938, -1, sizeof(::CCSUsrMsg_ShootInfo)},
+  { 942, 949, -1, sizeof(::CCSUsrMsg_ResetHud)},
+  { 950, 957, -1, sizeof(::CCSUsrMsg_GameTitle)},
+  { 958, 965, -1, sizeof(::CCSUsrMsg_RequestState)},
+  { 966, 973, -1, sizeof(::CCSUsrMsg_StopSpectatorMode)},
+  { 974, 981, -1, sizeof(::CCSUsrMsg_DisconnectToLobby)},
+  { 982, 989, -1, sizeof(::CCSUsrMsg_ClientInfo)},
+  { 990, 998, -1, sizeof(::CCSUsrMsg_ServerRankRevealAll)},
+  { 1000, 1009, -1, sizeof(::CCSUsrMsgPreMatchSayText)},
+  { 1012, 1020, -1, sizeof(::CCSUsrMsg_CounterStrafe)},
+  { 1022, 1036, -1, sizeof(::CCSUsrMsg_DamagePrediction)},
+  { 1044, 1052, -1, sizeof(::CCSUsrMsg_RecurringMissionSchema)},
+  { 1054, 1063, -1, sizeof(::CCSUsrMsg_SendPlayerLoadout_LoadoutItem)},
+  { 1066, 1074, -1, sizeof(::CCSUsrMsg_SendPlayerLoadout)},
+  { 1076, 1084, -1, sizeof(::CCSUsrMsg_CustomHudClicked)},
+  { 1086, 1093, -1, sizeof(::CVacNet_GetReviewerInfo_Request)},
+  { 1094, -1, -1, sizeof(::CVacnetReviewerInfo)},
+  { 1101, 1108, -1, sizeof(::CVacNet_GetReviewerInfo_Response)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -2619,6 +2750,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CCSUsrMsg_SendPlayerItemFound_default_instance_._instance,
   &::_CCSUsrMsg_ReloadEffect_default_instance_._instance,
   &::_CCSUsrMsg_WeaponSound_default_instance_._instance,
+  &::_CCSUsrMsg_WeaponMagDrop_default_instance_._instance,
   &::_CCSUsrMsg_UpdateScreenHealthBar_default_instance_._instance,
   &::_CCSUsrMsg_EntityOutlineHighlight_default_instance_._instance,
   &::_CCSUsrMsg_AdjustMoney_default_instance_._instance,
@@ -2651,7 +2783,6 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CCSUsrMsg_MarkAchievement_default_instance_._instance,
   &::_CCSUsrMsg_MatchStatsUpdate_default_instance_._instance,
   &::_CCSUsrMsg_ItemDrop_default_instance_._instance,
-  &::_CCSUsrMsg_GlowPropTurnOff_default_instance_._instance,
   &::_CCSUsrMsg_RoundBackupFilenames_default_instance_._instance,
   &::_CCSUsrMsg_SSUI_default_instance_._instance,
   &::_CCSUsrMsg_SurvivalStats_Fact_default_instance_._instance,
@@ -2676,13 +2807,18 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::_CCSUsrMsg_RequestState_default_instance_._instance,
   &::_CCSUsrMsg_StopSpectatorMode_default_instance_._instance,
   &::_CCSUsrMsg_DisconnectToLobby_default_instance_._instance,
-  &::_CCSUsrMsg_WarmupHasEnded_default_instance_._instance,
   &::_CCSUsrMsg_ClientInfo_default_instance_._instance,
   &::_CCSUsrMsg_ServerRankRevealAll_default_instance_._instance,
   &::_CCSUsrMsgPreMatchSayText_default_instance_._instance,
   &::_CCSUsrMsg_CounterStrafe_default_instance_._instance,
   &::_CCSUsrMsg_DamagePrediction_default_instance_._instance,
   &::_CCSUsrMsg_RecurringMissionSchema_default_instance_._instance,
+  &::_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_default_instance_._instance,
+  &::_CCSUsrMsg_SendPlayerLoadout_default_instance_._instance,
+  &::_CCSUsrMsg_CustomHudClicked_default_instance_._instance,
+  &::_CVacNet_GetReviewerInfo_Request_default_instance_._instance,
+  &::_CVacnetReviewerInfo_default_instance_._instance,
+  &::_CVacNet_GetReviewerInfo_Response_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_cstrike15_5fusermessages_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -2745,212 +2881,226 @@ const char descriptor_table_protodef_cstrike15_5fusermessages_2eproto[] PROTOBUF
   "onSound\022\022\n\006entidx\030\001 \001(\005:\002-1\022\020\n\010origin_x\030"
   "\002 \001(\002\022\020\n\010origin_y\030\003 \001(\002\022\020\n\010origin_z\030\004 \001("
   "\002\022\r\n\005sound\030\005 \001(\t\022\026\n\016game_timestamp\030\006 \001(\002"
-  "\022\033\n\023source_soundscapeid\030\007 \001(\007\"v\n\037CCSUsrM"
-  "sg_UpdateScreenHealthBar\022\022\n\006entidx\030\001 \001(\005"
-  ":\002-1\022\027\n\017healthratio_old\030\002 \001(\002\022\027\n\017healthr"
-  "atio_new\030\003 \001(\002\022\r\n\005style\030\004 \001(\005\"O\n CCSUsrM"
-  "sg_EntityOutlineHighlight\022\022\n\006entidx\030\001 \001("
-  "\005:\002-1\022\027\n\017removehighlight\030\002 \001(\010\"\'\n\025CCSUsr"
-  "Msg_AdjustMoney\022\016\n\006amount\030\001 \001(\005\"U\n\023CCSUs"
-  "rMsg_ReportHit\022\r\n\005pos_x\030\001 \001(\002\022\r\n\005pos_y\030\002"
-  " \001(\002\022\021\n\ttimestamp\030\004 \001(\002\022\r\n\005pos_z\030\003 \001(\002\"Z"
-  "\n\021CCSUsrMsg_KillCam\022\020\n\010obs_mode\030\001 \001(\005\022\030\n"
-  "\014first_target\030\002 \001(\005:\002-1\022\031\n\rsecond_target"
-  "\030\003 \001(\005:\002-1\"\213\001\n\032CCSUsrMsg_DesiredTimescal"
-  "e\022\031\n\021desired_timescale\030\001 \001(\002\022\035\n\025duration"
-  "_realtime_sec\030\002 \001(\002\022\031\n\021interpolator_type"
-  "\030\003 \001(\005\022\030\n\020start_blend_time\030\004 \001(\002\"3\n\032CCSU"
-  "srMsg_CurrentTimescale\022\025\n\rcur_timescale\030"
-  "\001 \001(\002\"Q\n\032CCSUsrMsg_AchievementEvent\022\023\n\013a"
-  "chievement\030\001 \001(\005\022\r\n\005count\030\002 \001(\005\022\017\n\007user_"
-  "id\030\003 \001(\005\"r\n\034CCSUsrMsg_MatchEndConditions"
-  "\022\021\n\tfraglimit\030\001 \001(\005\022\024\n\014mp_maxrounds\030\002 \001("
-  "\005\022\023\n\013mp_winlimit\030\003 \001(\005\022\024\n\014mp_timelimit\030\004"
-  " \001(\002\"\242\001\n\033CCSUsrMsg_PlayerStatsUpdate\022\017\n\007"
-  "version\030\001 \001(\005\0220\n\005stats\030\004 \003(\0132!.CCSUsrMsg"
-  "_PlayerStatsUpdate.Stat\022\017\n\007ehandle\030\005 \001(\r"
-  "\022\013\n\003crc\030\006 \001(\005\032\"\n\004Stat\022\013\n\003idx\030\001 \001(\005\022\r\n\005de"
-  "lta\030\002 \001(\005\"p\n\027CCSUsrMsg_QuestProgress\022\020\n\010"
-  "quest_id\030\001 \001(\r\022\025\n\rnormal_points\030\002 \001(\r\022\024\n"
-  "\014bonus_points\030\003 \001(\r\022\026\n\016is_event_quest\030\004 "
-  "\001(\010\"E\n\036CCSUsrMsg_ScoreLeaderboardData\022#\n"
-  "\004data\030\001 \001(\0132\025.ScoreLeaderboardData\"S\n%CC"
-  "SUsrMsg_PlayerDecalDigitalSignature\022*\n\004d"
-  "ata\030\001 \001(\0132\034.PlayerDecalDigitalSignature\""
-  ":\n\022CCSUsrMsg_XRankGet\022\020\n\010mode_idx\030\001 \001(\005\022"
-  "\022\n\ncontroller\030\002 \001(\005\"K\n\022CCSUsrMsg_XRankUp"
-  "d\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\022"
-  "\017\n\007ranking\030\003 \001(\005\"8\n\030CCSUsrMsg_CallVoteFa"
-  "iled\022\016\n\006reason\030\001 \001(\005\022\014\n\004time\030\002 \001(\005\"\306\001\n\023C"
-  "CSUsrMsg_VoteStart\022\014\n\004team\030\001 \001(\005\022\027\n\013play"
-  "er_slot\030\002 \001(\005:\002-1\022\021\n\tvote_type\030\003 \001(\005\022\020\n\010"
-  "disp_str\030\004 \001(\t\022\023\n\013details_str\030\005 \001(\t\022\026\n\016o"
-  "ther_team_str\030\006 \001(\t\022\026\n\016is_yes_no_vote\030\007 "
-  "\001(\010\022\036\n\022player_slot_target\030\010 \001(\005:\002-1\"\\\n\022C"
-  "CSUsrMsg_VotePass\022\014\n\004team\030\001 \001(\005\022\021\n\tvote_"
-  "type\030\002 \001(\005\022\020\n\010disp_str\030\003 \001(\t\022\023\n\013details_"
-  "str\030\004 \001(\t\"4\n\024CCSUsrMsg_VoteFailed\022\014\n\004tea"
-  "m\030\001 \001(\005\022\016\n\006reason\030\002 \001(\005\"/\n\023CCSUsrMsg_Vot"
-  "eSetup\022\030\n\020potential_issues\030\001 \003(\t\"\276\001\n&CCS"
-  "UsrMsg_SendLastKillerDamageToClient\022\026\n\016n"
-  "um_hits_given\030\001 \001(\005\022\024\n\014damage_given\030\002 \001("
-  "\005\022\026\n\016num_hits_taken\030\003 \001(\005\022\024\n\014damage_take"
-  "n\030\004 \001(\005\022\033\n\023actual_damage_given\030\005 \001(\005\022\033\n\023"
-  "actual_damage_taken\030\006 \001(\005\"\335\001\n\032CCSUsrMsg_"
-  "ServerRankUpdate\022;\n\013rank_update\030\001 \003(\0132&."
-  "CCSUsrMsg_ServerRankUpdate.RankUpdate\032\201\001"
-  "\n\nRankUpdate\022\022\n\naccount_id\030\001 \001(\005\022\020\n\010rank"
-  "_old\030\002 \001(\005\022\020\n\010rank_new\030\003 \001(\005\022\020\n\010num_wins"
-  "\030\004 \001(\005\022\023\n\013rank_change\030\005 \001(\002\022\024\n\014rank_type"
-  "_id\030\006 \001(\005\"Q\n\022CCSUsrMsg_XpUpdate\022;\n\004data\030"
-  "\001 \001(\0132-.CMsgGCCstrike15_v2_GC2ServerNoti"
-  "fyXPRewarded\"$\n\024CCSUsrMsg_ItemPickup\022\014\n\004"
-  "item\030\001 \001(\t\"Y\n\022CCSUsrMsg_ShowMenu\022\030\n\020bits"
-  "_valid_slots\030\001 \001(\005\022\024\n\014display_time\030\002 \001(\005"
-  "\022\023\n\013menu_string\030\003 \001(\t\"!\n\021CCSUsrMsg_BarTi"
-  "me\022\014\n\004time\030\001 \001(\t\"\'\n\024CCSUsrMsg_AmmoDenied"
-  "\022\017\n\007ammoidx\030\001 \001(\005\"0\n\031CCSUsrMsg_MarkAchie"
-  "vement\022\023\n\013achievement\030\001 \001(\t\",\n\032CCSUsrMsg"
-  "_MatchStatsUpdate\022\016\n\006update\030\001 \001(\t\"3\n\022CCS"
-  "UsrMsg_ItemDrop\022\016\n\006itemid\030\001 \001(\003\022\r\n\005death"
-  "\030\002 \001(\010\"/\n\031CCSUsrMsg_GlowPropTurnOff\022\022\n\006e"
-  "ntidx\030\001 \001(\005:\002-1\"b\n\036CCSUsrMsg_RoundBackup"
-  "Filenames\022\r\n\005count\030\001 \001(\005\022\r\n\005index\030\002 \001(\005\022"
-  "\020\n\010filename\030\003 \001(\t\022\020\n\010nicename\030\004 \001(\t\"D\n\016C"
-  "CSUsrMsg_SSUI\022\014\n\004show\030\001 \001(\010\022\022\n\nstart_tim"
-  "e\030\002 \001(\002\022\020\n\010end_time\030\003 \001(\002\"\265\003\n\027CCSUsrMsg_"
-  "SurvivalStats\022\014\n\004xuid\030\001 \001(\004\022,\n\005facts\030\002 \003"
-  "(\0132\035.CCSUsrMsg_SurvivalStats.Fact\0221\n\005use"
-  "rs\030\003 \003(\0132\".CCSUsrMsg_SurvivalStats.Place"
-  "ment\0220\n\007damages\030\005 \003(\0132\037.CCSUsrMsg_Surviv"
-  "alStats.Damage\022\022\n\nticknumber\030\004 \001(\005\032M\n\004Fa"
-  "ct\022\014\n\004type\030\001 \001(\005\022\017\n\007display\030\002 \001(\005\022\r\n\005val"
-  "ue\030\003 \001(\005\022\027\n\017interestingness\030\004 \001(\002\032@\n\tPla"
-  "cement\022\014\n\004xuid\030\001 \001(\004\022\022\n\nteamnumber\030\002 \001(\005"
-  "\022\021\n\tplacement\030\003 \001(\005\032T\n\006Damage\022\014\n\004xuid\030\001 "
-  "\001(\004\022\n\n\002to\030\002 \001(\005\022\017\n\007to_hits\030\003 \001(\005\022\014\n\004from"
-  "\030\004 \001(\005\022\021\n\tfrom_hits\030\005 \001(\005\"\234\003\n\"CCSUsrMsg_"
-  "EndOfMatchAllPlayersData\022E\n\rallplayerdat"
-  "a\030\001 \003(\0132..CCSUsrMsg_EndOfMatchAllPlayers"
-  "Data.PlayerData\022\r\n\005scene\030\002 \001(\005\032>\n\010Accola"
-  "de\022\021\n\teaccolade\030\001 \001(\005\022\r\n\005value\030\002 \001(\002\022\020\n\010"
-  "position\030\003 \001(\005\032\337\001\n\nPlayerData\022\020\n\004slot\030\001 "
-  "\001(\005:\002-1\022\014\n\004xuid\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\022\022\n\nt"
-  "eamnumber\030\004 \001(\005\022@\n\nnomination\030\005 \001(\0132,.CC"
-  "SUsrMsg_EndOfMatchAllPlayersData.Accolad"
-  "e\022)\n\005items\030\006 \003(\0132\032.CEconItemPreviewDataB"
-  "lock\022\023\n\013playercolor\030\007 \001(\005\022\r\n\005isbot\030\010 \001(\010"
-  "\"\350\006\n\034CCSUsrMsg_RoundEndReportData\022H\n\017ini"
-  "t_conditions\030\001 \001(\0132/.CCSUsrMsg_RoundEndR"
-  "eportData.InitialConditions\022B\n\022all_rer_e"
-  "vent_data\030\002 \003(\0132&.CCSUsrMsg_RoundEndRepo"
-  "rtData.RerEvent\032\335\004\n\010RerEvent\022\021\n\ttimestam"
-  "p\030\001 \001(\002\022\026\n\016terrorist_odds\030\002 \001(\005\022\020\n\010ct_al"
-  "ive\030\003 \001(\005\022\017\n\007t_alive\030\004 \001(\005\022B\n\013victim_dat"
-  "a\030\005 \001(\0132-.CCSUsrMsg_RoundEndReportData.R"
-  "erEvent.Victim\022H\n\016objective_data\030\006 \001(\01320"
-  ".CCSUsrMsg_RoundEndReportData.RerEvent.O"
-  "bjective\022F\n\017all_damage_data\030\007 \003(\0132-.CCSU"
-  "srMsg_RoundEndReportData.RerEvent.Damage"
-  "\032s\n\006Victim\022\023\n\013team_number\030\001 \001(\005\022\026\n\nplaye"
-  "rslot\030\002 \001(\005:\002-1\022\014\n\004xuid\030\003 \001(\004\022\r\n\005color\030\004"
-  " \001(\005\022\016\n\006is_bot\030\005 \001(\010\022\017\n\007is_dead\030\006 \001(\010\032\031\n"
-  "\tObjective\022\014\n\004type\030\001 \001(\005\032\234\001\n\006Damage\022\034\n\020o"
-  "ther_playerslot\030\001 \001(\005:\002-1\022\022\n\nother_xuid\030"
-  "\002 \001(\004\022\026\n\016health_removed\030\003 \001(\005\022\020\n\010num_hit"
-  "s\030\004 \001(\005\022\035\n\025return_health_removed\030\005 \001(\005\022\027"
-  "\n\017return_num_hits\030\006 \001(\005\032Z\n\021InitialCondit"
-  "ions\022\026\n\016ct_equip_value\030\001 \001(\005\022\025\n\rt_equip_"
-  "value\030\002 \001(\005\022\026\n\016terrorist_odds\030\003 \001(\005\"\323\001\n\037"
-  "CCSUsrMsg_PostRoundDamageReport\022\022\n\nother"
-  "_xuid\030\001 \001(\004\022\027\n\017given_kill_type\030\002 \001(\005\022\034\n\024"
-  "given_health_removed\030\003 \001(\005\022\026\n\016given_num_"
-  "hits\030\004 \001(\005\022\027\n\017taken_kill_type\030\005 \001(\005\022\034\n\024t"
-  "aken_health_removed\030\006 \001(\005\022\026\n\016taken_num_h"
-  "its\030\007 \001(\005\"*\n\032CCSUsrMsg_CurrentRoundOdds\022"
-  "\014\n\004odds\030\001 \001(\005\"F\n\023CCSUsrMsg_DeepStats\022/\n\005"
-  "stats\030\001 \001(\0132 .CMsgGCCStrike15_ClientDeep"
-  "Stats\"\226\001\n\023CCSUsrMsg_ShootInfo\022\024\n\014frame_n"
-  "umber\030\001 \001(\005\022)\n\021hitbox_transforms\030\002 \003(\0132\016"
-  ".CMsgTransform\022\036\n\tshoot_pos\030\003 \001(\0132\013.CMsg"
-  "Vector\022\036\n\tshoot_dir\030\004 \001(\0132\013.CMsgQAngle\"#"
-  "\n\022CCSUsrMsg_ResetHud\022\r\n\005reset\030\001 \001(\010\"$\n\023C"
-  "CSUsrMsg_GameTitle\022\r\n\005dummy\030\001 \001(\005\"\'\n\026CCS"
-  "UsrMsg_RequestState\022\r\n\005dummy\030\001 \001(\005\",\n\033CC"
-  "SUsrMsg_StopSpectatorMode\022\r\n\005dummy\030\001 \001(\005"
-  "\",\n\033CCSUsrMsg_DisconnectToLobby\022\r\n\005dummy"
-  "\030\001 \001(\005\")\n\030CCSUsrMsg_WarmupHasEnded\022\r\n\005du"
-  "mmy\030\001 \001(\005\"%\n\024CCSUsrMsg_ClientInfo\022\r\n\005dum"
-  "my\030\001 \001(\005\"\204\001\n\035CCSUsrMsg_ServerRankRevealA"
-  "ll\022\035\n\025seconds_till_shutdown\030\001 \001(\005\022D\n\013res"
-  "ervation\030\002 \001(\0132/.CMsgGCCStrike15_v2_Matc"
-  "hmakingGC2ServerReserve\"N\n\030CCSUsrMsgPreM"
-  "atchSayText\022\022\n\naccount_id\030\001 \001(\r\022\014\n\004text\030"
-  "\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010\"O\n\027CCSUsrMsg_Cou"
-  "nterStrafe\022\033\n\023press_to_release_ns\030\001 \001(\005\022"
-  "\027\n\017total_keys_down\030\002 \001(\005\"\361\001\n\032CCSUsrMsg_D"
-  "amagePrediction\022\023\n\013command_num\030\001 \001(\005\022\022\n\n"
-  "pellet_idx\030\002 \001(\005\022\023\n\013victim_slot\030\003 \001(\005\022\036\n"
-  "\026victim_starting_health\030\004 \001(\005\022\025\n\rvictim_"
-  "damage\030\005 \001(\005\022\036\n\tshoot_pos\030\006 \001(\0132\013.CMsgVe"
-  "ctor\022\036\n\tshoot_dir\030\007 \001(\0132\013.CMsgQAngle\022\036\n\t"
-  "aim_punch\030\010 \001(\0132\013.CMsgQAngle\"J\n CCSUsrMs"
-  "g_RecurringMissionSchema\022\016\n\006period\030\001 \001(\r"
-  "\022\026\n\016mission_schema\030\002 \001(\014*\354\017\n\026ECstrike15U"
-  "serMessages\022\023\n\016CS_UM_VGUIMenu\020\255\002\022\021\n\014CS_U"
-  "M_Geiger\020\256\002\022\020\n\013CS_UM_Train\020\257\002\022\022\n\rCS_UM_H"
-  "udText\020\260\002\022\022\n\rCS_UM_SayText\020\261\002\022\023\n\016CS_UM_S"
-  "ayText2\020\262\002\022\022\n\rCS_UM_TextMsg\020\263\002\022\021\n\014CS_UM_"
-  "HudMsg\020\264\002\022\023\n\016CS_UM_ResetHud\020\265\002\022\024\n\017CS_UM_"
-  "GameTitle\020\266\002\022\020\n\013CS_UM_Shake\020\270\002\022\017\n\nCS_UM_"
-  "Fade\020\271\002\022\021\n\014CS_UM_Rumble\020\272\002\022\027\n\022CS_UM_Clos"
-  "eCaption\020\273\002\022\035\n\030CS_UM_CloseCaptionDirect\020"
-  "\274\002\022\024\n\017CS_UM_SendAudio\020\275\002\022\023\n\016CS_UM_RawAud"
-  "io\020\276\002\022\024\n\017CS_UM_VoiceMask\020\277\002\022\027\n\022CS_UM_Req"
-  "uestState\020\300\002\022\021\n\014CS_UM_Damage\020\301\002\022\024\n\017CS_UM"
-  "_RadioText\020\302\002\022\023\n\016CS_UM_HintText\020\303\002\022\026\n\021CS"
-  "_UM_KeyHintText\020\304\002\022%\n CS_UM_ProcessSpott"
-  "edEntityUpdate\020\305\002\022\027\n\022CS_UM_ReloadEffect\020"
-  "\306\002\022\026\n\021CS_UM_AdjustMoney\020\307\002\022\032\n\025CS_UM_Upda"
-  "teTeamMoney\020\310\002\022\034\n\027CS_UM_StopSpectatorMod"
-  "e\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033\n\026CS_UM_Desire"
-  "dTimescale\020\313\002\022\033\n\026CS_UM_CurrentTimescale\020"
-  "\314\002\022\033\n\026CS_UM_AchievementEvent\020\315\002\022\035\n\030CS_UM"
-  "_MatchEndConditions\020\316\002\022\034\n\027CS_UM_Disconne"
-  "ctToLobby\020\317\002\022\034\n\027CS_UM_PlayerStatsUpdate\020"
-  "\320\002\022\031\n\024CS_UM_WarmupHasEnded\020\322\002\022\025\n\020CS_UM_C"
-  "lientInfo\020\323\002\022\023\n\016CS_UM_XRankGet\020\324\002\022\023\n\016CS_"
-  "UM_XRankUpd\020\325\002\022\031\n\024CS_UM_CallVoteFailed\020\331"
-  "\002\022\024\n\017CS_UM_VoteStart\020\332\002\022\023\n\016CS_UM_VotePas"
-  "s\020\333\002\022\025\n\020CS_UM_VoteFailed\020\334\002\022\024\n\017CS_UM_Vot"
-  "eSetup\020\335\002\022\036\n\031CS_UM_ServerRankRevealAll\020\336"
-  "\002\022\'\n\"CS_UM_SendLastKillerDamageToClient\020"
-  "\337\002\022\033\n\026CS_UM_ServerRankUpdate\020\340\002\022\025\n\020CS_UM"
-  "_ItemPickup\020\341\002\022\023\n\016CS_UM_ShowMenu\020\342\002\022\022\n\rC"
-  "S_UM_BarTime\020\343\002\022\025\n\020CS_UM_AmmoDenied\020\344\002\022\032"
-  "\n\025CS_UM_MarkAchievement\020\345\002\022\033\n\026CS_UM_Matc"
-  "hStatsUpdate\020\346\002\022\023\n\016CS_UM_ItemDrop\020\347\002\022\032\n\025"
-  "CS_UM_GlowPropTurnOff\020\350\002\022\036\n\031CS_UM_SendPl"
-  "ayerItemDrops\020\351\002\022\037\n\032CS_UM_RoundBackupFil"
-  "enames\020\352\002\022\036\n\031CS_UM_SendPlayerItemFound\020\353"
-  "\002\022\024\n\017CS_UM_ReportHit\020\354\002\022\023\n\016CS_UM_XpUpdat"
-  "e\020\355\002\022\030\n\023CS_UM_QuestProgress\020\356\002\022\037\n\032CS_UM_"
-  "ScoreLeaderboardData\020\357\002\022&\n!CS_UM_PlayerD"
-  "ecalDigitalSignature\020\360\002\022\026\n\021CS_UM_WeaponS"
-  "ound\020\361\002\022 \n\033CS_UM_UpdateScreenHealthBar\020\362"
-  "\002\022!\n\034CS_UM_EntityOutlineHighlight\020\363\002\022\017\n\n"
-  "CS_UM_SSUI\020\364\002\022\030\n\023CS_UM_SurvivalStats\020\365\002\022"
-  "\035\n\030CS_UM_DisconnectToLobby2\020\366\002\022#\n\036CS_UM_"
-  "EndOfMatchAllPlayersData\020\367\002\022 \n\033CS_UM_Pos"
-  "tRoundDamageReport\020\370\002\022\035\n\030CS_UM_RoundEndR"
-  "eportData\020\373\002\022\033\n\026CS_UM_CurrentRoundOdds\020\374"
-  "\002\022\024\n\017CS_UM_DeepStats\020\375\002\022\024\n\017CS_UM_ShootIn"
-  "fo\020\377\002\022\030\n\023CS_UM_CounterStrafe\020\201\003\022\033\n\026CS_UM"
-  "_DamagePrediction\020\202\003\022!\n\034CS_UM_RecurringM"
-  "issionSchema\020\203\003*\210\001\n\"ECSUsrMsg_Disconnect"
-  "ToLobby_Action\0220\n,k_ECSUsrMsg_Disconnect"
-  "ToLobby_Action_Default\020\000\0220\n,k_ECSUsrMsg_"
-  "DisconnectToLobby_Action_GoQueue\020\001"
+  "\022\033\n\023source_soundscapeid\030\007 \001(\007\"[\n\027CCSUsrM"
+  "sg_WeaponMagDrop\022\022\n\006entidx\030\001 \001(\005:\002-1\022\026\n\016"
+  "secondary_data\030\002 \001(\005\022\024\n\014server_event\030\003 \001"
+  "(\010\"v\n\037CCSUsrMsg_UpdateScreenHealthBar\022\022\n"
+  "\006entidx\030\001 \001(\005:\002-1\022\027\n\017healthratio_old\030\002 \001"
+  "(\002\022\027\n\017healthratio_new\030\003 \001(\002\022\r\n\005style\030\004 \001"
+  "(\005\"O\n CCSUsrMsg_EntityOutlineHighlight\022\022"
+  "\n\006entidx\030\001 \001(\005:\002-1\022\027\n\017removehighlight\030\002 "
+  "\001(\010\"\'\n\025CCSUsrMsg_AdjustMoney\022\016\n\006amount\030\001"
+  " \001(\005\"U\n\023CCSUsrMsg_ReportHit\022\r\n\005pos_x\030\001 \001"
+  "(\002\022\r\n\005pos_y\030\002 \001(\002\022\021\n\ttimestamp\030\004 \001(\002\022\r\n\005"
+  "pos_z\030\003 \001(\002\"Z\n\021CCSUsrMsg_KillCam\022\020\n\010obs_"
+  "mode\030\001 \001(\005\022\030\n\014first_target\030\002 \001(\005:\002-1\022\031\n\r"
+  "second_target\030\003 \001(\005:\002-1\"\213\001\n\032CCSUsrMsg_De"
+  "siredTimescale\022\031\n\021desired_timescale\030\001 \001("
+  "\002\022\035\n\025duration_realtime_sec\030\002 \001(\002\022\031\n\021inte"
+  "rpolator_type\030\003 \001(\005\022\030\n\020start_blend_time\030"
+  "\004 \001(\002\"3\n\032CCSUsrMsg_CurrentTimescale\022\025\n\rc"
+  "ur_timescale\030\001 \001(\002\"Q\n\032CCSUsrMsg_Achievem"
+  "entEvent\022\023\n\013achievement\030\001 \001(\005\022\r\n\005count\030\002"
+  " \001(\005\022\017\n\007user_id\030\003 \001(\005\"r\n\034CCSUsrMsg_Match"
+  "EndConditions\022\021\n\tfraglimit\030\001 \001(\005\022\024\n\014mp_m"
+  "axrounds\030\002 \001(\005\022\023\n\013mp_winlimit\030\003 \001(\005\022\024\n\014m"
+  "p_timelimit\030\004 \001(\002\"\242\001\n\033CCSUsrMsg_PlayerSt"
+  "atsUpdate\022\017\n\007version\030\001 \001(\005\0220\n\005stats\030\004 \003("
+  "\0132!.CCSUsrMsg_PlayerStatsUpdate.Stat\022\017\n\007"
+  "ehandle\030\005 \001(\r\022\013\n\003crc\030\006 \001(\005\032\"\n\004Stat\022\013\n\003id"
+  "x\030\001 \001(\005\022\r\n\005delta\030\002 \001(\005\"p\n\027CCSUsrMsg_Ques"
+  "tProgress\022\020\n\010quest_id\030\001 \001(\r\022\025\n\rnormal_po"
+  "ints\030\002 \001(\r\022\024\n\014bonus_points\030\003 \001(\r\022\026\n\016is_e"
+  "vent_quest\030\004 \001(\010\"E\n\036CCSUsrMsg_ScoreLeade"
+  "rboardData\022#\n\004data\030\001 \001(\0132\025.ScoreLeaderbo"
+  "ardData\"S\n%CCSUsrMsg_PlayerDecalDigitalS"
+  "ignature\022*\n\004data\030\001 \001(\0132\034.PlayerDecalDigi"
+  "talSignature\":\n\022CCSUsrMsg_XRankGet\022\020\n\010mo"
+  "de_idx\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\"K\n\022CCSU"
+  "srMsg_XRankUpd\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\ncont"
+  "roller\030\002 \001(\005\022\017\n\007ranking\030\003 \001(\005\"8\n\030CCSUsrM"
+  "sg_CallVoteFailed\022\016\n\006reason\030\001 \001(\005\022\014\n\004tim"
+  "e\030\002 \001(\005\"\306\001\n\023CCSUsrMsg_VoteStart\022\014\n\004team\030"
+  "\001 \001(\005\022\027\n\013player_slot\030\002 \001(\005:\002-1\022\021\n\tvote_t"
+  "ype\030\003 \001(\005\022\020\n\010disp_str\030\004 \001(\t\022\023\n\013details_s"
+  "tr\030\005 \001(\t\022\026\n\016other_team_str\030\006 \001(\t\022\026\n\016is_y"
+  "es_no_vote\030\007 \001(\010\022\036\n\022player_slot_target\030\010"
+  " \001(\005:\002-1\"\\\n\022CCSUsrMsg_VotePass\022\014\n\004team\030\001"
+  " \001(\005\022\021\n\tvote_type\030\002 \001(\005\022\020\n\010disp_str\030\003 \001("
+  "\t\022\023\n\013details_str\030\004 \001(\t\"4\n\024CCSUsrMsg_Vote"
+  "Failed\022\014\n\004team\030\001 \001(\005\022\016\n\006reason\030\002 \001(\005\"/\n\023"
+  "CCSUsrMsg_VoteSetup\022\030\n\020potential_issues\030"
+  "\001 \003(\t\"\276\001\n&CCSUsrMsg_SendLastKillerDamage"
+  "ToClient\022\026\n\016num_hits_given\030\001 \001(\005\022\024\n\014dama"
+  "ge_given\030\002 \001(\005\022\026\n\016num_hits_taken\030\003 \001(\005\022\024"
+  "\n\014damage_taken\030\004 \001(\005\022\033\n\023actual_damage_gi"
+  "ven\030\005 \001(\005\022\033\n\023actual_damage_taken\030\006 \001(\005\"\335"
+  "\001\n\032CCSUsrMsg_ServerRankUpdate\022;\n\013rank_up"
+  "date\030\001 \003(\0132&.CCSUsrMsg_ServerRankUpdate."
+  "RankUpdate\032\201\001\n\nRankUpdate\022\022\n\naccount_id\030"
+  "\001 \001(\005\022\020\n\010rank_old\030\002 \001(\005\022\020\n\010rank_new\030\003 \001("
+  "\005\022\020\n\010num_wins\030\004 \001(\005\022\023\n\013rank_change\030\005 \001(\002"
+  "\022\024\n\014rank_type_id\030\006 \001(\005\"Q\n\022CCSUsrMsg_XpUp"
+  "date\022;\n\004data\030\001 \001(\0132-.CMsgGCCstrike15_v2_"
+  "GC2ServerNotifyXPRewarded\"$\n\024CCSUsrMsg_I"
+  "temPickup\022\014\n\004item\030\001 \001(\t\"Y\n\022CCSUsrMsg_Sho"
+  "wMenu\022\030\n\020bits_valid_slots\030\001 \001(\005\022\024\n\014displ"
+  "ay_time\030\002 \001(\005\022\023\n\013menu_string\030\003 \001(\t\"!\n\021CC"
+  "SUsrMsg_BarTime\022\014\n\004time\030\001 \001(\t\"\'\n\024CCSUsrM"
+  "sg_AmmoDenied\022\017\n\007ammoidx\030\001 \001(\005\"0\n\031CCSUsr"
+  "Msg_MarkAchievement\022\023\n\013achievement\030\001 \001(\t"
+  "\",\n\032CCSUsrMsg_MatchStatsUpdate\022\016\n\006update"
+  "\030\001 \001(\t\"3\n\022CCSUsrMsg_ItemDrop\022\016\n\006itemid\030\001"
+  " \001(\003\022\r\n\005death\030\002 \001(\010\"b\n\036CCSUsrMsg_RoundBa"
+  "ckupFilenames\022\r\n\005count\030\001 \001(\005\022\r\n\005index\030\002 "
+  "\001(\005\022\020\n\010filename\030\003 \001(\t\022\020\n\010nicename\030\004 \001(\t\""
+  "D\n\016CCSUsrMsg_SSUI\022\014\n\004show\030\001 \001(\010\022\022\n\nstart"
+  "_time\030\002 \001(\002\022\020\n\010end_time\030\003 \001(\002\"\265\003\n\027CCSUsr"
+  "Msg_SurvivalStats\022\014\n\004xuid\030\001 \001(\004\022,\n\005facts"
+  "\030\002 \003(\0132\035.CCSUsrMsg_SurvivalStats.Fact\0221\n"
+  "\005users\030\003 \003(\0132\".CCSUsrMsg_SurvivalStats.P"
+  "lacement\0220\n\007damages\030\005 \003(\0132\037.CCSUsrMsg_Su"
+  "rvivalStats.Damage\022\022\n\nticknumber\030\004 \001(\005\032M"
+  "\n\004Fact\022\014\n\004type\030\001 \001(\005\022\017\n\007display\030\002 \001(\005\022\r\n"
+  "\005value\030\003 \001(\005\022\027\n\017interestingness\030\004 \001(\002\032@\n"
+  "\tPlacement\022\014\n\004xuid\030\001 \001(\004\022\022\n\nteamnumber\030\002"
+  " \001(\005\022\021\n\tplacement\030\003 \001(\005\032T\n\006Damage\022\014\n\004xui"
+  "d\030\001 \001(\004\022\n\n\002to\030\002 \001(\005\022\017\n\007to_hits\030\003 \001(\005\022\014\n\004"
+  "from\030\004 \001(\005\022\021\n\tfrom_hits\030\005 \001(\005\"\243\003\n\"CCSUsr"
+  "Msg_EndOfMatchAllPlayersData\022E\n\rallplaye"
+  "rdata\030\001 \003(\0132..CCSUsrMsg_EndOfMatchAllPla"
+  "yersData.PlayerData\022\r\n\005scene\030\002 \001(\005\032>\n\010Ac"
+  "colade\022\021\n\teaccolade\030\001 \001(\005\022\r\n\005value\030\002 \001(\002"
+  "\022\020\n\010position\030\003 \001(\005\032\337\001\n\nPlayerData\022\020\n\004slo"
+  "t\030\001 \001(\005:\002-1\022\014\n\004xuid\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\022"
+  "\022\n\nteamnumber\030\004 \001(\005\022@\n\nnomination\030\005 \001(\0132"
+  ",.CCSUsrMsg_EndOfMatchAllPlayersData.Acc"
+  "olade\022)\n\005items\030\006 \003(\0132\032.CEconItemPreviewD"
+  "ataBlock\022\023\n\013playercolor\030\007 \001(\005\022\r\n\005isbot\030\010"
+  " \001(\010:\005\200\265\030\200 \"\350\006\n\034CCSUsrMsg_RoundEndReport"
+  "Data\022H\n\017init_conditions\030\001 \001(\0132/.CCSUsrMs"
+  "g_RoundEndReportData.InitialConditions\022B"
+  "\n\022all_rer_event_data\030\002 \003(\0132&.CCSUsrMsg_R"
+  "oundEndReportData.RerEvent\032\335\004\n\010RerEvent\022"
+  "\021\n\ttimestamp\030\001 \001(\002\022\026\n\016terrorist_odds\030\002 \001"
+  "(\005\022\020\n\010ct_alive\030\003 \001(\005\022\017\n\007t_alive\030\004 \001(\005\022B\n"
+  "\013victim_data\030\005 \001(\0132-.CCSUsrMsg_RoundEndR"
+  "eportData.RerEvent.Victim\022H\n\016objective_d"
+  "ata\030\006 \001(\01320.CCSUsrMsg_RoundEndReportData"
+  ".RerEvent.Objective\022F\n\017all_damage_data\030\007"
+  " \003(\0132-.CCSUsrMsg_RoundEndReportData.RerE"
+  "vent.Damage\032s\n\006Victim\022\023\n\013team_number\030\001 \001"
+  "(\005\022\026\n\nplayerslot\030\002 \001(\005:\002-1\022\014\n\004xuid\030\003 \001(\004"
+  "\022\r\n\005color\030\004 \001(\005\022\016\n\006is_bot\030\005 \001(\010\022\017\n\007is_de"
+  "ad\030\006 \001(\010\032\031\n\tObjective\022\014\n\004type\030\001 \001(\005\032\234\001\n\006"
+  "Damage\022\034\n\020other_playerslot\030\001 \001(\005:\002-1\022\022\n\n"
+  "other_xuid\030\002 \001(\004\022\026\n\016health_removed\030\003 \001(\005"
+  "\022\020\n\010num_hits\030\004 \001(\005\022\035\n\025return_health_remo"
+  "ved\030\005 \001(\005\022\027\n\017return_num_hits\030\006 \001(\005\032Z\n\021In"
+  "itialConditions\022\026\n\016ct_equip_value\030\001 \001(\005\022"
+  "\025\n\rt_equip_value\030\002 \001(\005\022\026\n\016terrorist_odds"
+  "\030\003 \001(\005\"\323\001\n\037CCSUsrMsg_PostRoundDamageRepo"
+  "rt\022\022\n\nother_xuid\030\001 \001(\004\022\027\n\017given_kill_typ"
+  "e\030\002 \001(\005\022\034\n\024given_health_removed\030\003 \001(\005\022\026\n"
+  "\016given_num_hits\030\004 \001(\005\022\027\n\017taken_kill_type"
+  "\030\005 \001(\005\022\034\n\024taken_health_removed\030\006 \001(\005\022\026\n\016"
+  "taken_num_hits\030\007 \001(\005\"*\n\032CCSUsrMsg_Curren"
+  "tRoundOdds\022\014\n\004odds\030\001 \001(\005\"F\n\023CCSUsrMsg_De"
+  "epStats\022/\n\005stats\030\001 \001(\0132 .CMsgGCCStrike15"
+  "_ClientDeepStats\"\226\001\n\023CCSUsrMsg_ShootInfo"
+  "\022\024\n\014frame_number\030\001 \001(\005\022)\n\021hitbox_transfo"
+  "rms\030\002 \003(\0132\016.CMsgTransform\022\036\n\tshoot_pos\030\003"
+  " \001(\0132\013.CMsgVector\022\036\n\tshoot_dir\030\004 \001(\0132\013.C"
+  "MsgQAngle\"#\n\022CCSUsrMsg_ResetHud\022\r\n\005reset"
+  "\030\001 \001(\010\"$\n\023CCSUsrMsg_GameTitle\022\r\n\005dummy\030\001"
+  " \001(\005\"\'\n\026CCSUsrMsg_RequestState\022\r\n\005dummy\030"
+  "\001 \001(\005\",\n\033CCSUsrMsg_StopSpectatorMode\022\r\n\005"
+  "dummy\030\001 \001(\005\",\n\033CCSUsrMsg_DisconnectToLob"
+  "by\022\r\n\005dummy\030\001 \001(\005\"%\n\024CCSUsrMsg_ClientInf"
+  "o\022\r\n\005dummy\030\001 \001(\005\"\204\001\n\035CCSUsrMsg_ServerRan"
+  "kRevealAll\022\035\n\025seconds_till_shutdown\030\001 \001("
+  "\005\022D\n\013reservation\030\002 \001(\0132/.CMsgGCCStrike15"
+  "_v2_MatchmakingGC2ServerReserve\"N\n\030CCSUs"
+  "rMsgPreMatchSayText\022\022\n\naccount_id\030\001 \001(\r\022"
+  "\014\n\004text\030\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010\"O\n\027CCSUs"
+  "rMsg_CounterStrafe\022\033\n\023press_to_release_n"
+  "s\030\001 \001(\005\022\027\n\017total_keys_down\030\002 \001(\005\"\361\001\n\032CCS"
+  "UsrMsg_DamagePrediction\022\023\n\013command_num\030\001"
+  " \001(\005\022\022\n\npellet_idx\030\002 \001(\005\022\023\n\013victim_slot\030"
+  "\003 \001(\005\022\036\n\026victim_starting_health\030\004 \001(\005\022\025\n"
+  "\rvictim_damage\030\005 \001(\005\022\036\n\tshoot_pos\030\006 \001(\0132"
+  "\013.CMsgVector\022\036\n\tshoot_dir\030\007 \001(\0132\013.CMsgQA"
+  "ngle\022\036\n\taim_punch\030\010 \001(\0132\013.CMsgQAngle\"J\n "
+  "CCSUsrMsg_RecurringMissionSchema\022\016\n\006peri"
+  "od\030\001 \001(\r\022\026\n\016mission_schema\030\002 \001(\014\"\322\001\n\033CCS"
+  "UsrMsg_SendPlayerLoadout\0229\n\007loadout\030\001 \003("
+  "\0132(.CCSUsrMsg_SendPlayerLoadout.LoadoutI"
+  "tem\022\026\n\nplayerslot\030\002 \001(\005:\002-1\032X\n\013LoadoutIt"
+  "em\022-\n\tecon_item\030\001 \001(\0132\032.CEconItemPreview"
+  "DataBlock\022\014\n\004team\030\002 \001(\005\022\014\n\004slot\030\003 \001(\005:\006\200"
+  "\265\030\200\200\001\"T\n\032CCSUsrMsg_CustomHudClicked\022#\n\021c"
+  "ustom_hud_layout\030\001 \001(\r:\01016777215\022\021\n\tbutt"
+  "on_id\030\002 \001(\t\"0\n\037CVacNet_GetReviewerInfo_R"
+  "equest\022\r\n\005appid\030\001 \001(\r\"*\n\023CVacnetReviewer"
+  "Info\022\023\n\013permissions\030\001 \003(\t\"O\n CVacNet_Get"
+  "ReviewerInfo_Response\022+\n\rreviewer_info\030\001"
+  " \001(\0132\024.CVacnetReviewerInfo*\266\020\n\026ECstrike1"
+  "5UserMessages\022\023\n\016CS_UM_VGUIMenu\020\255\002\022\021\n\014CS"
+  "_UM_Geiger\020\256\002\022\020\n\013CS_UM_Train\020\257\002\022\022\n\rCS_UM"
+  "_HudText\020\260\002\022\035\n\030CS_UM_SayText_CSGOLegacy\020"
+  "\261\002\022\036\n\031CS_UM_SayText2_CSGOLegacy\020\262\002\022\035\n\030CS"
+  "_UM_TextMsg_CSGOLegacy\020\263\002\022\021\n\014CS_UM_HudMs"
+  "g\020\264\002\022\023\n\016CS_UM_ResetHud\020\265\002\022\024\n\017CS_UM_GameT"
+  "itle\020\266\002\022\020\n\013CS_UM_Shake\020\270\002\022\017\n\nCS_UM_Fade\020"
+  "\271\002\022\021\n\014CS_UM_Rumble\020\272\002\022\027\n\022CS_UM_CloseCapt"
+  "ion\020\273\002\022\035\n\030CS_UM_CloseCaptionDirect\020\274\002\022\024\n"
+  "\017CS_UM_SendAudio\020\275\002\022\023\n\016CS_UM_RawAudio\020\276\002"
+  "\022\024\n\017CS_UM_VoiceMask\020\277\002\022\027\n\022CS_UM_RequestS"
+  "tate\020\300\002\022\021\n\014CS_UM_Damage\020\301\002\022\024\n\017CS_UM_Radi"
+  "oText\020\302\002\022\023\n\016CS_UM_HintText\020\303\002\022\026\n\021CS_UM_K"
+  "eyHintText\020\304\002\022%\n CS_UM_ProcessSpottedEnt"
+  "ityUpdate\020\305\002\022\027\n\022CS_UM_ReloadEffect\020\306\002\022\026\n"
+  "\021CS_UM_AdjustMoney\020\307\002\022%\n CS_UM_UpdateTea"
+  "mMoney_CSGOLegacy\020\310\002\022\034\n\027CS_UM_StopSpecta"
+  "torMode\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033\n\026CS_UM_"
+  "DesiredTimescale\020\313\002\022\033\n\026CS_UM_CurrentTime"
+  "scale\020\314\002\022\033\n\026CS_UM_AchievementEvent\020\315\002\022\035\n"
+  "\030CS_UM_MatchEndConditions\020\316\002\022\034\n\027CS_UM_Di"
+  "sconnectToLobby\020\317\002\022\034\n\027CS_UM_PlayerStatsU"
+  "pdate\020\320\002\022\025\n\020CS_UM_ClientInfo\020\323\002\022\023\n\016CS_UM"
+  "_XRankGet\020\324\002\022\023\n\016CS_UM_XRankUpd\020\325\002\022\031\n\024CS_"
+  "UM_CallVoteFailed\020\331\002\022\024\n\017CS_UM_VoteStart\020"
+  "\332\002\022\023\n\016CS_UM_VotePass\020\333\002\022\025\n\020CS_UM_VoteFai"
+  "led\020\334\002\022\024\n\017CS_UM_VoteSetup\020\335\002\022\036\n\031CS_UM_Se"
+  "rverRankRevealAll\020\336\002\022\'\n\"CS_UM_SendLastKi"
+  "llerDamageToClient\020\337\002\022\033\n\026CS_UM_ServerRan"
+  "kUpdate\020\340\002\022\025\n\020CS_UM_ItemPickup\020\341\002\022\023\n\016CS_"
+  "UM_ShowMenu\020\342\002\022\022\n\rCS_UM_BarTime\020\343\002\022\025\n\020CS"
+  "_UM_AmmoDenied\020\344\002\022\032\n\025CS_UM_MarkAchieveme"
+  "nt\020\345\002\022\033\n\026CS_UM_MatchStatsUpdate\020\346\002\022\023\n\016CS"
+  "_UM_ItemDrop\020\347\002\022\036\n\031CS_UM_SendPlayerItemD"
+  "rops\020\351\002\022\037\n\032CS_UM_RoundBackupFilenames\020\352\002"
+  "\022\036\n\031CS_UM_SendPlayerItemFound\020\353\002\022\024\n\017CS_U"
+  "M_ReportHit\020\354\002\022\023\n\016CS_UM_XpUpdate\020\355\002\022\030\n\023C"
+  "S_UM_QuestProgress\020\356\002\022\037\n\032CS_UM_ScoreLead"
+  "erboardData\020\357\002\022&\n!CS_UM_PlayerDecalDigit"
+  "alSignature\020\360\002\022\026\n\021CS_UM_WeaponSound\020\361\002\022 "
+  "\n\033CS_UM_UpdateScreenHealthBar\020\362\002\022!\n\034CS_U"
+  "M_EntityOutlineHighlight\020\363\002\022\017\n\nCS_UM_SSU"
+  "I\020\364\002\022\030\n\023CS_UM_SurvivalStats\020\365\002\022\035\n\030CS_UM_"
+  "DisconnectToLobby2\020\366\002\022#\n\036CS_UM_EndOfMatc"
+  "hAllPlayersData\020\367\002\022 \n\033CS_UM_PostRoundDam"
+  "ageReport\020\370\002\022\035\n\030CS_UM_RoundEndReportData"
+  "\020\373\002\022\033\n\026CS_UM_CurrentRoundOdds\020\374\002\022\024\n\017CS_U"
+  "M_DeepStats\020\375\002\022\024\n\017CS_UM_ShootInfo\020\377\002\022\030\n\023"
+  "CS_UM_CounterStrafe\020\201\003\022\033\n\026CS_UM_DamagePr"
+  "ediction\020\202\003\022!\n\034CS_UM_RecurringMissionSch"
+  "ema\020\203\003\022\034\n\027CS_UM_SendPlayerLoadout\020\204\003\022\030\n\023"
+  "CS_UM_WeaponMagDrop\020\205\003\022\033\n\026CS_UM_CustomHu"
+  "dClicked\020\206\003*\210\001\n\"ECSUsrMsg_DisconnectToLo"
+  "bby_Action\0220\n,k_ECSUsrMsg_DisconnectToLo"
+  "bby_Action_Default\020\000\0220\n,k_ECSUsrMsg_Disc"
+  "onnectToLobby_Action_GoQueue\020\001"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_cstrike15_5fusermessages_2eproto_deps[2] = {
   &::descriptor_table_cstrike15_5fgcmessages_2eproto,
@@ -2958,9 +3108,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_cstrike15_5fusermes
 };
 static ::_pbi::once_flag descriptor_table_cstrike15_5fusermessages_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_cstrike15_5fusermessages_2eproto = {
-    false, false, 10594, descriptor_table_protodef_cstrike15_5fusermessages_2eproto,
+    false, false, 11150, descriptor_table_protodef_cstrike15_5fusermessages_2eproto,
     "cstrike15_usermessages.proto",
-    &descriptor_table_cstrike15_5fusermessages_2eproto_once, descriptor_table_cstrike15_5fusermessages_2eproto_deps, 2, 89,
+    &descriptor_table_cstrike15_5fusermessages_2eproto_once, descriptor_table_cstrike15_5fusermessages_2eproto_deps, 2, 94,
     schemas, file_default_instances, TableStruct_cstrike15_5fusermessages_2eproto::offsets,
     file_level_metadata_cstrike15_5fusermessages_2eproto, file_level_enum_descriptors_cstrike15_5fusermessages_2eproto,
     file_level_service_descriptors_cstrike15_5fusermessages_2eproto,
@@ -3012,7 +3162,6 @@ bool ECstrike15UserMessages_IsValid(int value) {
     case 334:
     case 335:
     case 336:
-    case 338:
     case 339:
     case 340:
     case 341:
@@ -3031,7 +3180,6 @@ bool ECstrike15UserMessages_IsValid(int value) {
     case 357:
     case 358:
     case 359:
-    case 360:
     case 361:
     case 362:
     case 363:
@@ -3055,6 +3203,9 @@ bool ECstrike15UserMessages_IsValid(int value) {
     case 385:
     case 386:
     case 387:
+    case 388:
+    case 389:
+    case 390:
       return true;
     default:
       return false;
@@ -10146,6 +10297,273 @@ void CCSUsrMsg_WeaponSound::InternalSwap(CCSUsrMsg_WeaponSound* other) {
 
 // ===================================================================
 
+class CCSUsrMsg_WeaponMagDrop::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CCSUsrMsg_WeaponMagDrop>()._impl_._has_bits_);
+  static void set_has_entidx(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_secondary_data(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_server_event(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+CCSUsrMsg_WeaponMagDrop::CCSUsrMsg_WeaponMagDrop(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_WeaponMagDrop)
+}
+CCSUsrMsg_WeaponMagDrop::CCSUsrMsg_WeaponMagDrop(const CCSUsrMsg_WeaponMagDrop& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CCSUsrMsg_WeaponMagDrop* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.secondary_data_){}
+    , decltype(_impl_.server_event_){}
+    , decltype(_impl_.entidx_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.secondary_data_, &from._impl_.secondary_data_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.entidx_) -
+    reinterpret_cast<char*>(&_impl_.secondary_data_)) + sizeof(_impl_.entidx_));
+  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_WeaponMagDrop)
+}
+
+inline void CCSUsrMsg_WeaponMagDrop::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.secondary_data_){0}
+    , decltype(_impl_.server_event_){false}
+    , decltype(_impl_.entidx_){-1}
+  };
+}
+
+CCSUsrMsg_WeaponMagDrop::~CCSUsrMsg_WeaponMagDrop() {
+  // @@protoc_insertion_point(destructor:CCSUsrMsg_WeaponMagDrop)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CCSUsrMsg_WeaponMagDrop::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void CCSUsrMsg_WeaponMagDrop::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CCSUsrMsg_WeaponMagDrop::Clear() {
+// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_WeaponMagDrop)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    ::memset(&_impl_.secondary_data_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.server_event_) -
+        reinterpret_cast<char*>(&_impl_.secondary_data_)) + sizeof(_impl_.server_event_));
+    _impl_.entidx_ = -1;
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CCSUsrMsg_WeaponMagDrop::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int32 entidx = 1 [default = -1];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_entidx(&has_bits);
+          _impl_.entidx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 secondary_data = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_secondary_data(&has_bits);
+          _impl_.secondary_data_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bool server_event = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_server_event(&has_bits);
+          _impl_.server_event_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CCSUsrMsg_WeaponMagDrop::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_WeaponMagDrop)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int32 entidx = 1 [default = -1];
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_entidx(), target);
+  }
+
+  // optional int32 secondary_data = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_secondary_data(), target);
+  }
+
+  // optional bool server_event = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_server_event(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_WeaponMagDrop)
+  return target;
+}
+
+size_t CCSUsrMsg_WeaponMagDrop::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_WeaponMagDrop)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional int32 secondary_data = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_secondary_data());
+    }
+
+    // optional bool server_event = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+    // optional int32 entidx = 1 [default = -1];
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_entidx());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_WeaponMagDrop::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CCSUsrMsg_WeaponMagDrop::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_WeaponMagDrop::GetClassData() const { return &_class_data_; }
+
+
+void CCSUsrMsg_WeaponMagDrop::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CCSUsrMsg_WeaponMagDrop*>(&to_msg);
+  auto& from = static_cast<const CCSUsrMsg_WeaponMagDrop&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_WeaponMagDrop)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.secondary_data_ = from._impl_.secondary_data_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.server_event_ = from._impl_.server_event_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.entidx_ = from._impl_.entidx_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CCSUsrMsg_WeaponMagDrop::CopyFrom(const CCSUsrMsg_WeaponMagDrop& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_WeaponMagDrop)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CCSUsrMsg_WeaponMagDrop::IsInitialized() const {
+  return true;
+}
+
+void CCSUsrMsg_WeaponMagDrop::InternalSwap(CCSUsrMsg_WeaponMagDrop* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CCSUsrMsg_WeaponMagDrop, _impl_.server_event_)
+      + sizeof(CCSUsrMsg_WeaponMagDrop::_impl_.server_event_)
+      - PROTOBUF_FIELD_OFFSET(CCSUsrMsg_WeaponMagDrop, _impl_.secondary_data_)>(
+          reinterpret_cast<char*>(&_impl_.secondary_data_),
+          reinterpret_cast<char*>(&other->_impl_.secondary_data_));
+  swap(_impl_.entidx_, other->_impl_.entidx_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_WeaponMagDrop::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[25]);
+}
+
+// ===================================================================
+
 class CCSUsrMsg_UpdateScreenHealthBar::_Internal {
  public:
   using HasBits = decltype(std::declval<CCSUsrMsg_UpdateScreenHealthBar>()._impl_._has_bits_);
@@ -10436,7 +10854,7 @@ void CCSUsrMsg_UpdateScreenHealthBar::InternalSwap(CCSUsrMsg_UpdateScreenHealthB
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_UpdateScreenHealthBar::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[25]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[26]);
 }
 
 // ===================================================================
@@ -10668,7 +11086,7 @@ void CCSUsrMsg_EntityOutlineHighlight::InternalSwap(CCSUsrMsg_EntityOutlineHighl
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_EntityOutlineHighlight::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[26]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[27]);
 }
 
 // ===================================================================
@@ -10859,7 +11277,7 @@ void CCSUsrMsg_AdjustMoney::InternalSwap(CCSUsrMsg_AdjustMoney* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_AdjustMoney::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[27]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[28]);
 }
 
 // ===================================================================
@@ -11152,7 +11570,7 @@ void CCSUsrMsg_ReportHit::InternalSwap(CCSUsrMsg_ReportHit* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ReportHit::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[28]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[29]);
 }
 
 // ===================================================================
@@ -11414,7 +11832,7 @@ void CCSUsrMsg_KillCam::InternalSwap(CCSUsrMsg_KillCam* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_KillCam::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[29]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[30]);
 }
 
 // ===================================================================
@@ -11707,7 +12125,7 @@ void CCSUsrMsg_DesiredTimescale::InternalSwap(CCSUsrMsg_DesiredTimescale* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_DesiredTimescale::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[30]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[31]);
 }
 
 // ===================================================================
@@ -11898,7 +12316,7 @@ void CCSUsrMsg_CurrentTimescale::InternalSwap(CCSUsrMsg_CurrentTimescale* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_CurrentTimescale::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[31]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[32]);
 }
 
 // ===================================================================
@@ -12163,7 +12581,7 @@ void CCSUsrMsg_AchievementEvent::InternalSwap(CCSUsrMsg_AchievementEvent* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_AchievementEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[32]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[33]);
 }
 
 // ===================================================================
@@ -12456,7 +12874,7 @@ void CCSUsrMsg_MatchEndConditions::InternalSwap(CCSUsrMsg_MatchEndConditions* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_MatchEndConditions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[33]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[34]);
 }
 
 // ===================================================================
@@ -12693,7 +13111,7 @@ void CCSUsrMsg_PlayerStatsUpdate_Stat::InternalSwap(CCSUsrMsg_PlayerStatsUpdate_
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_PlayerStatsUpdate_Stat::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[34]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[35]);
 }
 
 // ===================================================================
@@ -12992,7 +13410,7 @@ void CCSUsrMsg_PlayerStatsUpdate::InternalSwap(CCSUsrMsg_PlayerStatsUpdate* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_PlayerStatsUpdate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[35]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[36]);
 }
 
 // ===================================================================
@@ -13285,7 +13703,7 @@ void CCSUsrMsg_QuestProgress::InternalSwap(CCSUsrMsg_QuestProgress* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_QuestProgress::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[36]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[37]);
 }
 
 // ===================================================================
@@ -13495,7 +13913,7 @@ void CCSUsrMsg_ScoreLeaderboardData::InternalSwap(CCSUsrMsg_ScoreLeaderboardData
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ScoreLeaderboardData::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[37]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[38]);
 }
 
 // ===================================================================
@@ -13705,7 +14123,7 @@ void CCSUsrMsg_PlayerDecalDigitalSignature::InternalSwap(CCSUsrMsg_PlayerDecalDi
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_PlayerDecalDigitalSignature::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[38]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[39]);
 }
 
 // ===================================================================
@@ -13942,7 +14360,7 @@ void CCSUsrMsg_XRankGet::InternalSwap(CCSUsrMsg_XRankGet* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_XRankGet::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[39]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[40]);
 }
 
 // ===================================================================
@@ -14207,7 +14625,7 @@ void CCSUsrMsg_XRankUpd::InternalSwap(CCSUsrMsg_XRankUpd* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_XRankUpd::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[40]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[41]);
 }
 
 // ===================================================================
@@ -14444,7 +14862,7 @@ void CCSUsrMsg_CallVoteFailed::InternalSwap(CCSUsrMsg_CallVoteFailed* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_CallVoteFailed::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[41]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[42]);
 }
 
 // ===================================================================
@@ -14944,7 +15362,7 @@ void CCSUsrMsg_VoteStart::InternalSwap(CCSUsrMsg_VoteStart* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_VoteStart::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[42]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[43]);
 }
 
 // ===================================================================
@@ -15299,7 +15717,7 @@ void CCSUsrMsg_VotePass::InternalSwap(CCSUsrMsg_VotePass* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_VotePass::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[43]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[44]);
 }
 
 // ===================================================================
@@ -15536,7 +15954,7 @@ void CCSUsrMsg_VoteFailed::InternalSwap(CCSUsrMsg_VoteFailed* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_VoteFailed::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[44]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[45]);
 }
 
 // ===================================================================
@@ -15728,7 +16146,7 @@ void CCSUsrMsg_VoteSetup::InternalSwap(CCSUsrMsg_VoteSetup* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_VoteSetup::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[45]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[46]);
 }
 
 // ===================================================================
@@ -16077,7 +16495,7 @@ void CCSUsrMsg_SendLastKillerDamageToClient::InternalSwap(CCSUsrMsg_SendLastKill
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_SendLastKillerDamageToClient::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[46]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[47]);
 }
 
 // ===================================================================
@@ -16426,7 +16844,7 @@ void CCSUsrMsg_ServerRankUpdate_RankUpdate::InternalSwap(CCSUsrMsg_ServerRankUpd
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ServerRankUpdate_RankUpdate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[47]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[48]);
 }
 
 // ===================================================================
@@ -16611,7 +17029,7 @@ void CCSUsrMsg_ServerRankUpdate::InternalSwap(CCSUsrMsg_ServerRankUpdate* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ServerRankUpdate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[48]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[49]);
 }
 
 // ===================================================================
@@ -16821,7 +17239,7 @@ void CCSUsrMsg_XpUpdate::InternalSwap(CCSUsrMsg_XpUpdate* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_XpUpdate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[49]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[50]);
 }
 
 // ===================================================================
@@ -17041,7 +17459,7 @@ void CCSUsrMsg_ItemPickup::InternalSwap(CCSUsrMsg_ItemPickup* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ItemPickup::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[50]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[51]);
 }
 
 // ===================================================================
@@ -17337,7 +17755,7 @@ void CCSUsrMsg_ShowMenu::InternalSwap(CCSUsrMsg_ShowMenu* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ShowMenu::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[51]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[52]);
 }
 
 // ===================================================================
@@ -17557,7 +17975,7 @@ void CCSUsrMsg_BarTime::InternalSwap(CCSUsrMsg_BarTime* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_BarTime::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[52]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[53]);
 }
 
 // ===================================================================
@@ -17748,7 +18166,7 @@ void CCSUsrMsg_AmmoDenied::InternalSwap(CCSUsrMsg_AmmoDenied* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_AmmoDenied::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[53]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[54]);
 }
 
 // ===================================================================
@@ -17968,7 +18386,7 @@ void CCSUsrMsg_MarkAchievement::InternalSwap(CCSUsrMsg_MarkAchievement* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_MarkAchievement::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[54]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[55]);
 }
 
 // ===================================================================
@@ -18188,7 +18606,7 @@ void CCSUsrMsg_MatchStatsUpdate::InternalSwap(CCSUsrMsg_MatchStatsUpdate* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_MatchStatsUpdate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[55]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[56]);
 }
 
 // ===================================================================
@@ -18423,197 +18841,6 @@ void CCSUsrMsg_ItemDrop::InternalSwap(CCSUsrMsg_ItemDrop* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ItemDrop::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[56]);
-}
-
-// ===================================================================
-
-class CCSUsrMsg_GlowPropTurnOff::_Internal {
- public:
-  using HasBits = decltype(std::declval<CCSUsrMsg_GlowPropTurnOff>()._impl_._has_bits_);
-  static void set_has_entidx(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-};
-
-CCSUsrMsg_GlowPropTurnOff::CCSUsrMsg_GlowPropTurnOff(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_GlowPropTurnOff)
-}
-CCSUsrMsg_GlowPropTurnOff::CCSUsrMsg_GlowPropTurnOff(const CCSUsrMsg_GlowPropTurnOff& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CCSUsrMsg_GlowPropTurnOff* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entidx_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.entidx_ = from._impl_.entidx_;
-  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_GlowPropTurnOff)
-}
-
-inline void CCSUsrMsg_GlowPropTurnOff::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entidx_){-1}
-  };
-}
-
-CCSUsrMsg_GlowPropTurnOff::~CCSUsrMsg_GlowPropTurnOff() {
-  // @@protoc_insertion_point(destructor:CCSUsrMsg_GlowPropTurnOff)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CCSUsrMsg_GlowPropTurnOff::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void CCSUsrMsg_GlowPropTurnOff::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CCSUsrMsg_GlowPropTurnOff::Clear() {
-// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_GlowPropTurnOff)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.entidx_ = -1;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CCSUsrMsg_GlowPropTurnOff::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional int32 entidx = 1 [default = -1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_entidx(&has_bits);
-          _impl_.entidx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CCSUsrMsg_GlowPropTurnOff::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_GlowPropTurnOff)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional int32 entidx = 1 [default = -1];
-  if (cached_has_bits & 0x00000001u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_entidx(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_GlowPropTurnOff)
-  return target;
-}
-
-size_t CCSUsrMsg_GlowPropTurnOff::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_GlowPropTurnOff)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // optional int32 entidx = 1 [default = -1];
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_entidx());
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_GlowPropTurnOff::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CCSUsrMsg_GlowPropTurnOff::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_GlowPropTurnOff::GetClassData() const { return &_class_data_; }
-
-
-void CCSUsrMsg_GlowPropTurnOff::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CCSUsrMsg_GlowPropTurnOff*>(&to_msg);
-  auto& from = static_cast<const CCSUsrMsg_GlowPropTurnOff&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_GlowPropTurnOff)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from._internal_has_entidx()) {
-    _this->_internal_set_entidx(from._internal_entidx());
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CCSUsrMsg_GlowPropTurnOff::CopyFrom(const CCSUsrMsg_GlowPropTurnOff& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_GlowPropTurnOff)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CCSUsrMsg_GlowPropTurnOff::IsInitialized() const {
-  return true;
-}
-
-void CCSUsrMsg_GlowPropTurnOff::InternalSwap(CCSUsrMsg_GlowPropTurnOff* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.entidx_, other->_impl_.entidx_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_GlowPropTurnOff::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
       file_level_metadata_cstrike15_5fusermessages_2eproto[57]);
@@ -25300,197 +25527,6 @@ void CCSUsrMsg_DisconnectToLobby::InternalSwap(CCSUsrMsg_DisconnectToLobby* othe
 
 // ===================================================================
 
-class CCSUsrMsg_WarmupHasEnded::_Internal {
- public:
-  using HasBits = decltype(std::declval<CCSUsrMsg_WarmupHasEnded>()._impl_._has_bits_);
-  static void set_has_dummy(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-};
-
-CCSUsrMsg_WarmupHasEnded::CCSUsrMsg_WarmupHasEnded(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_WarmupHasEnded)
-}
-CCSUsrMsg_WarmupHasEnded::CCSUsrMsg_WarmupHasEnded(const CCSUsrMsg_WarmupHasEnded& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CCSUsrMsg_WarmupHasEnded* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.dummy_ = from._impl_.dummy_;
-  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_WarmupHasEnded)
-}
-
-inline void CCSUsrMsg_WarmupHasEnded::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){0}
-  };
-}
-
-CCSUsrMsg_WarmupHasEnded::~CCSUsrMsg_WarmupHasEnded() {
-  // @@protoc_insertion_point(destructor:CCSUsrMsg_WarmupHasEnded)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void CCSUsrMsg_WarmupHasEnded::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void CCSUsrMsg_WarmupHasEnded::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void CCSUsrMsg_WarmupHasEnded::Clear() {
-// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_WarmupHasEnded)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.dummy_ = 0;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* CCSUsrMsg_WarmupHasEnded::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional int32 dummy = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_dummy(&has_bits);
-          _impl_.dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  _impl_._has_bits_.Or(has_bits);
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* CCSUsrMsg_WarmupHasEnded::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_WarmupHasEnded)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _impl_._has_bits_[0];
-  // optional int32 dummy = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_dummy(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_WarmupHasEnded)
-  return target;
-}
-
-size_t CCSUsrMsg_WarmupHasEnded::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_WarmupHasEnded)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // optional int32 dummy = 1;
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_dummy());
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_WarmupHasEnded::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CCSUsrMsg_WarmupHasEnded::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_WarmupHasEnded::GetClassData() const { return &_class_data_; }
-
-
-void CCSUsrMsg_WarmupHasEnded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CCSUsrMsg_WarmupHasEnded*>(&to_msg);
-  auto& from = static_cast<const CCSUsrMsg_WarmupHasEnded&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_WarmupHasEnded)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from._internal_has_dummy()) {
-    _this->_internal_set_dummy(from._internal_dummy());
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void CCSUsrMsg_WarmupHasEnded::CopyFrom(const CCSUsrMsg_WarmupHasEnded& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_WarmupHasEnded)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CCSUsrMsg_WarmupHasEnded::IsInitialized() const {
-  return true;
-}
-
-void CCSUsrMsg_WarmupHasEnded::InternalSwap(CCSUsrMsg_WarmupHasEnded* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.dummy_, other->_impl_.dummy_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_WarmupHasEnded::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[82]);
-}
-
-// ===================================================================
-
 class CCSUsrMsg_ClientInfo::_Internal {
  public:
   using HasBits = decltype(std::declval<CCSUsrMsg_ClientInfo>()._impl_._has_bits_);
@@ -25677,7 +25713,7 @@ void CCSUsrMsg_ClientInfo::InternalSwap(CCSUsrMsg_ClientInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ClientInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[83]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[82]);
 }
 
 // ===================================================================
@@ -25928,7 +25964,7 @@ void CCSUsrMsg_ServerRankRevealAll::InternalSwap(CCSUsrMsg_ServerRankRevealAll* 
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_ServerRankRevealAll::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[84]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[83]);
 }
 
 // ===================================================================
@@ -26224,7 +26260,7 @@ void CCSUsrMsgPreMatchSayText::InternalSwap(CCSUsrMsgPreMatchSayText* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsgPreMatchSayText::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[85]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[84]);
 }
 
 // ===================================================================
@@ -26461,7 +26497,7 @@ void CCSUsrMsg_CounterStrafe::InternalSwap(CCSUsrMsg_CounterStrafe* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_CounterStrafe::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[86]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[85]);
 }
 
 // ===================================================================
@@ -26928,7 +26964,7 @@ void CCSUsrMsg_DamagePrediction::InternalSwap(CCSUsrMsg_DamagePrediction* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_DamagePrediction::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
-      file_level_metadata_cstrike15_5fusermessages_2eproto[87]);
+      file_level_metadata_cstrike15_5fusermessages_2eproto[86]);
 }
 
 // ===================================================================
@@ -27178,7 +27214,1365 @@ void CCSUsrMsg_RecurringMissionSchema::InternalSwap(CCSUsrMsg_RecurringMissionSc
 ::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_RecurringMissionSchema::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[87]);
+}
+
+// ===================================================================
+
+class CCSUsrMsg_SendPlayerLoadout_LoadoutItem::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CCSUsrMsg_SendPlayerLoadout_LoadoutItem>()._impl_._has_bits_);
+  static const ::CEconItemPreviewDataBlock& econ_item(const CCSUsrMsg_SendPlayerLoadout_LoadoutItem* msg);
+  static void set_has_econ_item(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_team(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_slot(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+const ::CEconItemPreviewDataBlock&
+CCSUsrMsg_SendPlayerLoadout_LoadoutItem::_Internal::econ_item(const CCSUsrMsg_SendPlayerLoadout_LoadoutItem* msg) {
+  return *msg->_impl_.econ_item_;
+}
+void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::clear_econ_item() {
+  if (_impl_.econ_item_ != nullptr) _impl_.econ_item_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+CCSUsrMsg_SendPlayerLoadout_LoadoutItem::CCSUsrMsg_SendPlayerLoadout_LoadoutItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+}
+CCSUsrMsg_SendPlayerLoadout_LoadoutItem::CCSUsrMsg_SendPlayerLoadout_LoadoutItem(const CCSUsrMsg_SendPlayerLoadout_LoadoutItem& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CCSUsrMsg_SendPlayerLoadout_LoadoutItem* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.econ_item_){nullptr}
+    , decltype(_impl_.team_){}
+    , decltype(_impl_.slot_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_econ_item()) {
+    _this->_impl_.econ_item_ = new ::CEconItemPreviewDataBlock(*from._impl_.econ_item_);
+  }
+  ::memcpy(&_impl_.team_, &from._impl_.team_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.slot_) -
+    reinterpret_cast<char*>(&_impl_.team_)) + sizeof(_impl_.slot_));
+  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+}
+
+inline void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.econ_item_){nullptr}
+    , decltype(_impl_.team_){0}
+    , decltype(_impl_.slot_){0}
+  };
+}
+
+CCSUsrMsg_SendPlayerLoadout_LoadoutItem::~CCSUsrMsg_SendPlayerLoadout_LoadoutItem() {
+  // @@protoc_insertion_point(destructor:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.econ_item_;
+}
+
+void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::Clear() {
+// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.econ_item_ != nullptr);
+    _impl_.econ_item_->Clear();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.team_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.slot_) -
+        reinterpret_cast<char*>(&_impl_.team_)) + sizeof(_impl_.slot_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CCSUsrMsg_SendPlayerLoadout_LoadoutItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .CEconItemPreviewDataBlock econ_item = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_econ_item(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 team = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_team(&has_bits);
+          _impl_.team_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 slot = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_slot(&has_bits);
+          _impl_.slot_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CCSUsrMsg_SendPlayerLoadout_LoadoutItem::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .CEconItemPreviewDataBlock econ_item = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::econ_item(this),
+        _Internal::econ_item(this).GetCachedSize(), target, stream);
+  }
+
+  // optional int32 team = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_team(), target);
+  }
+
+  // optional int32 slot = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_slot(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+  return target;
+}
+
+size_t CCSUsrMsg_SendPlayerLoadout_LoadoutItem::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional .CEconItemPreviewDataBlock econ_item = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.econ_item_);
+    }
+
+    // optional int32 team = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_team());
+    }
+
+    // optional int32 slot = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_slot());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_SendPlayerLoadout_LoadoutItem::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CCSUsrMsg_SendPlayerLoadout_LoadoutItem::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_SendPlayerLoadout_LoadoutItem::GetClassData() const { return &_class_data_; }
+
+
+void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CCSUsrMsg_SendPlayerLoadout_LoadoutItem*>(&to_msg);
+  auto& from = static_cast<const CCSUsrMsg_SendPlayerLoadout_LoadoutItem&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_econ_item()->::CEconItemPreviewDataBlock::MergeFrom(
+          from._internal_econ_item());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.team_ = from._impl_.team_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.slot_ = from._impl_.slot_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::CopyFrom(const CCSUsrMsg_SendPlayerLoadout_LoadoutItem& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CCSUsrMsg_SendPlayerLoadout_LoadoutItem::IsInitialized() const {
+  return true;
+}
+
+void CCSUsrMsg_SendPlayerLoadout_LoadoutItem::InternalSwap(CCSUsrMsg_SendPlayerLoadout_LoadoutItem* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CCSUsrMsg_SendPlayerLoadout_LoadoutItem, _impl_.slot_)
+      + sizeof(CCSUsrMsg_SendPlayerLoadout_LoadoutItem::_impl_.slot_)
+      - PROTOBUF_FIELD_OFFSET(CCSUsrMsg_SendPlayerLoadout_LoadoutItem, _impl_.econ_item_)>(
+          reinterpret_cast<char*>(&_impl_.econ_item_),
+          reinterpret_cast<char*>(&other->_impl_.econ_item_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_SendPlayerLoadout_LoadoutItem::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
       file_level_metadata_cstrike15_5fusermessages_2eproto[88]);
+}
+
+// ===================================================================
+
+class CCSUsrMsg_SendPlayerLoadout::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CCSUsrMsg_SendPlayerLoadout>()._impl_._has_bits_);
+  static void set_has_playerslot(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+CCSUsrMsg_SendPlayerLoadout::CCSUsrMsg_SendPlayerLoadout(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_SendPlayerLoadout)
+}
+CCSUsrMsg_SendPlayerLoadout::CCSUsrMsg_SendPlayerLoadout(const CCSUsrMsg_SendPlayerLoadout& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CCSUsrMsg_SendPlayerLoadout* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.loadout_){from._impl_.loadout_}
+    , decltype(_impl_.playerslot_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.playerslot_ = from._impl_.playerslot_;
+  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_SendPlayerLoadout)
+}
+
+inline void CCSUsrMsg_SendPlayerLoadout::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.loadout_){arena}
+    , decltype(_impl_.playerslot_){-1}
+  };
+}
+
+CCSUsrMsg_SendPlayerLoadout::~CCSUsrMsg_SendPlayerLoadout() {
+  // @@protoc_insertion_point(destructor:CCSUsrMsg_SendPlayerLoadout)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CCSUsrMsg_SendPlayerLoadout::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.loadout_.~RepeatedPtrField();
+}
+
+void CCSUsrMsg_SendPlayerLoadout::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CCSUsrMsg_SendPlayerLoadout::Clear() {
+// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_SendPlayerLoadout)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.loadout_.Clear();
+  _impl_.playerslot_ = -1;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CCSUsrMsg_SendPlayerLoadout::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_loadout(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 playerslot = 2 [default = -1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_playerslot(&has_bits);
+          _impl_.playerslot_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CCSUsrMsg_SendPlayerLoadout::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_SendPlayerLoadout)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_loadout_size()); i < n; i++) {
+    const auto& repfield = this->_internal_loadout(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int32 playerslot = 2 [default = -1];
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_playerslot(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_SendPlayerLoadout)
+  return target;
+}
+
+size_t CCSUsrMsg_SendPlayerLoadout::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_SendPlayerLoadout)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;
+  total_size += 1UL * this->_internal_loadout_size();
+  for (const auto& msg : this->_impl_.loadout_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // optional int32 playerslot = 2 [default = -1];
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_playerslot());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_SendPlayerLoadout::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CCSUsrMsg_SendPlayerLoadout::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_SendPlayerLoadout::GetClassData() const { return &_class_data_; }
+
+
+void CCSUsrMsg_SendPlayerLoadout::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CCSUsrMsg_SendPlayerLoadout*>(&to_msg);
+  auto& from = static_cast<const CCSUsrMsg_SendPlayerLoadout&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_SendPlayerLoadout)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.loadout_.MergeFrom(from._impl_.loadout_);
+  if (from._internal_has_playerslot()) {
+    _this->_internal_set_playerslot(from._internal_playerslot());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CCSUsrMsg_SendPlayerLoadout::CopyFrom(const CCSUsrMsg_SendPlayerLoadout& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_SendPlayerLoadout)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CCSUsrMsg_SendPlayerLoadout::IsInitialized() const {
+  return true;
+}
+
+void CCSUsrMsg_SendPlayerLoadout::InternalSwap(CCSUsrMsg_SendPlayerLoadout* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.loadout_.InternalSwap(&other->_impl_.loadout_);
+  swap(_impl_.playerslot_, other->_impl_.playerslot_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_SendPlayerLoadout::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[89]);
+}
+
+// ===================================================================
+
+class CCSUsrMsg_CustomHudClicked::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CCSUsrMsg_CustomHudClicked>()._impl_._has_bits_);
+  static void set_has_custom_hud_layout(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_button_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+CCSUsrMsg_CustomHudClicked::CCSUsrMsg_CustomHudClicked(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CCSUsrMsg_CustomHudClicked)
+}
+CCSUsrMsg_CustomHudClicked::CCSUsrMsg_CustomHudClicked(const CCSUsrMsg_CustomHudClicked& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CCSUsrMsg_CustomHudClicked* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.button_id_){}
+    , decltype(_impl_.custom_hud_layout_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.button_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.button_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_button_id()) {
+    _this->_impl_.button_id_.Set(from._internal_button_id(), 
+      _this->GetArenaForAllocation());
+  }
+  _this->_impl_.custom_hud_layout_ = from._impl_.custom_hud_layout_;
+  // @@protoc_insertion_point(copy_constructor:CCSUsrMsg_CustomHudClicked)
+}
+
+inline void CCSUsrMsg_CustomHudClicked::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.button_id_){}
+    , decltype(_impl_.custom_hud_layout_){16777215u}
+  };
+  _impl_.button_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.button_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+CCSUsrMsg_CustomHudClicked::~CCSUsrMsg_CustomHudClicked() {
+  // @@protoc_insertion_point(destructor:CCSUsrMsg_CustomHudClicked)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CCSUsrMsg_CustomHudClicked::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.button_id_.Destroy();
+}
+
+void CCSUsrMsg_CustomHudClicked::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CCSUsrMsg_CustomHudClicked::Clear() {
+// @@protoc_insertion_point(message_clear_start:CCSUsrMsg_CustomHudClicked)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.button_id_.ClearNonDefaultToEmpty();
+    }
+    _impl_.custom_hud_layout_ = 16777215u;
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CCSUsrMsg_CustomHudClicked::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional uint32 custom_hud_layout = 1 [default = 16777215];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_custom_hud_layout(&has_bits);
+          _impl_.custom_hud_layout_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string button_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_button_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "CCSUsrMsg_CustomHudClicked.button_id");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CCSUsrMsg_CustomHudClicked::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CCSUsrMsg_CustomHudClicked)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional uint32 custom_hud_layout = 1 [default = 16777215];
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_custom_hud_layout(), target);
+  }
+
+  // optional string button_id = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_button_id().data(), static_cast<int>(this->_internal_button_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "CCSUsrMsg_CustomHudClicked.button_id");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_button_id(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CCSUsrMsg_CustomHudClicked)
+  return target;
+}
+
+size_t CCSUsrMsg_CustomHudClicked::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CCSUsrMsg_CustomHudClicked)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string button_id = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_button_id());
+    }
+
+    // optional uint32 custom_hud_layout = 1 [default = 16777215];
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_custom_hud_layout());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CCSUsrMsg_CustomHudClicked::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CCSUsrMsg_CustomHudClicked::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CCSUsrMsg_CustomHudClicked::GetClassData() const { return &_class_data_; }
+
+
+void CCSUsrMsg_CustomHudClicked::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CCSUsrMsg_CustomHudClicked*>(&to_msg);
+  auto& from = static_cast<const CCSUsrMsg_CustomHudClicked&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CCSUsrMsg_CustomHudClicked)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_button_id(from._internal_button_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.custom_hud_layout_ = from._impl_.custom_hud_layout_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CCSUsrMsg_CustomHudClicked::CopyFrom(const CCSUsrMsg_CustomHudClicked& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CCSUsrMsg_CustomHudClicked)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CCSUsrMsg_CustomHudClicked::IsInitialized() const {
+  return true;
+}
+
+void CCSUsrMsg_CustomHudClicked::InternalSwap(CCSUsrMsg_CustomHudClicked* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.button_id_, lhs_arena,
+      &other->_impl_.button_id_, rhs_arena
+  );
+  swap(_impl_.custom_hud_layout_, other->_impl_.custom_hud_layout_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CCSUsrMsg_CustomHudClicked::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[90]);
+}
+
+// ===================================================================
+
+class CVacNet_GetReviewerInfo_Request::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CVacNet_GetReviewerInfo_Request>()._impl_._has_bits_);
+  static void set_has_appid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+CVacNet_GetReviewerInfo_Request::CVacNet_GetReviewerInfo_Request(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CVacNet_GetReviewerInfo_Request)
+}
+CVacNet_GetReviewerInfo_Request::CVacNet_GetReviewerInfo_Request(const CVacNet_GetReviewerInfo_Request& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CVacNet_GetReviewerInfo_Request* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.appid_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.appid_ = from._impl_.appid_;
+  // @@protoc_insertion_point(copy_constructor:CVacNet_GetReviewerInfo_Request)
+}
+
+inline void CVacNet_GetReviewerInfo_Request::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.appid_){0u}
+  };
+}
+
+CVacNet_GetReviewerInfo_Request::~CVacNet_GetReviewerInfo_Request() {
+  // @@protoc_insertion_point(destructor:CVacNet_GetReviewerInfo_Request)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CVacNet_GetReviewerInfo_Request::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void CVacNet_GetReviewerInfo_Request::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CVacNet_GetReviewerInfo_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:CVacNet_GetReviewerInfo_Request)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.appid_ = 0u;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CVacNet_GetReviewerInfo_Request::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional uint32 appid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_appid(&has_bits);
+          _impl_.appid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CVacNet_GetReviewerInfo_Request::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CVacNet_GetReviewerInfo_Request)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional uint32 appid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_appid(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CVacNet_GetReviewerInfo_Request)
+  return target;
+}
+
+size_t CVacNet_GetReviewerInfo_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CVacNet_GetReviewerInfo_Request)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional uint32 appid = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_appid());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CVacNet_GetReviewerInfo_Request::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CVacNet_GetReviewerInfo_Request::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CVacNet_GetReviewerInfo_Request::GetClassData() const { return &_class_data_; }
+
+
+void CVacNet_GetReviewerInfo_Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CVacNet_GetReviewerInfo_Request*>(&to_msg);
+  auto& from = static_cast<const CVacNet_GetReviewerInfo_Request&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CVacNet_GetReviewerInfo_Request)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_appid()) {
+    _this->_internal_set_appid(from._internal_appid());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CVacNet_GetReviewerInfo_Request::CopyFrom(const CVacNet_GetReviewerInfo_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CVacNet_GetReviewerInfo_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CVacNet_GetReviewerInfo_Request::IsInitialized() const {
+  return true;
+}
+
+void CVacNet_GetReviewerInfo_Request::InternalSwap(CVacNet_GetReviewerInfo_Request* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.appid_, other->_impl_.appid_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CVacNet_GetReviewerInfo_Request::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[91]);
+}
+
+// ===================================================================
+
+class CVacnetReviewerInfo::_Internal {
+ public:
+};
+
+CVacnetReviewerInfo::CVacnetReviewerInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CVacnetReviewerInfo)
+}
+CVacnetReviewerInfo::CVacnetReviewerInfo(const CVacnetReviewerInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CVacnetReviewerInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.permissions_){from._impl_.permissions_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:CVacnetReviewerInfo)
+}
+
+inline void CVacnetReviewerInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.permissions_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+CVacnetReviewerInfo::~CVacnetReviewerInfo() {
+  // @@protoc_insertion_point(destructor:CVacnetReviewerInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CVacnetReviewerInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.permissions_.~RepeatedPtrField();
+}
+
+void CVacnetReviewerInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CVacnetReviewerInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:CVacnetReviewerInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.permissions_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CVacnetReviewerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated string permissions = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_permissions();
+            ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(ptr);
+            #ifndef NDEBUG
+            ::_pbi::VerifyUTF8(str, "CVacnetReviewerInfo.permissions");
+            #endif  // !NDEBUG
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CVacnetReviewerInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CVacnetReviewerInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated string permissions = 1;
+  for (int i = 0, n = this->_internal_permissions_size(); i < n; i++) {
+    const auto& s = this->_internal_permissions(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "CVacnetReviewerInfo.permissions");
+    target = stream->WriteString(1, s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CVacnetReviewerInfo)
+  return target;
+}
+
+size_t CVacnetReviewerInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CVacnetReviewerInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated string permissions = 1;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.permissions_.size());
+  for (int i = 0, n = _impl_.permissions_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      _impl_.permissions_.Get(i));
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CVacnetReviewerInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CVacnetReviewerInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CVacnetReviewerInfo::GetClassData() const { return &_class_data_; }
+
+
+void CVacnetReviewerInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CVacnetReviewerInfo*>(&to_msg);
+  auto& from = static_cast<const CVacnetReviewerInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CVacnetReviewerInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.permissions_.MergeFrom(from._impl_.permissions_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CVacnetReviewerInfo::CopyFrom(const CVacnetReviewerInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CVacnetReviewerInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CVacnetReviewerInfo::IsInitialized() const {
+  return true;
+}
+
+void CVacnetReviewerInfo::InternalSwap(CVacnetReviewerInfo* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.permissions_.InternalSwap(&other->_impl_.permissions_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CVacnetReviewerInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[92]);
+}
+
+// ===================================================================
+
+class CVacNet_GetReviewerInfo_Response::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CVacNet_GetReviewerInfo_Response>()._impl_._has_bits_);
+  static const ::CVacnetReviewerInfo& reviewer_info(const CVacNet_GetReviewerInfo_Response* msg);
+  static void set_has_reviewer_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+const ::CVacnetReviewerInfo&
+CVacNet_GetReviewerInfo_Response::_Internal::reviewer_info(const CVacNet_GetReviewerInfo_Response* msg) {
+  return *msg->_impl_.reviewer_info_;
+}
+CVacNet_GetReviewerInfo_Response::CVacNet_GetReviewerInfo_Response(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CVacNet_GetReviewerInfo_Response)
+}
+CVacNet_GetReviewerInfo_Response::CVacNet_GetReviewerInfo_Response(const CVacNet_GetReviewerInfo_Response& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CVacNet_GetReviewerInfo_Response* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.reviewer_info_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_reviewer_info()) {
+    _this->_impl_.reviewer_info_ = new ::CVacnetReviewerInfo(*from._impl_.reviewer_info_);
+  }
+  // @@protoc_insertion_point(copy_constructor:CVacNet_GetReviewerInfo_Response)
+}
+
+inline void CVacNet_GetReviewerInfo_Response::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.reviewer_info_){nullptr}
+  };
+}
+
+CVacNet_GetReviewerInfo_Response::~CVacNet_GetReviewerInfo_Response() {
+  // @@protoc_insertion_point(destructor:CVacNet_GetReviewerInfo_Response)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CVacNet_GetReviewerInfo_Response::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.reviewer_info_;
+}
+
+void CVacNet_GetReviewerInfo_Response::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CVacNet_GetReviewerInfo_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:CVacNet_GetReviewerInfo_Response)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.reviewer_info_ != nullptr);
+    _impl_.reviewer_info_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CVacNet_GetReviewerInfo_Response::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .CVacnetReviewerInfo reviewer_info = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_reviewer_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CVacNet_GetReviewerInfo_Response::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CVacNet_GetReviewerInfo_Response)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .CVacnetReviewerInfo reviewer_info = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::reviewer_info(this),
+        _Internal::reviewer_info(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CVacNet_GetReviewerInfo_Response)
+  return target;
+}
+
+size_t CVacNet_GetReviewerInfo_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CVacNet_GetReviewerInfo_Response)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional .CVacnetReviewerInfo reviewer_info = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.reviewer_info_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CVacNet_GetReviewerInfo_Response::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CVacNet_GetReviewerInfo_Response::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CVacNet_GetReviewerInfo_Response::GetClassData() const { return &_class_data_; }
+
+
+void CVacNet_GetReviewerInfo_Response::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CVacNet_GetReviewerInfo_Response*>(&to_msg);
+  auto& from = static_cast<const CVacNet_GetReviewerInfo_Response&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CVacNet_GetReviewerInfo_Response)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_reviewer_info()) {
+    _this->_internal_mutable_reviewer_info()->::CVacnetReviewerInfo::MergeFrom(
+        from._internal_reviewer_info());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CVacNet_GetReviewerInfo_Response::CopyFrom(const CVacNet_GetReviewerInfo_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CVacNet_GetReviewerInfo_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CVacNet_GetReviewerInfo_Response::IsInitialized() const {
+  return true;
+}
+
+void CVacNet_GetReviewerInfo_Response::InternalSwap(CVacNet_GetReviewerInfo_Response* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.reviewer_info_, other->_impl_.reviewer_info_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CVacNet_GetReviewerInfo_Response::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cstrike15_5fusermessages_2eproto_getter, &descriptor_table_cstrike15_5fusermessages_2eproto_once,
+      file_level_metadata_cstrike15_5fusermessages_2eproto[93]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -27282,6 +28676,10 @@ Arena::CreateMaybeMessage< ::CCSUsrMsg_ReloadEffect >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::CCSUsrMsg_WeaponSound*
 Arena::CreateMaybeMessage< ::CCSUsrMsg_WeaponSound >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCSUsrMsg_WeaponSound >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CCSUsrMsg_WeaponMagDrop*
+Arena::CreateMaybeMessage< ::CCSUsrMsg_WeaponMagDrop >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CCSUsrMsg_WeaponMagDrop >(arena);
 }
 template<> PROTOBUF_NOINLINE ::CCSUsrMsg_UpdateScreenHealthBar*
 Arena::CreateMaybeMessage< ::CCSUsrMsg_UpdateScreenHealthBar >(Arena* arena) {
@@ -27411,10 +28809,6 @@ template<> PROTOBUF_NOINLINE ::CCSUsrMsg_ItemDrop*
 Arena::CreateMaybeMessage< ::CCSUsrMsg_ItemDrop >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCSUsrMsg_ItemDrop >(arena);
 }
-template<> PROTOBUF_NOINLINE ::CCSUsrMsg_GlowPropTurnOff*
-Arena::CreateMaybeMessage< ::CCSUsrMsg_GlowPropTurnOff >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CCSUsrMsg_GlowPropTurnOff >(arena);
-}
 template<> PROTOBUF_NOINLINE ::CCSUsrMsg_RoundBackupFilenames*
 Arena::CreateMaybeMessage< ::CCSUsrMsg_RoundBackupFilenames >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCSUsrMsg_RoundBackupFilenames >(arena);
@@ -27511,10 +28905,6 @@ template<> PROTOBUF_NOINLINE ::CCSUsrMsg_DisconnectToLobby*
 Arena::CreateMaybeMessage< ::CCSUsrMsg_DisconnectToLobby >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCSUsrMsg_DisconnectToLobby >(arena);
 }
-template<> PROTOBUF_NOINLINE ::CCSUsrMsg_WarmupHasEnded*
-Arena::CreateMaybeMessage< ::CCSUsrMsg_WarmupHasEnded >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::CCSUsrMsg_WarmupHasEnded >(arena);
-}
 template<> PROTOBUF_NOINLINE ::CCSUsrMsg_ClientInfo*
 Arena::CreateMaybeMessage< ::CCSUsrMsg_ClientInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCSUsrMsg_ClientInfo >(arena);
@@ -27538,6 +28928,30 @@ Arena::CreateMaybeMessage< ::CCSUsrMsg_DamagePrediction >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::CCSUsrMsg_RecurringMissionSchema*
 Arena::CreateMaybeMessage< ::CCSUsrMsg_RecurringMissionSchema >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CCSUsrMsg_RecurringMissionSchema >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CCSUsrMsg_SendPlayerLoadout_LoadoutItem*
+Arena::CreateMaybeMessage< ::CCSUsrMsg_SendPlayerLoadout_LoadoutItem >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CCSUsrMsg_SendPlayerLoadout_LoadoutItem >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CCSUsrMsg_SendPlayerLoadout*
+Arena::CreateMaybeMessage< ::CCSUsrMsg_SendPlayerLoadout >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CCSUsrMsg_SendPlayerLoadout >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CCSUsrMsg_CustomHudClicked*
+Arena::CreateMaybeMessage< ::CCSUsrMsg_CustomHudClicked >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CCSUsrMsg_CustomHudClicked >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CVacNet_GetReviewerInfo_Request*
+Arena::CreateMaybeMessage< ::CVacNet_GetReviewerInfo_Request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CVacNet_GetReviewerInfo_Request >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CVacnetReviewerInfo*
+Arena::CreateMaybeMessage< ::CVacnetReviewerInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CVacnetReviewerInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CVacNet_GetReviewerInfo_Response*
+Arena::CreateMaybeMessage< ::CVacNet_GetReviewerInfo_Response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CVacNet_GetReviewerInfo_Response >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

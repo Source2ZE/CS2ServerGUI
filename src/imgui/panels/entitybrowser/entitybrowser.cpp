@@ -21,6 +21,7 @@
 #include <imgui.h>
 #include <schemasystem/schemasystem.h>
 #include <entity2/entitysystem.h>
+#include "gameentitysystem.h"
 #include <entity2/entityclass.h>
 #include "cs2_sdk/entity/cbaseentity.h"
 #include "type_stringifier.h"
@@ -96,7 +97,7 @@ void Draw(bool* isOpen)
 		{
 			ImGui::Text("Classname: %s", pEntity->GetClassname());
 			ImGui::Text("Index: %d", pEntity->GetEntityIndex());
-			ImGui::Text("Schema: %s", pEntity->Schema_DynamicBinding().Get()->m_pszName);
+			ImGui::Text("Schema: %s", pEntity->Schema_DynamicBinding().Get()->m_pName);
 			g_menuContext.m_propertyFilter.Draw("Search");
 
 			if (ImGui::BeginTable("Schema", 3, ImGuiTableFlags_Borders))
@@ -131,11 +132,11 @@ void DumpEntitySchema(void* pSchemaField, CSchemaClassInfo* pSchema, std::unorde
 
 	ImGui::TableNextRow();
 	ImGui::TableNextColumn();
-	ImGui::TextColored(ImVec4(255, 255, 0, 255), "%s", pSchema->m_pszName);
+	ImGui::TextColored(ImVec4(255, 255, 0, 255), "%s", pSchema->m_pName);
 
 	// Just use a random class to get access to the full database, as some schema classes don't have entity representations
 	CNetworkSerializerCodeGenDatabase* pDatabase = GameEntitySystem()->FindClassByName("CBaseEntity")->m_NetworkSerializerInfo->m_pDatabase;
-	int index = pDatabase->m_ClassInfos.Find(pSchema->m_pszName);
+	int index = pDatabase->m_ClassInfos.Find(pSchema->m_pName);
 
 	if (index == pDatabase->m_ClassInfos.InvalidIndex())
 		return;
@@ -143,20 +144,20 @@ void DumpEntitySchema(void* pSchemaField, CSchemaClassInfo* pSchema, std::unorde
 	auto& vecOverrides = pDatabase->m_ClassInfos[index]->m_NetworkVarTypeOverrides;
 
 	FOR_EACH_VEC(vecOverrides, i)
-		overrideMap[vecOverrides[i]->m_FieldName.Get()] = vecOverrides[i]->m_OverrideType.Get();
+		overrideMap[vecOverrides[i]->m_FieldName] = vecOverrides[i]->m_OverrideType;
 
-	for (int i = 0; i < pSchema->m_nFieldCount; i++)
+	for (int i = 0; i < pSchema->m_nNumFields; i++)
 	{
 		SchemaClassFieldData_t& field = pSchema->m_pFields[i];
 
-		if(root && !g_menuContext.m_propertyFilter.PassFilter(field.m_pszName))
+		if(root && !g_menuContext.m_propertyFilter.PassFilter(field.m_pName))
 			continue;
 
 		auto ptr = (void*)((uint8*)pSchemaField + field.m_nSingleInheritanceOffset);
-		DumpFieldValue(field.m_pszName, ptr, field.m_pType, false, overrideMap);
+		DumpFieldValue(field.m_pName, ptr, field.m_pType, false, overrideMap);
 	}
 
-	for (int i = 0; i < pSchema->m_nBaseClassCount; i++)
+	for (int i = 0; i < pSchema->m_nNumBaseClasses; i++)
 	{
 		auto& baseClass = pSchema->m_pBaseClasses[i];
 		DumpEntitySchema(pSchemaField, baseClass.m_pClass, overrideMap, root);
